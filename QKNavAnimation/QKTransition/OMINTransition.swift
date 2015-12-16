@@ -19,18 +19,9 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
-    public var bottomViews: [UIView] = []
-    
     public var completion: (() -> Void)?
     
-    public var lastbottomView: UIView = UIView()//{
-//        get {
-//            return bottomViews.last ?? {
-//                bottomViews.append(UIView())
-//                return bottomViews.last!
-//            }()
-//        }
-//    }
+    public var bottomView: UIView = UIView()
     
     public var cancelPop: Bool = false
     
@@ -57,19 +48,18 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
         
         if transitionStatus == .Pop {
             swap(&fromVC, &toVC)
-            lastbottomView = (fromVC as! QKTransitionData).qk_transition_data as! UIView
-            topHeight = fromVC!.view.bounds.height - lastbottomView.bounds.height
-            bottomHeight = lastbottomView.bounds.height
+            bottomView = (fromVC as! QKTransitionData).qk_transition_data as! UIView
+            topHeight = fromVC!.view.bounds.height - bottomView.bounds.height
+            bottomHeight = bottomView.bounds.height
         }
         
         if transitionStatus == .Push {
-            bottomViews.append(UIView()) //新加一个保存的图层
             
             topHeight = keyView!.layer.position.y + keyView!.layer.bounds.size.height / 2
             bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
             
-            lastbottomView.frame = CGRect(x: 0, y: topHeight, width: fromVC!.view.layer.bounds.size.width, height: bottomHeight)
-            lastbottomView.layer.contents = {
+            bottomView.frame = CGRect(x: 0, y: topHeight, width: fromVC!.view.layer.bounds.size.width, height: bottomHeight)
+            bottomView.layer.contents = {
                 let scale = UIScreen.mainScreen().scale
                 UIGraphicsBeginImageContextWithOptions(fromVC!.view.bounds.size, true, scale)
                 fromVC!.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
@@ -80,7 +70,7 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
                 return clip
                 }()
             
-            (fromVC as! QKTransitionData).qk_transition_data = lastbottomView
+            (fromVC as! QKTransitionData).qk_transition_data = bottomView
             
             let maskLayer = CAShapeLayer()
             maskLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: fromVC!.view.layer.bounds.size.width, height: keyView!.layer.position.y + keyView!.layer.bounds.size.height / 2)).CGPath
@@ -91,19 +81,18 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
         }
         containView?.addSubview(toVC!.view)
         containView?.addSubview(fromVC!.view)
-        containView?.addSubview(lastbottomView)
+        containView?.addSubview(bottomView)
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC!.view.layer.position.y -= topHeight
-            self.lastbottomView.layer.position.y += bottomHeight
+            self.bottomView.layer.position.y += bottomHeight
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                self.lastbottomView.removeFromSuperview() // 只要动画结束，该图层都应该删除 //先除去图层
+                self.bottomView.removeFromSuperview() // 只要动画结束，该图层都应该移除
                 if !self.cancelPop {
                     if self.transitionStatus == .Pop {
                         transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
                         transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
-//                        self.bottomViews.removeLast() // Pop 完成，不再需要图层，移除 // 这步一定要后执行啊
                     }
                 }
            self.cancelPop = false
@@ -111,17 +100,6 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
                     self.completion?()
                     self.completion = nil
                 }
-        }
-    }
-    
-    // MARK: QK
-    public func popToVCIndex(index: Int) {
-        let lastIndex = bottomViews.count - 1
-        let firstIndex = index + 1
-        if firstIndex == lastIndex {
-            bottomViews.removeAtIndex(lastIndex)
-        } else if lastIndex > firstIndex {
-            bottomViews.removeRange(firstIndex...lastIndex)
         }
     }
 }

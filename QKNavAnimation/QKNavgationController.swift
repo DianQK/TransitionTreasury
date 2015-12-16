@@ -9,15 +9,6 @@
 import UIKit
 // TODO 对枚举类别的处理 
 public extension UINavigationController {
-    
-    var qk_nav_transition_delegate: QKNavgationTransitionDelegate? {
-        get {
-            return objc_getAssociatedObject(self, "qk_nav_transition_delegate") as? QKNavgationTransitionDelegate
-        }
-        set {
-            objc_setAssociatedObject(self, "qk_nav_transition_delegate", newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
 
     public func qk_pushViewController(viewcontroller: UIViewController,key: UIView, method: QKKeyPushMethod) {
         qk_pushViewController(viewcontroller, key: key, method: method, completion: nil)
@@ -26,13 +17,7 @@ public extension UINavigationController {
     public func qk_pushViewController(viewcontroller: UIViewController,key: UIView, method: QKKeyPushMethod, completion: (() -> Void)?) {
         let transition = QKNavgationTransitionDelegate(method: method, key: key, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
-//        qk_nav_transition_delegate = transition
-        if delegate == nil || !(delegate is QKNavgationTransitionDelegate) {
-            delegate = transition
-        } else {
-            let transitionDelegate = delegate as! QKNavgationTransitionDelegate
-            transitionDelegate.updateStatus(key, status: .Push, gestureFor: viewcontroller)
-        }
+        delegate = transition
         pushViewController(viewcontroller, animated: true)
     }
     
@@ -41,14 +26,9 @@ public extension UINavigationController {
     }
     
     public func qk_popViewController(completion: (() -> Void)?) -> UIViewController? {
-//        if let transitionDelegate = delegate as? QKNavgationTransitionDelegate {
-//            transitionDelegate.transition.transitionStatus = .Pop
-//            transitionDelegate.completion = completion
-//        }
         let transition = QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
         transition.completion = completion
         delegate = transition
-        print(delegate)
         return popViewControllerAnimated(true)
     }
     
@@ -60,11 +40,10 @@ public extension UINavigationController {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
-        if let transitionDelegate = delegate as? QKNavgationTransitionDelegate {
-            transitionDelegate.transition.transitionStatus = .Pop
-            transitionDelegate.completion = completion
-            transitionDelegate.transition.popToVCIndex(index)
-        }
+        let transition = QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
+        transition.completion = completion
+        transition.transition.popToVCIndex(index)
+        delegate = transition
         return popToViewController(viewController, animated: true)
     }
     
