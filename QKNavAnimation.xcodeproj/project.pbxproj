@@ -16,7 +16,6 @@
 		266FB4021C1B1366003EBB76 /* QKNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266FB4011C1B1366003EBB76 /* QKNavgationController.swift */; };
 		266FB4041C1B1464003EBB76 /* QKNavAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266FB4031C1B1464003EBB76 /* QKNavAnimation.swift */; };
 		2670398A1C1B9BBC006F5864 /* OMINTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267039891C1B9BBC006F5864 /* OMINTransition.swift */; };
-		2670398C1C1B9BCE006F5864 /* PingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670398B1C1B9BCE006F5864 /* PingTransition.swift */; };
 		267039901C1C04BC006F5864 /* QKNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670398F1C1C04BC006F5864 /* QKNavgationTransitionDelegate.swift */; };
 		267039921C1C0F71006F5864 /* QKCAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267039911C1C0F71006F5864 /* QKCAAnimation.swift */; };
 		26940A331C1D41EA003AF580 /* QKImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26940A321C1D41EA003AF580 /* QKImage.swift */; };
@@ -39,7 +38,6 @@
 		266FB4011C1B1366003EBB76 /* QKNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKNavgationController.swift; sourceTree = "<group>"; };
 		266FB4031C1B1464003EBB76 /* QKNavAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKNavAnimation.swift; sourceTree = "<group>"; };
 		267039891C1B9BBC006F5864 /* OMINTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransition.swift; sourceTree = "<group>"; };
-		2670398B1C1B9BCE006F5864 /* PingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingTransition.swift; sourceTree = "<group>"; };
 		2670398F1C1C04BC006F5864 /* QKNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
 		267039911C1C0F71006F5864 /* QKCAAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKCAAnimation.swift; sourceTree = "<group>"; };
 		26940A321C1D41EA003AF580 /* QKImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKImage.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				267039891C1B9BBC006F5864 /* OMINTransition.swift */,
-				2670398B1C1B9BCE006F5864 /* PingTransition.swift */,
 				26607B8B1C1D83F300E8FA86 /* QKViewControllerAnimatedTransitioning.swift */,
 				26607B8D1C1DC0EA00E8FA86 /* TwitterTransition.swift */,
 			);
@@ -199,7 +196,6 @@
 				263D5F4D1C1F260E00FBE697 /* QKTransitionDelegate.swift in Sources */,
 				266FB4001C1AEFB0003EBB76 /* SecondViewController.swift in Sources */,
 				26607B8E1C1DC0EA00E8FA86 /* TwitterTransition.swift in Sources */,
-				2670398C1C1B9BCE006F5864 /* PingTransition.swift in Sources */,
 				264E1E121C1F9247002DF3FB /* QKNavViewController.swift in Sources */,
 				26B25A311C1AD1E000639066 /* ViewController.swift in Sources */,
 				267039921C1C0F71006F5864 /* QKCAAnimation.swift in Sources */,
