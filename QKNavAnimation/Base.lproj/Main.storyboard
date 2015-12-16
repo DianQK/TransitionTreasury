@@ -636,11 +636,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nf7-FS-SjG">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="m0P-25-cxA">
-                            <connections>
-                                <action selector="dismissVC:" destination="ahf-RR-Hci" id="ojg-8i-16y"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="m0P-25-cxA"/>
                         <barButtonItem key="rightBarButtonItem" title="Default" id="IKJ-nB-Eh1">
                             <connections>
                                 <action selector="defaultDismissVC:" destination="ahf-RR-Hci" id="Q4n-3Q-qEe"/>

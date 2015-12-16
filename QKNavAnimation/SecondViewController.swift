@@ -24,8 +24,7 @@ class SecondViewController: UIViewController, ModalPresentDelegate {
     
     
     @IBAction func pop(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
-//        modalDelegate?.modalViewControllerDismiss(callbackData: nil)
+        modalDelegate?.modalViewControllerDismiss(callbackData: nil)
     }
 
     override func didReceiveMemoryWarning() {

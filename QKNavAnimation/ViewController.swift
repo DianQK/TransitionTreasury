@@ -24,9 +24,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, QKTransi
     }
     
     @IBAction func popToRootVC(sender: UIButton) {
-//        navigationController?.popViewControllerAnimated(true)
         navigationController?.qk_popViewController()
-//        navigationController?.qk_popToRootViewController()
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {

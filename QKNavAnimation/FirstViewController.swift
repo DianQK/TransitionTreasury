@@ -19,22 +19,14 @@ class FirstViewController: UIViewController, MainPresentDelegate {
 
     @IBAction func qk_presentVC(sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
-        navigationController?.pushViewController(vc, animated: true)
-//        vc.modalDelegate = self
-       // let nav = UINavigationController(rootViewController: vc)
-//        let nav = QKNavViewController(rootViewController: vc)
-//        qk_presentViewController(nav, method: .Twitter, completion: nil)
-//        presentViewController(nav, animated: true, completion: nil)
+        vc.modalDelegate = self
+        let nav = UINavigationController(rootViewController: vc)
+        qk_presentViewController(nav, method: .Twitter, completion: nil)
+        presentViewController(nav, animated: true, completion: nil)
     }
     
     @IBAction func defaultDismissVC(sender: UIBarButtonItem) {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func dismissVC(sender: UIBarButtonItem) {
-        qk_dismissViewController()
-//        navigationController?.qk_dismissViewController()
-//        navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
