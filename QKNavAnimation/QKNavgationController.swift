@@ -17,7 +17,9 @@ public extension UINavigationController {
     public func qk_pushViewController(viewcontroller: UIViewController,key: UIView, method: QKKeyPushMethod, completion: (() -> Void)?) {
         let transition = QKNavgationTransitionDelegate(method: method, key: key, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
+        (viewcontroller as? QKTransition)?.qk_transition = transition
         delegate = transition
+//        debugPrint(viewcontroller.view.gestureRecognizers)
         pushViewController(viewcontroller, animated: true)
     }
     
@@ -26,9 +28,14 @@ public extension UINavigationController {
     }
     
     public func qk_popViewController(completion: (() -> Void)?) -> UIViewController? {
-        let transition = QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
-        transition.completion = completion
+        debugPrint(topViewController?.view.gestureRecognizers)
+        print((topViewController as? QKTransition)?.qk_transition)
+        let transition = (topViewController as? QKTransition)?.qk_transition//QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
+        transition?.completion = completion
+        transition?.transition.transitionStatus = .Pop
         delegate = transition
+        debugPrint(topViewController?.view.gestureRecognizers)
+        (topViewController as? QKTransition)?.qk_transition = nil
         return popViewControllerAnimated(true)
     }
     
@@ -63,5 +70,9 @@ public extension UINavigationController {
 
 public protocol QKTransitionData: class {
     var qk_transition_data: AnyObject?{get set}
+}
+
+public protocol QKTransition: class {
+    var qk_transition: QKNavgationTransitionDelegate?{get set}
 }
 

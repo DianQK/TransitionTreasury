@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, QKTransitionData {
+class ViewController: UIViewController, UINavigationControllerDelegate, QKTransitionData, QKTransition {
     
     var qk_transition_data: AnyObject?
+    
+    var qk_transition: QKNavgationTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
