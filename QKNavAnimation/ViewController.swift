@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, QKTransition {
+class ViewController: UIViewController, QKTransition {
     
     var qk_transition: QKNavgationTransitionDelegate?
 
