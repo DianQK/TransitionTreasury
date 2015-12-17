@@ -10,21 +10,21 @@
 */
 
 import UIKit
-/// OMIN 具体实现
+/// OMIN 转场的实现
 public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
-    
+    /// 分割的边界视图
     public var keyView: UIView?
-    
+    /// 转场状态
     public var transitionStatus: TransitionStatus?
     
     public var transitionContext: UIViewControllerContextTransitioning?
-    
+    /// 动画结束执行的闭包
     public var completion: (() -> Void)?
-    
+    /// 分割的下半部分视图
     public var bottomView: UIView = UIView()
-    
+    /// 判断是否取消了 Pop
     public var cancelPop: Bool = false
-    
+    /// 判断是否在交互中
     public var interacting: Bool = false
     
     init(key: UIView?, status: TransitionStatus) {
