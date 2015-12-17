@@ -13,13 +13,12 @@ public extension UINavigationController {
     public func qk_pushViewController(viewcontroller: UIViewController,key: UIView, method: QKKeyPushMethod) {
         qk_pushViewController(viewcontroller, key: key, method: method, completion: nil)
     }
-    
+
     public func qk_pushViewController(viewcontroller: UIViewController,key: UIView, method: QKKeyPushMethod, completion: (() -> Void)?) {
         let transition = QKNavgationTransitionDelegate(method: method, key: key, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
         (viewcontroller as? QKTransition)?.qk_transition = transition
         delegate = transition
-//        debugPrint(viewcontroller.view.gestureRecognizers)
         pushViewController(viewcontroller, animated: true)
     }
     
@@ -32,9 +31,8 @@ public extension UINavigationController {
         let popViewController = topViewController
         transition?.completion = {
             completion?()
-            print("ee")
             (popViewController as? QKTransition)?.qk_transition = nil
-        }//completion
+        }
         transition?.transition.transitionStatus = .Pop
         delegate = transition
         return {

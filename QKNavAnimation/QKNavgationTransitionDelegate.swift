@@ -65,7 +65,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         var percent = recognizer.translationInView(view).x / view.bounds.size.width
         
         percent = min(1.0, max(0, percent))
-        
+        print(percent)
         switch recognizer.state {
         case .Began :
             transition.interacting = true
@@ -81,9 +81,8 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
                 transition.cancelPop = false
                 percentTransition!.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()
-                fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
-                toVC?.view.addGestureRecognizer(edgePanGestureRecognizer)
-                (fromVC as? QKTransition)?.qk_transition = nil
+//                fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
+//                toVC?.view.addGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
                 percentTransition?.cancelInteractiveTransition()
