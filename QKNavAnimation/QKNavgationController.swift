@@ -28,15 +28,20 @@ public extension UINavigationController {
     }
     
     public func qk_popViewController(completion: (() -> Void)?) -> UIViewController? {
-        debugPrint(topViewController?.view.gestureRecognizers)
-        print((topViewController as? QKTransition)?.qk_transition)
         let transition = (topViewController as? QKTransition)?.qk_transition//QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
-        transition?.completion = completion
+        let popViewController = topViewController
+        transition?.completion = {
+            completion?()
+            print("ee")
+            (popViewController as? QKTransition)?.qk_transition = nil
+        }//completion
         transition?.transition.transitionStatus = .Pop
         delegate = transition
-        debugPrint(topViewController?.view.gestureRecognizers)
-        (topViewController as? QKTransition)?.qk_transition = nil
-        return popViewControllerAnimated(true)
+        return {
+            let popViewController = popViewControllerAnimated(true)
+//            (popViewController as? QKTransition)?.qk_transition = nil
+            return popViewController
+        }()
     }
     
     public func qk_popToViewController(viewController: UIViewController) -> [UIViewController]? {

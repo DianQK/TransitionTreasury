@@ -71,7 +71,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             transition.interacting = true
             percentTransition = UIPercentDrivenInteractiveTransition()
             percentTransition!.startInteractiveTransition(transition.transitionContext!)
-            //fromVC 获取不到 navVC ，第二次返回必现 why？
+            //fromVC 获取不到 navVC ，第二次返回必现 此时 fromVC 已经从 nav 移除了
             toVC!.navigationController!.qk_popViewController()
         case .Changed :
             percentTransition?.updateInteractiveTransition(percent)
@@ -83,6 +83,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
                 percentTransition?.finishInteractiveTransition()
                 fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
                 toVC?.view.addGestureRecognizer(edgePanGestureRecognizer)
+                (fromVC as? QKTransition)?.qk_transition = nil
             } else {
                 transition.cancelPop = true
                 percentTransition?.cancelInteractiveTransition()

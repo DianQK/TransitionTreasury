@@ -94,12 +94,16 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
                         transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
                         transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
                     }
+                    if finished {
+                        self.completion?()
+                        self.completion = nil
+                    }
                 }
            self.cancelPop = false
-                if finished {
-                    self.completion?()
-                    self.completion = nil
-                }
         }
+    }
+    
+    deinit {
+        print("OMIN deinit")
     }
 }

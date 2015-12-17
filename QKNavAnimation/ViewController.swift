@@ -26,13 +26,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, QKTransi
     }
     
     @IBAction func popToRootVC(sender: UIButton) {
-        navigationController?.qk_popViewController()
+        navigationController?.qk_popViewController({
+            print("Pop finish")
+        })
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let view = touches.first?.view {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ViewController")
-            navigationController?.qk_pushViewController(vc, key: view, method: .OMIN)
+            navigationController?.qk_pushViewController(vc, key: view, method: .OMIN, completion: {
+                print("Push finish")
+            })
         }
     }
     
