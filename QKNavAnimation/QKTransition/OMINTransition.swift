@@ -48,7 +48,6 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
         
         if transitionStatus == .Pop {
             swap(&fromVC, &toVC)
-            bottomView = (fromVC as! QKTransitionData).qk_transition_data as! UIView
             topHeight = fromVC!.view.bounds.height - bottomView.bounds.height
             bottomHeight = bottomView.bounds.height
         }
@@ -69,8 +68,6 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
                 let clip = CGImageCreateWithImageInRect(image.CGImage,inRect)
                 return clip
                 }()
-            
-            (fromVC as! QKTransitionData).qk_transition_data = bottomView
             
             let maskLayer = CAShapeLayer()
             maskLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: fromVC!.view.layer.bounds.size.width, height: keyView!.layer.position.y + keyView!.layer.bounds.size.height / 2)).CGPath

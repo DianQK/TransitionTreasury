@@ -71,9 +71,9 @@ public extension UINavigationController {
     
 }
 
-public protocol QKTransitionData: class {
-    var qk_transition_data: AnyObject?{get set}
-}
+//public protocol QKTransitionData: class {
+//    var qk_transition_data: AnyObject?{get set}
+//}
 
 public protocol QKTransition: class {
     var qk_transition: QKNavgationTransitionDelegate?{get set}
