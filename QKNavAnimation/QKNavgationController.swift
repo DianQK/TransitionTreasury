@@ -27,7 +27,7 @@ public extension UINavigationController {
     }
     
     public func qk_popViewController(completion: (() -> Void)?) -> UIViewController? {
-        let transition = (topViewController as? QKTransition)?.qk_transition//QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
+        let transition = (topViewController as? QKTransition)?.qk_transition
         let popViewController = topViewController
         transition?.completion = {
             completion?()

@@ -77,7 +77,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             percentTransition?.updateInteractiveTransition(percent)
         default :
             transition.interacting = false
-            if percent > 0.3 {
+            if percent > transition.interactivePrecent {
                 transition.cancelPop = false
                 percentTransition!.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()

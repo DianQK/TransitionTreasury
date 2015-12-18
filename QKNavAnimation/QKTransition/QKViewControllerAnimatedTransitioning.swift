@@ -22,6 +22,8 @@ public protocol QKViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     
     var completion: (() -> Void)?{get set}
     
+    var interactivePrecent: CGFloat{get}
+    
     func popToVCIndex(index: Int)
 }
 
@@ -53,7 +55,14 @@ public extension QKViewControllerAnimatedTransitioning {
         }
     }
     
+    var interactivePrecent: CGFloat {
+        get {
+            return 0.3
+        }
+    }
+    
     func popToVCIndex(index: Int) {
         
     }
+    
 }
