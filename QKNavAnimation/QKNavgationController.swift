@@ -35,11 +35,7 @@ public extension UINavigationController {
         }
         transition?.transition.transitionStatus = .Pop
         delegate = transition
-        return {
-            let popViewController = popViewControllerAnimated(true)
-//            (popViewController as? QKTransition)?.qk_transition = nil
-            return popViewController
-        }()
+        return popViewControllerAnimated(true)
     }
     
     public func qk_popToViewController(viewController: UIViewController) -> [UIViewController]? {
@@ -50,9 +46,10 @@ public extension UINavigationController {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
-        let transition = QKNavgationTransitionDelegate(method: .OMIN, key: UIView(), status: .Pop, gestureFor: nil)
-        transition.completion = completion
-        transition.transition.popToVCIndex(index)
+        let transition = (viewController as? QKTransition)?.qk_transition
+        transition?.transition.transitionStatus = .Pop
+        transition?.completion = completion
+        transition?.transition.popToVCIndex(index)
         delegate = transition
         return popToViewController(viewController, animated: true)
     }
@@ -62,18 +59,18 @@ public extension UINavigationController {
     }
     
     public func qk_popToRootViewController(completion: (() -> Void)?) -> [UIViewController]? {
-        let transitionDelegate = delegate as? QKNavgationTransitionDelegate
-        transitionDelegate?.completion = completion
-        transitionDelegate?.transition.transitionStatus = .Pop
-        transitionDelegate?.transition.popToVCIndex(0)
+        guard viewControllers.count > 1 else {
+            return popToRootViewControllerAnimated(true)
+        }
+        let transition = (viewControllers[1] as? QKTransition)?.qk_transition
+        transition?.completion = completion
+        transition?.transition.transitionStatus = .Pop
+        transition?.transition.popToVCIndex(0)
+        delegate = transition
         return popToRootViewControllerAnimated(true)
     }
     
 }
-
-//public protocol QKTransitionData: class {
-//    var qk_transition_data: AnyObject?{get set}
-//}
 
 public protocol QKTransition: class {
     var qk_transition: QKNavgationTransitionDelegate?{get set}

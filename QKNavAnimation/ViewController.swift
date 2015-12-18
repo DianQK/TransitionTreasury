@@ -24,8 +24,11 @@ class ViewController: UIViewController, QKTransition {
     }
     
     @IBAction func popToRootVC(sender: UIButton) {
-        navigationController?.qk_popViewController({
-            print("Pop finish")
+//        navigationController?.qk_popViewController({
+//            print("Pop finish")
+//        })
+        navigationController?.qk_popToRootViewController({
+            print("Pop Root finish.")
         })
     }
     
