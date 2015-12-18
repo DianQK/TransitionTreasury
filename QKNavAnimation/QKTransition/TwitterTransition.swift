@@ -57,8 +57,6 @@ public class TwitterTransition: NSObject, QKViewControllerAnimatedTransitioning 
             transform = CATransform3DRotate(transform, CGFloat(angle), 1, 0, 0)
             anchorPointBackup = fromVC?.view.layer.anchorPoint
             positionBackup = fromVC?.view.layer.position
-            print(anchorPointBackup)
-            print(positionBackup)
             fromVC?.view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
             fromVC?.view.layer.position = CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y + fromVC!.view.layer.bounds.height / 2)
         }

@@ -11,7 +11,9 @@ import UIKit
 class SecondViewController: UIViewController, ModalPresentDelegate {
     
     weak var modalDelegate: MainPresentDelegate?
-
+    
+//    var qk_transition: QKTransitionDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,7 +26,7 @@ class SecondViewController: UIViewController, ModalPresentDelegate {
     
     
     @IBAction func pop(sender: AnyObject) {
-        modalDelegate?.modalViewControllerDismiss(callbackData: nil)
+        modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])
     }
 
     override func didReceiveMemoryWarning() {

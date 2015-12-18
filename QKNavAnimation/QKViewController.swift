@@ -18,14 +18,8 @@ public extension UIViewController {
     public func qk_presentViewController(viewControllerToPresent: UIViewController, method: QKPresentMethod, completion: (() -> Void)?) {
 
         let transitionDelegate = QKTransitionDelegate(method: method)
-        
-        if viewControllerToPresent.transitioningDelegate == nil || !(viewControllerToPresent.transitioningDelegate is QKTransitionDelegate) {
-            viewControllerToPresent.transitioningDelegate = transitionDelegate
-        } else {
-            let transitionDelegate = viewControllerToPresent.transitioningDelegate as! QKTransitionDelegate
-            transitionDelegate.updateStatus(.Present)
-        }
-        print("Present:\(viewControllerToPresent.transitioningDelegate)")
+        (self as? MainPresentDelegate)?.qk_transition = transitionDelegate
+        viewControllerToPresent.transitioningDelegate = transitionDelegate
         presentViewController(viewControllerToPresent, animated: true, completion: completion)
 
     }
@@ -35,24 +29,30 @@ public extension UIViewController {
     }
     
     public func qk_dismissViewController(completion: (() -> Void)?) {
-        let transitionDelegate = QKTransitionDelegate(method: .Twitter, status: .Dismiss)
-        presentedViewController?.transitioningDelegate = transitionDelegate
+        let transition = (self as? MainPresentDelegate)?.qk_transition
+        transition?.transition.transitionStatus = .Dismiss
+        presentedViewController?.transitioningDelegate = transition
+        (self as? MainPresentDelegate)?.qk_transition = nil
         dismissViewControllerAnimated(true, completion: completion)
     }
 }
 
 public protocol MainPresentDelegate: class, NSObjectProtocol {
+    var qk_transition: QKTransitionDelegate?{get set}
+    
     // TODO update -> Dictionary
     func modalViewControllerDismiss(callbackData data:NSDictionary?)
 }
 
 public extension MainPresentDelegate where Self:UIViewController  {
+    
     func modalViewControllerDismiss(callbackData data:NSDictionary?) {
         qk_dismissViewController()
     }
 }
 
 public protocol ModalPresentDelegate: class, NSObjectProtocol {
+    
     weak var modalDelegate: MainPresentDelegate?{get set}
 }
 
