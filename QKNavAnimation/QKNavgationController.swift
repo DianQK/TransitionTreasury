@@ -48,10 +48,20 @@ public extension UINavigationController {
         }
         let transition = (viewController as? QKTransition)?.qk_transition
         transition?.transition.transitionStatus = .Pop
-        transition?.completion = completion
+        transition?.completion = {
+            completion?()
+            for i in index...(self.viewControllers.count - 1) {
+                (self.viewControllers[i] as? QKTransition)?.qk_transition = nil
+            }
+        }
         transition?.transition.popToVCIndex(index)
         delegate = transition
-        return popToViewController(viewController, animated: true)
+        return {
+            return popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
+                (viewController as? QKTransition)?.qk_transition = nil
+                return viewController
+            })
+        }()
     }
     
     public func qk_popToRootViewController() -> [UIViewController]? {
@@ -63,11 +73,22 @@ public extension UINavigationController {
             return popToRootViewControllerAnimated(true)
         }
         let transition = (viewControllers[1] as? QKTransition)?.qk_transition
-        transition?.completion = completion
+        transition?.completion = {
+            completion?()
+            for i in 1..<self.viewControllers.count {
+                print("ddddd")
+                (self.viewControllers[i] as? QKTransition)?.qk_transition = nil
+            }
+        }
         transition?.transition.transitionStatus = .Pop
         transition?.transition.popToVCIndex(0)
         delegate = transition
-        return popToRootViewControllerAnimated(true)
+        return {
+            return popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
+                (viewController as? QKTransition)?.qk_transition = nil
+                return viewController
+            })
+            }()
     }
     
 }

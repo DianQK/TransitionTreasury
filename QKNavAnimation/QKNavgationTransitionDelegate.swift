@@ -81,7 +81,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
                 transition.cancelPop = false
                 percentTransition!.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()
-//                fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
+                fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
 //                toVC?.view.addGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
