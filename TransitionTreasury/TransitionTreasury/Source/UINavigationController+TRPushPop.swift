@@ -10,12 +10,12 @@ import UIKit
 // TODO 对枚举类别的处理
 public extension UINavigationController {
     
-    public func tr_pushViewController(viewcontroller: UIViewController,key: UIView, method: TRKeyPushMethod) {
-        tr_pushViewController(viewcontroller, key: key, method: method, completion: nil)
+    public func tr_pushViewController(viewcontroller: UIViewController, method: TRKeyPushMethod) {
+        tr_pushViewController(viewcontroller, method: method, completion: nil)
     }
     
-    public func tr_pushViewController(viewcontroller: UIViewController,key: UIView, method: TRKeyPushMethod, completion: (() -> Void)?) {
-        let transition = TRNavgationTransitionDelegate(method: method, key: key, status: .Push, gestureFor: viewcontroller)
+    public func tr_pushViewController(viewcontroller: UIViewController, method: TRKeyPushMethod, completion: (() -> Void)?) {
+        let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
         (viewcontroller as? TRTransition)?.tr_transition = transition
         delegate = transition

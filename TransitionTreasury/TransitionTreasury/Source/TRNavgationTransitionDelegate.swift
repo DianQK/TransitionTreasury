@@ -29,8 +29,8 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         return edgePanGestureRecognizer
     }()
     
-    public init(method: TRKeyPushMethod, key: UIView?, status: TransitionStatus, gestureFor viewcontroller: UIViewController?) {
-        transition = method.TransitionAnimation(key)//QKCreateKeyPushTransition(method, key: key, status: status)
+    public init(method: TRKeyPushMethod, status: TransitionStatus, gestureFor viewcontroller: UIViewController?) {
+        transition = method.TransitionAnimation()//QKCreateKeyPushTransition(method, key: key, status: status)
         super.init()
         viewcontroller?.view.addGestureRecognizer(edgePanGestureRecognizer)
     }
