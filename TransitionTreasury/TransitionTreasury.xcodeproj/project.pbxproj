@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */; };
+		26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */; };
+		26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CC91C26D80C005F4DDC /* Main.storyboard */; };
+		26FE2CCD1C26D80C005F4DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */; };
+		26FE2CD01C26D80C005F4DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */; };
+		26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */; };
+		26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */; };
+		26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */; };
+		26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */; };
+		26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */; };
+		26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */; };
+		26FE2CE51C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */; };
+		26FE2CE71C26DAE9005F4DDC /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */; };
+		26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE81C26DC30005F4DDC /* MainViewController.swift */; };
+		26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
+		26FE2CCA1C26D80C005F4DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26FE2CCF1C26D80C005F4DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26FE2CD11C26D80C005F4DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
+		26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
+		26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
+		26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
+		26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
+		26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
+		26FE2CE81C26DC30005F4DDC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26FE2CBF1C26D80C005F4DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26FE2CB91C26D80C005F4DDC = {
+			isa = PBXGroup;
+			children = (
+				26FE2CC41C26D80C005F4DDC /* TransitionTreasury */,
+				26FE2CC31C26D80C005F4DDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26FE2CC31C26D80C005F4DDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26FE2CC41C26D80C005F4DDC /* TransitionTreasury */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2CD71C26D86F005F4DDC /* Source */,
+				26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */,
+				26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */,
+				26FE2CC91C26D80C005F4DDC /* Main.storyboard */,
+				26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */,
+				26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */,
+				26FE2CD11C26D80C005F4DDC /* Info.plist */,
+				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
+				26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */,
+			);
+			path = TransitionTreasury;
+			sourceTree = "<group>";
+		};
+		26FE2CD71C26D86F005F4DDC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */,
+				26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */,
+				26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */,
+				26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */,
+				26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */,
+				26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */,
+				26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */,
+				26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26FE2CC11C26D80C005F4DDC /* TransitionTreasury */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasury" */;
+			buildPhases = (
+				26FE2CBE1C26D80C005F4DDC /* Sources */,
+				26FE2CBF1C26D80C005F4DDC /* Frameworks */,
+				26FE2CC01C26D80C005F4DDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransitionTreasury;
+			productName = TransitionTreasury;
+			productReference = 26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26FE2CBA1C26D80C005F4DDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = TransitionTreasury;
+				TargetAttributes = {
+					26FE2CC11C26D80C005F4DDC = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HY634B3FW2;
+					};
+				};
+			};
+			buildConfigurationList = 26FE2CBD1C26D80C005F4DDC /* Build configuration list for PBXProject "TransitionTreasury" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26FE2CB91C26D80C005F4DDC;
+			productRefGroup = 26FE2CC31C26D80C005F4DDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26FE2CC11C26D80C005F4DDC /* TransitionTreasury */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26FE2CC01C26D80C005F4DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FE2CD01C26D80C005F4DDC /* LaunchScreen.storyboard in Resources */,
+				26FE2CCD1C26D80C005F4DDC /* Assets.xcassets in Resources */,
+				26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26FE2CBE1C26D80C005F4DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */,
+				26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */,
+				26FE2CE51C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift in Sources */,
+				26FE2CE71C26DAE9005F4DDC /* UIViewController+TRPresent.swift in Sources */,
+				26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */,
+				26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */,
+				26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */,
+				26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */,
+				26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */,
+				26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */,
+				26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		26FE2CC91C26D80C005F4DDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26FE2CCA1C26D80C005F4DDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26FE2CCF1C26D80C005F4DDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FE2CD21C26D80C005F4DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26FE2CD31C26D80C005F4DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26FE2CD51C26D80C005F4DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26FE2CD61C26D80C005F4DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FE2CBD1C26D80C005F4DDC /* Build configuration list for PBXProject "TransitionTreasury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FE2CD21C26D80C005F4DDC /* Debug */,
+				26FE2CD31C26D80C005F4DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FE2CD51C26D80C005F4DDC /* Debug */,
+				26FE2CD61C26D80C005F4DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26FE2CBA1C26D80C005F4DDC /* Project object */;
+}
