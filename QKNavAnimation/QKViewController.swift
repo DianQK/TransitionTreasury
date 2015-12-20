@@ -18,7 +18,7 @@ public extension UIViewController {
     public func qk_presentViewController(viewControllerToPresent: UIViewController, method: QKPresentMethod, completion: (() -> Void)?) {
 
         let transitionDelegate = QKTransitionDelegate(method: method)
-        (self as? MainPresentDelegate)?.qk_transition = transitionDelegate
+        (self as? ModalViewControllerDelegate)?.qk_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         presentViewController(viewControllerToPresent, animated: true, completion: completion)
 
@@ -29,30 +29,30 @@ public extension UIViewController {
     }
     
     public func qk_dismissViewController(completion: (() -> Void)?) {
-        let transition = (self as? MainPresentDelegate)?.qk_transition
+        let transition = (self as? ModalViewControllerDelegate)?.qk_transition
         transition?.transition.transitionStatus = .Dismiss
         presentedViewController?.transitioningDelegate = transition
-        (self as? MainPresentDelegate)?.qk_transition = nil
+        (self as? ModalViewControllerDelegate)?.qk_transition = nil
         dismissViewControllerAnimated(true, completion: completion)
     }
 }
 
-public protocol MainPresentDelegate: class, NSObjectProtocol {
+public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
     var qk_transition: QKTransitionDelegate?{get set}
     
     // TODO update -> Dictionary
     func modalViewControllerDismiss(callbackData data:NSDictionary?)
 }
 
-public extension MainPresentDelegate where Self:UIViewController  {
+public extension ModalViewControllerDelegate where Self:UIViewController  {
     
     func modalViewControllerDismiss(callbackData data:NSDictionary?) {
         qk_dismissViewController()
     }
 }
 
-public protocol ModalPresentDelegate: class, NSObjectProtocol {
+public protocol MainViewControllerDelegate: class, NSObjectProtocol {
     
-    weak var modalDelegate: MainPresentDelegate?{get set}
+    weak var modalDelegate: ModalViewControllerDelegate?{get set}
 }
 

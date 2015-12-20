@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, ModalPresentDelegate {
+class SecondViewController: UIViewController, MainViewControllerDelegate {
     
-    weak var modalDelegate: MainPresentDelegate?
+    weak var modalDelegate: ModalViewControllerDelegate?
     
 //    var qk_transition: QKTransitionDelegate?
     

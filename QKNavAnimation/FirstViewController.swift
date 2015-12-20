@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, MainPresentDelegate {
+class FirstViewController: UIViewController, ModalViewControllerDelegate {
 
     var qk_transition: QKTransitionDelegate?
     
