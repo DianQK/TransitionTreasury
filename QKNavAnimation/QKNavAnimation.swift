@@ -12,6 +12,15 @@ public enum QKKeyPushMethod {
     case OMIN
     case Default
     case Custom
+    
+    func TransitionAnimation(key: UIView?) -> QKViewControllerAnimatedTransitioning {
+        switch self {
+        case .OMIN :
+            return OMINTransition(key: key)
+        default :
+            fatalError("No this key push method!!!")
+        }
+    }
 }
 
 public enum QKPushMethod {
@@ -23,6 +32,15 @@ public enum QKPresentMethod {
     case Twitter
     case Default
     case Custom
+    
+    func TransitionAnimation() -> QKViewControllerAnimatedTransitioning {
+        switch self {
+        case .Twitter :
+            return TwitterTransition()
+        default :
+            fatalError("No this present method.")
+        }
+    }
 }
 
 public enum TransitionStatus {
@@ -30,30 +48,4 @@ public enum TransitionStatus {
     case Pop
     case Present
     case Dismiss
-}
-
-public func QKCreateKeyPushTransition(method: QKKeyPushMethod, key: UIView?, status: TransitionStatus) -> QKViewControllerAnimatedTransitioning {
-    switch method {
-    case .OMIN :
-        return OMINTransition(key: key, status: status)
-    default :
-        fatalError("No this key push method!!!")
-    }
-}
-
-//public func QKCreatePushTransition(method: QKPushMethod, status: TransitionStatus) -> QKViewControllerAnimatedTransitioning {
-//    switch method {
-//    case .Custom {
-//        return nil
-//        }
-//    }
-//}
-
-public func QKCreatePresentTransition(method: QKPresentMethod, status: TransitionStatus) -> QKViewControllerAnimatedTransitioning {
-    switch method {
-    case .Twitter :
-        return TwitterTransition(status: status)
-    default :
-        fatalError("No this present method!!!")
-    }
 }

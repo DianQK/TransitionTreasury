@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Transition(Present) Animation Delegate Object
 public class QKTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     var percentTransition: UIPercentDrivenInteractiveTransition?
@@ -15,7 +15,7 @@ public class QKTransitionDelegate: NSObject, UIViewControllerTransitioningDelega
     var transition: QKViewControllerAnimatedTransitioning
     
     public init(method: QKPresentMethod, status: TransitionStatus = .Present) {
-        transition = QKCreatePresentTransition(method, status: status)
+        transition = method.TransitionAnimation()
         super.init()
     }
     

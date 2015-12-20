@@ -25,7 +25,7 @@ public class TwitterTransition: NSObject, QKViewControllerAnimatedTransitioning 
     
     private var positionBackup: CGPoint?
     
-    init(status: TransitionStatus) {
+    init(status: TransitionStatus = .Present) {
         transitionStatus = status
         super.init()
     }

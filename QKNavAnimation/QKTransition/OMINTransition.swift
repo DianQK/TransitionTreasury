@@ -27,7 +27,7 @@ public class OMINTransition: NSObject, QKViewControllerAnimatedTransitioning {
     /// 判断是否在交互中
     public var interacting: Bool = false
     
-    init(key: UIView?, status: TransitionStatus) {
+    init(key: UIView?, status: TransitionStatus = .Push) {
         keyView = key
         transitionStatus = status
         super.init()

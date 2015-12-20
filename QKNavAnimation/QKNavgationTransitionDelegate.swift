@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Transition(Push & Pop) Animation Delegate Object
 public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDelegate {
     
     var percentTransition: UIPercentDrivenInteractiveTransition?
@@ -30,7 +30,7 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }()
     
     public init(method: QKKeyPushMethod, key: UIView?, status: TransitionStatus, gestureFor viewcontroller: UIViewController?) {
-        transition = QKCreateKeyPushTransition(method, key: key, status: status)
+        transition = method.TransitionAnimation(key)//QKCreateKeyPushTransition(method, key: key, status: status)
         super.init()
         viewcontroller?.view.addGestureRecognizer(edgePanGestureRecognizer)
     }
@@ -71,7 +71,6 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             transition.interacting = true
             percentTransition = UIPercentDrivenInteractiveTransition()
             percentTransition!.startInteractiveTransition(transition.transitionContext!)
-            //fromVC 获取不到 navVC ，第二次返回必现 此时 fromVC 已经从 nav 移除了
             toVC!.navigationController!.qk_popViewController()
         case .Changed :
             percentTransition?.updateInteractiveTransition(percent)
@@ -82,7 +81,6 @@ public class QKNavgationTransitionDelegate: NSObject, UINavigationControllerDele
                 percentTransition!.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()
                 fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
-//                toVC?.view.addGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
                 percentTransition?.cancelInteractiveTransition()

@@ -16,12 +16,10 @@ public extension UIViewController {
     }
     
     public func qk_presentViewController(viewControllerToPresent: UIViewController, method: QKPresentMethod, completion: (() -> Void)?) {
-
         let transitionDelegate = QKTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.qk_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         presentViewController(viewControllerToPresent, animated: true, completion: completion)
-
     }
     
     public func qk_dismissViewController() {
