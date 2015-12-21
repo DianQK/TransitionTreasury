@@ -77,12 +77,12 @@
 				26FE2CD71C26D86F005F4DDC /* Source */,
 				26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */,
 				26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */,
+				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
+				26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */,
 				26FE2CC91C26D80C005F4DDC /* Main.storyboard */,
 				26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */,
 				26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */,
 				26FE2CD11C26D80C005F4DDC /* Info.plist */,
-				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
-				26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */,
 			);
 			path = TransitionTreasury;
 			sourceTree = "<group>";
@@ -333,6 +333,7 @@
 				26FE2CD61C26D80C005F4DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

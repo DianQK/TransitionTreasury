@@ -36,14 +36,13 @@ public extension UIViewController {
 
 public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
     var qk_transition: TRViewControllerTransitionDelegate?{get set}
-    
-    // TODO update -> Dictionary
-    func modalViewControllerDismiss(callbackData data:NSDictionary?)
+
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>)
 }
 
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     
-    func modalViewControllerDismiss(callbackData data:NSDictionary?) {
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>) {
         qk_dismissViewController()
     }
 }
