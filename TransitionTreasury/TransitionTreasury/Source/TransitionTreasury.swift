@@ -8,8 +8,8 @@
 
 import UIKit
 // 枚举定义
-public enum TRKeyPushMethod {
-    case OMIN(UIView)
+public enum TRPushMethod {
+    case OMIN(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func TransitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -20,11 +20,6 @@ public enum TRKeyPushMethod {
             return transition
         }
     }
-}
-
-public enum TRPushMethod {
-    case Default
-    case Custom(TRViewControllerAnimatedTransitioning)
 }
 
 public enum TRPresentMethod {

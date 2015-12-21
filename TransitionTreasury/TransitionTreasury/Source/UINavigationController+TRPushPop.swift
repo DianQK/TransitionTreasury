@@ -10,11 +10,11 @@ import UIKit
 
 public extension UINavigationController {
     
-    public func tr_pushViewController(viewcontroller: UIViewController, method: TRKeyPushMethod) {
+    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod) {
         tr_pushViewController(viewcontroller, method: method, completion: nil)
     }
     
-    public func tr_pushViewController(viewcontroller: UIViewController, method: TRKeyPushMethod, completion: (() -> Void)?) {
+    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)?) {
         let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
         (viewcontroller as? TRTransition)?.tr_transition = transition
