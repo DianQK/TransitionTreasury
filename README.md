@@ -1,6 +1,6 @@
-![TransitionTreasury](https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/Assets/transitiontreasury.png)    
+![TransitionTreasury](https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/Assets/transitiontreasury.png)
 
-[![Build Status](https://travis-ci.org/DianQK/TransitionTreasury.svg)](https://travis-ci.org/DianQK/TransitionTreasury)    
+[![Build Status](https://travis-ci.org/DianQK/TransitionTreasury.svg)](https://travis-ci.org/DianQK/TransitionTreasury)
 [![Twitter](https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat)](http://twitter.com/Songxut)    
 
 TransitionTreasury is a viewController transition framework in Swift.    
