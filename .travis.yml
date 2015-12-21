@@ -1,0 +1,3 @@
+language: objective-c
+osx_image: xcode7.2
+xcode_project: TransitionTreasury.xcodeproj
