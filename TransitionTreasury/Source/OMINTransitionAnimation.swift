@@ -96,8 +96,4 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
            self.cancelPop = false
         }
     }
-    
-    deinit {
-        print("OMIN deinit")
-    }
 }
