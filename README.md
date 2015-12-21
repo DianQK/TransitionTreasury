@@ -19,6 +19,17 @@ TransitionTreasury is a viewController transition framework in Swift.
 * iOS 8.0+
 * Xcode 7.1+
 
+## Communication
+
+* If you **need help or found a bug, open an issue.
+* If you **have a new transition animation** or *want to contribute*, submit a pull request. :]
+
+## Installation
+
+### CocoaPods
+
+### Carthage
+
 ## Usage    
 
 ### Make a Push    
@@ -78,6 +89,10 @@ weak var modalDelegate: ModalViewControllerDelegate?
 > Mote:      
 > If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?)`.     
 > You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](http://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
+
+## Advanced Usage
+
+### Custom Animation
 
 ## License
 
