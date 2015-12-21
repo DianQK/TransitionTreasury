@@ -86,7 +86,7 @@ weak var modalDelegate: ModalViewControllerDelegate?
     }
 ````
 
-> Mote:      
+> Note:      
 > If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?)`.     
 > You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](http://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
 
