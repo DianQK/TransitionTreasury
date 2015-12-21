@@ -614,10 +614,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-fx-gfk">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="134" y="269" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
                                 <connections>
-                                    <action selector="qk_presentVC:" destination="5It-Ul-zyB" eventType="touchUpInside" id="QJG-jd-lR7"/>
+                                    <action selector="tr_presentVC:" destination="5It-Ul-zyB" eventType="touchUpInside" id="65K-a8-F27"/>
                                 </connections>
                             </button>
                         </subviews>

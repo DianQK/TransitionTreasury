@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController, ModalViewControllerDelegate {
     
-    var qk_transition: TRViewControllerTransitionDelegate?
+    var tr_transition: TRViewControllerTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func qk_presentVC(sender: UIButton) {
+    @IBAction func tr_presentVC(sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
         vc.modalDelegate = self
         let nav = UINavigationController(rootViewController: vc)
@@ -32,7 +32,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     
     func modalViewControllerDismiss(callbackData data: NSDictionary?) {
         print(data)
-        self.qk_dismissViewController()
+        self.tr_dismissViewController()
     }
 
 }

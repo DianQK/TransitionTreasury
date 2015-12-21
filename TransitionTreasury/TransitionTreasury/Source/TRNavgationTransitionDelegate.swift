@@ -30,7 +30,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }()
     
     public init(method: TRPushMethod, status: TransitionStatus, gestureFor viewcontroller: UIViewController?) {
-        transition = method.transitionAnimation()//QKCreateKeyPushTransition(method, key: key, status: status)
+        transition = method.transitionAnimation()
         super.init()
         viewcontroller?.view.addGestureRecognizer(edgePanGestureRecognizer)
     }

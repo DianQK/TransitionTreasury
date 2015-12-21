@@ -16,26 +16,26 @@ public extension UIViewController {
     
     public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, completion: (() -> Void)?) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
-        (self as? ModalViewControllerDelegate)?.qk_transition = transitionDelegate
+        (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         presentViewController(viewControllerToPresent, animated: true, completion: completion)
     }
     
-    public func qk_dismissViewController() {
-        qk_dismissViewController(nil)
+    public func tr_dismissViewController() {
+        tr_dismissViewController(nil)
     }
     
-    public func qk_dismissViewController(completion: (() -> Void)?) {
-        let transition = (self as? ModalViewControllerDelegate)?.qk_transition
+    public func tr_dismissViewController(completion: (() -> Void)?) {
+        let transition = (self as? ModalViewControllerDelegate)?.tr_transition
         transition?.transition.transitionStatus = .Dismiss
         presentedViewController?.transitioningDelegate = transition
-        (self as? ModalViewControllerDelegate)?.qk_transition = nil
+        (self as? ModalViewControllerDelegate)?.tr_transition = nil
         dismissViewControllerAnimated(true, completion: completion)
     }
 }
 
 public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
-    var qk_transition: TRViewControllerTransitionDelegate?{get set}
+    var tr_transition: TRViewControllerTransitionDelegate?{get set}
 
     func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>)
 }
@@ -43,7 +43,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     
     func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>) {
-        qk_dismissViewController()
+        tr_dismissViewController()
     }
 }
 
