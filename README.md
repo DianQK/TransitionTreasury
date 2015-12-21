@@ -1,3 +1,3 @@
 # TransitionTreasury
 
-![TransitionTreasury](/assets/logo.png)
+![TransitionTreasury](https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/Assets/transitiontreasury.png)
