@@ -12,7 +12,7 @@ public enum TRPushMethod {
     case OMIN(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func TransitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case let .OMIN(key) :
             return OMINTransitionAnimation(key: key)
@@ -26,7 +26,7 @@ public enum TRPresentMethod {
     case Twitter
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func TransitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case .Twitter :
             return TwitterTransitionAnimation()
