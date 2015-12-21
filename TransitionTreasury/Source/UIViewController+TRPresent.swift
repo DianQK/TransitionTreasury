@@ -37,12 +37,12 @@ public extension UIViewController {
 public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
     var tr_transition: TRViewControllerTransitionDelegate?{get set}
 
-    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>)
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?)
 }
 
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     
-    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>) {
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?) {
         tr_dismissViewController()
     }
 }

@@ -30,7 +30,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func modalViewControllerDismiss(callbackData data: NSDictionary?) {
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?) {
         print(data)
         self.tr_dismissViewController()
     }
