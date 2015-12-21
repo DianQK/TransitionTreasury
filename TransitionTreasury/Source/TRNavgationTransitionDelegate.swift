@@ -9,11 +9,11 @@
 import UIKit
 /// Transition(Push & Pop) Animation Delegate Object
 public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDelegate {
-    
+    /// Control transition precent
     var percentTransition: UIPercentDrivenInteractiveTransition?
-    
+    /// The transition animation object
     var transition: TRViewControllerAnimatedTransitioning
-    
+    /// Transition completion block
     var completion: (() -> Void)? {
         get {
             return self.transition.completion
@@ -22,23 +22,38 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             self.transition.completion = newValue
         }
     }
-    
+    /// The edge gesture for pop
     lazy public var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
         let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
         edgePanGestureRecognizer.edges = .Left
         return edgePanGestureRecognizer
     }()
-    
-    public init(method: TRPushMethod, status: TransitionStatus, gestureFor viewcontroller: UIViewController?) {
+    /**
+     Init method
+     
+     - parameter method:         the push method
+     - parameter status:         default is .Push
+     - parameter viewController: for edge gesture
+     
+     - returns: Transition Animation Delegate Object
+     */
+    public init(method: TRPushMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
-        viewcontroller?.view.addGestureRecognizer(edgePanGestureRecognizer)
+        viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
     }
-    
-    public func updateStatus(key: UIView, status: TransitionStatus,  gestureFor viewcontroller: UIViewController) {
+    /**
+     Update transition status
+     
+     - parameter key:            <#key description#>
+     - parameter status:         <#status description#>
+     - parameter viewcontroller: <#viewcontroller description#>
+     */
+    // TODO : Update api
+    public func updateStatus(key: UIView, status: TransitionStatus,  gestureFor viewController: UIViewController) {
         transition.keyView = key
         transition.transitionStatus = status
-        viewcontroller.view.addGestureRecognizer(edgePanGestureRecognizer)
+        viewController.view.addGestureRecognizer(edgePanGestureRecognizer)
     }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
