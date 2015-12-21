@@ -21,7 +21,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 
 ## Communication
 
-* If you **need help or found a bug, open an issue.
+* If you **need help or found a bug**, open an issue.
 * If you **have a new transition animation** or *want to contribute*, submit a pull request. :]
 
 ## Installation
