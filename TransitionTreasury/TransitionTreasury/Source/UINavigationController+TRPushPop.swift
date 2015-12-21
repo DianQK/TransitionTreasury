@@ -7,7 +7,7 @@
 //
 
 import UIKit
-// TODO 对枚举类别的处理
+
 public extension UINavigationController {
     
     public func tr_pushViewController(viewcontroller: UIViewController, method: TRKeyPushMethod) {

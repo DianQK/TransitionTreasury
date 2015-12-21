@@ -10,7 +10,6 @@ import UIKit
 // 枚举定义
 public enum TRKeyPushMethod {
     case OMIN(UIView)
-    case Default
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func TransitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -19,8 +18,6 @@ public enum TRKeyPushMethod {
             return OMINTransitionAnimation(key: key)
         case let .Custom(transition) :
             return transition
-        default :
-            fatalError("No this key push method!!!")
         }
     }
 }
@@ -32,7 +29,6 @@ public enum TRPushMethod {
 
 public enum TRPresentMethod {
     case Twitter
-    case Default
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func TransitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -41,8 +37,6 @@ public enum TRPresentMethod {
             return TwitterTransitionAnimation()
         case let .Custom(transition) :
             return transition
-        default :
-            fatalError("No this present method.")
         }
     }
 }
