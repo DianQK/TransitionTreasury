@@ -15,7 +15,7 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     var transition: TRViewControllerAnimatedTransitioning
     
     public init(method: TRPresentMethod, status: TransitionStatus = .Present) {
-        transition = method.TransitionAnimation()
+        transition = method.transitionAnimation()
         super.init()
     }
     

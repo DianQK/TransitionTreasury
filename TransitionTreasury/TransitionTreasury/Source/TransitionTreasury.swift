@@ -7,7 +7,12 @@
 //
 
 import UIKit
-// 枚举定义
+/**
+ ViewController Push Methods
+ 
+ - OMIN:        Like OmniFocus
+ - Custom:      Custom you like
+ */
 public enum TRPushMethod {
     case OMIN(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
@@ -22,6 +27,12 @@ public enum TRPushMethod {
     }
 }
 
+/**
+ ViewController Present Methods
+ 
+ - Twitter:     Like Twitter
+ - Custom:      Custom you like
+ */
 public enum TRPresentMethod {
     case Twitter
     case Custom(TRViewControllerAnimatedTransitioning)
@@ -36,6 +47,14 @@ public enum TRPresentMethod {
     }
 }
 
+/**
+ ViewController Transition Status
+ 
+ - Push:    ViewController will push
+ - Pop:     ViewController will pop
+ - Present: ViewController will present
+ - Dismiss: ViewController will dismiss
+ */
 public enum TransitionStatus {
     case Push
     case Pop

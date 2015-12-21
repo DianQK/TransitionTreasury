@@ -7,23 +7,27 @@
 //
 
 import UIKit
-
+/**
+ *  TransitionTreasury's transition protocol. All transition animation must conform this protocol.
+ */
 public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
-    
-    var keyView: UIView?{get set}
-    
+    /// Required implement.
     var transitionStatus: TransitionStatus?{get set}
-    
+    /// Required implement.
     var interacting: Bool{get set}
-    
+    /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
     
     var cancelPop: Bool{get set}
-    
+    /// Option
     var completion: (() -> Void)?{get set}
-    
+    /// Option
     var interactivePrecent: CGFloat{get}
-    
+    /**
+     Option
+     
+     - parameter index: index of navgationViewController.viewcontrollers
+     */
     func popToVCIndex(index: Int)
 }
 

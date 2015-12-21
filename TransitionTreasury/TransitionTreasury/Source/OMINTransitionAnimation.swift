@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/// OMIN 转场的实现
+/// OminFocus app push transition implement.
 public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     /// 分割的边界视图
     public var keyView: UIView?
