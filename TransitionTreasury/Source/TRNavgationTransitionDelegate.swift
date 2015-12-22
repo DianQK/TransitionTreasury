@@ -42,19 +42,6 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         super.init()
         viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
     }
-    /**
-     Update transition status
-     
-     - parameter key:            <#key description#>
-     - parameter status:         <#status description#>
-     - parameter viewcontroller: <#viewcontroller description#>
-     */
-    // TODO : Update api
-    public func updateStatus(key: UIView, status: TransitionStatus,  gestureFor viewController: UIViewController) {
-        transition.keyView = key
-        transition.transitionStatus = status
-        viewController.view.addGestureRecognizer(edgePanGestureRecognizer)
-    }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .Push {
