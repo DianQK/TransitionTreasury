@@ -15,6 +15,7 @@ import UIKit
  */
 public enum TRPushMethod {
     case OMIN(keyView: UIView)
+    case BanTang(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -23,6 +24,8 @@ public enum TRPushMethod {
             return OMINTransitionAnimation(key: key)
         case let .Custom(transition) :
             return transition
+        case let .BanTang(key) :
+            return BTTransitionAnimation(key: key)
         }
     }
 }

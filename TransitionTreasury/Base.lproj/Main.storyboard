@@ -568,7 +568,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1M7-gI-NzN" kind="relationship" relationship="rootViewController" id="Rc8-j7-WMv"/>
+                        <segue destination="Jag-6S-ezM" kind="relationship" relationship="rootViewController" id="Z0a-fj-LLv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N64-OE-cb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -600,6 +600,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-cm-bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="291" y="979"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gyn-W5-Rtr">
+            <objects>
+                <viewController storyboardIdentifier="BTViewController" id="Jag-6S-ezM" customClass="BTViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sd6-If-ySV"/>
+                        <viewControllerLayoutGuide type="bottom" id="g9r-fc-Eyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AXN-ok-WWU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_girl" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-3x-74h">
+                                <rect key="frame" x="0.0" y="232" width="320" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="Hvd-ry-Rbk"/>
+                                    <constraint firstAttribute="width" constant="320" id="fU6-hx-mww"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="UKr-3x-74h" secondAttribute="bottom" constant="165" id="fIv-gc-KAF"/>
+                            <constraint firstItem="UKr-3x-74h" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="gdE-h8-wiZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="os4-zf-kP1"/>
+                    <connections>
+                        <outlet property="keyImageView" destination="UKr-3x-74h" id="Fnu-0d-l9K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYU-3W-bor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="979"/>
         </scene>
         <!--Main-->
         <scene sceneID="FWU-pO-5pQ">
@@ -638,5 +673,6 @@
     <resources>
         <image name="addInbox" width="25" height="44"/>
         <image name="addInboxBackground" width="39" height="44"/>
+        <image name="img_girl" width="700" height="394"/>
     </resources>
 </document>
