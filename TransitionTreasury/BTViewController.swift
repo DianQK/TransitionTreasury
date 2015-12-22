@@ -26,9 +26,16 @@ class BTViewController: UIViewController, TRTransition {
     func push(sender: UITapGestureRecognizer) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("BTViewController")
         navigationController?.tr_pushViewController(vc, method: .BanTang(keyView: sender.view!), completion: {
-            print("Finish")
+            print("Push finish")
         })
     }
+    
+    @IBAction func pop(sender: UIButton) {
+        navigationController?.tr_popViewController({
+            print("Pop finish")
+        })
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,6 +45,10 @@ class BTViewController: UIViewController, TRTransition {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        print("BT VC deinit")
     }
     
 

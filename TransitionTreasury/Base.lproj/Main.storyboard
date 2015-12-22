@@ -620,9 +620,18 @@
                                     <constraint firstAttribute="width" constant="320" id="fU6-hx-mww"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-Wv-3wA">
+                                <rect key="frame" x="15" y="79" width="30" height="30"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="pop:" destination="Jag-6S-ezM" eventType="touchUpInside" id="08D-dA-RAl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="N8c-Wv-3wA" firstAttribute="leading" secondItem="AXN-ok-WWU" secondAttribute="leading" constant="15" id="FxS-xc-H9a"/>
+                            <constraint firstItem="N8c-Wv-3wA" firstAttribute="top" secondItem="sd6-If-ySV" secondAttribute="bottom" constant="15" id="Kj3-yu-CUp"/>
                             <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="UKr-3x-74h" secondAttribute="bottom" constant="165" id="fIv-gc-KAF"/>
                             <constraint firstItem="UKr-3x-74h" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="gdE-h8-wiZ"/>
                         </constraints>
