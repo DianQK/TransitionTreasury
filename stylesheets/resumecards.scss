@@ -323,10 +323,13 @@ a {
 }
 
 .resume-intro-maintitle {
-  display: block;
+
   color: $color-base;
-  font-size: 40px;
+  font-size: 2.9rem;
+
   font-family: "Quando", sans-serif;
+
+
 
   @each $color-name in $color-list {
     .theme-#{$color-name} & {
