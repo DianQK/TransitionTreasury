@@ -1,0 +1,10 @@
+---
+type: "Push & Pop"
+heading: "OmniFocus"
+---
+
+<!-- <a href="https://www.bizreach.jp/" target="_blank">BizReach</a> is Japan's top job site exclusive to business executives. I worked on front-end design and coding. My most recent project was <a href="https://woman.bizreach.jp/" target="_blank">Bizreach Woman</a>, a job site specifically for female business executives in Japan. -->
+
+<video id="video" width="275" height="490" controls="" preload="assets/videos/push/OmniFocus.mp4" loop>
+ <source src="assets/videos/push/OmniFocus.mp4" type="video/mp4">
+ </video>
