@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BTTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var keyView: UIView?
     

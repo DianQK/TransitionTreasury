@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BTViewController: UIViewController, TRTransition {
+class IBTViewController: UIViewController, TRTransition {
     
     var tr_transition: TRNavgationTransitionDelegate?
 
@@ -24,8 +24,8 @@ class BTViewController: UIViewController, TRTransition {
     }
     
     func push(sender: UITapGestureRecognizer) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("BTViewController")
-        navigationController?.tr_pushViewController(vc, method: .BanTang(keyView: sender.view!), completion: {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("IBTViewController")
+        navigationController?.tr_pushViewController(vc, method: .IBanTang(keyView: sender.view!), completion: {
             print("Push finish")
         })
     }

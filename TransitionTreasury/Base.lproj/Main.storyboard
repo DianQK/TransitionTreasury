@@ -604,7 +604,7 @@
         <!--View Controller-->
         <scene sceneID="gyn-W5-Rtr">
             <objects>
-                <viewController storyboardIdentifier="BTViewController" id="Jag-6S-ezM" customClass="BTViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IBTViewController" id="Jag-6S-ezM" customClass="IBTViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sd6-If-ySV"/>
                         <viewControllerLayoutGuide type="bottom" id="g9r-fc-Eyn"/>

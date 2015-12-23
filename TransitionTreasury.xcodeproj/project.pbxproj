@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		264F7B161C295FF100920250 /* BTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* BTViewController.swift */; };
-		264F7B181C29635B00920250 /* BTTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B171C29635B00920250 /* BTTransitionAnimation.swift */; };
+		264F7B161C295FF100920250 /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* IBTViewController.swift */; };
+		264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */; };
 		26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */; };
 		26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */; };
 		26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CC91C26D80C005F4DDC /* Main.storyboard */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		264F7B151C295FF100920250 /* BTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTViewController.swift; sourceTree = "<group>"; };
-		264F7B171C29635B00920250 /* BTTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTTransitionAnimation.swift; sourceTree = "<group>"; };
+		264F7B151C295FF100920250 /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
+		264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */,
 				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
 				26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */,
-				264F7B151C295FF100920250 /* BTViewController.swift */,
+				264F7B151C295FF100920250 /* IBTViewController.swift */,
 				26FE2CC91C26D80C005F4DDC /* Main.storyboard */,
 				26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */,
 				26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */,
@@ -103,7 +103,7 @@
 				26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */,
 				26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */,
 				26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */,
-				264F7B171C29635B00920250 /* BTTransitionAnimation.swift */,
+				264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 				26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */,
 				26FE2CE51C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift in Sources */,
 				26FE2CE71C26DAE9005F4DDC /* UIViewController+TRPresent.swift in Sources */,
-				264F7B161C295FF100920250 /* BTViewController.swift in Sources */,
-				264F7B181C29635B00920250 /* BTTransitionAnimation.swift in Sources */,
+				264F7B161C295FF100920250 /* IBTViewController.swift in Sources */,
+				264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */,
 				26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */,
 				26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */,
 				26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */,
