@@ -163,55 +163,10 @@ name: "Elle Kasai"
 copy: "UI/UX Designer from Japan..."
 color: default</pre>
             <p>Next, the contact info section is defined by <code>_includes/nav.html</code>. You can use <a href="http://fontawesome.io/" target="_blank">Font Awesome icons</a>.</p>
-            <pre>&lt;p&gt;
-  &lt;i class="fa fa-twitter fa-lg fa-fw"&gt;&lt;/i&gt;
-  &lt;a href="https://twitter.com/ellekasai/"&gt;@ellekasai&lt;/a&gt;
-&lt;/p&gt;
-
-...</pre>
-            <p>Finally, the cards are defined by markdown files under the <code>_posts</code> directory. It uses <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank">YAML front matter</a>.</p>
-            <pre>
----
-type: "Work Experience"
-heading: "BizC. I'm currently working as a Web Developer at Istuary Innovation Group.reach"
-subheading: "Junior Product Designer"
-duration: "October 2013 – September 2014 (1 year)"
-location: "Tokyo, Japan"
----
-
-[BizReach](https://www.bizreach.jp/) is Japan's top job site exclusive to business executives. ...</pre>
-            <p>These files are put together by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, which is supported by <a href="https://pages.github.com/" target="_blanks">GitHub Pages</a>.</p>
-            <p>Also, card heights are fixed by CSS. So, if all the texts fit within each card when viewed on the web, they'd also fit within each card when clicking the "Saved as PDF" button.</p>
-            <p>You can read more detailed documentation on GitHub.</p>
-            <p class="resume-explanations-btn">
-              <a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg">Download on GitHub →</a>
-            </p>
           </div>
         </div>
         <div class="row resume-explanations">
-          <div class="col-md-8 col-md-offset-2">
-            <h2>The Story Behind ResumeCards</h2>
-            <p>I've been looking for a UI design job in Vancouver, Canada, and one recruiter had asked me to submit a PDF resume. I wasn't sure why it had to be in PDF though, since anyone can learn about my professional experience on <a href="http://ellekasai.com/about/" target="_blank">my about page</a>, <a href="https://www.linkedin.com/in/ellekasai" target="_blank">LinkedIn</a>, and <a href="https://github.com/ellekasai" target="_blank">GitHub</a>.</p>
-            <p>There are services that convert your LinkedIn or GitHub profile to a PDF file, but I couldn't find a design template I like. Also, my LinkedIn profile was too long to fit in one page, and my GitHub profile was too short. Rewriting the text was necessary.</p>
-            <p>Since I had to rewrite the text anyway, I decided to see if I can use Markdown and Jekyll to build a nice resume that looks great both on the web and in PDF. After some brainstorming, I realized that card UIs would work great. <a href="http://blog.intercom.io/why-cards-are-the-future-of-the-web/" target="_blank">They're responsive design friendly</a>. And by specifying the height manually, they can be made to fit in one page.</p>
-            <p>I decided to open source this, and made it so that users can pick the color they like. This is how ResumeCards was born.</p>
-          </div>
         </div>
-        <div class="row resume-explanations">
-          <div class="col-md-8 col-md-offset-2">
-            <h2>Author</h2>
-            <p class="text-center">Written by <a href="http://ellekasai.com/about" target="_blank">Elle Kasai</a> (<a href="http://twitter.com/ellekasai" target="_blank">@ellekasai</a>), a UI/UX designer based in Vancouver, Canada.</p>
-            <p class="resume-explanations-btn"><a href="http://ellekasai.com/about/" target="_blank" class="btn btn-primary btn-lg">Learn More about Elle →</a></p>
-            <p class="resume-explanations-btn"><a href="https://twitter.com/ellekasai" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-dnt="true" data-size="large">Follow @ellekasai</a></p>
-          </div>
-        </div>
-        <div class="row resume-explanations">
-          <div class="col-md-8 col-md-offset-2">
-            <h2>Thanks!</h2>
-            <p class="resume-explanations-btn"><a href="https://twitter.com/share" class="twitter-share-button" data-via="ellekasai" data-size="large">Tweet</a> <iframe src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=resumecards&type=watch&count=true&size=large"
-      allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30" style="margin-top: 14px;"></iframe></p>
-            <blockquote class="twitter-tweet" lang="en" align="center"><p>I released a new project :) ResumeCards, a Markdown based resume generator! 💼✨→ <a href="http://t.co/LTPKEzEbqD">http://t.co/LTPKEzEbqD</a></p>&mdash; Elle Kasai (@ellekasai) <a href="https://twitter.com/ellekasai/status/555780937212915713">January 15, 2015</a></blockquote>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             <p>P.S. If you like ResumeCards, you should check out my other project: <a href="http://ellekasai.github.io/purplecoat.js/" target="_blank">Purplecoat.js</a>, Simple Labeled Overlays.</p>
             <p>Thanks to <a href="https://twitter.com/chibicode" target="_blank">@chibicode</a> for revising my English.</p>
           </div>
@@ -219,11 +174,16 @@ location: "Tokyo, Japan"
       </footer>
     </div>
     {% endif %}
-    {% if site.data.resume.demo %}
-    <div class="hidden-xs">
-      <div class="github-fork-ribbon-wrapper right fixed" style="width: 150px;height: 150px;position: fixed;overflow: hidden;top: 0;z-index: 9999;pointer-events: none;right: 0;"><div class="github-fork-ribbon" style="position: absolute;padding: 2px 0;background-color: rgba(95, 124, 138, 1);background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);z-index: 9999;pointer-events: auto;top: 42px;right: -43px;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);"><a href="https://github.com/DianQK/TransitionTreasury" style="font: 700 13px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color: #fff;text-decoration: none;text-shadow: 0 -1px rgba(0, 0, 0, 0.5);text-align: center;width: 200px;line-height: 20px;display: inline-block;padding: 2px 0;border-width: 1px 0;border-style: dotted;border-color: rgba(255, 255, 255, 0.7);" target="_blank">Fork me on GitHub</a></div></div>
+    <div class="hidden-print resume-bottom">
+      <footer class="container">
+        <div class="row resume-explanations">
+          <div class="col-md-8 col-md-offset-2">
+          <p>Thanks to <a href="http://ellekasai.com" target="_blank">Elle Kasai</a>for sharing this theme.</p>
+          </div>
+        </div>
+      </footer>
     </div>
-    {% endif %}
+
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/resumecards.js" | prepend:site.baseurl }}"></script>
