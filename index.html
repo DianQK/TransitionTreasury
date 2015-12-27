@@ -120,7 +120,6 @@
                 <h3 class="panel-title">{{ card.type }}</h3>
               </div>
               <div class="panel-body">
-              <span>
                 {% if card.heading %}
                   <h4>
                     {{ card.heading }}
@@ -135,16 +134,10 @@
                     {{ card.author }}
                     {% endif %}
                   </p>
-                  </span>
                 {% endif %}
-                {% if card.duration %}
-                  <p class="resume-duration">
-                    {{ card.duration }}
-                  </p>
-                {% endif %}
-                {% if card.location %}
-                  <p class="resume-location">
-                    {{ card.location }}
+                {% if card.case %}
+                  <p class="resume-case">
+                    {{ card.case }}
                   </p>
                 {% endif %}
                 {{ card.content }}

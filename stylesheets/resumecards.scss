@@ -235,7 +235,7 @@ a {
 }
 
 .panel-body {
-  height: 575px;
+  height: 605px;
   overflow: hidden;
 }
 
@@ -453,7 +453,7 @@ script + p {
 }
 
 .resume-duration,
-.resume-location {
+.resume-case {
   color: $color-muted;
   line-height: 1.4;
 
@@ -574,7 +574,7 @@ script + p {
   }
 
   .resume-duration,
-  .resume-location {
+  .resume-case {
     font-size: $font-size-base - 5;
   }
 
