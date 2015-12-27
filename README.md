@@ -12,7 +12,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 * [x] Support completion callback
 * [x] Support modal viewController data callback
 * [x] Support Custom Transition
-* [ ] [Complete Documentation](wiki)
+* [ ] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/wiki)
 
 ## Requirements   
 
