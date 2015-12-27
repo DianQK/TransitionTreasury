@@ -120,15 +120,22 @@
                 <h3 class="panel-title">{{ card.type }}</h3>
               </div>
               <div class="panel-body">
+              <span>
                 {% if card.heading %}
                   <h4>
                     {{ card.heading }}
                   </h4>
                 {% endif %}
-                {% if card.subheading %}
+                {% if card.author %}
                   <p class="resume-subheading">
-                    {{ card.subheading }}
+                  via
+                    {% if card.link %}
+                    <a href="{{ card.link }}">{{ card.author }}</a>
+                    {% else %}
+                    {{ card.author }}
+                    {% endif %}
                   </p>
+                  </span>
                 {% endif %}
                 {% if card.duration %}
                   <p class="resume-duration">
