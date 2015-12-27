@@ -13,7 +13,7 @@ import UIKit
 public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     /// Required implement.
     var transitionStatus: TransitionStatus?{get set}
-    /// Required implement.
+    /// Option implement.
     var interacting: Bool{get set}
     /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
@@ -59,14 +59,25 @@ public extension TRViewControllerAnimatedTransitioning {
         }
     }
     
-    var interactivePrecent: CGFloat {
+    public var interactivePrecent: CGFloat {
         get {
             return 0.3
+        }
+    }
+    
+    public var cancelPop: Bool {
+        get {
+            return false
+        }
+        set {
+            
         }
     }
     
     func popToVCIndex(index: Int) {
         
     }
+    
+    
     
 }

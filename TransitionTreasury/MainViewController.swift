@@ -22,7 +22,8 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
         vc.modalDelegate = self
         let nav = UINavigationController(rootViewController: vc)
-        tr_presentViewController(nav, method: .Twitter, completion: nil)
+        let fade = FadeTransitionAnimation()
+        tr_presentViewController(nav, method: .Custom(fade), completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */; };
 		264F7B161C295FF100920250 /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* IBTViewController.swift */; };
 		264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */; };
 		26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		264F7B151C295FF100920250 /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
 		264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 				26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */,
 				26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */,
 				264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */,
+				2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */,
 				26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */,
 				26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */,
 				26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */,
 				26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */,
 			);
