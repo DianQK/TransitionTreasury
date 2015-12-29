@@ -598,7 +598,8 @@
         <scene sceneID="qmS-77-alP">
             <objects>
                 <navigationController id="jto-NY-ZNP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KkX-0E-YCU">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KkX-0E-YCU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -619,7 +620,7 @@
                         <viewControllerLayoutGuide type="bottom" id="p5v-6I-33K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gOu-0d-WVH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.2175178619" blue="0.22646251910000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -630,7 +631,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-cm-bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -689,11 +690,11 @@
                         <viewControllerLayoutGuide type="bottom" id="35S-zW-gxJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dGH-sb-6XB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-fx-gfk">
-                                <rect key="frame" x="134" y="269" width="53" height="30"/>
+                                <rect key="frame" x="134" y="237" width="53" height="30"/>
                                 <state key="normal" title="Present"/>
                                 <connections>
                                     <action selector="tr_presentVC:" destination="5It-Ul-zyB" eventType="touchUpInside" id="65K-a8-F27"/>
@@ -707,7 +708,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="sTI-Nq-UVN"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAC-SE-L1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
