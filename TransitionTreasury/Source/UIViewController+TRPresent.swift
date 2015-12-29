@@ -18,7 +18,12 @@ public extension UIViewController {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
-        presentViewController(viewControllerToPresent, animated: true, completion: completion)
+        transitionDelegate.transition.completion = completion
+        if transitionDelegate.transition.completion != nil { // Choose who deal completion
+            presentViewController(viewControllerToPresent, animated: true, completion: nil)
+        } else {
+            presentViewController(viewControllerToPresent, animated: true, completion: completion)
+        }
     }
     
     public func tr_dismissViewController() {
@@ -28,9 +33,18 @@ public extension UIViewController {
     public func tr_dismissViewController(completion: (() -> Void)?) {
         let transition = (self as? ModalViewControllerDelegate)?.tr_transition
         transition?.transition.transitionStatus = .Dismiss
+        print(transition)
         presentedViewController?.transitioningDelegate = transition
-        (self as? ModalViewControllerDelegate)?.tr_transition = nil
-        dismissViewControllerAnimated(true, completion: completion)
+        let fullCompletion = {
+            completion?()
+            (self as? ModalViewControllerDelegate)?.tr_transition = nil
+        }
+        transition?.transition.completion = fullCompletion
+        if transition?.transition.completion != nil {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            dismissViewControllerAnimated(true, completion: fullCompletion)
+        }
     }
 }
 
