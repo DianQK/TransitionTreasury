@@ -70,18 +70,18 @@
 		264443EF1C3281D4004A25FD /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */,
-				264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */,
-				264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */,
-				264443F31C3281D4004A25FD /* PhotoTransitionAnimation.swift */,
 				264443F41C3281D4004A25FD /* TransitionTreasury.swift */,
+				264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */,
+				264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */,
 				264443F51C3281D4004A25FD /* TRNavgationTransitionDelegate.swift */,
 				264443F61C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift */,
 				264443F71C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift */,
 				264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */,
-				264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */,
-				264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */,
 				263B43221C32BE8C0093593E /* ListTransitionAnimation.swift */,
+				264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */,
+				264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */,
+				264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */,
+				264443F31C3281D4004A25FD /* PhotoTransitionAnimation.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;

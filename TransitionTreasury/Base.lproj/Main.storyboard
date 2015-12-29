@@ -604,7 +604,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5It-Ul-zyB" kind="relationship" relationship="rootViewController" id="OFL-d3-sUV"/>
+                        <segue destination="5It-Ul-zyB" kind="relationship" relationship="rootViewController" id="6GD-Qk-6iR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N64-OE-cb0" userLabel="First Responder" sceneMemberID="firstResponder"/>

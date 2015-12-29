@@ -45,7 +45,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 3
+        return 0.6
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -82,7 +82,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             toVC?.view.layer.opacity = 0
         }
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .CurveEaseInOut, animations: {
             switch self.transitionStatus! {
             case .Present :
                 self.keyView.center = toVC!.view.center
@@ -112,8 +112,9 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                     self.completion?()
                     self.completion = nil
                 }
-
+                
         }
+        
     }
     
     func handlePan(recognizer: UIPanGestureRecognizer) {
