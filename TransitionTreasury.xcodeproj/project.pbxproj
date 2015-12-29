@@ -17,6 +17,19 @@
 		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
 		263B438A1C32E54D0093593E /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43801C32E54D0093593E /* OMINViewController.swift */; };
 		263B438B1C32E54D0093593E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43811C32E54D0093593E /* PhotoViewController.swift */; };
+		263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 263B43931C32E6BD0093593E /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		263B43A61C32E6E00093593E /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439A1C32E6E00093593E /* FadeTransitionAnimation.swift */; };
+		263B43A71C32E6E00093593E /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439B1C32E6E00093593E /* IBanTangTransitionAnimation.swift */; };
+		263B43A81C32E6E00093593E /* ListTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439C1C32E6E00093593E /* ListTransitionAnimation.swift */; };
+		263B43A91C32E6E00093593E /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439D1C32E6E00093593E /* OMINTransitionAnimation.swift */; };
+		263B43AA1C32E6E00093593E /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439E1C32E6E00093593E /* PhotoTransitionAnimation.swift */; };
+		263B43AB1C32E6E00093593E /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B439F1C32E6E00093593E /* TransitionTreasury.swift */; };
+		263B43AC1C32E6E00093593E /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A01C32E6E00093593E /* TRNavgationTransitionDelegate.swift */; };
+		263B43AD1C32E6E00093593E /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A11C32E6E00093593E /* TRViewControllerAnimatedTransitioning.swift */; };
+		263B43AE1C32E6E00093593E /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A21C32E6E00093593E /* TRViewControllerTransitionDelegate.swift */; };
+		263B43AF1C32E6E00093593E /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A31C32E6E00093593E /* TwitterTransitionAnimation.swift */; };
+		263B43B01C32E6E00093593E /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A41C32E6E00093593E /* UINavigationController+TRPushPop.swift */; };
+		263B43B11C32E6E00093593E /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43A51C32E6E00093593E /* UIViewController+TRPresent.swift */; };
 		264443FB1C3281D4004A25FD /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */; };
 		264443FC1C3281D4004A25FD /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */; };
 		264443FD1C3281D4004A25FD /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */; };
@@ -42,6 +55,21 @@
 		263B437F1C32E54D0093593E /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		263B43801C32E54D0093593E /* OMINViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
 		263B43811C32E54D0093593E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		263B43911C32E6BD0093593E /* TransitionTreasury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionTreasury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		263B43931C32E6BD0093593E /* TransitionTreasury.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
+		263B43951C32E6BD0093593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263B439A1C32E6E00093593E /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B439B1C32E6E00093593E /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B439C1C32E6E00093593E /* ListTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B439D1C32E6E00093593E /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B439E1C32E6E00093593E /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B439F1C32E6E00093593E /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
+		263B43A01C32E6E00093593E /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
+		263B43A11C32E6E00093593E /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		263B43A21C32E6E00093593E /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
+		263B43A31C32E6E00093593E /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B43A41C32E6E00093593E /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
+		263B43A51C32E6E00093593E /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
 		264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -53,10 +81,17 @@
 		264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
 		264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
-		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasuryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		263B438D1C32E6BD0093593E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26FE2CBF1C26D80C005F4DDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +120,35 @@
 			path = TransitionTreasuryDemo;
 			sourceTree = "<group>";
 		};
+		263B43921C32E6BD0093593E /* TransitionTreasury */ = {
+			isa = PBXGroup;
+			children = (
+				263B43991C32E6E00093593E /* Source */,
+				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
+				263B43951C32E6BD0093593E /* Info.plist */,
+			);
+			path = TransitionTreasury;
+			sourceTree = "<group>";
+		};
+		263B43991C32E6E00093593E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				263B439A1C32E6E00093593E /* FadeTransitionAnimation.swift */,
+				263B439B1C32E6E00093593E /* IBanTangTransitionAnimation.swift */,
+				263B439C1C32E6E00093593E /* ListTransitionAnimation.swift */,
+				263B439D1C32E6E00093593E /* OMINTransitionAnimation.swift */,
+				263B439E1C32E6E00093593E /* PhotoTransitionAnimation.swift */,
+				263B439F1C32E6E00093593E /* TransitionTreasury.swift */,
+				263B43A01C32E6E00093593E /* TRNavgationTransitionDelegate.swift */,
+				263B43A11C32E6E00093593E /* TRViewControllerAnimatedTransitioning.swift */,
+				263B43A21C32E6E00093593E /* TRViewControllerTransitionDelegate.swift */,
+				263B43A31C32E6E00093593E /* TwitterTransitionAnimation.swift */,
+				263B43A41C32E6E00093593E /* UINavigationController+TRPushPop.swift */,
+				263B43A51C32E6E00093593E /* UIViewController+TRPresent.swift */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
 		264443EF1C3281D4004A25FD /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +171,7 @@
 		26FE2CB91C26D80C005F4DDC = {
 			isa = PBXGroup;
 			children = (
+				263B43921C32E6BD0093593E /* TransitionTreasury */,
 				263B43751C32E54D0093593E /* TransitionTreasuryDemo */,
 				26FE2CC31C26D80C005F4DDC /* Products */,
 			);
@@ -115,17 +180,47 @@
 		26FE2CC31C26D80C005F4DDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */,
+				26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */,
+				263B43911C32E6BD0093593E /* TransitionTreasury.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		263B438E1C32E6BD0093593E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		26FE2CC11C26D80C005F4DDC /* TransitionTreasury */ = {
+		263B43901C32E6BD0093593E /* TransitionTreasury */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasury" */;
+			buildConfigurationList = 263B43961C32E6BD0093593E /* Build configuration list for PBXNativeTarget "TransitionTreasury" */;
+			buildPhases = (
+				263B438C1C32E6BD0093593E /* Sources */,
+				263B438D1C32E6BD0093593E /* Frameworks */,
+				263B438E1C32E6BD0093593E /* Headers */,
+				263B438F1C32E6BD0093593E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransitionTreasury;
+			productName = TransitionTreasury;
+			productReference = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemo" */;
 			buildPhases = (
 				26FE2CBE1C26D80C005F4DDC /* Sources */,
 				26FE2CBF1C26D80C005F4DDC /* Frameworks */,
@@ -135,9 +230,9 @@
 			);
 			dependencies = (
 			);
-			name = TransitionTreasury;
+			name = TransitionTreasuryDemo;
 			productName = TransitionTreasury;
-			productReference = 26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */;
+			productReference = 26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,6 +245,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = TransitionTreasury;
 				TargetAttributes = {
+					263B43901C32E6BD0093593E = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HY634B3FW2;
+					};
 					26FE2CC11C26D80C005F4DDC = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = HY634B3FW2;
@@ -169,12 +268,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26FE2CC11C26D80C005F4DDC /* TransitionTreasury */,
+				26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */,
+				263B43901C32E6BD0093593E /* TransitionTreasury */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		263B438F1C32E6BD0093593E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26FE2CC01C26D80C005F4DDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +295,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		263B438C1C32E6BD0093593E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263B43B11C32E6E00093593E /* UIViewController+TRPresent.swift in Sources */,
+				263B43A61C32E6E00093593E /* FadeTransitionAnimation.swift in Sources */,
+				263B43A81C32E6E00093593E /* ListTransitionAnimation.swift in Sources */,
+				263B43A91C32E6E00093593E /* OMINTransitionAnimation.swift in Sources */,
+				263B43A71C32E6E00093593E /* IBanTangTransitionAnimation.swift in Sources */,
+				263B43B01C32E6E00093593E /* UINavigationController+TRPushPop.swift in Sources */,
+				263B43AA1C32E6E00093593E /* PhotoTransitionAnimation.swift in Sources */,
+				263B43AC1C32E6E00093593E /* TRNavgationTransitionDelegate.swift in Sources */,
+				263B43AB1C32E6E00093593E /* TransitionTreasury.swift in Sources */,
+				263B43AE1C32E6E00093593E /* TRViewControllerTransitionDelegate.swift in Sources */,
+				263B43AF1C32E6E00093593E /* TwitterTransitionAnimation.swift in Sources */,
+				263B43AD1C32E6E00093593E /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26FE2CBE1C26D80C005F4DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +361,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		263B43971C32E6BD0093593E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		263B43981C32E6BD0093593E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		26FE2CD21C26D80C005F4DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/TransitionTreasuryDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasuryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -333,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/TransitionTreasuryDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasuryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -341,6 +507,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		263B43961C32E6BD0093593E /* Build configuration list for PBXNativeTarget "TransitionTreasury" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263B43971C32E6BD0093593E /* Debug */,
+				263B43981C32E6BD0093593E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		26FE2CBD1C26D80C005F4DDC /* Build configuration list for PBXProject "TransitionTreasury" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -350,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasury" */ = {
+		26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				26FE2CD51C26D80C005F4DDC /* Debug */,

@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="Oe5-0j-2UB">
             <objects>
-                <viewController storyboardIdentifier="OMINViewController" id="1M7-gI-NzN" customClass="OMINViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OMINViewController" id="1M7-gI-NzN" customClass="OMINViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bMQ-sd-VIk"/>
                         <viewControllerLayoutGuide type="bottom" id="cDS-4S-XAJ"/>
@@ -562,7 +562,7 @@
         <!--Photo-->
         <scene sceneID="w30-GD-86f">
             <objects>
-                <viewController storyboardIdentifier="PhotoViewController" id="fVj-Yl-QlK" customClass="PhotoViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="fVj-Yl-QlK" customClass="PhotoViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RKa-it-E1f"/>
                         <viewControllerLayoutGuide type="bottom" id="atm-O8-Cvg"/>
@@ -614,7 +614,7 @@
         <!--Modal-->
         <scene sceneID="nSv-5k-9N2">
             <objects>
-                <viewController storyboardIdentifier="ModalViewController" id="RtC-pi-0g6" customClass="ModalViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalViewController" id="RtC-pi-0g6" customClass="ModalViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xqi-dW-XMb"/>
                         <viewControllerLayoutGuide type="bottom" id="p5v-6I-33K"/>
@@ -640,7 +640,7 @@
         <!--View Controller-->
         <scene sceneID="gyn-W5-Rtr">
             <objects>
-                <viewController storyboardIdentifier="IBTViewController" id="Jag-6S-ezM" customClass="IBTViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IBTViewController" id="Jag-6S-ezM" customClass="IBTViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sd6-If-ySV"/>
                         <viewControllerLayoutGuide type="bottom" id="g9r-fc-Eyn"/>
@@ -684,7 +684,7 @@
         <!--Main-->
         <scene sceneID="FWU-pO-5pQ">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="5It-Ul-zyB" customClass="MainViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="5It-Ul-zyB" customClass="MainViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kZ6-vn-ykM"/>
                         <viewControllerLayoutGuide type="bottom" id="35S-zW-gxJ"/>
