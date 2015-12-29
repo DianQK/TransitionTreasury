@@ -1,14 +1,14 @@
 <p align="center">
-![TransitionTreasury](https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/transitiontreasury.png)
+<img src="https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/transitiontreasury.png" alt="TransitionTreasury" title="TransitionTreasury" width="1000"/>
 </p>
 
 <p align="center">
-[![Build Status](https://travis-ci.org/DianQK/TransitionTreasury.svg)](https://travis-ci.org/DianQK/TransitionTreasury)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/TransitionTreasury.svg)](https://img.shields.io/cocoapods/v/TransitionTreasury.svg)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/TransitionTreasury.svg?style=flat)](http://cocoadocs.org/docsets/TransitionTreasury)
-[![Twitter](https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat)](http://twitter.com/Songxut) 
-</p>  
+<a href="https://travis-ci.org/DianQK/TransitionTreasury"><img src="https://travis-ci.org/DianQK/TransitionTreasury.svg"></a>
+<a href="https://img.shields.io/cocoapods/v/TransitionTreasury.svg"><img src="https://img.shields.io/cocoapods/v/TransitionTreasury.svg"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+<a href="http://cocoadocs.org/docsets/TransitionTreasury"><img src="hhttps://img.shields.io/cocoapods/p/TransitionTreasury.svg?style=flat"></a>
+<a href="http://twitter.com/Songxut"><img src="https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat">
+</p>
 
 TransitionTreasury is a viewController transition framework in Swift.    
 
