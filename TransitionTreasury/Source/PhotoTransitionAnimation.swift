@@ -61,7 +61,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
 //        containView?.addSubview(keyView)
-        toVC!.view.addSubview(keyView)
+        toVC?.view.addSubview(keyView)
         
         
         if transitionStatus == .Present {
@@ -83,7 +83,6 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-//            toVC!.view.layer.opacity = 1
             switch self.transitionStatus! {
             case .Present :
                 self.keyView.center = toVC!.view.center
@@ -93,23 +92,23 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                 self.keyView.layer.frame = self.frameBackup!// ?? self.keyView.layer.frame
             case .Dismiss where self.interacting == true :
                 toVC!.view.layer.opacity = 1
-//                self.keyView.layer.frame = self.frameBackup!
             default :
                 fatalError("Transition status error.")
             }
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-//                toVC?.view.addSubview(self.keyView)
                 if self.transitionStatus == .Dismiss {
                     UIView.animateWithDuration(3, animations: {
                         self.keyView.layer.frame = self.frameBackup!
                     })
                 }
                 if finished {
-                    self.gesturesBackup?.forEach({ (gesture) -> () in
-                        self.keyView.addGestureRecognizer(gesture)
-                    })
-                    self.gesturesBackup = nil
+                    if self.transitionStatus == .Dismiss {
+                        self.gesturesBackup?.forEach({ (gesture) -> () in
+                            self.keyView.addGestureRecognizer(gesture)
+                        })
+                        self.gesturesBackup = nil
+                    }
                     self.completion?()
                     self.completion = nil
                 }
@@ -143,11 +142,8 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         default :
             if interacting == true {
                 interacting = false
-                print("Percent: \(percent)")
-                print("Translation: \(translation)")
                 if translation.y >= 0 { // Something not well
                     cancelPop = false
-                    print(percentTransition)
                     percentTransition?.completionSpeed = 200 // Trick
                     percentTransition?.finishInteractiveTransition()
 //                    detailVC?.view.removeGestureRecognizer(recognizer)

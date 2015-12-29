@@ -33,7 +33,6 @@ public extension UIViewController {
     public func tr_dismissViewController(completion: (() -> Void)?) {
         let transition = (self as? ModalViewControllerDelegate)?.tr_transition
         transition?.transition.transitionStatus = .Dismiss
-        print(transition)
         presentedViewController?.transitioningDelegate = transition
         let fullCompletion = {
             completion?()

@@ -71,7 +71,6 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
                 if self.transitionStatus == .Dismiss {
                     fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
                     fromVC?.view.layer.position = self.positionBackup ?? CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y - fromVC!.view.layer.bounds.height / 2)
-                    print(fromVC?.view.layer.position)
                 }
         }
     }
