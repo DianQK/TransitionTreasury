@@ -80,20 +80,26 @@ public class ListTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             containView?.addSubview(bottomView)
             maskView.frame = screenBounds
             maskView.alpha = startOpacity
-            containView?.addSubview(maskView)
+            bottomView.addSubview(maskView)
             mainVC = fromVC
         }
         
         toVC?.view.layer.frame = startFrame
         
         containView?.addSubview(toVC!.view)
-        
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: (bounce ? 0.8 : 1), initialSpringVelocity: (bounce ? 0.6 : 1), options: .CurveEaseInOut, animations: {
             toVC?.view.layer.frame = finalFrame
             self.maskView.alpha = finalOpacity
-            }) { (finished) -> Void in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
+            }, completion: { (finished) -> Void in
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+    })
+    
+//        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+//            toVC?.view.layer.frame = finalFrame
+//            self.maskView.alpha = finalOpacity
+//            }) { (finished) -> Void in
+//                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+//        }
     }
     
     func tapDismiss(tap: UITapGestureRecognizer) {

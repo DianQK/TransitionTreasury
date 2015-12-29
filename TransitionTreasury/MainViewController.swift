@@ -22,7 +22,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
         vc.modalDelegate = self
         let nav = UINavigationController(rootViewController: vc)
-        let list = ListTransitionAnimation(visibleHeight: 500)
+        let list = ListTransitionAnimation(visibleHeight: 500, bounce: true)
         tr_presentViewController(nav, method: .Custom(list), completion: nil)
     }
 
