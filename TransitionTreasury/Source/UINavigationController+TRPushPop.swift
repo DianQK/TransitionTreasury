@@ -10,11 +10,7 @@ import UIKit
 
 public extension UINavigationController {
     
-    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod) {
-        tr_pushViewController(viewcontroller, method: method, completion: nil)
-    }
-    
-    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)?) {
+    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)? = nil) {
         let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewcontroller)
         transition.completion = completion
         (viewcontroller as? TRTransition)?.tr_transition = transition
@@ -22,11 +18,7 @@ public extension UINavigationController {
         pushViewController(viewcontroller, animated: true)
     }
     
-    public func tr_popViewController() -> UIViewController? {
-        return tr_popViewController(nil)
-    }
-    
-    public func tr_popViewController(completion: (() -> Void)?) -> UIViewController? {
+    public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
         let transition = (topViewController as? TRTransition)?.tr_transition
         let popViewController = topViewController
         transition?.completion = {
@@ -38,11 +30,7 @@ public extension UINavigationController {
         return popViewControllerAnimated(true)
     }
     
-    public func tr_popToViewController(viewController: UIViewController) -> [UIViewController]? {
-        return tr_popToViewController(viewController, completion: nil)
-    }
-    
-    public func tr_popToViewController(viewController: UIViewController, completion: (() -> Void)?) -> [UIViewController]? {
+    public func tr_popToViewController(viewController: UIViewController, completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
@@ -59,11 +47,7 @@ public extension UINavigationController {
             }()
     }
     
-    public func tr_popToRootViewController() -> [UIViewController]? {
-        return tr_popToRootViewController(nil)
-    }
-    
-    public func tr_popToRootViewController(completion: (() -> Void)?) -> [UIViewController]? {
+    public func tr_popToRootViewController(completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard viewControllers.count > 1 else {
             return popToRootViewControllerAnimated(true)
         }

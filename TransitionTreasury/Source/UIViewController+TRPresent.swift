@@ -10,11 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod) {
-        tr_presentViewController(viewControllerToPresent, method: method, completion: nil)
-    }
-    
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, completion: (() -> Void)?) {
+    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
@@ -26,11 +22,7 @@ public extension UIViewController {
         }
     }
     
-    public func tr_dismissViewController() {
-        tr_dismissViewController(nil)
-    }
-    
-    public func tr_dismissViewController(completion: (() -> Void)?) {
+    public func tr_dismissViewController(completion: (() -> Void)? = nil) {
         let transition = (self as? ModalViewControllerDelegate)?.tr_transition
         transition?.transition.transitionStatus = .Dismiss
         presentedViewController?.transitioningDelegate = transition
@@ -55,7 +47,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
 
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     
-    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?) {
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
         tr_dismissViewController()
     }
 }
