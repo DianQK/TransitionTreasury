@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26286B001C314C800096FB27 /* PhotoViewController.swift */; };
 		263B43231C32BE8C0093593E /* ListTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43221C32BE8C0093593E /* ListTransitionAnimation.swift */; };
+		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
+		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
+		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
+		263B43851C32E54D0093593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B437A1C32E54D0093593E /* Main.storyboard */; };
+		263B43861C32E54D0093593E /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437C1C32E54D0093593E /* IBTViewController.swift */; };
+		263B43881C32E54D0093593E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437E1C32E54D0093593E /* MainViewController.swift */; };
+		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
+		263B438A1C32E54D0093593E /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43801C32E54D0093593E /* OMINViewController.swift */; };
+		263B438B1C32E54D0093593E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43811C32E54D0093593E /* PhotoViewController.swift */; };
 		264443FB1C3281D4004A25FD /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */; };
 		264443FC1C3281D4004A25FD /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */; };
 		264443FD1C3281D4004A25FD /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */; };
@@ -20,19 +28,20 @@
 		264444031C3281D4004A25FD /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */; };
 		264444041C3281D4004A25FD /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */; };
 		264444051C3281D4004A25FD /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */; };
-		264F7B161C295FF100920250 /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* IBTViewController.swift */; };
-		26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */; };
-		26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */; };
-		26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CC91C26D80C005F4DDC /* Main.storyboard */; };
-		26FE2CCD1C26D80C005F4DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */; };
-		26FE2CD01C26D80C005F4DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */; };
-		26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE81C26DC30005F4DDC /* MainViewController.swift */; };
-		26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26286B001C314C800096FB27 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		263B43221C32BE8C0093593E /* ListTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTransitionAnimation.swift; sourceTree = "<group>"; };
+		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		263B437B1C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		263B437C1C32E54D0093593E /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
+		263B437D1C32E54D0093593E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263B437E1C32E54D0093593E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		263B437F1C32E54D0093593E /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		263B43801C32E54D0093593E /* OMINViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
+		263B43811C32E54D0093593E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -44,16 +53,7 @@
 		264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
 		264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
 		264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
-		264F7B151C295FF100920250 /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
-		26FE2CCA1C26D80C005F4DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		26FE2CCF1C26D80C005F4DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		26FE2CD11C26D80C005F4DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26FE2CE81C26DC30005F4DDC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263B43751C32E54D0093593E /* TransitionTreasuryDemo */ = {
+			isa = PBXGroup;
+			children = (
+				264443EF1C3281D4004A25FD /* Source */,
+				263B43761C32E54D0093593E /* AppDelegate.swift */,
+				263B43771C32E54D0093593E /* Assets.xcassets */,
+				263B43781C32E54D0093593E /* LaunchScreen.storyboard */,
+				263B437A1C32E54D0093593E /* Main.storyboard */,
+				263B437C1C32E54D0093593E /* IBTViewController.swift */,
+				263B437D1C32E54D0093593E /* Info.plist */,
+				263B437E1C32E54D0093593E /* MainViewController.swift */,
+				263B437F1C32E54D0093593E /* ModalViewController.swift */,
+				263B43801C32E54D0093593E /* OMINViewController.swift */,
+				263B43811C32E54D0093593E /* PhotoViewController.swift */,
+			);
+			path = TransitionTreasuryDemo;
+			sourceTree = "<group>";
+		};
 		264443EF1C3281D4004A25FD /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +107,7 @@
 		26FE2CB91C26D80C005F4DDC = {
 			isa = PBXGroup;
 			children = (
-				26FE2CC41C26D80C005F4DDC /* TransitionTreasury */,
+				263B43751C32E54D0093593E /* TransitionTreasuryDemo */,
 				26FE2CC31C26D80C005F4DDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,24 +118,6 @@
 				26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		26FE2CC41C26D80C005F4DDC /* TransitionTreasury */ = {
-			isa = PBXGroup;
-			children = (
-				264443EF1C3281D4004A25FD /* Source */,
-				26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */,
-				26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */,
-				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
-				26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */,
-				264F7B151C295FF100920250 /* IBTViewController.swift */,
-				26FE2CC91C26D80C005F4DDC /* Main.storyboard */,
-				26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */,
-				26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */,
-				26FE2CD11C26D80C005F4DDC /* Info.plist */,
-				26286B001C314C800096FB27 /* PhotoViewController.swift */,
-			);
-			path = TransitionTreasury;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +179,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FE2CD01C26D80C005F4DDC /* LaunchScreen.storyboard in Resources */,
-				26FE2CCD1C26D80C005F4DDC /* Assets.xcassets in Resources */,
-				26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */,
+				263B43831C32E54D0093593E /* Assets.xcassets in Resources */,
+				263B43851C32E54D0093593E /* Main.storyboard in Resources */,
+				263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,21 +192,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263B43881C32E54D0093593E /* MainViewController.swift in Sources */,
 				264443FD1C3281D4004A25FD /* OMINTransitionAnimation.swift in Sources */,
 				263B43231C32BE8C0093593E /* ListTransitionAnimation.swift in Sources */,
+				263B43821C32E54D0093593E /* AppDelegate.swift in Sources */,
+				263B438A1C32E54D0093593E /* OMINViewController.swift in Sources */,
+				263B438B1C32E54D0093593E /* PhotoViewController.swift in Sources */,
 				264444011C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift in Sources */,
 				264443FB1C3281D4004A25FD /* FadeTransitionAnimation.swift in Sources */,
 				264444041C3281D4004A25FD /* UINavigationController+TRPushPop.swift in Sources */,
 				264443FC1C3281D4004A25FD /* IBanTangTransitionAnimation.swift in Sources */,
-				26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */,
 				264443FE1C3281D4004A25FD /* PhotoTransitionAnimation.swift in Sources */,
-				26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */,
-				264F7B161C295FF100920250 /* IBTViewController.swift in Sources */,
-				26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */,
-				26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */,
+				263B43861C32E54D0093593E /* IBTViewController.swift in Sources */,
+				263B43891C32E54D0093593E /* ModalViewController.swift in Sources */,
 				264444021C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift in Sources */,
 				264444001C3281D4004A25FD /* TRNavgationTransitionDelegate.swift in Sources */,
-				26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */,
 				264444031C3281D4004A25FD /* TwitterTransitionAnimation.swift in Sources */,
 				264443FF1C3281D4004A25FD /* TransitionTreasury.swift in Sources */,
 				264444051C3281D4004A25FD /* UIViewController+TRPresent.swift in Sources */,
@@ -216,20 +216,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		26FE2CC91C26D80C005F4DDC /* Main.storyboard */ = {
+		263B43781C32E54D0093593E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				26FE2CCA1C26D80C005F4DDC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26FE2CCF1C26D80C005F4DDC /* Base */,
+				263B43791C32E54D0093593E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		263B437A1C32E54D0093593E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				263B437B1C32E54D0093593E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -320,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TransitionTreasuryDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -331,7 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TransitionTreasury/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TransitionTreasuryDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
