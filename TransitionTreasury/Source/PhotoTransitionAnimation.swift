@@ -102,6 +102,11 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                         self.keyView.layer.frame = self.frameBackup!
                     })
                 }
+                if finished {
+                    self.completion?()
+                    self.completion = nil
+                }
+
         }
     }
     
@@ -111,16 +116,18 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         keyView.center = CGPoint(x: keyView.center.x + translation.x, y: keyView.center.y + translation.y)
         recognizer.setTranslation(CGPointZero, inView: keyView)
         
-        var percent: CGFloat = (keyView.center.y - detailVC!.view.center.y) / detailVC!.view.bounds.height
+        let percent: CGFloat = min(1.0, max(0, (keyView.center.y - detailVC!.view.center.y) / detailVC!.view.bounds.height))
 
         switch recognizer.state {
         case .Began :
-            transitionStatus = .Dismiss
-            interacting = true
-            percentTransition = UIPercentDrivenInteractiveTransition()
-            percentTransition!.startInteractiveTransition(transitionContext!)
-            if let detailVC = detailVC as? MainViewControllerDelegate {
-                detailVC.modalDelegate?.modalViewControllerDismiss(callbackData: nil)
+            if translation.y > 0 {
+                transitionStatus = .Dismiss
+                interacting = true
+                percentTransition = UIPercentDrivenInteractiveTransition()
+                percentTransition!.startInteractiveTransition(transitionContext!)
+                if let detailVC = detailVC as? MainViewControllerDelegate {
+                    detailVC.modalDelegate?.modalViewControllerDismiss(callbackData: nil)
+                }
             }
         case .Changed :
             percentTransition?.updateInteractiveTransition(percent)
@@ -129,7 +136,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             print(percent)
             if percent > interactivePrecent {
                 cancelPop = false
-                percentTransition!.completionSpeed = 200 // Trick
+                percentTransition?.completionSpeed = 200 // Trick
                 percentTransition?.finishInteractiveTransition()
 //                keyView.removeGestureRecognizer(recognizer)
                 detailVC?.view.removeGestureRecognizer(recognizer)

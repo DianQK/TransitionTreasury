@@ -83,7 +83,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 self.bottomView.removeFromSuperview() // 只要动画结束，该图层都应该移除
-                if !self.cancelPop {
+                if !self.cancelPop { //TODO change this. cancelPop won't update
                     if self.transitionStatus == .Pop {
                         transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
                         transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
