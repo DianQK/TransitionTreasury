@@ -1,6 +1,7 @@
 ![TransitionTreasury](https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/transitiontreasury.png)
 
 [![Build Status](https://travis-ci.org/DianQK/TransitionTreasury.svg)](https://travis-ci.org/DianQK/TransitionTreasury)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/TransitionTreasury.svg)](https://img.shields.io/cocoapods/v/TransitionTreasury.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat)](http://twitter.com/Songxut)    
 
 TransitionTreasury is a viewController transition framework in Swift.    
@@ -26,7 +27,31 @@ TransitionTreasury is a viewController transition framework in Swift.
 
 ## Installation
 
-### CocoaPods
+### CocoaPods    
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+> CocoaPods 0.39.0+ is required to build TransitionTreasury.
+
+To integrate TransitionTreasury into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'TransitionTreasury', '~> 0.9.0'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ### Carthage
 
