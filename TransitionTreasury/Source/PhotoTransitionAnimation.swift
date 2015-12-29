@@ -26,6 +26,8 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     private var frameBackup: CGRect?
     
+    private var gesturesBackup: [UIGestureRecognizer]?
+    
     private var detailVC: UIViewController?
     
     private var showVC: UIViewController?
@@ -72,12 +74,13 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                 detailVC = (toVC as? UINavigationController)?.viewControllers.first
             }
             detailVC?.view.addGestureRecognizer(panGestureRecognizer)
+            gesturesBackup = keyView.gestureRecognizers?.flatMap({ (gesture) -> UIGestureRecognizer? in
+                self.keyView.removeGestureRecognizer(gesture)
+                return gesture
+            })
         } else if transitionStatus == .Dismiss {
             toVC?.view.layer.opacity = 0
         }
-        
-
-//        toVC!.view.layer.opacity = 0
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
 //            toVC!.view.layer.opacity = 1
@@ -103,6 +106,10 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                     })
                 }
                 if finished {
+                    self.gesturesBackup?.forEach({ (gesture) -> () in
+                        self.keyView.addGestureRecognizer(gesture)
+                    })
+                    self.gesturesBackup = nil
                     self.completion?()
                     self.completion = nil
                 }
@@ -117,7 +124,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         recognizer.setTranslation(CGPointZero, inView: keyView)
         
         let percent: CGFloat = min(1.0, max(0, (keyView.center.y - detailVC!.view.center.y) / detailVC!.view.bounds.height))
-
+        
         switch recognizer.state {
         case .Began :
             if translation.y > 0 {
@@ -128,24 +135,33 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                 if let detailVC = detailVC as? MainViewControllerDelegate {
                     detailVC.modalDelegate?.modalViewControllerDismiss(callbackData: nil)
                 }
+            } else {
+                interacting = false
             }
         case .Changed :
             percentTransition?.updateInteractiveTransition(percent)
         default :
-            interacting = false
-            print(percent)
-            if percent > interactivePrecent {
-                cancelPop = false
-                percentTransition?.completionSpeed = 200 // Trick
-                percentTransition?.finishInteractiveTransition()
-//                keyView.removeGestureRecognizer(recognizer)
-                detailVC?.view.removeGestureRecognizer(recognizer)
-                recognizer.removeTarget(self, action: Selector("handlePan:"))
+            if interacting == true {
+                interacting = false
+                print("Percent: \(percent)")
+                print("Translation: \(translation)")
+                if translation.y >= 0 { // Something not well
+                    cancelPop = false
+                    print(percentTransition)
+                    percentTransition?.completionSpeed = 200 // Trick
+                    percentTransition?.finishInteractiveTransition()
+//                    detailVC?.view.removeGestureRecognizer(recognizer)
+//                    recognizer.removeTarget(self, action: Selector("handlePan:"))
+                } else {
+                    cancelPop = true
+                    percentTransition?.cancelInteractiveTransition()
+                }
+                percentTransition = nil
             } else {
-                cancelPop = true
-                percentTransition?.cancelInteractiveTransition()
+                UIView.animateWithDuration(0.3, animations: {
+                    self.keyView.center = self.detailVC!.view.center
+                })
             }
-            percentTransition = nil
         }
         
     }

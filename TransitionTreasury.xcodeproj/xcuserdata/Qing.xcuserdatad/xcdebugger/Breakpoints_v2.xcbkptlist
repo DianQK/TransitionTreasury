@@ -28,11 +28,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransitionTreasury/Source/PhotoTransitionAnimation.swift"
-            timestampString = "473045312.511391"
+            timestampString = "473064531.416899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "animateTransition(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -44,12 +44,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TransitionTreasury/Source/PhotoTransitionAnimation.swift"
-            timestampString = "473043575.045885"
+            timestampString = "473064721.744833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "animateTransition(_:)"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "handlePan(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
