@@ -10,7 +10,7 @@ import UIKit
 /// Transition(Present) Animation Delegate Object
 public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
     /// Control transition precent
-    var percentTransition: UIPercentDrivenInteractiveTransition?
+//    var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
     var transition: TRViewControllerAnimatedTransitioning
     /**
@@ -44,7 +44,7 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     }
     
     public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return transition.interacting ? percentTransition : nil
+        return transition.interacting ? transition.percentTransition : nil
     }
     
     public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {

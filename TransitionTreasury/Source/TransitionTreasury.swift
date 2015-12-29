@@ -63,6 +63,7 @@ public enum TransitionStatus {
     case Pop
     case Present
     case Dismiss
+    case Finish
 }
 
 // TODO

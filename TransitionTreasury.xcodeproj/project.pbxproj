@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26286AFF1C314C450096FB27 /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */; };
+		26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26286B001C314C800096FB27 /* PhotoViewController.swift */; };
 		2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */; };
 		264F7B161C295FF100920250 /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* IBTViewController.swift */; };
 		264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
+		26286B001C314C800096FB27 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		264F7B151C295FF100920250 /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
 		264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */,
 				26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */,
 				26FE2CD11C26D80C005F4DDC /* Info.plist */,
+				26286B001C314C800096FB27 /* PhotoViewController.swift */,
 			);
 			path = TransitionTreasury;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */,
 				264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */,
 				2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */,
+				26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -193,10 +199,12 @@
 				26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */,
 				26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */,
 				26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */,
+				26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */,
 				26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */,
 				26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */,
 				2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */,
 				26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */,
+				26286AFF1C314C450096FB27 /* PhotoTransitionAnimation.swift in Sources */,
 				26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,5 +32,9 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        print("Modal deinit")
+    }
+    
 
 }

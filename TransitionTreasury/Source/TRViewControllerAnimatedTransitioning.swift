@@ -23,6 +23,8 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     var completion: (() -> Void)?{get set}
     /// Option
     var interactivePrecent: CGFloat{get}
+    
+    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
     /**
      Option
      
@@ -68,6 +70,15 @@ public extension TRViewControllerAnimatedTransitioning {
     public var cancelPop: Bool {
         get {
             return false
+        }
+        set {
+            
+        }
+    }
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition? {
+        get {
+            return nil
         }
         set {
             

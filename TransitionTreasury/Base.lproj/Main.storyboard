@@ -559,6 +559,41 @@
             </objects>
             <point key="canvasLocation" x="291.19999999999999" y="348.37333333333333"/>
         </scene>
+        <!--Photo-->
+        <scene sceneID="w30-GD-86f">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="fVj-Yl-QlK" customClass="PhotoViewController" customModule="TransitionTreasury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKa-it-E1f"/>
+                        <viewControllerLayoutGuide type="bottom" id="atm-O8-Cvg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eC3-MB-61Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="img_girl" translatesAutoresizingMaskIntoConstraints="NO" id="FLd-TE-WfF">
+                                <rect key="frame" x="77" y="394" width="223" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="psI-jC-dnl"/>
+                                    <constraint firstAttribute="width" constant="223" id="rgQ-as-p2E"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FLd-TE-WfF" secondAttribute="trailing" constant="20" id="LJz-Uh-AZI"/>
+                            <constraint firstItem="atm-O8-Cvg" firstAttribute="top" secondItem="FLd-TE-WfF" secondAttribute="bottom" constant="48" id="ViW-WS-TTJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="ccr-3D-K1a"/>
+                    <connections>
+                        <outlet property="imageView" destination="FLd-TE-WfF" id="hJg-Pc-9SP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNE-CQ-EDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-295"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qmS-77-alP">
             <objects>
@@ -568,7 +603,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5It-Ul-zyB" kind="relationship" relationship="rootViewController" id="9qw-il-6SB"/>
+                        <segue destination="fVj-Yl-QlK" kind="relationship" relationship="rootViewController" id="jnq-Nd-EdB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N64-OE-cb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -621,7 +656,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-Wv-3wA">
-                                <rect key="frame" x="15" y="79" width="30" height="30"/>
+                                <rect key="frame" x="15" y="35" width="30" height="30"/>
                                 <state key="normal" title="Pop"/>
                                 <connections>
                                     <action selector="pop:" destination="Jag-6S-ezM" eventType="touchUpInside" id="08D-dA-RAl"/>
