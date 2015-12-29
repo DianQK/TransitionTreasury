@@ -7,34 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26286AFF1C314C450096FB27 /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */; };
 		26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26286B001C314C800096FB27 /* PhotoViewController.swift */; };
-		2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */; };
+		264443FB1C3281D4004A25FD /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */; };
+		264443FC1C3281D4004A25FD /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */; };
+		264443FD1C3281D4004A25FD /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */; };
+		264443FE1C3281D4004A25FD /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F31C3281D4004A25FD /* PhotoTransitionAnimation.swift */; };
+		264443FF1C3281D4004A25FD /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F41C3281D4004A25FD /* TransitionTreasury.swift */; };
+		264444001C3281D4004A25FD /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F51C3281D4004A25FD /* TRNavgationTransitionDelegate.swift */; };
+		264444011C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F61C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift */; };
+		264444021C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F71C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift */; };
+		264444031C3281D4004A25FD /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */; };
+		264444041C3281D4004A25FD /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */; };
+		264444051C3281D4004A25FD /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */; };
 		264F7B161C295FF100920250 /* IBTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B151C295FF100920250 /* IBTViewController.swift */; };
-		264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */; };
 		26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */; };
 		26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */; };
 		26FE2CCB1C26D80C005F4DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CC91C26D80C005F4DDC /* Main.storyboard */; };
 		26FE2CCD1C26D80C005F4DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */; };
 		26FE2CD01C26D80C005F4DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2CCE1C26D80C005F4DDC /* LaunchScreen.storyboard */; };
-		26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */; };
-		26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */; };
-		26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */; };
-		26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */; };
-		26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */; };
-		26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */; };
-		26FE2CE51C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */; };
-		26FE2CE71C26DAE9005F4DDC /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */; };
 		26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CE81C26DC30005F4DDC /* MainViewController.swift */; };
 		26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
 		26286B001C314C800096FB27 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F31C3281D4004A25FD /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F41C3281D4004A25FD /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
+		264443F51C3281D4004A25FD /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
+		264443F61C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		264443F71C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
+		264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
+		264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
+		264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
 		264F7B151C295FF100920250 /* IBTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBTViewController.swift; sourceTree = "<group>"; };
-		264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMINViewController.swift; sourceTree = "<group>"; };
@@ -42,14 +50,6 @@
 		26FE2CCC1C26D80C005F4DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26FE2CCF1C26D80C005F4DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26FE2CD11C26D80C005F4DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
-		26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
-		26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
-		26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
-		26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
-		26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
 		26FE2CE81C26DC30005F4DDC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26FE2CEA1C26DC39005F4DDC /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		264443EF1C3281D4004A25FD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				264443F01C3281D4004A25FD /* FadeTransitionAnimation.swift */,
+				264443F11C3281D4004A25FD /* IBanTangTransitionAnimation.swift */,
+				264443F21C3281D4004A25FD /* OMINTransitionAnimation.swift */,
+				264443F31C3281D4004A25FD /* PhotoTransitionAnimation.swift */,
+				264443F41C3281D4004A25FD /* TransitionTreasury.swift */,
+				264443F51C3281D4004A25FD /* TRNavgationTransitionDelegate.swift */,
+				264443F61C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift */,
+				264443F71C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift */,
+				264443F81C3281D4004A25FD /* TwitterTransitionAnimation.swift */,
+				264443F91C3281D4004A25FD /* UINavigationController+TRPushPop.swift */,
+				264443FA1C3281D4004A25FD /* UIViewController+TRPresent.swift */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
 		26FE2CB91C26D80C005F4DDC = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +102,7 @@
 		26FE2CC41C26D80C005F4DDC /* TransitionTreasury */ = {
 			isa = PBXGroup;
 			children = (
-				26FE2CD71C26D86F005F4DDC /* Source */,
+				264443EF1C3281D4004A25FD /* Source */,
 				26FE2CC51C26D80C005F4DDC /* AppDelegate.swift */,
 				26FE2CC71C26D80C005F4DDC /* OMINViewController.swift */,
 				26FE2CE81C26DC30005F4DDC /* MainViewController.swift */,
@@ -97,24 +115,6 @@
 				26286B001C314C800096FB27 /* PhotoViewController.swift */,
 			);
 			path = TransitionTreasury;
-			sourceTree = "<group>";
-		};
-		26FE2CD71C26D86F005F4DDC /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				26FE2CD81C26D899005F4DDC /* TransitionTreasury.swift */,
-				26FE2CDA1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift */,
-				26FE2CE01C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift */,
-				26FE2CE21C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift */,
-				26FE2CE41C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift */,
-				26FE2CE61C26DAE9005F4DDC /* UIViewController+TRPresent.swift */,
-				26FE2CDC1C26D921005F4DDC /* OMINTransitionAnimation.swift */,
-				26FE2CDE1C26D975005F4DDC /* TwitterTransitionAnimation.swift */,
-				264F7B171C29635B00920250 /* IBanTangTransitionAnimation.swift */,
-				2636F2501C2F750B000048AC /* FadeTransitionAnimation.swift */,
-				26286AFE1C314C450096FB27 /* PhotoTransitionAnimation.swift */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,23 +189,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264443FD1C3281D4004A25FD /* OMINTransitionAnimation.swift in Sources */,
+				264444011C3281D4004A25FD /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				264443FB1C3281D4004A25FD /* FadeTransitionAnimation.swift in Sources */,
+				264444041C3281D4004A25FD /* UINavigationController+TRPushPop.swift in Sources */,
+				264443FC1C3281D4004A25FD /* IBanTangTransitionAnimation.swift in Sources */,
 				26FE2CC81C26D80C005F4DDC /* OMINViewController.swift in Sources */,
+				264443FE1C3281D4004A25FD /* PhotoTransitionAnimation.swift in Sources */,
 				26FE2CE91C26DC30005F4DDC /* MainViewController.swift in Sources */,
-				26FE2CE51C26DA4D005F4DDC /* UINavigationController+TRPushPop.swift in Sources */,
-				26FE2CE71C26DAE9005F4DDC /* UIViewController+TRPresent.swift in Sources */,
 				264F7B161C295FF100920250 /* IBTViewController.swift in Sources */,
-				264F7B181C29635B00920250 /* IBanTangTransitionAnimation.swift in Sources */,
 				26FE2CEB1C26DC39005F4DDC /* ModalViewController.swift in Sources */,
-				26FE2CE31C26DA0D005F4DDC /* TRNavgationTransitionDelegate.swift in Sources */,
 				26FE2CC61C26D80C005F4DDC /* AppDelegate.swift in Sources */,
-				26FE2CD91C26D899005F4DDC /* TransitionTreasury.swift in Sources */,
+				264444021C3281D4004A25FD /* TRViewControllerTransitionDelegate.swift in Sources */,
+				264444001C3281D4004A25FD /* TRNavgationTransitionDelegate.swift in Sources */,
 				26286B011C314C800096FB27 /* PhotoViewController.swift in Sources */,
-				26FE2CE11C26D9CD005F4DDC /* TRViewControllerTransitionDelegate.swift in Sources */,
-				26FE2CDB1C26D8E8005F4DDC /* TRViewControllerAnimatedTransitioning.swift in Sources */,
-				2636F2511C2F750B000048AC /* FadeTransitionAnimation.swift in Sources */,
-				26FE2CDF1C26D975005F4DDC /* TwitterTransitionAnimation.swift in Sources */,
-				26286AFF1C314C450096FB27 /* PhotoTransitionAnimation.swift in Sources */,
-				26FE2CDD1C26D921005F4DDC /* OMINTransitionAnimation.swift in Sources */,
+				264444031C3281D4004A25FD /* TwitterTransitionAnimation.swift in Sources */,
+				264443FF1C3281D4004A25FD /* TransitionTreasury.swift in Sources */,
+				264444051C3281D4004A25FD /* UIViewController+TRPresent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

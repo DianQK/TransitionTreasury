@@ -25,6 +25,9 @@ class OMINViewController: UIViewController, TRTransition {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let view = touches.first?.view {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OMINViewController")
+            navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAnimation(key: view)), completion: {
+                print("Push finished")
+            })
             navigationController?.tr_pushViewController(vc, method: .OMIN(keyView: view), completion: {
                 print("Push finish")
             })
