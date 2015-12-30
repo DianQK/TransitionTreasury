@@ -33,6 +33,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     func loadTransition() {
         pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
         
         presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
