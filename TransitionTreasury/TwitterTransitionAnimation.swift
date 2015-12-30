@@ -28,7 +28,7 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.5
+        return 0.6
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {

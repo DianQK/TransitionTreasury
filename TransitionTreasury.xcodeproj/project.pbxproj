@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
 		2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */; };
+		262F1DF51C33F74A00E078AE /* TwitterTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */; };
+		262F1DF71C33F7E600E078AE /* FadeTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */; };
+		262F1DF91C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */; };
+		262F1DFB1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */; };
 		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
 		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
 		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
@@ -88,6 +92,10 @@
 /* Begin PBXFileReference section */
 		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
+		262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimationTests.swift; sourceTree = "<group>"; };
+		262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimationTests.swift; sourceTree = "<group>"; };
+		262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegateTests.swift; sourceTree = "<group>"; };
+		262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegateTests.swift; sourceTree = "<group>"; };
 		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -183,10 +191,10 @@
 				26FF06CC1C3380DE003DAC25 /* FadeTransitionAnimation.swift */,
 				26FF06CD1C3380DE003DAC25 /* OMINTransitionAnimation.swift */,
 				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
+				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */,
 				26FF06D01C3380DE003DAC25 /* IBanTangTransitionAnimation.swift */,
 				26FF06D11C3380DE003DAC25 /* PhotoTransitionAnimation.swift */,
-				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */,
 				26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */,
 				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
@@ -202,9 +210,13 @@
 				26FDFF181C33C4A600CB3995 /* Info.plist */,
 				26FDFF2D1C33C63900CB3995 /* OMINTransitionAnimationTests.swift */,
 				26FDFF311C33CCE400CB3995 /* PopTipTransitionAnimationTests.swift */,
+				262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */,
 				26FDFF331C33CFCA00CB3995 /* MainViewController.swift */,
 				26FDFF351C33D01400CB3995 /* ModalViewController.swift */,
 				26FDFF371C33D03D00CB3995 /* SecondViewController.swift */,
+				262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */,
+				262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */,
+				262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */,
 			);
 			path = TransitionTreasuryTests;
 			sourceTree = "<group>";
@@ -437,11 +449,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FDFF381C33D03D00CB3995 /* SecondViewController.swift in Sources */,
+				262F1DF51C33F74A00E078AE /* TwitterTransitionAnimationTests.swift in Sources */,
+				262F1DFB1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift in Sources */,
 				26FDFF321C33CCE400CB3995 /* PopTipTransitionAnimationTests.swift in Sources */,
 				26FDFF361C33D01400CB3995 /* ModalViewController.swift in Sources */,
+				262F1DF91C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift in Sources */,
 				26FDFF2E1C33C63900CB3995 /* OMINTransitionAnimationTests.swift in Sources */,
 				26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */,
 				26FDFF341C33CFCA00CB3995 /* MainViewController.swift in Sources */,
+				262F1DF71C33F7E600E078AE /* FadeTransitionAnimationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +752,7 @@
 				26FDFF1D1C33C4A600CB3995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26FDFF2A1C33C4B700CB3995 /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -744,6 +761,7 @@
 				26FDFF2C1C33C4B700CB3995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26FE2CBD1C26D80C005F4DDC /* Build configuration list for PBXProject "TransitionTreasury" */ = {
 			isa = XCConfigurationList;
