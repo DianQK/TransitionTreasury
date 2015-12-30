@@ -50,7 +50,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'TransitionTreasury', '~> 0.9.0'
+pod 'TransitionTreasury', '~> 0.9.2'
 ```
 
 Then, run the following command:
