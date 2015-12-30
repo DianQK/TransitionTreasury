@@ -19,7 +19,7 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func pop(sender: AnyObject) {
+    @IBAction func dismissClick(sender: AnyObject) {
         modalDelegate?.modalViewControllerDismiss(callbackData: ["title":title ?? ""])
     }
 

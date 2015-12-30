@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -13,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KkX-0E-YCU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29411764709999999" green="0.96862745100000003" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="c7d-ck-FUk" kind="relationship" relationship="rootViewController" id="ejn-wx-Akf"/>
@@ -25,18 +27,32 @@
         <!--TransitionTreasury-->
         <scene sceneID="LJp-be-kYW">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="c7d-ck-FUk" customClass="MainViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="c7d-ck-FUk" customClass="MainViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q5K-pc-iBh"/>
                         <viewControllerLayoutGuide type="bottom" id="0xm-VY-0ph"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VP2-pQ-OpO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-nb-CPP">
-                                <rect key="frame" x="0.0" y="74" width="320" height="430"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WkT-8M-YRk">
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WkT-8M-YRk" secondAttribute="height" multiplier="225:37" id="1p9-AN-MEi"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-nb-CPP">
+                                <rect key="frame" x="0.0" y="73" width="320" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" hidden="YES" alpha="0.0" contentMode="scaleToFill" id="aMi-44-mjM">
+                                    <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="z7t-Qi-98D">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -52,22 +68,20 @@
                                     <outlet property="delegate" destination="c7d-ck-FUk" id="QUF-LW-aTq"/>
                                 </connections>
                             </tableView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WkT-8M-YRk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="q5K-pc-iBh" secondAttribute="bottom" id="640-GH-mIt"/>
-                            <constraint firstAttribute="trailing" secondItem="WkT-8M-YRk" secondAttribute="trailing" id="6Uu-0F-3fU"/>
-                            <constraint firstItem="WkT-8M-YRk" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="Diu-Pi-2h0"/>
-                            <constraint firstItem="tyn-nb-CPP" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="FJD-F2-XxV"/>
-                            <constraint firstAttribute="trailing" secondItem="tyn-nb-CPP" secondAttribute="trailing" id="Yg8-Rp-SNB"/>
-                            <constraint firstItem="0xm-VY-0ph" firstAttribute="top" secondItem="tyn-nb-CPP" secondAttribute="bottom" id="Ziq-2B-imZ"/>
-                            <constraint firstItem="tyn-nb-CPP" firstAttribute="top" secondItem="WkT-8M-YRk" secondAttribute="bottom" id="umt-2l-Lqg"/>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="centerX" secondItem="VP2-pQ-OpO" secondAttribute="centerX" id="LY5-BX-Hib"/>
+                            <constraint firstAttribute="trailing" secondItem="tyn-nb-CPP" secondAttribute="trailing" id="Msh-oR-5vE"/>
+                            <constraint firstItem="0xm-VY-0ph" firstAttribute="top" secondItem="tyn-nb-CPP" secondAttribute="bottom" id="aJe-zy-C3s"/>
+                            <constraint firstItem="tyn-nb-CPP" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="gbe-V0-AgU"/>
+                            <constraint firstItem="tyn-nb-CPP" firstAttribute="top" secondItem="WkT-8M-YRk" secondAttribute="bottom" id="j3c-qE-XYA"/>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="width" secondItem="VP2-pQ-OpO" secondAttribute="width" id="mmZ-AJ-h0U"/>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="q5K-pc-iBh" secondAttribute="bottom" id="tGa-Ta-gSa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TransitionTreasury" id="7mu-u5-QaS"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="logoImageView" destination="WkT-8M-YRk" id="D4e-Wc-77o"/>
                     </connections>
@@ -92,7 +106,7 @@
                     <navigationItem key="navigationItem" title="Modal" id="Jof-y5-WIS">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="h0Q-Iv-VFP">
                             <connections>
-                                <action selector="pop:" destination="RtC-pi-0g6" id="1Sr-hl-dth"/>
+                                <action selector="dismissClick:" destination="RtC-pi-0g6" id="mUg-iI-oiw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,7 +136,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29641568350000003" green="0.81888549509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mys-O1-L3X" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="4OU-Bk-9jS"/>
                             <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="mys-O1-L3X" secondAttribute="bottom" constant="60" id="ZtN-Kb-GOc"/>

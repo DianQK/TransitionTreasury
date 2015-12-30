@@ -29,7 +29,6 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     
     @IBOutlet weak var logoImageView: UIImageView!
     
-    
     func loadTransition() {
         pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
