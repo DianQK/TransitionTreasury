@@ -17,6 +17,7 @@ public enum TRPushMethod {
     case OMIN(keyView: UIView)
     case IBanTang(keyView: UIView)
     case Fade
+    case Page
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -27,6 +28,8 @@ public enum TRPushMethod {
             return IBanTangTransitionAnimation(key: key)
         case .Fade :
             return FadeTransitionAnimation()
+        case .Page :
+            return PageTransitionAnimation()
         case let .Custom(transition) :
             return transition
         }

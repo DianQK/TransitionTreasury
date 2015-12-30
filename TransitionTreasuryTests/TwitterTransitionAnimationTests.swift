@@ -2,7 +2,7 @@
 //  TwitterTransitionAnimationTests.swift
 //  TransitionTreasury
 //
-//  Created by 宋宋 on 12/30/15.
+//  Created by DianQK on 12/30/15.
 //  Copyright © 2015 TransitionTreasury. All rights reserved.
 //
 

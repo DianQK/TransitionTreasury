@@ -13,6 +13,7 @@
 		262F1DF71C33F7E600E078AE /* FadeTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */; };
 		262F1DF91C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */; };
 		262F1DFB1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */; };
+		262F1DFD1C341B9E00E078AE /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */; };
 		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
 		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
 		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimationTests.swift; sourceTree = "<group>"; };
 		262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegateTests.swift; sourceTree = "<group>"; };
 		262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegateTests.swift; sourceTree = "<group>"; };
+		262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
 		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */,
 				26FF06D01C3380DE003DAC25 /* IBanTangTransitionAnimation.swift */,
 				26FF06D11C3380DE003DAC25 /* PhotoTransitionAnimation.swift */,
+				262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */,
 				26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */,
 				26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */,
 				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
@@ -430,6 +433,7 @@
 			files = (
 				26FF06E01C3380DE003DAC25 /* UIViewController+TRPresent.swift in Sources */,
 				26FF06DB1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				262F1DFD1C341B9E00E078AE /* PageTransitionAnimation.swift in Sources */,
 				26FF06DC1C3380DE003DAC25 /* IBanTangTransitionAnimation.swift in Sources */,
 				26FF06DE1C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift in Sources */,
 				26FF06D91C3380DE003DAC25 /* OMINTransitionAnimation.swift in Sources */,

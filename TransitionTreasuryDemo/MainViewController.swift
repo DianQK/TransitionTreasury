@@ -36,6 +36,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
+        pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
         
         presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
@@ -84,8 +85,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        // Configure the cell...
-        cell.textLabel?.text = presentTransition[indexPath.row].name
         switch indexPath.section {
         case 0 :
             cell.textLabel?.text = pushTransition[indexPath.row].name

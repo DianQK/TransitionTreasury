@@ -92,5 +92,9 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 self.cancelPop = false
         }
     }
+    
+    deinit {
+        print("IBanTang deinit")
+    }
 
 }
