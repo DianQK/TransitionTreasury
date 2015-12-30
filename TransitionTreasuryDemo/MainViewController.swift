@@ -84,11 +84,19 @@ class MainTableViewController: UITableViewController, ModalViewControllerDelegat
         case 1 :
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
             vc.modalDelegate = self
+            vc.title = presentTransition[indexPath.row].name
             let nav = UINavigationController(rootViewController: vc)
             tr_presentViewController(nav, method: presentTransition[indexPath.row].presentMethod, completion: nil)
         default :
-            print("Nothing.")
+            print("Nothing happened.")
         }
+    }
+    
+    // MARK: - Modal viewController delegate
+    
+    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
+        print("CallbackData: \(data)")
+        tr_dismissViewController()
     }
 
 }

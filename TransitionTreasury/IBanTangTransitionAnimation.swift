@@ -25,6 +25,8 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     lazy private var keyViewCopy: UIView = {
         let keyViewCopy = UIView(frame: self.keyView!.frame)
         keyViewCopy.layer.contents = self.keyView?.layer.contents
+        keyViewCopy.layer.contentsGravity = self.keyView!.layer.contentsGravity
+        keyViewCopy.layer.contentsScale = self.keyView!.layer.contentsScale
         return keyViewCopy
     }()
     
