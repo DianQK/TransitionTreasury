@@ -103,9 +103,9 @@ For more information about how to use Carthage, please see its [project page](ht
 
 ### Make a Push   
 
-if we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `TRTransition`, and add code `var tr_transition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
+If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `TRTransition`, and add code `var tr_transition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
 
-when you need to push, just call `public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)?)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
+When you need to push, just call `public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)?)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
 
 Example：   
 
@@ -125,11 +125,11 @@ class OMINViewController: UIViewController, TRTransition {
 }
 ```    
 
-when you need to pop, just call `public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController?`.
+When you need to pop, just call `public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController?`.
 
 ### Make a Present   
 
-if we present `MainViewController` to `ModalViewController`:     
+If we present `MainViewController` to `ModalViewController`:     
 
 * `MainViewController` should conform `ModalViewControllerDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?` 
 * `ModalViewController` should conform `ModalViewControllerDelegate`, and add `weak var modalDelegate: ModalViewControllerDelegate?`  
@@ -171,7 +171,7 @@ weak var modalDelegate: ModalViewControllerDelegate?
 
 Now, there is just **Custom Animation**, other usages are coming after next version.
 
-like **Basic-Usage**, just replace `method` paramters to `Custom(TRViewControllerAnimatedTransitioning)`, provide your animation object.  
+Like **Basic-Usage**, just replace `method` paramters to `Custom(TRViewControllerAnimatedTransitioning)`, provide your animation object.  
 
 > Note:   
 > Thanks to Swift's Enum. I can write more concise code.   
