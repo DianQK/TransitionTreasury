@@ -40,6 +40,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
         presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
+    
     }
     
     override func viewDidLoad() {

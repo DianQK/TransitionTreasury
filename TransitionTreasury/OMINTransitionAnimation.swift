@@ -24,7 +24,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     /// 判断是否在交互中
     public var interacting: Bool = false
     
-    init(key: UIView?, status: TransitionStatus = .Push) {
+    public init(key: UIView?, status: TransitionStatus = .Push) {
         keyView = key
         transitionStatus = status
         super.init()

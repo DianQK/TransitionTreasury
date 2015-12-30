@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26FDFF221C33C4B700CB3995"
+               BuildableName = "TransitionTreasuryDemoTests.xctest"
+               BlueprintName = "TransitionTreasuryDemoTests"
+               ReferencedContainer = "container:TransitionTreasury.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

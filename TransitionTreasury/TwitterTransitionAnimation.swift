@@ -22,7 +22,7 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     private var positionBackup: CGPoint?
     
-    init(status: TransitionStatus = .Present) {
+    public init(status: TransitionStatus = .Present) {
         transitionStatus = status
         super.init()
     }

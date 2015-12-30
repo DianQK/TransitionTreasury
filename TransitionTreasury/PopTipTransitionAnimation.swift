@@ -31,11 +31,11 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         return view
     }()
     
-    private let visibleHeight: CGFloat
+    public private(set) var visibleHeight: CGFloat
     
     private let bounce: Bool
     
-    init(visibleHeight height: CGFloat, bounce: Bool = false, status: TransitionStatus = .Present) {
+    public init(visibleHeight height: CGFloat, bounce: Bool = false, status: TransitionStatus = .Present) {
         transitionStatus = status
         visibleHeight = height
         self.bounce = bounce
