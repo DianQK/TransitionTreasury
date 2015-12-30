@@ -184,7 +184,7 @@ navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAn
             })
 ```     
 
-> About write your animation, you can read [Animation-Guide](Animation-Guide), I happy to you will share your animation for this project.
+> About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I happy to you will share your animation for this project.
 
 ## License
 
