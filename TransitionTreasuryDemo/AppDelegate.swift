@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TransitionTreasury
 //
-//  Created by 宋宋 on 12/20/15.
+//  Created by DianQK on 12/20/15.
 //  Copyright © 2015 TransitionTreasury. All rights reserved.
 //
 
@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        application.statusBarStyle = .LightContent
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         return true
     }
 
