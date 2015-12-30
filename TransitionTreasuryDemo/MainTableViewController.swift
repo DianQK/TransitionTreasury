@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 
 struct PushTransition {
     let name: String
@@ -18,20 +19,24 @@ struct PresentTransition {
     let presentMethod: TRPresentMethod
 }
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, ModalViewControllerDelegate {
+    
+    var tr_transition: TRViewControllerTransitionDelegate?
     
     var pushTransition = [PushTransition]()
 
     var presentTransition = [PresentTransition]()
     
+    func loadTransition() {
+        presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
+        presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
+        presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadTransition()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,12 +47,10 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         switch section {
         case 0: return pushTransition.count
         case 1: return presentTransition.count
@@ -59,6 +62,7 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = presentTransition[indexPath.row].name
 
         return cell
     }
@@ -68,6 +72,22 @@ class MainTableViewController: UITableViewController {
         case 0: return "Push & Pop"
         case 1: return "Present & Dismiss"
         default: return nil
+        }
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.section {
+        case 0 :
+            print("0")
+        case 1 :
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+            vc.modalDelegate = self
+            let nav = UINavigationController(rootViewController: vc)
+            tr_presentViewController(nav, method: presentTransition[indexPath.row].presentMethod, completion: nil)
+        default :
+            print("Nothing.")
         }
     }
 

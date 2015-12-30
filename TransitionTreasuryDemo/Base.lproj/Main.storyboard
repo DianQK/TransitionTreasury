@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-107" y="348"/>
         </scene>
-        <!--Main Table View Controller-->
+        <!--TransitionTreasury-->
         <scene sceneID="b3g-I5-tA5">
             <objects>
                 <tableViewController storyboardIdentifier="MainTableViewController" id="dlD-8i-Vp2" customClass="MainTableViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="dlD-8i-Vp2" id="S98-xy-D4W"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cc0-5Q-Bin"/>
+                    <navigationItem key="navigationItem" title="TransitionTreasury" id="cc0-5Q-Bin"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzq-Af-gmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
