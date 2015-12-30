@@ -59,7 +59,44 @@ Then, run the following command:
 $ pod install
 ```
 
-### Carthage
+### Carthage    
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Cocoa application. To install the carthage tool, you can use [Homebrew](http://brew.sh).
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "DianQK/TransitionTreasury" >= 0.9.2
+```
+
+Then, run the following command to build the TransitionTreasury framework:
+
+```bash
+$ carthage update
+```
+
+At last, you need to set up your Xcode project manually to add the TransitionTreasury framework.
+
+On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop each framework you want to use from the Carthage/Build folder on disk.
+
+On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following content:
+
+```bash
+/usr/local/bin/carthage copy-frameworks
+```
+
+and add the paths to the frameworks you want to use under “Input Files”:
+
+```bash
+$(SRCROOT)/Carthage/Build/iOS/TransitionTreasury.framework
+```
+
+For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).
 
 ## Usage    
 
