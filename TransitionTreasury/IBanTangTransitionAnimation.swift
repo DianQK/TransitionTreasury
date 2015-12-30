@@ -49,9 +49,9 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         let lightMaskLayer: CALayer = {
             let layer =  CALayer()
             layer.frame = CGRect(origin: CGPointZero, size: toVC!.view.bounds.size)
-            layer.backgroundColor = UIColor.whiteColor().CGColor
-            layer.opacity = 0
+            layer.backgroundColor = toVC!.view.backgroundColor?.CGColor
             let maskAnimation = CABasicAnimation(keyPath: "opacity")
+            maskAnimation.fromValue = 0
             maskAnimation.toValue = 1
             maskAnimation.duration = transitionDuration(transitionContext)
             layer.addAnimation(maskAnimation, forKey: "")
@@ -72,6 +72,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
             case .Pop where self.interacting == true :
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
             case .Pop where self.interacting == false :
+                fromVC!.view.layer.opacity = 0
                 self.keyViewCopy.layer.position.y = self.keyView!.layer.position.y
             default :
                 fatalError("You set false status.")
