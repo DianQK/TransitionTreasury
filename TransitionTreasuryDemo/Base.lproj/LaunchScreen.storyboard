@@ -17,17 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TransitionTreasury" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-iP-MSD">
-                                <rect key="frame" x="166" y="140" width="268" height="44"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TransitionTreasury" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-iP-MSD">
+                                <rect key="frame" x="30" y="140" width="540" height="42"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="transitiontreasury.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-o5-bSa">
+                                <rect key="frame" x="228" y="553" width="145" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.96862745098039216" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YQZ-o5-bSa" secondAttribute="bottom" constant="30" id="DJN-y6-pJJ"/>
                             <constraint firstItem="pf3-iP-MSD" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="120" id="LpY-sK-QNs"/>
-                            <constraint firstItem="pf3-iP-MSD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vLX-N9-aCP"/>
+                            <constraint firstAttribute="trailing" secondItem="pf3-iP-MSD" secondAttribute="trailing" constant="30" id="QaS-xe-UZn"/>
+                            <constraint firstItem="YQZ-o5-bSa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dQc-uD-Kba"/>
+                            <constraint firstItem="pf3-iP-MSD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="pjR-2m-KNW"/>
                         </constraints>
                     </view>
                 </viewController>
