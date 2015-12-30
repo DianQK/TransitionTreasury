@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
 		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
 		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
 		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
 		263B43851C32E54D0093593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B437A1C32E54D0093593E /* Main.storyboard */; };
 		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
 		263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 263B43931C32E6BD0093593E /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FF06AB1C337459003DAC25 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06AA1C337459003DAC25 /* MainTableViewController.swift */; };
+		26FF06AB1C337459003DAC25 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06AA1C337459003DAC25 /* MainViewController.swift */; };
 		26FF06AC1C33800E003DAC25 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FF06AD1C33800E003DAC25 /* TransitionTreasury.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		263B43931C32E6BD0093593E /* TransitionTreasury.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
 		263B43951C32E6BD0093593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasuryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		26FF06AA1C337459003DAC25 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		26FF06AA1C337459003DAC25 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
 		26FF06CA1C3380DE003DAC25 /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FF06CB1C3380DE003DAC25 /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -108,7 +110,8 @@
 				263B43781C32E54D0093593E /* LaunchScreen.storyboard */,
 				263B437A1C32E54D0093593E /* Main.storyboard */,
 				263B437F1C32E54D0093593E /* ModalViewController.swift */,
-				26FF06AA1C337459003DAC25 /* MainTableViewController.swift */,
+				26FF06AA1C337459003DAC25 /* MainViewController.swift */,
+				2621D49E1C339A730071B275 /* SecondViewController.swift */,
 			);
 			path = TransitionTreasuryDemo;
 			sourceTree = "<group>";
@@ -284,7 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FF06AB1C337459003DAC25 /* MainTableViewController.swift in Sources */,
+				2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */,
+				26FF06AB1C337459003DAC25 /* MainViewController.swift in Sources */,
 				263B43821C32E54D0093593E /* AppDelegate.swift in Sources */,
 				263B43891C32E54D0093593E /* ModalViewController.swift in Sources */,
 			);

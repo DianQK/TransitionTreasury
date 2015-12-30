@@ -19,13 +19,8 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     @IBAction func pop(sender: AnyObject) {
-        modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])
+        modalDelegate?.modalViewControllerDismiss(callbackData: ["title":title ?? ""])
     }
 
     override func didReceiveMemoryWarning() {

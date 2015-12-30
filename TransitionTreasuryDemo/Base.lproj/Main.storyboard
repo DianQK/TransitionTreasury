@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dlD-8i-Vp2" kind="relationship" relationship="rootViewController" id="Z2e-vR-hyq"/>
+                        <segue destination="c7d-ck-FUk" kind="relationship" relationship="rootViewController" id="ejn-wx-Akf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N64-OE-cb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -23,34 +23,58 @@
             <point key="canvasLocation" x="-107" y="348"/>
         </scene>
         <!--TransitionTreasury-->
-        <scene sceneID="b3g-I5-tA5">
+        <scene sceneID="LJp-be-kYW">
             <objects>
-                <tableViewController storyboardIdentifier="MainTableViewController" id="dlD-8i-Vp2" customClass="MainTableViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ail-af-hnN">
+                <viewController storyboardIdentifier="MainViewController" id="c7d-ck-FUk" customClass="MainViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q5K-pc-iBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xm-VY-0ph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VP2-pQ-OpO">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-nb-CPP">
+                                <rect key="frame" x="0.0" y="74" width="320" height="430"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="z7t-Qi-98D">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z7t-Qi-98D" id="3lw-x4-6dk">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="c7d-ck-FUk" id="4Wx-eo-wpG"/>
+                                    <outlet property="delegate" destination="c7d-ck-FUk" id="QUF-LW-aTq"/>
+                                </connections>
+                            </tableView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WkT-8M-YRk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ErD-xm-Pzn">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ErD-xm-Pzn" id="IYy-cz-zuR">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dlD-8i-Vp2" id="FNM-DD-OS2"/>
-                            <outlet property="delegate" destination="dlD-8i-Vp2" id="S98-xy-D4W"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="TransitionTreasury" id="cc0-5Q-Bin"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bzq-Af-gmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="q5K-pc-iBh" secondAttribute="bottom" id="640-GH-mIt"/>
+                            <constraint firstAttribute="trailing" secondItem="WkT-8M-YRk" secondAttribute="trailing" id="6Uu-0F-3fU"/>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="Diu-Pi-2h0"/>
+                            <constraint firstItem="tyn-nb-CPP" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="FJD-F2-XxV"/>
+                            <constraint firstAttribute="trailing" secondItem="tyn-nb-CPP" secondAttribute="trailing" id="Yg8-Rp-SNB"/>
+                            <constraint firstItem="0xm-VY-0ph" firstAttribute="top" secondItem="tyn-nb-CPP" secondAttribute="bottom" id="Ziq-2B-imZ"/>
+                            <constraint firstItem="tyn-nb-CPP" firstAttribute="top" secondItem="WkT-8M-YRk" secondAttribute="bottom" id="umt-2l-Lqg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TransitionTreasury" id="7mu-u5-QaS"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="WkT-8M-YRk" id="D4e-Wc-77o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZf-U4-ThD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="348"/>
+            <point key="canvasLocation" x="265" y="348"/>
         </scene>
         <!--Modal-->
         <scene sceneID="nSv-5k-9N2">
@@ -76,47 +100,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-cm-bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="348"/>
+            <point key="canvasLocation" x="625" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Second-->
         <scene sceneID="gyn-W5-Rtr">
             <objects>
-                <viewController storyboardIdentifier="IBTViewController" id="Jag-6S-ezM" customClass="IBTViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="Jag-6S-ezM" customClass="SecondViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sd6-If-ySV"/>
                         <viewControllerLayoutGuide type="bottom" id="g9r-fc-Eyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AXN-ok-WWU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_girl" translatesAutoresizingMaskIntoConstraints="NO" id="UKr-3x-74h">
-                                <rect key="frame" x="0.0" y="232" width="320" height="171"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="Hvd-ry-Rbk"/>
-                                    <constraint firstAttribute="width" constant="320" id="fU6-hx-mww"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-Wv-3wA">
-                                <rect key="frame" x="15" y="35" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mys-O1-L3X">
+                                <rect key="frame" x="145" y="414" width="30" height="30"/>
                                 <state key="normal" title="Pop"/>
                                 <connections>
-                                    <action selector="pop:" destination="Jag-6S-ezM" eventType="touchUpInside" id="08D-dA-RAl"/>
+                                    <action selector="popClick:" destination="Jag-6S-ezM" eventType="touchUpInside" id="CWs-qM-Ynh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="N8c-Wv-3wA" firstAttribute="leading" secondItem="AXN-ok-WWU" secondAttribute="leading" constant="15" id="FxS-xc-H9a"/>
-                            <constraint firstItem="N8c-Wv-3wA" firstAttribute="top" secondItem="sd6-If-ySV" secondAttribute="bottom" constant="15" id="Kj3-yu-CUp"/>
-                            <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="UKr-3x-74h" secondAttribute="bottom" constant="165" id="fIv-gc-KAF"/>
-                            <constraint firstItem="UKr-3x-74h" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="gdE-h8-wiZ"/>
+                            <constraint firstItem="mys-O1-L3X" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="4OU-Bk-9jS"/>
+                            <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="mys-O1-L3X" secondAttribute="bottom" constant="60" id="ZtN-Kb-GOc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="os4-zf-kP1"/>
-                    <connections>
-                        <outlet property="keyImageView" destination="UKr-3x-74h" id="Fnu-0d-l9K"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Second" id="os4-zf-kP1">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="CEF-bj-Cmk">
+                            <connections>
+                                <action selector="popClick:" destination="Jag-6S-ezM" id="bpZ-rw-pOJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYU-3W-bor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +143,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_girl" width="700" height="394"/>
+        <image name="Logo" width="450" height="74"/>
     </resources>
 </document>

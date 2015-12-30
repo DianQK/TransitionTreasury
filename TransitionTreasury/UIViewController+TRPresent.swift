@@ -48,6 +48,9 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     
     func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
+        if data != nil {
+            debugPrint("Warning: You set callbackData, but you forget implement this method to get data.")
+        }
         tr_dismissViewController()
     }
 }
