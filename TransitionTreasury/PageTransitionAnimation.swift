@@ -32,7 +32,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.3
+        return 0.7
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
