@@ -50,7 +50,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
             let layer =  CALayer()
             layer.frame = CGRect(origin: CGPointZero, size: toVC!.view.bounds.size)
             layer.backgroundColor = toVC!.view.backgroundColor?.CGColor
-            let maskAnimation = CABasicAnimation(keyPath: "opacity")
+            let maskAnimation = CABasicAnimation(tr_keyPath: .opacity)
             maskAnimation.fromValue = 0
             maskAnimation.toValue = 1
             maskAnimation.duration = transitionDuration(transitionContext)

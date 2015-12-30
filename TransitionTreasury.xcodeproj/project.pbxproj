@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
+		2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */; };
 		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
 		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
 		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
 		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */,
+				2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */,
 				26FF06CA1C3380DE003DAC25 /* PopTipTransitionAnimation.swift */,
 				26FF06CB1C3380DE003DAC25 /* TwitterTransitionAnimation.swift */,
 				26FF06CC1C3380DE003DAC25 /* FadeTransitionAnimation.swift */,
@@ -278,6 +281,7 @@
 				26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */,
 				26FF06D71C3380DE003DAC25 /* TwitterTransitionAnimation.swift in Sources */,
 				26FF06DA1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift in Sources */,
+				2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */,
 				26FF06D61C3380DE003DAC25 /* PopTipTransitionAnimation.swift in Sources */,
 				26FF06D81C3380DE003DAC25 /* FadeTransitionAnimation.swift in Sources */,
 			);
