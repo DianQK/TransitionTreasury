@@ -14,6 +14,8 @@ import UIKit
  */
 public enum TRKeyPath: String {
     case opacity = "opacity"
+    case bounds_size = "bounds.size"
+    case position = "position"
 }
 // MARK: - Safety CAAnimation
 public extension CABasicAnimation {

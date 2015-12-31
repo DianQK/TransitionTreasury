@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Just because AutoLayout, I have to Copy the maskView. So ~ Not bounce.
 public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var transitionStatus: TransitionStatus?
@@ -16,6 +16,15 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public let maskView: UIView
     
+    private lazy var maskViewCopy: UIView = {
+        let maskViewCopy = UIView(frame: self.maskView.frame)
+        maskViewCopy.layer.contents = self.maskView.layer.contents
+        maskViewCopy.layer.position = self.maskView.layer.position
+        return maskViewCopy
+    }()
+    
+    private var animationCount: Int = 0
+    
     public init(maskView view: UIView, status: TransitionStatus = .Present) {
         maskView = view
         transitionStatus = status
@@ -23,7 +32,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.6
+        return 0.5
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -54,35 +63,54 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         var startSize = maskView.layer.bounds.size
         var endSize = maskView.layer.bounds.size.heightFill(distanceResult * 2).widthFill(distanceResult * 2)
         
+        var startPosition = maskView.layer.position
+        var endPosition = toVC!.view.layer.position
+        
         if transitionStatus == .Dismiss {
             swap(&fromVC, &toVC)
             swap(&startSize, &endSize)
+            swap(&startPosition, &endPosition)
         }
         
         maskLayer.bounds.size = endSize
+        maskViewCopy.layer.position = endPosition
+        
         
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
+        toVC?.view.addSubview(maskViewCopy)
         toVC?.view.layer.mask = maskLayer
 
-        let maskLayerAnimation = CABasicAnimation(keyPath: "bounds.size")
+        let maskLayerAnimation = CABasicAnimation(tr_keyPath: .bounds_size)
 
         maskLayerAnimation.fromValue = NSValue(CGSize: startSize)
         maskLayerAnimation.toValue = NSValue(CGSize: endSize)
         maskLayerAnimation.duration = transitionDuration(transitionContext)
         maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         maskLayerAnimation.delegate = self
+        animationCount++
         
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
+        
+        let maskViewPositionAnimation = CABasicAnimation(tr_keyPath: .position)
+        maskViewPositionAnimation.fromValue = NSValue(CGPoint: startPosition)
+        maskViewPositionAnimation.toValue = NSValue(CGPoint: endPosition)
+        maskViewPositionAnimation.duration = transitionDuration(transitionContext)
+        maskViewPositionAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        maskViewPositionAnimation.delegate = self
+        animationCount++
+        
+        maskViewCopy.layer.addAnimation(maskViewPositionAnimation, forKey: "position")
         
     }
     
     override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        //告诉 iOS 这个 transition 完成
-        transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled())
-        //清除 fromVC 的 mask
-        transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
-        transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
+        animationCount--
+        if animationCount == 0 {
+            transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled())
+            transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
+            transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
+        }
     }
     
 }
