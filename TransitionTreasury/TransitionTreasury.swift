@@ -64,7 +64,7 @@ public enum TRPresentMethod {
     case Fade
     case PopTip(visibleHeight: CGFloat)
     case TaaskyFlip(blurEffect: Bool)
-    case Elevate(maskView: UIView)
+    case Elevate(maskView: UIView, toPosition: CGPoint)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -77,8 +77,8 @@ public enum TRPresentMethod {
             return PopTipTransitionAnimation(visibleHeight: height)
         case let .TaaskyFlip(blur) :
             return TaaskyFlipTransitionAnimation(blurEffect: blur)
-        case let .Elevate(view) :
-            return ElevateTransitionAnimation(maskView: view)
+        case let .Elevate(view, position) :
+            return ElevateTransitionAnimation(maskView: view, toPosition: position)
         case let .Custom(transition) :
             return transition
         }

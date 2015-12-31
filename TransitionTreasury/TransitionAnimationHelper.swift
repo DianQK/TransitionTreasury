@@ -60,3 +60,12 @@ public extension CGSize {
         }
     }
 }
+
+public extension UIScreen {
+    public var center: CGPoint {
+        get {
+            return CGPoint(x: bounds.width / 2, y: bounds.height / 2)
+        }
+    }
+
+}

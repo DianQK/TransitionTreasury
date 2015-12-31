@@ -16,6 +16,8 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public let maskView: UIView
     
+    public let toPosition: CGPoint
+    
     private lazy var maskViewCopy: UIView = {
         let maskViewCopy = UIView(frame: self.maskView.frame)
         maskViewCopy.layer.contents = self.maskView.layer.contents
@@ -25,8 +27,9 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     private var animationCount: Int = 0
     
-    public init(maskView view: UIView, status: TransitionStatus = .Present) {
+    public init(maskView view: UIView, toPosition position: CGPoint, status: TransitionStatus = .Present) {
         maskView = view
+        toPosition = position
         transitionStatus = status
         super.init()
     }
@@ -64,7 +67,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         var endSize = maskView.layer.bounds.size.heightFill(distanceResult * 2).widthFill(distanceResult * 2)
         
         var startPosition = maskView.layer.position
-        var endPosition = toVC!.view.layer.position
+        var endPosition = toPosition
         
         if transitionStatus == .Dismiss {
             swap(&fromVC, &toVC)
