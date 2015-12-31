@@ -13,14 +13,21 @@
 		262F1DF71C33F7E600E078AE /* FadeTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */; };
 		262F1DF91C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */; };
 		262F1DFB1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */; };
-		262F1DFD1C341B9E00E078AE /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */; };
 		263B43821C32E54D0093593E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B43761C32E54D0093593E /* AppDelegate.swift */; };
 		263B43831C32E54D0093593E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263B43771C32E54D0093593E /* Assets.xcassets */; };
 		263B43841C32E54D0093593E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B43781C32E54D0093593E /* LaunchScreen.storyboard */; };
 		263B43851C32E54D0093593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B437A1C32E54D0093593E /* Main.storyboard */; };
 		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
 		263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 263B43931C32E6BD0093593E /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		266DE80D1C34DDCB00D5CCC9 /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266DE80C1C34DDCB00D5CCC9 /* TaaskyFlipTransitionAnimation.swift */; };
+		26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */; };
+		26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */; };
+		26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */; };
+		26978F871C3558CF001B4C25 /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7E1C3558CF001B4C25 /* OMINTransitionAnimation.swift */; };
+		26978F881C3558CF001B4C25 /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7F1C3558CF001B4C25 /* PageTransitionAnimation.swift */; };
+		26978F891C3558CF001B4C25 /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F801C3558CF001B4C25 /* PhotoTransitionAnimation.swift */; };
+		26978F8A1C3558CF001B4C25 /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */; };
+		26978F8B1C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */; };
+		26978F8C1C3558CF001B4C25 /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */; };
 		26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */; };
 		26FDFF191C33C4A600CB3995 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FDFF261C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF251C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift */; };
@@ -33,14 +40,8 @@
 		26FF06AC1C33800E003DAC25 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FF06AD1C33800E003DAC25 /* TransitionTreasury.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */; };
-		26FF06D61C3380DE003DAC25 /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CA1C3380DE003DAC25 /* PopTipTransitionAnimation.swift */; };
-		26FF06D71C3380DE003DAC25 /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CB1C3380DE003DAC25 /* TwitterTransitionAnimation.swift */; };
-		26FF06D81C3380DE003DAC25 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CC1C3380DE003DAC25 /* FadeTransitionAnimation.swift */; };
-		26FF06D91C3380DE003DAC25 /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CD1C3380DE003DAC25 /* OMINTransitionAnimation.swift */; };
 		26FF06DA1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */; };
 		26FF06DB1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */; };
-		26FF06DC1C3380DE003DAC25 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06D01C3380DE003DAC25 /* IBanTangTransitionAnimation.swift */; };
-		26FF06DD1C3380DE003DAC25 /* PhotoTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06D11C3380DE003DAC25 /* PhotoTransitionAnimation.swift */; };
 		26FF06DE1C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */; };
 		26FF06DF1C3380DE003DAC25 /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */; };
 		26FF06E01C3380DE003DAC25 /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */; };
@@ -98,7 +99,6 @@
 		262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimationTests.swift; sourceTree = "<group>"; };
 		262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegateTests.swift; sourceTree = "<group>"; };
 		262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegateTests.swift; sourceTree = "<group>"; };
-		262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
 		263B43761C32E54D0093593E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263B43771C32E54D0093593E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263B43791C32E54D0093593E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,7 +108,15 @@
 		263B43911C32E6BD0093593E /* TransitionTreasury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionTreasury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		263B43931C32E6BD0093593E /* TransitionTreasury.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
 		263B43951C32E6BD0093593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		266DE80C1C34DDCB00D5CCC9 /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F7E1C3558CF001B4C25 /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F7F1C3558CF001B4C25 /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F801C3558CF001B4C25 /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
+		26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryTests.swift; sourceTree = "<group>"; };
 		26FDFF181C33C4A600CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,14 +131,8 @@
 		26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasuryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FF06AA1C337459003DAC25 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
-		26FF06CA1C3380DE003DAC25 /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FF06CB1C3380DE003DAC25 /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FF06CC1C3380DE003DAC25 /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FF06CD1C3380DE003DAC25 /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
 		26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
-		26FF06D01C3380DE003DAC25 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
-		26FF06D11C3380DE003DAC25 /* PhotoTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
 		26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
 		26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
@@ -188,25 +190,34 @@
 		263B43921C32E6BD0093593E /* TransitionTreasury */ = {
 			isa = PBXGroup;
 			children = (
+				26978F7A1C3558CF001B4C25 /* TransitionAnimation */,
 				26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */,
 				2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */,
-				26FF06CA1C3380DE003DAC25 /* PopTipTransitionAnimation.swift */,
-				26FF06CB1C3380DE003DAC25 /* TwitterTransitionAnimation.swift */,
-				26FF06CC1C3380DE003DAC25 /* FadeTransitionAnimation.swift */,
-				26FF06CD1C3380DE003DAC25 /* OMINTransitionAnimation.swift */,
 				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
 				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */,
-				26FF06D01C3380DE003DAC25 /* IBanTangTransitionAnimation.swift */,
-				26FF06D11C3380DE003DAC25 /* PhotoTransitionAnimation.swift */,
-				262F1DFC1C341B9E00E078AE /* PageTransitionAnimation.swift */,
 				26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */,
 				26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */,
 				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
 				263B43951C32E6BD0093593E /* Info.plist */,
-				266DE80C1C34DDCB00D5CCC9 /* TaaskyFlipTransitionAnimation.swift */,
 			);
 			path = TransitionTreasury;
+			sourceTree = "<group>";
+		};
+		26978F7A1C3558CF001B4C25 /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */,
+				26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */,
+				26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */,
+				26978F7E1C3558CF001B4C25 /* OMINTransitionAnimation.swift */,
+				26978F7F1C3558CF001B4C25 /* PageTransitionAnimation.swift */,
+				26978F801C3558CF001B4C25 /* PhotoTransitionAnimation.swift */,
+				26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */,
+				26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */,
+				26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */,
+			);
+			path = TransitionAnimation;
 			sourceTree = "<group>";
 		};
 		26FDFF151C33C4A600CB3995 /* TransitionTreasuryTests */ = {
@@ -434,21 +445,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26978F881C3558CF001B4C25 /* PageTransitionAnimation.swift in Sources */,
+				26978F891C3558CF001B4C25 /* PhotoTransitionAnimation.swift in Sources */,
+				26978F8C1C3558CF001B4C25 /* TwitterTransitionAnimation.swift in Sources */,
+				26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */,
+				26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */,
 				26FF06E01C3380DE003DAC25 /* UIViewController+TRPresent.swift in Sources */,
+				26978F871C3558CF001B4C25 /* OMINTransitionAnimation.swift in Sources */,
 				26FF06DB1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift in Sources */,
-				262F1DFD1C341B9E00E078AE /* PageTransitionAnimation.swift in Sources */,
-				26FF06DC1C3380DE003DAC25 /* IBanTangTransitionAnimation.swift in Sources */,
+				26978F8A1C3558CF001B4C25 /* PopTipTransitionAnimation.swift in Sources */,
+				26978F8B1C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift in Sources */,
 				26FF06DE1C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift in Sources */,
-				26FF06D91C3380DE003DAC25 /* OMINTransitionAnimation.swift in Sources */,
 				26FF06DF1C3380DE003DAC25 /* UINavigationController+TRPushPop.swift in Sources */,
-				26FF06DD1C3380DE003DAC25 /* PhotoTransitionAnimation.swift in Sources */,
-				266DE80D1C34DDCB00D5CCC9 /* TaaskyFlipTransitionAnimation.swift in Sources */,
+				26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */,
 				26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */,
-				26FF06D71C3380DE003DAC25 /* TwitterTransitionAnimation.swift in Sources */,
 				26FF06DA1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift in Sources */,
 				2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */,
-				26FF06D61C3380DE003DAC25 /* PopTipTransitionAnimation.swift in Sources */,
-				26FF06D81C3380DE003DAC25 /* FadeTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
