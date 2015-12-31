@@ -41,7 +41,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
         presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
         presentTransition.append(PresentTransition(name: "TaaskyFlip", presentMethod: .TaaskyFlip(blurEffect: true)))
-        presentTransition.append(PresentTransition(name: "Elevate", presentMethod: .Elevate(maskView: logoImageView)))
+        presentTransition.append(PresentTransition(name: "Elevate", presentMethod: .Elevate(maskView: logoImageView, toPosition: UIScreen.mainScreen().center)))
     
     }
     
