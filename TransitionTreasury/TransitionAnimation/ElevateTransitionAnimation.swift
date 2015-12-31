@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/// Just because AutoLayout, I have to Copy the maskView. So ~ Not bounce.
+/// Like Elevate (No Bounce)
 public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var transitionStatus: TransitionStatus?
