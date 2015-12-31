@@ -155,10 +155,3 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     }
     
 }
-
-extension CGSize {
-    func widthFit(width: CGFloat) -> CGSize {
-        let widthPresent = width / self.width
-        return CGSize(width: width, height: widthPresent * height)
-    }
-}
