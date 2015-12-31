@@ -24,7 +24,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.3
+        return 0.6
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -44,13 +44,12 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         if transitionStatus == .Dismiss {
             swap(&fromVC, &toVC)
             swap(&startTransform, &endTransform)
-        } else if transitionStatus == .Present {
-            anchorPointBackup = toVC?.view.layer.anchorPoint
-            positionBackup = toVC?.view.layer.position
-            toVC?.view.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
-            toVC?.view.layer.position = CGPoint(x: toVC!.view.layer.position.x + toVC!.view.layer.bounds.width / 2, y: toVC!.view.layer.position.y)
         }
         
+        anchorPointBackup = toVC?.view.layer.anchorPoint
+        positionBackup = toVC?.view.layer.position
+        toVC?.view.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
+        toVC?.view.layer.position = CGPoint(x: toVC!.view.layer.position.x + toVC!.view.layer.bounds.width / 2, y: toVC!.view.layer.position.y)
         toVC?.view.layer.transform = startTransform
         
         containView?.addSubview(fromVC!.view)
@@ -60,10 +59,8 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
             toVC?.view.layer.transform = endTransform
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                if self.transitionStatus == .Dismiss {
-                    toVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
-                    toVC?.view.layer.position = self.positionBackup ?? CGPoint(x: toVC!.view.layer.position.x, y: toVC!.view.layer.position.y - toVC!.view.layer.bounds.height / 2)
-                }
+                toVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
+                toVC?.view.layer.position = self.positionBackup ?? CGPoint(x: toVC!.view.layer.position.x, y: toVC!.view.layer.position.y - toVC!.view.layer.bounds.height / 2)
         }
     }
     
