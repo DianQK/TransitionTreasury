@@ -20,6 +20,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
 
     public var interacting: Bool = false
     
+    private var transformBackup: CATransform3D?
+    
     private lazy var maskView: UIView = {
         let maskView = UIView(frame: UIScreen.mainScreen().bounds)
         maskView.backgroundColor = UIColor.blackColor()
@@ -32,7 +34,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.7
+        return 0.6
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -46,6 +48,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         
         var startOpacity: Float = 0
         var endOpacity: Float = 0.3
+        
+        transformBackup = transformBackup ?? fromVC?.view.layer.transform
         
         var transform3D: CATransform3D = CATransform3DIdentity
         transform3D.m34 = -1.0/500.0
@@ -77,6 +81,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                 toVC?.view.layer.shadowOpacity = 0
                 if self.transitionStatus == .Pop && finished {
                     self.maskView.removeFromSuperview()
+                    fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
                 }
         }
     }

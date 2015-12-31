@@ -18,6 +18,8 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     private var positionBackup: CGPoint?
     
+    private var transformBackup: CATransform3D?
+    
     public init(status: TransitionStatus = .Present) {
         transitionStatus = status
         super.init()
@@ -38,6 +40,8 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         var transform = CATransform3DIdentity
         transform.m34 = -1.0/500.0
         
+        transformBackup = fromVC?.view.layer.transform
+        
         var startFrame = CGRectOffset(screenBounds, 0, screenBounds.size.height)
         var finalFrame = screenBounds
         
@@ -47,12 +51,11 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             angle = -angle
         } else if transitionStatus == .Present {
             transform = CATransform3DRotate(transform, CGFloat(angle), 1, 0, 0)
+            anchorPointBackup = fromVC?.view.layer.anchorPoint
+            positionBackup = fromVC?.view.layer.position
+            fromVC?.view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
+            fromVC?.view.layer.position = CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y + fromVC!.view.layer.bounds.height / 2)
         }
-        
-        anchorPointBackup = fromVC?.view.layer.anchorPoint
-        positionBackup = fromVC?.view.layer.position
-        fromVC?.view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
-        fromVC?.view.layer.position = CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y + fromVC!.view.layer.bounds.height / 2)
         
         toVC?.view.layer.frame = startFrame
         
@@ -64,8 +67,11 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             toVC?.view.layer.frame = finalFrame
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
-                fromVC?.view.layer.position = self.positionBackup ?? CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y - fromVC!.view.layer.bounds.height / 2)
+                if self.transitionStatus == .Dismiss && finished {
+                    fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
+                    fromVC?.view.layer.position = self.positionBackup ?? CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y - fromVC!.view.layer.bounds.height / 2)
+                    fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
+                }
         }
     }
 }
