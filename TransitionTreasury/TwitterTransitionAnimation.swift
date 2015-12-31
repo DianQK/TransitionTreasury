@@ -14,10 +14,6 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
-    public var cancelPop: Bool = false
-    
-    public var interacting: Bool = false
-    
     private var anchorPointBackup: CGPoint?
     
     private var positionBackup: CGPoint?
@@ -40,6 +36,7 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         let screenBounds = UIScreen.mainScreen().bounds
         var angle = M_PI/48
         var transform = CATransform3DIdentity
+        transform.m34 = -1.0/500.0
         
         var startFrame = CGRectOffset(screenBounds, 0, screenBounds.size.height)
         var finalFrame = screenBounds
@@ -48,15 +45,14 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             swap(&fromVC, &toVC)
             swap(&startFrame, &finalFrame)
             angle = -angle
-        }
-        if transitionStatus == .Present {
-            transform.m34 = -1.0/500.0
+        } else if transitionStatus == .Present {
             transform = CATransform3DRotate(transform, CGFloat(angle), 1, 0, 0)
-            anchorPointBackup = fromVC?.view.layer.anchorPoint
-            positionBackup = fromVC?.view.layer.position
-            fromVC?.view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
-            fromVC?.view.layer.position = CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y + fromVC!.view.layer.bounds.height / 2)
         }
+        
+        anchorPointBackup = fromVC?.view.layer.anchorPoint
+        positionBackup = fromVC?.view.layer.position
+        fromVC?.view.layer.anchorPoint = CGPoint(x: 0.5, y: 1)
+        fromVC?.view.layer.position = CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y + fromVC!.view.layer.bounds.height / 2)
         
         toVC?.view.layer.frame = startFrame
         
@@ -68,10 +64,8 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             toVC?.view.layer.frame = finalFrame
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                if self.transitionStatus == .Dismiss {
-                    fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
-                    fromVC?.view.layer.position = self.positionBackup ?? CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y - fromVC!.view.layer.bounds.height / 2)
-                }
+                fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
+                fromVC?.view.layer.position = self.positionBackup ?? CGPoint(x: fromVC!.view.layer.position.x, y: fromVC!.view.layer.position.y - fromVC!.view.layer.bounds.height / 2)
         }
     }
 }
