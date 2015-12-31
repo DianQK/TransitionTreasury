@@ -14,11 +14,14 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
+    public private(set) var blurEffect: Bool = true
+    
     private var anchorPointBackup: CGPoint?
     
     private var positionBackup: CGPoint?
     
-    public init(status: TransitionStatus = .Present) {
+    public init(blurEffect blur: Bool = true, status: TransitionStatus = .Present) {
+        blurEffect = blur
         transitionStatus = status
         super.init()
     }
@@ -53,6 +56,11 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         toVC?.view.layer.transform = startTransform
         
         containView?.addSubview(fromVC!.view)
+        if blurEffect && (transitionStatus == .Present) {
+            let effectView = UIVisualEffectView(frame: fromVC!.view.frame)
+            effectView.effect = UIBlurEffect(style: .Dark)
+            containView?.addSubview(effectView)
+        }
         containView?.addSubview(toVC!.view)
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
