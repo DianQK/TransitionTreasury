@@ -17,13 +17,13 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     var interacting: Bool{get set}
     /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
-    
-    var cancelPop: Bool{get set}
     /// Option
     var completion: (() -> Void)?{get set}
-    /// Option
+    /// Option, For Interaction
+    var cancelPop: Bool{get set}
+    /// Option, For Interaction
     var interactivePrecent: CGFloat{get}
-    
+    /// Option, For Interaction
     var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
     /**
      Option
@@ -34,31 +34,26 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
 }
 
 public extension TRViewControllerAnimatedTransitioning {
+    
     public var interacting: Bool {
         get {
             return false
         }
-        set {
-            
-        }
+        set {}
     }
     
     public var keyView: UIView? {
         get {
             return nil
         }
-        set {
-            
-        }
+        set {}
     }
     
     public var completion: (() -> Void)? {
         get {
             return nil
         }
-        set {
-            
-        }
+        set {}
     }
     
     public var interactivePrecent: CGFloat {
@@ -71,24 +66,16 @@ public extension TRViewControllerAnimatedTransitioning {
         get {
             return false
         }
-        set {
-            
-        }
+        set {}
     }
     
     public var percentTransition: UIPercentDrivenInteractiveTransition? {
         get {
             return nil
         }
-        set {
-            
-        }
+        set {}
     }
     
-    func popToVCIndex(index: Int) {
-        
-    }
-    
-    
+    func popToVCIndex(index: Int) {}
     
 }

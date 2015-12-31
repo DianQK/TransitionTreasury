@@ -31,7 +31,6 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     
     @IBOutlet weak var presentResultLabel: UILabel!
     
-    
     func loadTransition() {
         pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
@@ -60,7 +59,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     // MARK: - Modal viewController delegate
     
     func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
-        presentResultLabel.text = "CallbackData: \(data)"
+        presentResultLabel.text = "CallbackData: \(data)."
         tr_dismissViewController()
         
     }
@@ -68,6 +67,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

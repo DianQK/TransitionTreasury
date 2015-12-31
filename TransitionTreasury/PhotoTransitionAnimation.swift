@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Beta
 public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var keyView: UIView
@@ -33,8 +33,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     private var showVC: UIViewController?
     
     lazy private var panGestureRecognizer: UIPanGestureRecognizer = {
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: Selector("handlePan:"))//UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
-//        eanGestureRecognizer.edges = .Left
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: Selector("handlePan:"))
         return panGestureRecognizer
     }()
     
@@ -54,18 +53,12 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-//        if transitionStatus == .Dismiss {
-//            swap(&fromVC, &toVC)
-//        }
-        
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
-//        containView?.addSubview(keyView)
         toVC?.view.addSubview(keyView)
         
         
         if transitionStatus == .Present {
-//            toVC!.view.addGestureRecognizer(panGestureRecognizer)
             frameBackup = keyView.frame
             showVC = fromVC
             if let toVC = toVC as? ModalViewControllerDelegate {
@@ -87,9 +80,9 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             case .Present :
                 self.keyView.center = toVC!.view.center
                 self.keyView.layer.bounds.size = self.keyView.layer.bounds.size.widthFit(toVC!.view.bounds.width)
-            case .Dismiss where self.interacting == false : //Error!!!!
+            case .Dismiss where self.interacting == false :
                 toVC!.view.layer.opacity = 1
-                self.keyView.layer.frame = self.frameBackup!// ?? self.keyView.layer.frame
+                self.keyView.layer.frame = self.frameBackup!
             case .Dismiss where self.interacting == true :
                 toVC!.view.layer.opacity = 1
             default :
@@ -143,12 +136,10 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         default :
             if interacting == true {
                 interacting = false
-                if translation.y >= 0 { // Something not well
+                if translation.y >= 0 {
                     cancelPop = false
-                    percentTransition?.completionSpeed = 200 // Trick
+                    percentTransition?.completionSpeed = 200
                     percentTransition?.finishInteractiveTransition()
-//                    detailVC?.view.removeGestureRecognizer(recognizer)
-//                    recognizer.removeTarget(self, action: Selector("handlePan:"))
                 } else {
                     cancelPop = true
                     percentTransition?.cancelInteractiveTransition()
@@ -161,10 +152,6 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             }
         }
         
-    }
-    
-    deinit {
-        print("Photo deinit")
     }
     
 }

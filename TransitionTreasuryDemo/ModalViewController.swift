@@ -29,8 +29,7 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
     }
     
     deinit {
-        print("Modal deinit")
+        print("Modal deinit.")
     }
     
-
 }

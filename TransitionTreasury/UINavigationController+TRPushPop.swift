@@ -7,17 +7,21 @@
 //
 
 import UIKit
-
+// MARK: - Transition Treasury UINavgationController Extension
 public extension UINavigationController {
-    
-    public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)? = nil) {
-        let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewcontroller)
+    /**
+     Transition treasury push viewController.
+     */
+    public func tr_pushViewController(viewController: UIViewController, method: TRPushMethod, completion: (() -> Void)? = nil) {
+        let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
         transition.completion = completion
-        (viewcontroller as? TRTransition)?.tr_transition = transition
+        (viewController as? TRTransition)?.tr_transition = transition
         delegate = transition
-        pushViewController(viewcontroller, animated: true)
+        pushViewController(viewController, animated: true)
     }
-    
+    /**
+     Transition treasury pop viewController.
+     */
     public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
         let transition = (topViewController as? TRTransition)?.tr_transition
         let popViewController = topViewController
@@ -29,7 +33,9 @@ public extension UINavigationController {
         delegate = transition
         return popViewControllerAnimated(true)
     }
-    
+    /**
+     Transition treasury pop to viewController.
+     */
     public func tr_popToViewController(viewController: UIViewController, completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
@@ -46,7 +52,9 @@ public extension UINavigationController {
             })
             }()
     }
-    
+    /**
+     Transition Treasury Pop to Root ViewController.
+     */
     public func tr_popToRootViewController(completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard viewControllers.count > 1 else {
             return popToRootViewControllerAnimated(true)
@@ -65,7 +73,8 @@ public extension UINavigationController {
     }
     
 }
-
+/// Retain transiton delegate
 public protocol TRTransition: class {
+    /// Transiton delegate
     var tr_transition: TRNavgationTransitionDelegate?{get set}
 }

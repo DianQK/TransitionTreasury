@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Like IBanTang, View Move
 public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var keyView: UIView?
@@ -91,10 +91,6 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 }
                 self.cancelPop = false
         }
-    }
-    
-    deinit {
-        print("IBanTang deinit")
     }
 
 }

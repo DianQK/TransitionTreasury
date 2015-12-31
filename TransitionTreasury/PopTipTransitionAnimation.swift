@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Pop Your Tip ViewController.
 public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var transitionStatus: TransitionStatus?
@@ -94,12 +94,6 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
     })
     
-//        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-//            toVC?.view.layer.frame = finalFrame
-//            self.maskView.alpha = finalOpacity
-//            }) { (finished) -> Void in
-//                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-//        }
     }
     
     func tapDismiss(tap: UITapGestureRecognizer) {

@@ -13,6 +13,15 @@ import UIKit
  - OMIN:        Like OmniFocus
  - Custom:      Custom you like
  */
+ /**
+ ViewController Push Methods
+ 
+ - OMIN:          Like OmniFocus
+ - IBanTang:      Like IBanTang
+ - Fade:          Fade Out In
+ - Page:          Page Motion
+ - Custom:        Custom your animation
+ */
 public enum TRPushMethod {
     case OMIN(keyView: UIView)
     case IBanTang(keyView: UIView)
@@ -41,6 +50,14 @@ public enum TRPushMethod {
  
  - Twitter:     Like Twitter
  - Custom:      Custom you like
+ */
+ /**
+ ViewController Present Methods
+ 
+ - Twitter:     Like Twitter
+ - Fade:        Fade out in
+ - PopTip:      Pop A Tip VC
+ - Custom:      Custom your Animation
  */
 public enum TRPresentMethod {
     case Twitter

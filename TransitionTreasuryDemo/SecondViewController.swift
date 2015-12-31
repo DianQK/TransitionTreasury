@@ -31,7 +31,7 @@ class SecondViewController: UIViewController, TRTransition {
     }
     
     deinit {
-        print("Second deinit")
+        print("Second deinit.")
     }
 
 }

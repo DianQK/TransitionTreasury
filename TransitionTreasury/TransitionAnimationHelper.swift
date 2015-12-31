@@ -7,18 +7,23 @@
 //
 
 import UIKit
-
+/**
+ TransitionTreasury's CAAnimation Enum
+ 
+ - opacity: layer.opacity
+ */
 public enum TRKeyPath: String {
     case opacity = "opacity"
 }
-
-//public extension CAPropertyAnimation {
-//    public convenience init(tr_keyPath path: TRKeyPath?) {
-//        self.init(keyPath: path?.rawValue)
-//    }
-//}
-
+// MARK: - Safety CAAnimation
 public extension CABasicAnimation {
+    /**
+     TransitionTreasury's CABasicAnimation Init Method
+     
+     - parameter path: TRKeyPath
+     
+     - returns: CAAnimation
+     */
     public convenience init(tr_keyPath path: TRKeyPath?) {
         self.init(keyPath: path?.rawValue)
     }

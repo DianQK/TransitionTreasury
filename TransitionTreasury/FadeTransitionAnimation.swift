@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Fade Out In Animation
 public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var transitionStatus: TransitionStatus?
@@ -15,9 +15,9 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var percentTransition: UIPercentDrivenInteractiveTransition?
-    /// 判断是否取消了 Pop
+
     public var cancelPop: Bool = false
-    /// 判断是否在交互中
+
     public var interacting: Bool = false
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {

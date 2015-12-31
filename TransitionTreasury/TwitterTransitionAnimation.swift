@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/// OMIN 具体实现
+/// Like Twitter Present.
 public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public var transitionStatus: TransitionStatus?

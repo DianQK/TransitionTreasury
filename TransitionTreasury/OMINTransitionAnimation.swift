@@ -9,20 +9,20 @@
 import UIKit
 /// OminFocus app push transition implement.
 public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
-    /// 分割的边界视图
-    public var keyView: UIView?
-    /// 转场状态
+
     public var transitionStatus: TransitionStatus?
     
     public var transitionContext: UIViewControllerContextTransitioning?
-    /// 动画结束执行的闭包
+
     public var completion: (() -> Void)?
-    /// 分割的下半部分视图
+
     public var bottomView: UIView = UIView()
-    /// 判断是否取消了 Pop
+
     public var cancelPop: Bool = false
-    /// 判断是否在交互中
+
     public var interacting: Bool = false
+    
+    var keyView: UIView?
     
     public init(key: UIView?, status: TransitionStatus = .Push) {
         keyView = key
@@ -40,7 +40,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-        var topHeight: CGFloat = 0// = keyView!.layer.position.y + keyView!.layer.bounds.size.height / 2
+        var topHeight: CGFloat = 0
         var bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
         
         if transitionStatus == .Pop {
@@ -82,8 +82,8 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             self.bottomView.layer.position.y += bottomHeight
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                self.bottomView.removeFromSuperview() // 只要动画结束，该图层都应该移除
-                if !self.cancelPop { //TODO change this. cancelPop won't update
+                self.bottomView.removeFromSuperview()
+                if !self.cancelPop {
                     if self.transitionStatus == .Pop {
                         transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
                         transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.layer.mask = nil
