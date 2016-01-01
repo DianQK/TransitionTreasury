@@ -79,7 +79,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 toVC?.view.layer.shadowOpacity = 0
-                if self.transitionStatus == .Pop && finished {
+                if self.transitionStatus == .Pop && finished && !self.cancelPop {
                     self.maskView.removeFromSuperview()
                     fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
                 }
