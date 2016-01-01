@@ -82,16 +82,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="q5K-pc-iBh" secondAttribute="bottom" id="2az-m4-C9d"/>
                             <constraint firstItem="WkT-8M-YRk" firstAttribute="centerX" secondItem="VP2-pQ-OpO" secondAttribute="centerX" id="LY5-BX-Hib"/>
                             <constraint firstAttribute="trailing" secondItem="tyn-nb-CPP" secondAttribute="trailing" id="Msh-oR-5vE"/>
                             <constraint firstItem="0xm-VY-0ph" firstAttribute="top" secondItem="tyn-nb-CPP" secondAttribute="bottom" id="aJe-zy-C3s"/>
                             <constraint firstItem="tyn-nb-CPP" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="gbe-V0-AgU"/>
                             <constraint firstItem="tyn-nb-CPP" firstAttribute="top" secondItem="WkT-8M-YRk" secondAttribute="bottom" id="j3c-qE-XYA"/>
                             <constraint firstItem="WkT-8M-YRk" firstAttribute="width" secondItem="VP2-pQ-OpO" secondAttribute="width" id="mmZ-AJ-h0U"/>
-                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="q5K-pc-iBh" secondAttribute="bottom" id="tGa-Ta-gSa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TransitionTreasury" id="7mu-u5-QaS"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="logoImageView" destination="WkT-8M-YRk" id="D4e-Wc-77o"/>

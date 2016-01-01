@@ -7,12 +7,6 @@
 //
 
 import UIKit
-/**
- ViewController Push Methods
- 
- - OMIN:        Like OmniFocus
- - Custom:      Custom you like
- */
  /**
  ViewController Push Methods
  
@@ -27,6 +21,7 @@ public enum TRPushMethod {
     case IBanTang(keyView: UIView)
     case Fade
     case Page
+    case Blixt(keyView: UIView, to: CGRect)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -39,18 +34,14 @@ public enum TRPushMethod {
             return FadeTransitionAnimation()
         case .Page :
             return PageTransitionAnimation()
+        case let .Blixt(view, frame) :
+            return BlixtTransitionAnimation(key: view, toFrame: frame)
         case let .Custom(transition) :
             return transition
         }
     }
 }
 
-/**
- ViewController Present Methods
- 
- - Twitter:     Like Twitter
- - Custom:      Custom you like
- */
  /**
  ViewController Present Methods
  

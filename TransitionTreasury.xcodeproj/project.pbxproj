@@ -28,6 +28,7 @@
 		26978F8A1C3558CF001B4C25 /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */; };
 		26978F8B1C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */; };
 		26978F8C1C3558CF001B4C25 /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */; };
+		26C4C6501C36A7AB00151251 /* BlixtTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4C64F1C36A7AB00151251 /* BlixtTransitionAnimation.swift */; };
 		26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */; };
 		26FDFF191C33C4A600CB3995 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FDFF261C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF251C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift */; };
@@ -117,6 +118,7 @@
 		26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
+		26C4C64F1C36A7AB00151251 /* BlixtTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlixtTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryTests.swift; sourceTree = "<group>"; };
 		26FDFF181C33C4A600CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				26978F811C3558CF001B4C25 /* PopTipTransitionAnimation.swift */,
 				26978F821C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift */,
 				26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */,
+				26C4C64F1C36A7AB00151251 /* BlixtTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				26978F8C1C3558CF001B4C25 /* TwitterTransitionAnimation.swift in Sources */,
 				26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */,
 				26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */,
+				26C4C6501C36A7AB00151251 /* BlixtTransitionAnimation.swift in Sources */,
 				26FF06E01C3380DE003DAC25 /* UIViewController+TRPresent.swift in Sources */,
 				26978F871C3558CF001B4C25 /* OMINTransitionAnimation.swift in Sources */,
 				26FF06DB1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift in Sources */,
