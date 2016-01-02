@@ -384,7 +384,6 @@
 					};
 					26FE2CC11C26D80C005F4DDC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = HY634B3FW2;
 					};
 				};
 			};

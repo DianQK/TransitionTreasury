@@ -31,21 +31,6 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     
     @IBOutlet weak var presentResultLabel: UILabel!
     
-    func loadTransition() {
-        pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
-        pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
-        pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
-        pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
-        pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
-        
-        presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
-        presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
-        presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
-        presentTransition.append(PresentTransition(name: "TaaskyFlip", presentMethod: .TaaskyFlip(blurEffect: true)))
-        presentTransition.append(PresentTransition(name: "Elevate", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().center)))
-    
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +49,21 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
         presentResultLabel.text = "CallbackData: \(data)."
         tr_dismissViewController()
+        
+    }
+    
+    func loadTransition() {
+        pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
+        pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
+        pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
+        
+        presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
+        presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
+        presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
+        presentTransition.append(PresentTransition(name: "TaaskyFlip", presentMethod: .TaaskyFlip(blurEffect: true)))
+        presentTransition.append(PresentTransition(name: "Elevate", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().center)))
         
     }
 
