@@ -16,6 +16,7 @@ public enum TRKeyPath: String {
     case opacity = "opacity"
     case bounds_size = "bounds.size"
     case position = "position"
+    case transform = "transform"
 }
 // MARK: - Safety CAAnimation
 public extension CABasicAnimation {
