@@ -67,5 +67,10 @@ public extension UIScreen {
             return CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         }
     }
+}
 
+public extension CGRect {
+    public func shape(precent precent: CGFloat) -> CGRect {
+        return CGRectInset(self, width * (1 - precent), height * (1 - precent))
+    }
 }

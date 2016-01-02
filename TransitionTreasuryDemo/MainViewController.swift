@@ -36,7 +36,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
         pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
         pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
-        pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 0, y: 360, width: logoImageView.frame.size.width / 2, height: logoImageView.frame.size.height / 2))))
+        pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
         
         presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))

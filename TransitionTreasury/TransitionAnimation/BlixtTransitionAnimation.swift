@@ -38,7 +38,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     }
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.3
+        return 0.6
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -58,7 +58,22 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         containView?.addSubview(keyViewCopy)
         keyView.layer.opacity = 0
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        func bounce(completion: (() -> Void)? = nil) {
+            UIView.animateWithDuration(0.1, animations: {
+                self.keyViewCopy.frame = self.keyView.frame.shape(precent: 0.97)
+            })
+            UIView.animateWithDuration(0.1, delay: 0.1, options: .CurveEaseInOut, animations: {
+                self.keyViewCopy.frame = self.keyView.frame
+                }, completion: { (finished) -> Void in
+                    completion?()
+            })
+        }
+        
+        if transitionStatus == .Push {
+            bounce()
+        }
+        
+        UIView.animateWithDuration(transitionDuration(transitionContext) - 0.2, delay: 0.2, options: .CurveEaseInOut, animations: {
             switch self.transitionStatus! {
             case .Push :
                 fromVC?.view.layer.frame.origin.x = -rightX
@@ -72,12 +87,14 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                 fatalError("You set false status.")
             }
             }) { (finished) -> Void in
+                
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if finished && !self.cancelPop {
                     toVC?.view.addSubview(self.keyViewCopy)
                     if self.transitionStatus == .Pop {
                         self.keyView.layer.opacity = 1
                         self.keyViewCopy.removeFromSuperview()
+                        
                     }
                     self.completion?()
                     self.completion = nil
