@@ -51,7 +51,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'TransitionTreasury', '~> 1.0.0'
+pod 'TransitionTreasury', '~> 1.0.1'
 ```
 
 Then, run the following command:
@@ -72,7 +72,7 @@ $ brew install carthage
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "DianQK/TransitionTreasury" >= 1.0.0
+github "DianQK/TransitionTreasury" >= 1.0.1
 ```
 
 Then, run the following command to build the TransitionTreasury framework:
