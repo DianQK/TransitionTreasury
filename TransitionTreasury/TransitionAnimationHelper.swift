@@ -32,16 +32,23 @@ public extension CABasicAnimation {
 }
 
 public extension CGSize {
+    /**
+     Fit width without shape change.
+     */
     public func widthFit(width: CGFloat) -> CGSize {
         let widthPresent = width / self.width
         return CGSize(width: width, height: widthPresent * height)
     }
-    
+    /**
+     Fit height without shape change.
+     */
     public func heightFit(height: CGFloat) -> CGSize {
         let heightPresent = height / self.height
         return CGSize(width: heightPresent * width, height: height)
     }
-    
+    /**
+     Fill width without shape change.
+     */
     public func widthFill(width: CGFloat) -> CGSize {
         switch self.width >= width {
         case true :
@@ -50,7 +57,9 @@ public extension CGSize {
             return widthFit(width)
         }
     }
-    
+    /**
+     Fit height without shape change.
+     */
     public func heightFill(height: CGFloat) -> CGSize {
         switch self.height >= height {
         case true :
@@ -62,6 +71,7 @@ public extension CGSize {
 }
 
 public extension UIScreen {
+    /// Get screen center.
     public var center: CGPoint {
         get {
             return CGPoint(x: bounds.width / 2, y: bounds.height / 2)
@@ -70,6 +80,9 @@ public extension UIScreen {
 }
 
 public extension CGRect {
+    /** 
+     Return a rectangle that precent the source rectangle, with the same center point.
+     */
     public func shape(precent precent: CGFloat) -> CGRect {
         return CGRectInset(self, width * (1 - precent), height * (1 - precent))
     }
