@@ -12,7 +12,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     /// Control transition precent
     var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
-    var transition: TRViewControllerAnimatedTransitioning
+    public var transition: TRViewControllerAnimatedTransitioning
     /// Transition completion block
     var completion: (() -> Void)? {
         get {
@@ -23,7 +23,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         }
     }
     /// The edge gesture for pop
-    lazy public var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
+    lazy var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
         let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("edgePan:"))
         edgePanGestureRecognizer.edges = .Left
         return edgePanGestureRecognizer

@@ -10,7 +10,7 @@ import UIKit
 /// Like IBanTang, View Move
 public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var keyView: UIView?
+    public private(set) var keyView: UIView
     
     public var transitionStatus: TransitionStatus?
     
@@ -22,15 +22,16 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     public var interacting: Bool = false
     
-    lazy private var keyViewCopy: UIView = {
-        let keyViewCopy = UIView(frame: self.keyView!.frame)
-        keyViewCopy.layer.contents = self.keyView?.layer.contents
-        keyViewCopy.layer.contentsGravity = self.keyView!.layer.contentsGravity
-        keyViewCopy.layer.contentsScale = self.keyView!.layer.contentsScale
+    lazy public private(set) var keyViewCopy: UIView = {
+        let keyViewCopy = UIView(frame: self.keyView.frame)
+        keyViewCopy.layer.contents = self.keyView.layer.contents
+        keyViewCopy.layer.contentsGravity = self.keyView.layer.contentsGravity
+        keyViewCopy.layer.contentsScale = self.keyView.layer.contentsScale
+        keyViewCopy.tag = self.keyView.tag
         return keyViewCopy
     }()
     
-    init(key: UIView?, status: TransitionStatus = .Push) {
+    init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key
         transitionStatus = status
         super.init()
@@ -73,12 +74,11 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
             case .Pop where self.interacting == false :
                 fromVC!.view.layer.opacity = 0
-                self.keyViewCopy.layer.position.y = self.keyView!.layer.position.y
+                self.keyViewCopy.layer.position.y = self.keyView.layer.position.y
             default :
                 fatalError("You set false status.")
             }
             }) { (finished) -> Void in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     if finished {
                         self.completion?()
@@ -90,6 +90,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                     lightMaskLayer.removeFromSuperlayer()
                 }
                 self.cancelPop = false
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
         }
     }
 

@@ -22,7 +22,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
 
     public var interacting: Bool = false
     
-    var keyView: UIView?
+    public private(set) var keyView: UIView?
     
     public init(key: UIView?, status: TransitionStatus = .Push) {
         keyView = key
@@ -81,7 +81,6 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             fromVC!.view.layer.position.y -= topHeight
             self.bottomView.layer.position.y += bottomHeight
             }) { (finished) -> Void in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 self.bottomView.removeFromSuperview()
                 if !self.cancelPop {
                     if self.transitionStatus == .Pop {
@@ -93,6 +92,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                         self.completion = nil
                     }
                 }
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
            self.cancelPop = false
         }
     }

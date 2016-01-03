@@ -9,10 +9,8 @@
 import UIKit
 /// Transition(Present) Animation Delegate Object
 public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
-    /// Control transition precent
-//    var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
-    var transition: TRViewControllerAnimatedTransitioning
+    public var transition: TRViewControllerAnimatedTransitioning
     /**
      Init method
      

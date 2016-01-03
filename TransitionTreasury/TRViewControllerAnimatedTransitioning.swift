@@ -42,13 +42,6 @@ public extension TRViewControllerAnimatedTransitioning {
         set {}
     }
     
-    public var keyView: UIView? {
-        get {
-            return nil
-        }
-        set {}
-    }
-    
     public var completion: (() -> Void)? {
         get {
             return nil
