@@ -89,3 +89,26 @@ public extension CGRect {
         return CGRectInset(self, width * (1 - precent), height * (1 - precent))
     }
 }
+
+public extension UIView {
+    /**
+     Create copy contents view.
+     */
+    public func copyWithContents() -> UIView {
+        let view = UIView(frame: frame)
+        view.layer.contents = layer.contents
+        view.layer.contentsGravity = layer.contentsGravity
+        view.layer.contentsScale = layer.contentsScale
+        view.tag = tag
+        return view
+    }
+    /**
+     Create copy snapshot view.
+     */
+    public func copyWithSnapshot() -> UIView {
+        let view = snapshotViewAfterScreenUpdates(false)
+        view.frame = frame
+        return view
+    }
+    
+}

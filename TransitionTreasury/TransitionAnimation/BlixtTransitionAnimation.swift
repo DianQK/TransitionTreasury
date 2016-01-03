@@ -24,11 +24,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public let toFrame: CGRect
     
-    private lazy var keyViewCopy: UIView = {
-        let view = self.keyView.snapshotViewAfterScreenUpdates(false)
-        view.frame = self.keyView.frame
-        return view
-    }()
+    private lazy var keyViewCopy: UIView = self.keyView.copyWithSnapshot()
     
     init(key: UIView, toFrame frame:CGRect, status: TransitionStatus = .Push) {
         keyView = key

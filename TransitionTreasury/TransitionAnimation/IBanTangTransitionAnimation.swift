@@ -22,14 +22,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     public var interacting: Bool = false
     
-    lazy public private(set) var keyViewCopy: UIView = {
-        let keyViewCopy = UIView(frame: self.keyView.frame)
-        keyViewCopy.layer.contents = self.keyView.layer.contents
-        keyViewCopy.layer.contentsGravity = self.keyView.layer.contentsGravity
-        keyViewCopy.layer.contentsScale = self.keyView.layer.contentsScale
-        keyViewCopy.tag = self.keyView.tag
-        return keyViewCopy
-    }()
+    lazy public private(set) var keyViewCopy: UIView = self.keyView.copyWithContents()
     
     init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key

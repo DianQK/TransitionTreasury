@@ -18,15 +18,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public let toPosition: CGPoint
     
-    public private(set) lazy var maskViewCopy: UIView = {
-        let maskViewCopy = UIView(frame: self.maskView.frame)
-        maskViewCopy.layer.contents = self.maskView.layer.contents
-        maskViewCopy.layer.position = self.maskView.layer.position
-        maskViewCopy.layer.contentsGravity = self.maskView.layer.contentsGravity
-        maskViewCopy.layer.contentsScale = self.maskView.layer.contentsScale
-        maskViewCopy.tag = self.maskView.tag
-        return maskViewCopy
-    }()
+    public private(set) lazy var maskViewCopy: UIView = self.maskView.copyWithContents()
     
     private var animationCount: Int = 0
     
