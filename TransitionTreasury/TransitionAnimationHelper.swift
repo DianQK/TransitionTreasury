@@ -113,5 +113,12 @@ public extension UIView {
         view.frame = frame
         return view
     }
+    /**
+     Add view with convert point.
+     */
+    public func tr_addSubview(view: UIView, convertFrom fromView: UIView) {
+        view.layer.position = convertPoint(fromView.layer.position, fromView: fromView.superview)
+        addSubview(view)
+    }
     
 }
