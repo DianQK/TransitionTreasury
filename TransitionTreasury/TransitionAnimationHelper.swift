@@ -8,13 +8,16 @@
 
 import UIKit
 /**
- TransitionTreasury's CAAnimation Enum
+ TransitionTreasury's CAAnimation Enum.
  
  - opacity: layer.opacity
  */
 public enum TRKeyPath: String {
     case opacity = "opacity"
+    case bounds = "bounds"
     case bounds_size = "bounds.size"
+    case bounds_height = "bounds.height"
+    case bounds_width = "bounds.width"
     case position = "position"
     case transform = "transform"
     case strokeEnd = "strokeEnd"
@@ -22,7 +25,7 @@ public enum TRKeyPath: String {
 // MARK: - Safety CAAnimation
 public extension CABasicAnimation {
     /**
-     TransitionTreasury's CABasicAnimation Init Method
+     TransitionTreasury's CABasicAnimation Init Method.
      
      - parameter path: TRKeyPath
      

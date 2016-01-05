@@ -151,11 +151,43 @@
                                     <action selector="popClick:" destination="Jag-6S-ezM" eventType="touchUpInside" id="CWs-qM-Ynh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRW-I6-Tzp">
+                                <rect key="frame" x="278" y="30" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My6-Ke-dBE">
+                                <rect key="frame" x="276" y="192" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34M-cW-PJu">
+                                <rect key="frame" x="277" y="111" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9K-Li-Irv">
+                                <rect key="frame" x="276" y="273" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29641568350000003" green="0.81888549509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mys-O1-L3X" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="4OU-Bk-9jS"/>
+                            <constraint firstItem="34M-cW-PJu" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="6jt-dq-Ep7"/>
+                            <constraint firstItem="mRW-I6-Tzp" firstAttribute="top" secondItem="sd6-If-ySV" secondAttribute="bottom" constant="30" id="QmS-1c-GQB"/>
+                            <constraint firstItem="My6-Ke-dBE" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="Ue9-8c-iee"/>
+                            <constraint firstItem="K9K-Li-Irv" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="Whl-zF-awF"/>
                             <constraint firstItem="g9r-fc-Eyn" firstAttribute="top" secondItem="mys-O1-L3X" secondAttribute="bottom" constant="60" id="ZtN-Kb-GOc"/>
+                            <constraint firstItem="34M-cW-PJu" firstAttribute="top" secondItem="mRW-I6-Tzp" secondAttribute="bottom" constant="60" id="bsE-rw-c5y"/>
+                            <constraint firstItem="mRW-I6-Tzp" firstAttribute="centerX" secondItem="AXN-ok-WWU" secondAttribute="centerX" id="vVM-sw-f5c"/>
+                            <constraint firstItem="K9K-Li-Irv" firstAttribute="top" secondItem="My6-Ke-dBE" secondAttribute="bottom" constant="60" id="vWp-o0-d52"/>
+                            <constraint firstItem="My6-Ke-dBE" firstAttribute="top" secondItem="34M-cW-PJu" secondAttribute="bottom" constant="60" id="xz5-bG-9Pe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Second" id="os4-zf-kP1">
@@ -169,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYU-3W-bor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="367.6056338028169"/>
+            <point key="canvasLocation" x="1830" y="367"/>
         </scene>
     </scenes>
     <resources>
