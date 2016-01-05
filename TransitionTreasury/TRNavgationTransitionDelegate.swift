@@ -40,7 +40,9 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     public init(method: TRPushMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
-        viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
+        if transition.edgeSlidePop {
+            viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
+        }
     }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

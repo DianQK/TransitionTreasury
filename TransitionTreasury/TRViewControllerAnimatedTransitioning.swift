@@ -25,6 +25,8 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     var interactivePrecent: CGFloat{get}
     /// Option, For Interaction
     var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
+    /// Option, set false, if you don't need edge slide, default is true
+    var edgeSlidePop: Bool{get set}
     /**
      Option
      
@@ -65,6 +67,13 @@ public extension TRViewControllerAnimatedTransitioning {
     public var percentTransition: UIPercentDrivenInteractiveTransition? {
         get {
             return nil
+        }
+        set {}
+    }
+    
+    public var edgeSlidePop: Bool {
+        get {
+            return true
         }
         set {}
     }
