@@ -51,15 +51,15 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
-        containView?.addSubview(keyViewCopy)
+        containView?.tr_addSubview(keyViewCopy, convertFrom: (transitionStatus == .Push ? keyView : keyViewCopy))
         keyView.layer.opacity = 0
         
         func bounce(completion: (() -> Void)? = nil) {
             UIView.animateWithDuration(0.1, animations: {
-                self.keyViewCopy.frame = self.keyView.frame.shape(precent: 0.97)
+                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame.shape(precent: 0.97), fromView: self.keyView.superview)
             })
             UIView.animateWithDuration(0.1, delay: 0.1, options: .CurveEaseInOut, animations: {
-                self.keyViewCopy.frame = self.keyView.frame
+                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)
                 }, completion: { (finished) -> Void in
                     completion?()
             })
@@ -78,7 +78,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             case .Pop :
                 fromVC?.view.layer.frame.origin.x = rightX
                 toVC?.view.layer.frame.origin.x = leftX
-                self.keyViewCopy.frame = self.keyView.frame
+                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }
