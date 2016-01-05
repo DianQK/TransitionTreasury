@@ -18,15 +18,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public let toPosition: CGPoint
     
-    public private(set) lazy var maskViewCopy: UIView = {
-        let maskViewCopy = UIView(frame: self.maskView.frame)
-        maskViewCopy.layer.contents = self.maskView.layer.contents
-        maskViewCopy.layer.position = self.maskView.layer.position
-        maskViewCopy.layer.contentsGravity = self.maskView.layer.contentsGravity
-        maskViewCopy.layer.contentsScale = self.maskView.layer.contentsScale
-        maskViewCopy.tag = self.maskView.tag
-        return maskViewCopy
-    }()
+    public private(set) lazy var maskViewCopy: UIView = self.maskView.copyWithContents()
     
     private var animationCount: Int = 0
     
@@ -47,8 +39,11 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
+        var startPosition = toVC!.view.convertPoint(maskView.layer.position, fromView: maskView.superview)
+        var endPosition = toPosition
+        
         let maskLayer = CAShapeLayer()
-        maskLayer.position = maskView.layer.position
+        maskLayer.position = startPosition
         maskLayer.contents = maskView.layer.contents
         
         func distance(point: CGPoint, size: CGSize) -> CGFloat {
@@ -64,13 +59,10 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             }
         }
         
-        let distanceResult = distance(maskView.layer.position, size: toVC!.view.layer.bounds.size)
+        let distanceResult = distance(startPosition, size: toVC!.view.layer.bounds.size)
         
         var startSize = maskView.layer.bounds.size
         var endSize = maskView.layer.bounds.size.heightFill(distanceResult * 2).widthFill(distanceResult * 2)
-        
-        var startPosition = maskView.layer.position
-        var endPosition = toPosition
         
         if transitionStatus == .Dismiss {
             swap(&fromVC, &toVC)
@@ -94,9 +86,9 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskLayerAnimation.duration = transitionDuration(transitionContext)
         maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         maskLayerAnimation.delegate = self
-        animationCount++
         
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
+        animationCount++
         
         let maskViewPositionAnimation = CABasicAnimation(tr_keyPath: .position)
         maskViewPositionAnimation.fromValue = NSValue(CGPoint: startPosition)
@@ -104,10 +96,9 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskViewPositionAnimation.duration = transitionDuration(transitionContext)
         maskViewPositionAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         maskViewPositionAnimation.delegate = self
-        animationCount++
         
         maskViewCopy.layer.addAnimation(maskViewPositionAnimation, forKey: "position")
-        
+        animationCount++
     }
     
     override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {

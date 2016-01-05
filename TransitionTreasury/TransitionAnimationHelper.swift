@@ -8,13 +8,16 @@
 
 import UIKit
 /**
- TransitionTreasury's CAAnimation Enum
+ TransitionTreasury's CAAnimation Enum.
  
  - opacity: layer.opacity
  */
 public enum TRKeyPath: String {
     case opacity = "opacity"
+    case bounds = "bounds"
     case bounds_size = "bounds.size"
+    case bounds_height = "bounds.height"
+    case bounds_width = "bounds.width"
     case position = "position"
     case transform = "transform"
     case strokeEnd = "strokeEnd"
@@ -22,7 +25,7 @@ public enum TRKeyPath: String {
 // MARK: - Safety CAAnimation
 public extension CABasicAnimation {
     /**
-     TransitionTreasury's CABasicAnimation Init Method
+     TransitionTreasury's CABasicAnimation Init Method.
      
      - parameter path: TRKeyPath
      
@@ -88,4 +91,34 @@ public extension CGRect {
     public func shape(precent precent: CGFloat) -> CGRect {
         return CGRectInset(self, width * (1 - precent), height * (1 - precent))
     }
+}
+
+public extension UIView {
+    /**
+     Create copy contents view.
+     */
+    public func copyWithContents() -> UIView {
+        let view = UIView(frame: frame)
+        view.layer.contents = layer.contents
+        view.layer.contentsGravity = layer.contentsGravity
+        view.layer.contentsScale = layer.contentsScale
+        view.tag = tag
+        return view
+    }
+    /**
+     Create copy snapshot view.
+     */
+    public func copyWithSnapshot() -> UIView {
+        let view = snapshotViewAfterScreenUpdates(false)
+        view.frame = frame
+        return view
+    }
+    /**
+     Add view with convert point.
+     */
+    public func tr_addSubview(view: UIView, convertFrom fromView: UIView) {
+        view.layer.position = convertPoint(fromView.layer.position, fromView: fromView.superview)
+        addSubview(view)
+    }
+    
 }

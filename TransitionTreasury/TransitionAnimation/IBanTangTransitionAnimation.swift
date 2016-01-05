@@ -22,14 +22,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     public var interacting: Bool = false
     
-    lazy public private(set) var keyViewCopy: UIView = {
-        let keyViewCopy = UIView(frame: self.keyView.frame)
-        keyViewCopy.layer.contents = self.keyView.layer.contents
-        keyViewCopy.layer.contentsGravity = self.keyView.layer.contentsGravity
-        keyViewCopy.layer.contentsScale = self.keyView.layer.contentsScale
-        keyViewCopy.tag = self.keyView.tag
-        return keyViewCopy
-    }()
+    lazy public private(set) var keyViewCopy: UIView = self.keyView.copyWithContents()
     
     init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key
@@ -61,8 +54,10 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         
         containView?.addSubview(toVC!.view)
         containView?.addSubview(fromVC!.view)
+
         if transitionStatus == .Push {
             containView?.layer.addSublayer(lightMaskLayer)
+            keyViewCopy.layer.position = containView!.convertPoint(keyView.layer.position, fromView: keyView.superview)
             containView?.addSubview(keyViewCopy)
         }
         
@@ -74,7 +69,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
             case .Pop where self.interacting == false :
                 fromVC!.view.layer.opacity = 0
-                self.keyViewCopy.layer.position.y = self.keyView.layer.position.y
+                self.keyViewCopy.layer.position = containView!.convertPoint(self.keyView.layer.position, fromView: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }

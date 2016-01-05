@@ -46,7 +46,7 @@ public extension UINavigationController {
         transition?.transition.popToVCIndex(index)
         delegate = transition
         return {
-            return popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
+            popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil
                 return viewController
             })
@@ -65,7 +65,7 @@ public extension UINavigationController {
         transition?.transition.popToVCIndex(0)
         delegate = transition
         return {
-            return popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
+            popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil
                 return viewController
             })

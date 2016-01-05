@@ -58,6 +58,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
         pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
         pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
+        pushTransition.append(PushTransition(name: "Storehouse", pushMethod: .Storehouse(keyView: logoImageView)))
         
         presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
@@ -96,6 +97,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             cell.textLabel?.text = "Default"
         }
+        cell.imageView?.image = UIImage(named: "Logo")
         
         return cell
     }
