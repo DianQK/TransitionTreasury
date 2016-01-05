@@ -51,7 +51,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         
         if transitionStatus == .Push {
             
-            topHeight = keyView.layer.position.y + keyView.layer.bounds.size.height / 2
+            topHeight = containView!.convertPoint(keyView.layer.position, fromView: keyView.superview).y + keyView.layer.bounds.size.height / 2
             bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
             
             bottomView.frame = CGRect(x: 0, y: topHeight, width: fromVC!.view.layer.bounds.size.width, height: bottomHeight)
@@ -67,7 +67,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                 }()
             
             let maskLayer = CAShapeLayer()
-            maskLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: fromVC!.view.layer.bounds.size.width, height: keyView.layer.position.y + keyView.layer.bounds.size.height / 2)).CGPath
+            maskLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: fromVC!.view.layer.bounds.size.width, height: topHeight)).CGPath
             fromVC!.view.layer.mask = maskLayer
         } else {
             topHeight = -topHeight

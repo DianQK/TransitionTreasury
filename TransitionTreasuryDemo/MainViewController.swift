@@ -97,6 +97,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             cell.textLabel?.text = "Default"
         }
+        cell.imageView?.image = UIImage(named: "Logo")
         
         return cell
     }
