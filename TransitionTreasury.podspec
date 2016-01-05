@@ -1,6 +1,10 @@
 Pod::Spec.new do |s|
   s.name = 'TransitionTreasury'
+<<<<<<< HEAD
   s.version = '1.0.2'
+=======
+  s.version = '1.0.3'
+>>>>>>> develop
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Easier way to push your viewController.'
   s.homepage = 'https://github.com/DianQK/TransitionTreasury'

@@ -11,7 +11,9 @@
 <a href="http://twitter.com/Songxut"><img src="https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat"></a>
 </p>
 
-TransitionTreasury is a viewController transition framework in Swift.    
+TransitionTreasury is a viewController transition framework in Swift.      
+
+> **You can see [transitiontreasury.com](http://transitiontreasury.com)**
 
 ## Features    
 
@@ -51,7 +53,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'TransitionTreasury', '~> 1.0.2'
+pod 'TransitionTreasury', '~> 1.0.3'
 ```
 
 Then, run the following command:
@@ -72,7 +74,7 @@ $ brew install carthage
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "DianQK/TransitionTreasury" >= 1.0.2
+github "DianQK/TransitionTreasury" >= 1.0.3
 ```
 
 Then, run the following command to build the TransitionTreasury framework:
