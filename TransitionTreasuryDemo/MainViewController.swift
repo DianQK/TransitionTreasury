@@ -11,11 +11,13 @@ import TransitionTreasury
 
 struct PushTransition {
     let name: String
+    let imageName: String
     let pushMethod: TRPushMethod
 }
 
 struct PresentTransition {
     let name: String
+    let imageName: String
     let presentMethod: TRPresentMethod
 }
 
@@ -53,18 +55,18 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     }
     
     func loadTransition() {
-        pushTransition.append(PushTransition(name: "OmniFocus", pushMethod: .OMIN(keyView: logoImageView)))
-        pushTransition.append(PushTransition(name: "IBanTang", pushMethod: .IBanTang(keyView: logoImageView)))
-        pushTransition.append(PushTransition(name: "Fade", pushMethod: .Fade))
-        pushTransition.append(PushTransition(name: "Page", pushMethod: .Page))
-        pushTransition.append(PushTransition(name: "Blixt", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
-        pushTransition.append(PushTransition(name: "Storehouse", pushMethod: .Storehouse(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "OmniFocus", imageName: "OmniFocus60x60", pushMethod: .OMIN(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "IBanTang", imageName: "IBanTang60x60", pushMethod: .IBanTang(keyView: logoImageView)))
+        pushTransition.append(PushTransition(name: "Fade", imageName: "WeChat60x60", pushMethod: .Fade))
+        pushTransition.append(PushTransition(name: "Page", imageName: "MeituanMovie60x60", pushMethod: .Page))
+        pushTransition.append(PushTransition(name: "Blixt", imageName: "Blixt60x60", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
+        pushTransition.append(PushTransition(name: "Storehouse" , imageName: "Storehouse60x60", pushMethod: .Storehouse(keyView: logoImageView)))
         
-        presentTransition.append(PresentTransition(name: "Twitter", presentMethod: .Twitter))
-        presentTransition.append(PresentTransition(name: "Fade", presentMethod: .Fade))
-        presentTransition.append(PresentTransition(name: "PopTip", presentMethod: .PopTip(visibleHeight: 500)))
-        presentTransition.append(PresentTransition(name: "TaaskyFlip", presentMethod: .TaaskyFlip(blurEffect: true)))
-        presentTransition.append(PresentTransition(name: "Elevate", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().center)))
+        presentTransition.append(PresentTransition(name: "Twitter", imageName: "Twitter60x60", presentMethod: .Twitter))
+        presentTransition.append(PresentTransition(name: "Fade", imageName: "WeChat60x60", presentMethod: .Fade))
+        presentTransition.append(PresentTransition(name: "PopTip", imageName: "Alipay60x60", presentMethod: .PopTip(visibleHeight: 500)))
+        presentTransition.append(PresentTransition(name: "TaaskyFlip", imageName: "Taasky60x60", presentMethod: .TaaskyFlip(blurEffect: true)))
+        presentTransition.append(PresentTransition(name: "Elevate", imageName: "Elevate60x60", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().center)))
         
     }
 
@@ -92,12 +94,14 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0 :
             cell.textLabel?.text = pushTransition[indexPath.row].name
+            cell.imageView?.image = UIImage(named: pushTransition[indexPath.row].imageName)
         case 1:
             cell.textLabel?.text = presentTransition[indexPath.row].name
+            cell.imageView?.image = UIImage(named: presentTransition[indexPath.row].imageName)
         default:
             cell.textLabel?.text = "Default"
         }
-        cell.imageView?.image = UIImage(named: "Logo")
+        cell.imageView?.contentMode = .ScaleToFill
         
         return cell
     }
