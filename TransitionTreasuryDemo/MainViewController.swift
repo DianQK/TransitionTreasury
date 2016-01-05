@@ -117,11 +117,24 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else { return }
         switch indexPath.section {
         case 0 :
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
             vc.title = pushTransition[indexPath.row].name
-            navigationController?.tr_pushViewController(vc, method: pushTransition[indexPath.row].pushMethod, completion: {
+            let updateTransition: TRPushMethod = {
+                switch self.pushTransition[indexPath.row].name {
+                case "OmniFocus" :
+                    return .OMIN(keyView: cell)
+                case "IBanTang" :
+                    return .IBanTang(keyView: cell)
+                case "Blixt" :
+                    return .Blixt(keyView: cell.imageView!, to: CGRect(x: 30, y: 160, width: cell.imageView!.frame.size.width * 3, height: cell.imageView!.frame.size.height * 3))
+                default :
+                    return self.pushTransition[indexPath.row].pushMethod
+                }
+            }()
+            navigationController?.tr_pushViewController(vc, method: updateTransition, completion: {
                 print("Push finished.")
             })
         case 1 :
@@ -129,7 +142,15 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             vc.modalDelegate = self
             vc.title = presentTransition[indexPath.row].name
             let nav = UINavigationController(rootViewController: vc)
-            tr_presentViewController(nav, method: presentTransition[indexPath.row].presentMethod, completion: {
+            let updateTransition: TRPresentMethod = {
+                switch self.presentTransition[indexPath.row].name {
+                case "Elevate" :
+                    return .Elevate(maskView: cell.imageView!, to: UIScreen.mainScreen().center)
+                default :
+                    return self.presentTransition[indexPath.row].presentMethod
+                }
+            }()
+            tr_presentViewController(nav, method: updateTransition, completion: {
                 print("Present finished.")
             })
         default :
