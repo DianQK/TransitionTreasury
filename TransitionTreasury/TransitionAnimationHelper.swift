@@ -21,6 +21,7 @@ public enum TRKeyPath: String {
     case position = "position"
     case transform = "transform"
     case strokeEnd = "strokeEnd"
+    case path = "path"
 }
 // MARK: - Safety CAAnimation
 public extension CABasicAnimation {
@@ -91,6 +92,12 @@ public extension CGRect {
     public func shape(precent precent: CGFloat) -> CGRect {
         return CGRectInset(self, width * (1 - precent), height * (1 - precent))
     }
+    /**
+     Just F**k Xcode.
+     */
+    public func ns_value() -> NSValue {
+        return NSValue(CGRect: self)
+    }
 }
 
 public extension UIView {
@@ -121,4 +128,13 @@ public extension UIView {
         addSubview(view)
     }
     
+}
+
+public extension CATransform3D {
+    /**
+     Just F**k Xcode.
+     */
+    public func ns_value() -> NSValue {
+        return NSValue(CATransform3D: self)
+    }
 }

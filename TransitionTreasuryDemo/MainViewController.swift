@@ -60,6 +60,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         pushTransition.append(PushTransition(name: "Fade", imageName: "WeChat60x60", pushMethod: .Fade))
         pushTransition.append(PushTransition(name: "Page", imageName: "MeituanMovie60x60", pushMethod: .Page))
         pushTransition.append(PushTransition(name: "Blixt", imageName: "Blixt60x60", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3))))
+        pushTransition.append(PushTransition(name: "Storehouse", imageName: "Storehouse60x60", pushMethod: .Storehouse(keyView: logoImageView)))
         
         presentTransition.append(PresentTransition(name: "Twitter", imageName: "Twitter60x60", presentMethod: .Twitter))
         presentTransition.append(PresentTransition(name: "Fade", imageName: "WeChat60x60", presentMethod: .Fade))
@@ -130,6 +131,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                     return .IBanTang(keyView: cell)
                 case "Blixt" :
                     return .Blixt(keyView: cell.imageView!, to: CGRect(x: 30, y: 160, width: cell.imageView!.frame.size.width * 3, height: cell.imageView!.frame.size.height * 3))
+                case "Storehouse" :
+                    return .Storehouse(keyView: cell)
                 default :
                     return self.pushTransition[indexPath.row].pushMethod
                 }
