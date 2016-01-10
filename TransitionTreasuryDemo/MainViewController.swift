@@ -66,7 +66,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         presentTransition.append(PresentTransition(name: "Fade", imageName: "WeChat60x60", presentMethod: .Fade))
         presentTransition.append(PresentTransition(name: "PopTip", imageName: "Alipay60x60", presentMethod: .PopTip(visibleHeight: 500)))
         presentTransition.append(PresentTransition(name: "TaaskyFlip", imageName: "Taasky60x60", presentMethod: .TaaskyFlip(blurEffect: true)))
-        presentTransition.append(PresentTransition(name: "Elevate", imageName: "Elevate60x60", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().center)))
+        presentTransition.append(PresentTransition(name: "Elevate", imageName: "Elevate60x60", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().tr_center)))
         
     }
 
@@ -148,7 +148,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             let updateTransition: TRPresentMethod = {
                 switch self.presentTransition[indexPath.row].name {
                 case "Elevate" :
-                    return .Elevate(maskView: cell.imageView!, to: UIScreen.mainScreen().center)
+                    return .Elevate(maskView: cell.imageView!, to: UIScreen.mainScreen().tr_center)
                 default :
                     return self.presentTransition[indexPath.row].presentMethod
                 }

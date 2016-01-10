@@ -24,7 +24,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public let toFrame: CGRect
     
-    private lazy var keyViewCopy: UIView = self.keyView.copyWithSnapshot()
+    private lazy var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
     init(key: UIView, toFrame frame:CGRect, status: TransitionStatus = .Push) {
         keyView = key
@@ -56,7 +56,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         
         func bounce(completion: (() -> Void)? = nil) {
             UIView.animateWithDuration(0.1, animations: {
-                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame.shape(precent: 0.97), fromView: self.keyView.superview)
+                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame.tr_shape(precent: 0.97), fromView: self.keyView.superview)
             })
             UIView.animateWithDuration(0.1, delay: 0.1, options: .CurveEaseInOut, animations: {
                 self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)

@@ -79,7 +79,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             switch self.transitionStatus! {
             case .Present :
                 self.keyView.center = toVC!.view.center
-                self.keyView.layer.bounds.size = self.keyView.layer.bounds.size.widthFit(toVC!.view.bounds.width)
+                self.keyView.layer.bounds.size = self.keyView.layer.bounds.size.tr_widthFit(toVC!.view.bounds.width)
             case .Dismiss where self.interacting == false :
                 toVC!.view.layer.opacity = 1
                 self.keyView.layer.frame = self.frameBackup!

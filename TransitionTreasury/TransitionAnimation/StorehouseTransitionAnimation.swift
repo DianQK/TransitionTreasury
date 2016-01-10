@@ -26,7 +26,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     private var transformBackup: CATransform3D?
     
-    lazy public private(set) var keyViewCopy: UIView = self.keyView.copyWithSnapshot()
+    lazy public private(set) var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
     init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key
@@ -78,8 +78,8 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
 //        toVC?.view.layer.transform = endTransform
         
         let transformAnimation = CABasicAnimation(tr_keyPath: .transform)
-        transformAnimation.fromValue = startTransform.ns_value()
-        transformAnimation.toValue = endTransform.ns_value()
+        transformAnimation.fromValue = startTransform.tr_ns_value
+        transformAnimation.toValue = endTransform.tr_ns_value
         transformAnimation.duration = transitionDuration(transitionContext)
         transformAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transformAnimation.delegate = self
