@@ -12,18 +12,18 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
         transition.completion = completion
         (viewController as? TRTransition)?.tr_transition = transition
         delegate = transition
         pushViewController(viewController, animated: true)
-        transition.transition.previousStatusBarStyle = UIApplication.sharedApplication().statusBarStyle
+        transition.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         guard transition.transition.previousStatusBarStyle != nil else {
             debugPrint("WARNING: This animation not support update status bar style.")
             return
         }
-        UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle, animated: true)
+        statusBarStyle.updateStatusBarStyle()
     }
     /**
      Transition treasury pop viewController.
@@ -37,7 +37,7 @@ public extension UINavigationController {
         }
         transition?.transition.transitionStatus = .Pop
         delegate = transition
-        UIApplication.sharedApplication().setStatusBarStyle(transition?.transition.previousStatusBarStyle ?? UIApplication.sharedApplication().statusBarStyle, animated: true)
+        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return popViewControllerAnimated(true)
     }
     /**
@@ -52,7 +52,7 @@ public extension UINavigationController {
         transition?.completion = completion
         transition?.transition.popToVCIndex(index)
         delegate = transition
-        UIApplication.sharedApplication().setStatusBarStyle(transition?.transition.previousStatusBarStyle ?? UIApplication.sharedApplication().statusBarStyle, animated: true)
+        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil
@@ -72,7 +72,7 @@ public extension UINavigationController {
         transition?.transition.transitionStatus = .Pop
         transition?.transition.popToVCIndex(0)
         delegate = transition
-        UIApplication.sharedApplication().setStatusBarStyle(transition?.transition.previousStatusBarStyle ?? UIApplication.sharedApplication().statusBarStyle, animated: true)
+        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil

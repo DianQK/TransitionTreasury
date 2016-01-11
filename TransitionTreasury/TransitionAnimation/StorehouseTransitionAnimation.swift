@@ -14,7 +14,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     public var transitionStatus: TransitionStatus?
     
-    public var previousStatusBarStyle: UIStatusBarStyle?
+    public var previousStatusBarStyle: TRStatusBarStyle?
     
     public var transitionContext: UIViewControllerContextTransitioning?
     

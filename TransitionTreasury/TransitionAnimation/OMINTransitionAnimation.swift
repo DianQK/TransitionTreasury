@@ -12,7 +12,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
 
     public var transitionStatus: TransitionStatus?
     
-    public var previousStatusBarStyle: UIStatusBarStyle?
+    public var previousStatusBarStyle: TRStatusBarStyle?
     
     public var transitionContext: UIViewControllerContextTransitioning?
 

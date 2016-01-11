@@ -14,7 +14,7 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     /// Required implement.
     var transitionStatus: TransitionStatus?{get set}
     /// Option implement.
-    var previousStatusBarStyle: UIStatusBarStyle?{get set}
+    var previousStatusBarStyle: TRStatusBarStyle?{get set}
     /// Option implement.
     var interacting: Bool{get set}
     /// Rquired implement.

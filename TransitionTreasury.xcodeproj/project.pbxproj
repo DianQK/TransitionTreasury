@@ -19,6 +19,7 @@
 		263B43851C32E54D0093593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B437A1C32E54D0093593E /* Main.storyboard */; };
 		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
 		263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 263B43931C32E6BD0093593E /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2669403B1C43ABF8008A5A5D /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */; };
 		26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */; };
 		26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */; };
 		26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */; };
@@ -110,6 +111,7 @@
 		263B43911C32E6BD0093593E /* TransitionTreasury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionTreasury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		263B43931C32E6BD0093593E /* TransitionTreasury.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
 		263B43951C32E6BD0093593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRStatusBarStyle.swift; sourceTree = "<group>"; };
 		26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -196,12 +198,13 @@
 			children = (
 				26978F7A1C3558CF001B4C25 /* TransitionAnimation */,
 				26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */,
-				2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */,
-				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
-				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */,
 				26FF06D31C3380DE003DAC25 /* UINavigationController+TRPushPop.swift */,
 				26FF06D41C3380DE003DAC25 /* UIViewController+TRPresent.swift */,
+				2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */,
+				2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */,
+				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
+				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
 				263B43951C32E6BD0093593E /* Info.plist */,
 			);
@@ -466,6 +469,7 @@
 				26FF06DF1C3380DE003DAC25 /* UINavigationController+TRPushPop.swift in Sources */,
 				26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */,
 				26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */,
+				2669403B1C43ABF8008A5A5D /* TRStatusBarStyle.swift in Sources */,
 				26FF06DA1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift in Sources */,
 				2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */,
 			);

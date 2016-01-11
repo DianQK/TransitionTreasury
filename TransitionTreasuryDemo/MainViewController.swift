@@ -48,7 +48,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
     
     // MARK: - Modal viewController delegate
     
-    func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>? = nil) {
+    func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
         presentResultLabel.text = "CallbackData: \(data)."
         tr_dismissViewController()
         
