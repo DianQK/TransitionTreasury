@@ -12,6 +12,8 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var cancelPop: Bool = false

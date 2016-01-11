@@ -12,6 +12,8 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     private var anchorPointBackup: CGPoint?

@@ -12,6 +12,8 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public private(set) var blurEffect: Bool = true

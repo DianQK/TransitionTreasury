@@ -12,7 +12,7 @@ public extension UIViewController {
     /**
      Transition treasury present viewController.
      */
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, completion: (() -> Void)? = nil) {
+    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
@@ -22,6 +22,7 @@ public extension UIViewController {
         } else {
             presentViewController(viewControllerToPresent, animated: true, completion: completion)
         }
+        UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle, animated: true)
     }
     /**
      Transition treasury dismiss VvewController.

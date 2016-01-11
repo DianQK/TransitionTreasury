@@ -14,6 +14,8 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var interacting: Bool = false

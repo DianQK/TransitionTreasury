@@ -14,6 +14,8 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var completion: (() -> Void)?

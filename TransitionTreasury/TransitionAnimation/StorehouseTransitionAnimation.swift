@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+// Developer~ 
 public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
     public private(set) var keyView: UIView
     
     public var transitionStatus: TransitionStatus?
+    
+    public var previousStatusBarStyle: UIStatusBarStyle?
     
     public var transitionContext: UIViewControllerContextTransitioning?
     

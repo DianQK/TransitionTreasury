@@ -22,7 +22,7 @@ public enum TRPushMethod {
     case Fade
     case Page
     case Blixt(keyView: UIView, to: CGRect)
-    case Storehouse(keyView: UIView)
+//    case Storehouse(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -37,8 +37,8 @@ public enum TRPushMethod {
             return PageTransitionAnimation()
         case let .Blixt(view, frame) :
             return BlixtTransitionAnimation(key: view, toFrame: frame)
-        case let .Storehouse(view) :
-            return StorehouseTransitionAnimation(key: view)
+//        case let .Storehouse(view) :
+//            return StorehouseTransitionAnimation(key: view)
         case let .Custom(transition) :
             return transition
         }

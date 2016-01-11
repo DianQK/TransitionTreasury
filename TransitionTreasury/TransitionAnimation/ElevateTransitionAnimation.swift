@@ -12,6 +12,8 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public var transitionStatus: TransitionStatus?
     
+    public var previousStatusBarStyle: UIStatusBarStyle?
+    
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public let maskView: UIView
