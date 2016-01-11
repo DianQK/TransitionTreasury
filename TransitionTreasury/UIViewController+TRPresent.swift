@@ -12,7 +12,7 @@ public extension UIViewController {
     /**
      Transition treasury present viewController.
      */
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
@@ -22,12 +22,12 @@ public extension UIViewController {
         } else {
             presentViewController(viewControllerToPresent, animated: true, completion: completion)
         }
-        transitionDelegate.transition.previousStatusBarStyle = UIApplication.sharedApplication().statusBarStyle
+        transitionDelegate.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         guard transitionDelegate.transition.previousStatusBarStyle != nil else {
             debugPrint("WARNING: This animation not support update status bar style.")
             return
         }
-        UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle, animated: true)
+        statusBarStyle.updateStatusBarStyle()
     }
     /**
      Transition treasury dismiss VvewController.
@@ -46,7 +46,7 @@ public extension UIViewController {
         } else {
             dismissViewControllerAnimated(true, completion: fullCompletion)
         }
-        UIApplication.sharedApplication().setStatusBarStyle(transition?.transition.previousStatusBarStyle ?? UIApplication.sharedApplication().statusBarStyle, animated: true)
+        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
     }
 }
 /**
