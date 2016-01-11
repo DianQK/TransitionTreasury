@@ -22,6 +22,11 @@ public extension UIViewController {
         } else {
             presentViewController(viewControllerToPresent, animated: true, completion: completion)
         }
+        transitionDelegate.transition.previousStatusBarStyle = UIApplication.sharedApplication().statusBarStyle
+        guard transitionDelegate.transition.previousStatusBarStyle != nil else {
+            debugPrint("WARNING: This animation not support update status bar style.")
+            return
+        }
         UIApplication.sharedApplication().setStatusBarStyle(statusBarStyle, animated: true)
     }
     /**
@@ -41,6 +46,7 @@ public extension UIViewController {
         } else {
             dismissViewControllerAnimated(true, completion: fullCompletion)
         }
+        UIApplication.sharedApplication().setStatusBarStyle(transition?.transition.previousStatusBarStyle ?? UIApplication.sharedApplication().statusBarStyle, animated: true)
     }
 }
 /**
