@@ -53,7 +53,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'TransitionTreasury', '~> 1.0.3'
+pod 'TransitionTreasury', '~> 1.1.0'
 ```
 
 Then, run the following command:
@@ -74,7 +74,7 @@ $ brew install carthage
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "DianQK/TransitionTreasury" >= 1.0.3
+github "DianQK/TransitionTreasury" >= 1.1.0
 ```
 
 Then, run the following command to build the TransitionTreasury framework:
@@ -187,7 +187,25 @@ navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAn
             })
 ```     
 
-> About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I happy to you will share your animation for this project.
+> About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I happy to you will share your animation for this project.   
+
+### Status Bar Style     
+
+> @Available >~ 1.1.0    
+
+If you want to update status bar style, you should add key `View controller-based status bar appearance` in **info.plist**, and set value is `false`.   
+
+Then like **Basic Usage**, just add param `statusBarStyle`:       
+
+```swift
+// Push & Pop
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
+
+// Present & Dismiss
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default)
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
+```    
 
 ## License
 

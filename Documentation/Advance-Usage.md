@@ -17,3 +17,21 @@ navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAn
 ```     
 
 > About write your animation, you can read [Animation-Guide](Animation-Guide), I happy to you will share your animation for this project.
+
+## Status Bar Style     
+
+> @Available >~ 1.1.0    
+
+If you want to update status bar style, you should add key `View controller-based status bar appearance` in **info.plist**, and set value is `false`.   
+
+Then like **Basic Usage**, just add param `statusBarStyle`:    
+
+```swift
+// Push & Pop
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
+
+// Present & Dismiss
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default)
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
+```   
