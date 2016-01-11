@@ -13,13 +13,13 @@ public extension UINavigationController {
      Transition treasury push viewController.
      */
     public func tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
-        let transition = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
-        transition.completion = completion
-        (viewController as? TRTransition)?.tr_transition = transition
-        delegate = transition
+        let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
+        transitionDelegate.completion = completion
+        (viewController as? TRTransition)?.tr_transition = transitionDelegate
+        delegate = transitionDelegate
         pushViewController(viewController, animated: true)
-        transition.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
-        guard transition.transition.previousStatusBarStyle != nil else {
+        transitionDelegate.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
+        guard transitionDelegate.transition.previousStatusBarStyle != nil else {
             debugPrint("WARNING: This animation not support update status bar style.")
             return
         }
@@ -29,15 +29,15 @@ public extension UINavigationController {
      Transition treasury pop viewController.
      */
     public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
-        let transition = (topViewController as? TRTransition)?.tr_transition
+        let transitionDelegate = (topViewController as? TRTransition)?.tr_transition
         let popViewController = topViewController
-        transition?.completion = {
+        transitionDelegate?.completion = {
             completion?()
             (popViewController as? TRTransition)?.tr_transition = nil
         }
-        transition?.transition.transitionStatus = .Pop
-        delegate = transition
-        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
+        transitionDelegate?.transition.transitionStatus = .Pop
+        delegate = transitionDelegate
+        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return popViewControllerAnimated(true)
     }
     /**
@@ -47,12 +47,12 @@ public extension UINavigationController {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
-        let transition = (viewController as? TRTransition)?.tr_transition
-        transition?.transition.transitionStatus = .Pop
-        transition?.completion = completion
-        transition?.transition.popToVCIndex(index)
-        delegate = transition
-        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
+        let transitionDelegate = (viewController as? TRTransition)?.tr_transition
+        transitionDelegate?.transition.transitionStatus = .Pop
+        transitionDelegate?.completion = completion
+        transitionDelegate?.transition.popToVCIndex(index)
+        delegate = transitionDelegate
+        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil
@@ -67,12 +67,12 @@ public extension UINavigationController {
         guard viewControllers.count > 1 else {
             return popToRootViewControllerAnimated(true)
         }
-        let transition = (viewControllers[1] as? TRTransition)?.tr_transition
-        transition?.completion = completion
-        transition?.transition.transitionStatus = .Pop
-        transition?.transition.popToVCIndex(0)
-        delegate = transition
-        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
+        let transitionDelegate = (viewControllers[1] as? TRTransition)?.tr_transition
+        transitionDelegate?.completion = completion
+        transitionDelegate?.transition.transitionStatus = .Pop
+        transitionDelegate?.transition.popToVCIndex(0)
+        delegate = transitionDelegate
+        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil

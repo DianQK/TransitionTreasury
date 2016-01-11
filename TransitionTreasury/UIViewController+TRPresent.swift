@@ -33,20 +33,20 @@ public extension UIViewController {
      Transition treasury dismiss VvewController.
      */
     public func tr_dismissViewController(completion: (() -> Void)? = nil) {
-        let transition = (self as? ModalViewControllerDelegate)?.tr_transition
-        transition?.transition.transitionStatus = .Dismiss
-        presentedViewController?.transitioningDelegate = transition
+        let transitionDelegate = (self as? ModalViewControllerDelegate)?.tr_transition
+        transitionDelegate?.transition.transitionStatus = .Dismiss
+        presentedViewController?.transitioningDelegate = transitionDelegate
         let fullCompletion = {
             completion?()
             (self as? ModalViewControllerDelegate)?.tr_transition = nil
         }
-        transition?.transition.completion = fullCompletion
-        if transition?.transition.completion != nil {
+        transitionDelegate?.transition.completion = fullCompletion
+        if transitionDelegate?.transition.completion != nil {
             dismissViewControllerAnimated(true, completion: nil)
         } else {
             dismissViewControllerAnimated(true, completion: fullCompletion)
         }
-        transition?.transition.previousStatusBarStyle?.updateStatusBarStyle()
+        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
     }
 }
 /**
