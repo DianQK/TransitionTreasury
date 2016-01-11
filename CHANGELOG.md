@@ -14,7 +14,13 @@
 * Fade    
 * PopTip   
 * TaaskyFlip    
-* Elevate  
+* Elevate    
+
+## [1.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/1.0.0)   
+
+#### Add    
+
+* Add New Feature: Update Status Bar Style
 
 ## [1.0.3](https://github.com/DianQK/TransitionTreasury/releases/tag/1.0.3)
 
