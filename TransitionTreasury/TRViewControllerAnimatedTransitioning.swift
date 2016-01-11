@@ -80,7 +80,7 @@ public extension TRViewControllerAnimatedTransitioning {
         set {}
     }
     
-    public var previousStatusBarStyle: UIStatusBarStyle? {
+    public var previousStatusBarStyle: TRStatusBarStyle? {
         get {
             return nil
         }
