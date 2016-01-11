@@ -41,6 +41,7 @@ class TRNavgationTransitionDelegateTests: XCTestCase {
             self.mainVC!.navigationController?.tr_pushViewController(secondVC, method: .Fade)
             XCTAssertNotNil(secondVC.tr_transition, "TRTransitionDelegate should be load.")
             XCTAssertNotNil(self.mainVC?.navigationController?.delegate, "Delegate should be set.")
+            XCTAssertNotNil(secondVC.tr_transition?.transition.previousStatusBarStyle, "Transition should support update status bar style.")
             XCTAssertEqual(secondVC.tr_transition, self.mainVC?.navigationController?.delegate as? TRNavgationTransitionDelegate, "Transition delegate should be equal delegate.")
             secondVC.navigationController?.tr_popViewController()
         }
