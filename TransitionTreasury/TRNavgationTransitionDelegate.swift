@@ -60,7 +60,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     
     public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return transition.interacting ? percentTransition : nil
+        return transition.interacting ? (transition.percentTransition ?? percentTransition) : nil
     }
     
     public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
