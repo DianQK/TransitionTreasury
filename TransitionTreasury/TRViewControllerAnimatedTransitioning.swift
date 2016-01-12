@@ -12,9 +12,7 @@ import UIKit
  */
 public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     /// Required implement.
-    var transitionStatus: TransitionStatus?{get set}
-    /// Option implement.
-    var previousStatusBarStyle: TRStatusBarStyle?{get set}
+    var transitionStatus: TransitionStatus{get set}
     /// Option implement.
     var interacting: Bool{get set}
     /// Rquired implement.
@@ -76,13 +74,6 @@ public extension TRViewControllerAnimatedTransitioning {
     public var edgeSlidePop: Bool {
         get {
             return true
-        }
-        set {}
-    }
-    
-    public var previousStatusBarStyle: TRStatusBarStyle? {
-        get {
-            return nil
         }
         set {}
     }

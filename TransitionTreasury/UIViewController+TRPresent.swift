@@ -16,21 +16,20 @@ public extension UIViewController {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
-        transitionDelegate.transition.completion = completion
+        transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
+        let fullCompletion = {
+            completion?()
+            statusBarStyle.updateStatusBarStyle()
+        }
+        transitionDelegate.transition.completion = fullCompletion
         if transitionDelegate.transition.completion != nil { // Choose who deal completion
             presentViewController(viewControllerToPresent, animated: true, completion: nil)
         } else {
-            presentViewController(viewControllerToPresent, animated: true, completion: completion)
+            presentViewController(viewControllerToPresent, animated: true, completion: fullCompletion)
         }
-        transitionDelegate.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
-        guard transitionDelegate.transition.previousStatusBarStyle != nil else {
-            debugPrint("WARNING: This animation not support update status bar style.")
-            return
-        }
-        statusBarStyle.updateStatusBarStyle()
     }
     /**
-     Transition treasury dismiss VvewController.
+     Transition treasury dismiss ViewController.
      */
     public func tr_dismissViewController(completion: (() -> Void)? = nil) {
         let transitionDelegate = (self as? ModalViewControllerDelegate)?.tr_transition
@@ -38,6 +37,7 @@ public extension UIViewController {
         presentedViewController?.transitioningDelegate = transitionDelegate
         let fullCompletion = {
             completion?()
+            transitionDelegate?.previousStatusBarStyle?.updateStatusBarStyle()
             (self as? ModalViewControllerDelegate)?.tr_transition = nil
         }
         transitionDelegate?.transition.completion = fullCompletion
@@ -46,7 +46,6 @@ public extension UIViewController {
         } else {
             dismissViewControllerAnimated(true, completion: fullCompletion)
         }
-        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
     }
 }
 /**

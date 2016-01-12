@@ -12,9 +12,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var keyView: UIView
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
@@ -78,7 +76,7 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .CurveEaseInOut, animations: {
-            switch self.transitionStatus! {
+            switch self.transitionStatus {
             case .Present :
                 self.keyView.center = toVC!.view.center
                 self.keyView.layer.bounds.size = self.keyView.layer.bounds.size.tr_widthFit(toVC!.view.bounds.width)

@@ -10,9 +10,7 @@ import UIKit
 /// Like Twitter Present.
 public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     

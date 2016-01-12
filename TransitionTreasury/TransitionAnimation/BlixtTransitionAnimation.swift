@@ -12,9 +12,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var keyView: UIView
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
@@ -72,7 +70,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext) - 0.2, delay: 0.2, options: .CurveEaseInOut, animations: {
-            switch self.transitionStatus! {
+            switch self.transitionStatus {
             case .Push :
                 fromVC?.view.layer.frame.origin.x = -rightX
                 toVC?.view.layer.frame.origin.x = leftX

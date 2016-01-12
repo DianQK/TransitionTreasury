@@ -17,13 +17,9 @@ public extension UINavigationController {
         transitionDelegate.completion = completion
         (viewController as? TRTransition)?.tr_transition = transitionDelegate
         delegate = transitionDelegate
+        transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
+        transitionDelegate.currentStatusBarStyle = statusBarStyle
         pushViewController(viewController, animated: true)
-        transitionDelegate.transition.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
-        guard transitionDelegate.transition.previousStatusBarStyle != nil else {
-            debugPrint("WARNING: This animation not support update status bar style.")
-            return
-        }
-        statusBarStyle.updateStatusBarStyle()
     }
     /**
      Transition treasury pop viewController.
@@ -37,7 +33,6 @@ public extension UINavigationController {
         }
         transitionDelegate?.transition.transitionStatus = .Pop
         delegate = transitionDelegate
-        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return popViewControllerAnimated(true)
     }
     /**
@@ -52,7 +47,6 @@ public extension UINavigationController {
         transitionDelegate?.completion = completion
         transitionDelegate?.transition.popToVCIndex(index)
         delegate = transitionDelegate
-        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil
@@ -72,7 +66,6 @@ public extension UINavigationController {
         transitionDelegate?.transition.transitionStatus = .Pop
         transitionDelegate?.transition.popToVCIndex(0)
         delegate = transitionDelegate
-        transitionDelegate?.transition.previousStatusBarStyle?.updateStatusBarStyle()
         return {
             popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? TRTransition)?.tr_transition = nil

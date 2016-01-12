@@ -38,7 +38,7 @@ class MainViewController: UIViewController, ModalViewControllerDelegate {
         
         loadTransition()
         
-        navigationController?.navigationBar.hidden = true
+        navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -162,6 +162,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .Default
+        return .LightContent
     }
 }

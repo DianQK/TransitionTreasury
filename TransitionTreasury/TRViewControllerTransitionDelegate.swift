@@ -11,6 +11,8 @@ import UIKit
 public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
     /// The transition animation object
     public var transition: TRViewControllerAnimatedTransitioning
+    
+    public var previousStatusBarStyle: TRStatusBarStyle?
     /**
      Init method
      
@@ -23,7 +25,6 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
         transition = method.transitionAnimation()
         super.init()
     }
-    
     /**
      Update transition status
      

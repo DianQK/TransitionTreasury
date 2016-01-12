@@ -10,9 +10,7 @@ import UIKit
 /// Like Elevate
 public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     

@@ -12,9 +12,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     public private(set) var keyView: UIView
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
@@ -64,7 +62,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-            switch self.transitionStatus! {
+            switch self.transitionStatus {
             case .Push :
                 self.keyViewCopy.layer.position.y = self.keyViewCopy.layer.bounds.height / 2
             case .Pop where self.interacting == true :
@@ -76,6 +74,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 fatalError("You set false status.")
             }
             }) { (finished) -> Void in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     if finished {
                         self.completion?()
@@ -87,7 +86,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                     lightMaskLayer.removeFromSuperlayer()
                 }
                 self.cancelPop = false
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                
         }
     }
 

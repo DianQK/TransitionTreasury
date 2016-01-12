@@ -10,9 +10,7 @@ import UIKit
 /// Fade Out In Animation
 public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
@@ -24,6 +22,11 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.3
+    }
+    
+    init(status: TransitionStatus = .Push) {
+        transitionStatus = status
+        super.init()
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {

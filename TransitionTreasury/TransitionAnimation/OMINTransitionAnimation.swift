@@ -10,9 +10,7 @@ import UIKit
 /// OminFocus app push transition implement.
 public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
 
-    public var transitionStatus: TransitionStatus?
-    
-    public var previousStatusBarStyle: TRStatusBarStyle?
+    public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
 
@@ -83,6 +81,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             fromVC!.view.layer.position.y -= topHeight
             self.bottomView.layer.position.y += bottomHeight
             }) { (finished) -> Void in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 self.bottomView.removeFromSuperview()
                 if !self.cancelPop {
                     if self.transitionStatus == .Pop {
@@ -94,7 +93,6 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                         self.completion = nil
                     }
                 }
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
            self.cancelPop = false
         }
     }

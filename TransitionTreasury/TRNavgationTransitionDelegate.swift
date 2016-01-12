@@ -13,6 +13,10 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
     public var transition: TRViewControllerAnimatedTransitioning
+    
+    public var previousStatusBarStyle: TRStatusBarStyle?
+    
+    public var currentStatusBarStyle: TRStatusBarStyle?
     /// Transition completion block
     var completion: (() -> Void)? {
         get {
@@ -57,6 +61,17 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     
     public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return transition.interacting ? percentTransition : nil
+    }
+    
+    public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+        switch transition.transitionStatus {
+        case .Push :
+            currentStatusBarStyle?.updateStatusBarStyle()
+        case .Pop :
+            previousStatusBarStyle?.updateStatusBarStyle()
+        default :
+            fatalError("No this transition status here.")
+        }
     }
     
     public func edgePan(recognizer: UIPanGestureRecognizer) {
