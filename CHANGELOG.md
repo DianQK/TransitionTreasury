@@ -16,6 +16,13 @@
 * TaaskyFlip    
 * Elevate  
 
+## [1.1.3](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.3)
+
+#### Fixed
+* Fix Present delay bug(****Apple)
+  * Updated by leizh007 in Issues [#3](https://github.com/DianQK/TransitionTreasury/issues/3)
+  * For more, see [presentViewController:animated:YES view will not appear until user taps again](http://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again) or [UITableView and presentViewController takes 2 clicks to display](http://stackoverflow.com/questions/20320591/uitableview-and-presentviewcontroller-takes-2-clicks-to-display)
+
 ## [1.1.2](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.2)
 
 #### Fixed

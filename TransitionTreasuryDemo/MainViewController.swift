@@ -118,7 +118,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else { return }
+        print("Click")
+        guard let cell = tableView.cellForRowAtIndexPath(indexPath) else {
+            print("Fuck")
+            return }
         switch indexPath.section {
         case 0 :
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController

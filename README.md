@@ -50,11 +50,8 @@ $ gem install cocoapods
 To integrate TransitionTreasury into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
 use_frameworks!
-
-pod 'TransitionTreasury', '~> 1.1.2'
+pod 'TransitionTreasury'
 ```
 
 Then, run the following command:
@@ -75,7 +72,7 @@ $ brew install carthage
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "DianQK/TransitionTreasury" >= 1.1.2
+github "DianQK/TransitionTreasury"
 ```
 
 Then, run the following command to build the TransitionTreasury framework:

@@ -22,11 +22,19 @@ public extension UIViewController {
             statusBarStyle.updateStatusBarStyle()
         }
         transitionDelegate.transition.completion = fullCompletion
-        if transitionDelegate.transition.completion != nil { // Choose who deal completion
-            presentViewController(viewControllerToPresent, animated: true, completion: nil)
-        } else {
-            presentViewController(viewControllerToPresent, animated: true, completion: fullCompletion)
-        }
+        /**
+        *  http://stackoverflow.com/questions/20320591/uitableview-and-presentviewcontroller-takes-2-clicks-to-display
+        */
+        /**
+        *  http://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again
+        */
+        dispatch_async(dispatch_get_main_queue(), {
+            if transitionDelegate.transition.completion != nil { // Choose who deal completion
+                self.presentViewController(viewControllerToPresent, animated: true, completion: nil)
+            } else {
+                self.presentViewController(viewControllerToPresent, animated: true, completion: fullCompletion)
+            }
+            });
     }
     /**
      Transition treasury dismiss ViewController.
