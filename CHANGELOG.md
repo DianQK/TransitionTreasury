@@ -16,7 +16,13 @@
 * TaaskyFlip    
 * Elevate  
 
-## [1.1.1](https://github.com/DianQK/TransitionTreasury/releases/tag/1.0.1)   
+## [1.1.2](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.2)
+
+#### Fixed
+* Fix cancel pop & dismiss status bar style change
+* Fix not support custom gesture for Pop  
+
+## [1.1.1](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.1)   
 
 #### Fixed   
 * Fix no `Hide` status bar style.   
@@ -24,7 +30,7 @@
 #### Other
 * Separate status bar style module.
 
-## [1.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/1.0.0)   
+## [1.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.0)   
 
 #### Add    
 
