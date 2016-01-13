@@ -14,7 +14,7 @@ public extension UIViewController {
      */
     public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
-        (self as? ModalViewControllerDelegate)?.tr_transition = transitionDelegate
+        (self as? ViewControllerTransitionable)?.tr_transition = transitionDelegate
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         let fullCompletion = {
@@ -40,13 +40,13 @@ public extension UIViewController {
      Transition treasury dismiss ViewController.
      */
     public func tr_dismissViewController(completion: (() -> Void)? = nil) {
-        let transitionDelegate = (self as? ModalViewControllerDelegate)?.tr_transition
+        let transitionDelegate = (self as? ViewControllerTransitionable)?.tr_transition
         transitionDelegate?.transition.transitionStatus = .Dismiss
         presentedViewController?.transitioningDelegate = transitionDelegate
         let fullCompletion = {
             completion?()
             transitionDelegate?.previousStatusBarStyle?.updateStatusBarStyle()
-            (self as? ModalViewControllerDelegate)?.tr_transition = nil
+            (self as? ViewControllerTransitionable)?.tr_transition = nil
         }
         transitionDelegate?.transition.completion = fullCompletion
         if transitionDelegate?.transition.completion != nil {
@@ -56,12 +56,18 @@ public extension UIViewController {
         }
     }
 }
+
+public protocol ViewControllerTransitionable: class, NSObjectProtocol {
+    /// Retain transition delegate.
+    var tr_transition: TRViewControllerTransitionDelegate?{get set}
+}
+
 /**
  *  Your `MianViewController` should conform this delegate.
  */
 public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
-    /// Retain transition delegate.
-    var tr_transition: TRViewControllerTransitionDelegate?{get set}
+//    /// Retain transition delegate.
+//    var tr_transition: TRViewControllerTransitionDelegate?{get set}
     /**
      Dismiss by delegate.
      
@@ -69,6 +75,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      */
     func modalViewControllerDismiss(callbackData data:AnyObject?)
 }
+
 // MARK: - Implement dismiss
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {

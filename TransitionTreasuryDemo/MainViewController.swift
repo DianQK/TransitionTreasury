@@ -21,7 +21,7 @@ struct PresentTransition {
     let presentMethod: TRPresentMethod
 }
 
-class MainViewController: UIViewController, ModalViewControllerDelegate {
+class MainViewController: UIViewController, ViewControllerTransitionable,ModalViewControllerDelegate {
     
     var tr_transition: TRViewControllerTransitionDelegate?
     
