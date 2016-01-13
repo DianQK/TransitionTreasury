@@ -29,13 +29,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.1.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZj-fg-AmI">
+                                <rect key="frame" x="282" y="531" width="36" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.77254901960784317" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YQZ-o5-bSa" secondAttribute="bottom" constant="30" id="DJN-y6-pJJ"/>
                             <constraint firstItem="pf3-iP-MSD" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="120" id="LpY-sK-QNs"/>
+                            <constraint firstItem="XZj-fg-AmI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q2N-jJ-K6C"/>
                             <constraint firstAttribute="trailing" secondItem="pf3-iP-MSD" secondAttribute="trailing" constant="30" id="QaS-xe-UZn"/>
                             <constraint firstItem="YQZ-o5-bSa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dQc-uD-Kba"/>
+                            <constraint firstItem="YQZ-o5-bSa" firstAttribute="top" secondItem="XZj-fg-AmI" secondAttribute="bottom" constant="5" id="fJZ-Nj-gUC"/>
                             <constraint firstItem="pf3-iP-MSD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="pjR-2m-KNW"/>
                         </constraints>
                     </view>
