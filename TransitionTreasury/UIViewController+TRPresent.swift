@@ -56,7 +56,15 @@ public extension UIViewController {
         }
     }
 }
+/// Modal Transition & Delegate.
+public typealias ModalTransitionDelegate = protocol<ViewControllerTransitionable,ModalViewControllerDelegate>
 
+/// Main Delegate (typealias).
+public typealias MainTransitionDelegate = MainViewControllerDelegate
+
+/**
+ *  Enable Transition for Present.
+ */
 public protocol ViewControllerTransitionable: class, NSObjectProtocol {
     /// Retain transition delegate.
     var tr_transition: TRViewControllerTransitionDelegate?{get set}
@@ -75,6 +83,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      */
     func modalViewControllerDismiss(callbackData data:AnyObject?)
 }
+
 
 // MARK: - Implement dismiss
 public extension ModalViewControllerDelegate where Self:UIViewController  {

@@ -9,7 +9,7 @@
 import UIKit
 import TransitionTreasury
 
-class ModalViewController: UIViewController, MainViewControllerDelegate {
+class ModalViewController: UIViewController, MainTransitionDelegate {
     
     weak var modalDelegate: ModalViewControllerDelegate?
 

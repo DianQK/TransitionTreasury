@@ -21,7 +21,7 @@ struct PresentTransition {
     let presentMethod: TRPresentMethod
 }
 
-class MainViewController: UIViewController, ViewControllerTransitionable,ModalViewControllerDelegate {
+class MainViewController: UIViewController, ModalTransitionDelegate {
     
     var tr_transition: TRViewControllerTransitionDelegate?
     
@@ -49,7 +49,7 @@ class MainViewController: UIViewController, ViewControllerTransitionable,ModalVi
     // MARK: - Modal viewController delegate
     
     func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
-        presentResultLabel.text = "CallbackData: \(data)."
+        presentResultLabel.text = "CallbackData: \(data?["title"] as? String ?? "")."
         tr_dismissViewController()
         
     }
@@ -162,9 +162,5 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         default :
             print("Nothing happened.")
         }
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
     }
 }
