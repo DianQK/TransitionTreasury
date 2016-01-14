@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260C69EB1C47C3950077758E /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */; };
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
 		2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */; };
 		262F1DF51C33F74A00E078AE /* TwitterTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */; };
@@ -96,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
 		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
 		262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimationTests.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				26978F831C3558CF001B4C25 /* TwitterTransitionAnimation.swift */,
 				26C4C64F1C36A7AB00151251 /* BlixtTransitionAnimation.swift */,
 				26E0E77C1C3A687B00797517 /* StorehouseTransitionAnimation.swift */,
+				260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				26978F891C3558CF001B4C25 /* PhotoTransitionAnimation.swift in Sources */,
 				26E0E77D1C3A687B00797517 /* StorehouseTransitionAnimation.swift in Sources */,
 				26978F8C1C3558CF001B4C25 /* TwitterTransitionAnimation.swift in Sources */,
+				260C69EB1C47C3950077758E /* ScanbotTransitionAnimation.swift in Sources */,
 				26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */,
 				26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */,
 				26C4C6501C36A7AB00151251 /* BlixtTransitionAnimation.swift in Sources */,

@@ -59,6 +59,7 @@ public enum TRPresentMethod {
     case PopTip(visibleHeight: CGFloat)
     case TaaskyFlip(blurEffect: Bool)
     case Elevate(maskView: UIView, to: CGPoint)
+    case Scanbot(gesture: UIPanGestureRecognizer?)
     case Custom(TRViewControllerAnimatedTransitioning)
     
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -73,6 +74,8 @@ public enum TRPresentMethod {
             return TaaskyFlipTransitionAnimation(blurEffect: blur)
         case let .Elevate(view, position) :
             return ElevateTransitionAnimation(maskView: view, toPosition: position)
+        case let .Scanbot(gesture) :
+            return ScanbotTransitionAnimation(gesture: gesture)
         case let .Custom(transition) :
             return transition
         }

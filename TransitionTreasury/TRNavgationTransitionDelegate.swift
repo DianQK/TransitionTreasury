@@ -17,13 +17,19 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     public var previousStatusBarStyle: TRStatusBarStyle?
     
     public var currentStatusBarStyle: TRStatusBarStyle?
+    
+    private var p_completion: (() -> Void)?
+    
     /// Transition completion block
     var completion: (() -> Void)? {
         get {
-            return self.transition.completion
+            return self.transition.completion ?? p_completion
         }
         set {
             self.transition.completion = newValue
+            if self.transition.completion == nil {
+                p_completion = newValue
+            }
         }
     }
     /// The edge gesture for pop
@@ -63,7 +69,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         guard let transition = transition as? TransitionInteractiveable else {
             return nil
         }
-        return transition.interacting ? transition.percentTransition : nil//transition.interacting ? (transition.percentTransition ?? percentTransition) : nil
+        return transition.interacting ? transition.percentTransition : nil
     }
     
     public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {

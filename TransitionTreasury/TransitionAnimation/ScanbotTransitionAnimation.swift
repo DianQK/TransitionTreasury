@@ -1,14 +1,14 @@
 //
-//  FadeTransitionAnimation.swift
+//  ScanbotTransitionAnimation.swift
 //  TransitionTreasury
 //
-//  Created by DianQK on 12/22/15.
-//  Copyright © 2015 TransitionTreasury. All rights reserved.
+//  Created by DianQK on 1/14/16.
+//  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
 import UIKit
-/// Fade Out In Animation
-public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
+
+public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
     
@@ -16,19 +16,26 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     public var percentTransition: UIPercentDrivenInteractiveTransition?
     
-    public var completion: (() -> Void)?
-
     public var cancelPop: Bool = false
-
+    
     public var interacting: Bool = false
+    
+    public var edgeSlidePop: Bool = false
+    
+    private let panGesture: UIPanGestureRecognizer?
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.3
     }
     
-    init(status: TransitionStatus = .Push) {
+    init(gesture: UIPanGestureRecognizer?, status: TransitionStatus = .Push) {
+        panGesture = gesture
         transitionStatus = status
         super.init()
+        panGesture?.addTarget(self, action: Selector("slideTransition:"))
+        if panGesture != nil {
+            interacting = true
+        }
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -45,14 +52,11 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             toVC!.view.layer.opacity = 1
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                if !self.cancelPop {
-                    if finished {
-                        self.completion?()
-                        self.completion = nil
-                    }
-                }
-                self.cancelPop = false
         }
+    }
+    
+    public func slideTransition(sender: UIPanGestureRecognizer) {
+        
     }
     
 }

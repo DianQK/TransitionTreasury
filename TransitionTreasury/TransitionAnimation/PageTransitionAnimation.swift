@@ -15,6 +15,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var percentTransition: UIPercentDrivenInteractiveTransition?
+    
+    public var completion: (() -> Void)?
 
     public var cancelPop: Bool = false
 
@@ -78,11 +80,18 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             toVC?.view.layer.position.x = endPositionX + toVC!.view.layer.bounds.width / 2
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-                toVC?.view.layer.shadowOpacity = 0
-                if self.transitionStatus == .Pop && finished && !self.cancelPop {
-                    self.maskView.removeFromSuperview()
-                    fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
+                if !self.cancelPop {
+                    toVC?.view.layer.shadowOpacity = 0
+                    if self.transitionStatus == .Pop && finished && !self.cancelPop {
+                        self.maskView.removeFromSuperview()
+                        fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
+                    }
+                    if finished {
+                        self.completion?()
+                        self.completion = nil
+                    }
                 }
+                self.cancelPop = false
         }
     }
     

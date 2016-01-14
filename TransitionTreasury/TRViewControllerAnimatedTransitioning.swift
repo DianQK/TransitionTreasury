@@ -26,7 +26,7 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
 }
 
 public protocol TransitionInteractiveable {
-    /// Option
+    /// Option, if you implement, you must support your animation Push & Present interactive.
     var panGestureRecognizer: UIPanGestureRecognizer?{get set}
     /// Require
     var percentTransition: UIPercentDrivenInteractiveTransition?{get set}
