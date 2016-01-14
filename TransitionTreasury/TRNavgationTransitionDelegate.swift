@@ -60,7 +60,10 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     
     public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return transition.interacting ? (transition.percentTransition ?? percentTransition) : nil
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
+        return transition.interacting ? transition.percentTransition : nil//transition.interacting ? (transition.percentTransition ?? percentTransition) : nil
     }
     
     public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
@@ -79,6 +82,10 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         let fromVC = transition.transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let toVC = transition.transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)
         
+        guard var transition = transition as? TransitionInteractiveable else {
+            return
+        }
+        
         let view = fromVC!.view
         
         var percent = recognizer.translationInView(view).x / view.bounds.size.width
@@ -89,7 +96,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         case .Began :
             transition.interacting = true
             percentTransition = UIPercentDrivenInteractiveTransition()
-            percentTransition!.startInteractiveTransition(transition.transitionContext!)
+            percentTransition!.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
             toVC!.navigationController!.tr_popViewController()
         case .Changed :
             percentTransition?.updateInteractiveTransition(percent)

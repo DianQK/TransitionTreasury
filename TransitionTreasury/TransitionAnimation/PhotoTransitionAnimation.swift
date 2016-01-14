@@ -24,6 +24,8 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var completion: (() -> Void)?
     
+    public var cancelPop: Bool = false
+    
     private var frameBackup: CGRect?
     
     private var gesturesBackup: [UIGestureRecognizer]?

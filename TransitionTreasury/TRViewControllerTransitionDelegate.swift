@@ -43,7 +43,9 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     }
     
     public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
         return transition.interacting ? transition.percentTransition : nil
     }
     

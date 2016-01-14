@@ -14,17 +14,17 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     /// Required implement.
     var transitionStatus: TransitionStatus{get set}
     /// Option implement.
-    var interacting: Bool{get set}
+//    var interacting: Bool{get set}
     /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
     /// Option
     var completion: (() -> Void)?{get set}
     /// Option, For Interaction
-    var cancelPop: Bool{get set}
+//    var cancelPop: Bool{get set}
     /// Option, For Interaction
-    var interactivePrecent: CGFloat{get}
+//    var interactivePrecent: CGFloat{get}
     /// Option, For Interaction
-    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
+//    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
     /// Option, set false, if you don't need edge slide, default is true
     var edgeSlidePop: Bool{get set}
     /**
@@ -35,14 +35,27 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     func popToVCIndex(index: Int)
 }
 
+public protocol TransitionInteractiveable {
+    
+    var panGestureRecognizer: UIPanGestureRecognizer{get set}
+    
+    var percentTransition: UIPercentDrivenInteractiveTransition{get set}
+    
+    var interactivePrecent: CGFloat{get}
+    
+    var interacting: Bool{get set}
+    
+    var cancelPop: Bool{get set}
+}
+
 public extension TRViewControllerAnimatedTransitioning {
     
-    public var interacting: Bool {
-        get {
-            return false
-        }
-        set {}
-    }
+//    public var interacting: Bool {
+//        get {
+//            return false
+//        }
+//        set {}
+//    }
     
     public var completion: (() -> Void)? {
         get {
@@ -51,25 +64,25 @@ public extension TRViewControllerAnimatedTransitioning {
         set {}
     }
     
-    public var interactivePrecent: CGFloat {
-        get {
-            return 0.3
-        }
-    }
+//    public var interactivePrecent: CGFloat {
+//        get {
+//            return 0.3
+//        }
+//    }
     
-    public var cancelPop: Bool {
-        get {
-            return false
-        }
-        set {}
-    }
+//    public var cancelPop: Bool {
+//        get {
+//            return false
+//        }
+//        set {}
+//    }
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition? {
-        get {
-            return nil
-        }
-        set {}
-    }
+//    public var percentTransition: UIPercentDrivenInteractiveTransition? {
+//        get {
+//            return nil
+//        }
+//        set {}
+//    }
     
     public var edgeSlidePop: Bool {
         get {
@@ -79,9 +92,5 @@ public extension TRViewControllerAnimatedTransitioning {
     }
     
     func popToVCIndex(index: Int) {}
-    
-}
-
-public protocol TransitionGestureable {
     
 }
