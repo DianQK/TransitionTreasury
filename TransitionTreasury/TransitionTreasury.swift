@@ -94,10 +94,3 @@ public enum TransitionStatus {
     case Dismiss
     case Finish
 }
-
-// TODO
-//public enum TransitionPresentStatus {
-//    case Present
-//    case Dismiss
-//}
-

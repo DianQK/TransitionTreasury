@@ -81,3 +81,7 @@ public extension TRViewControllerAnimatedTransitioning {
     func popToVCIndex(index: Int) {}
     
 }
+
+public protocol TransitionGestureable {
+    
+}
