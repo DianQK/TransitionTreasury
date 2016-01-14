@@ -13,20 +13,10 @@ import UIKit
 public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     /// Required implement.
     var transitionStatus: TransitionStatus{get set}
-    /// Option implement.
-//    var interacting: Bool{get set}
     /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
     /// Option
     var completion: (() -> Void)?{get set}
-    /// Option, For Interaction
-//    var cancelPop: Bool{get set}
-    /// Option, For Interaction
-//    var interactivePrecent: CGFloat{get}
-    /// Option, For Interaction
-//    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
-    /// Option, set false, if you don't need edge slide, default is true
-//    var edgeSlidePop: Bool{get set}
     /**
      Option
      

@@ -89,5 +89,3 @@ public extension ModalViewControllerDelegate where Self:UIViewController  {
         tr_dismissViewController()
     }
 }
-
-
