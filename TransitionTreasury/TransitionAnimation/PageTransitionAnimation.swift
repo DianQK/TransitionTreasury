@@ -8,7 +8,7 @@
 
 import UIKit
 /// Page Motion
-public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
     

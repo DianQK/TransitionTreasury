@@ -8,13 +8,15 @@
 
 import UIKit
 
-public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var keyView: UIView
     
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition?
     
     public var completion: (() -> Void)?
     

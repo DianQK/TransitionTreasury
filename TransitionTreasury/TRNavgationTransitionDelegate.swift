@@ -10,7 +10,7 @@ import UIKit
 /// Transition(Push & Pop) Animation Delegate Object
 public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDelegate {
     /// Control transition precent
-    var percentTransition: UIPercentDrivenInteractiveTransition?
+//    var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
     public var transition: TRViewControllerAnimatedTransitioning
     
@@ -44,7 +44,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     public init(method: TRPushMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
-        if transition.edgeSlidePop {
+        if let transition = transition as? TransitionInteractiveable where transition.edgeSlidePop {
             viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
         }
     }
@@ -95,23 +95,23 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         switch recognizer.state {
         case .Began :
             transition.interacting = true
-            percentTransition = UIPercentDrivenInteractiveTransition()
-            percentTransition!.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
+            transition.percentTransition = UIPercentDrivenInteractiveTransition()
+            transition.percentTransition?.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
             toVC!.navigationController!.tr_popViewController()
         case .Changed :
-            percentTransition?.updateInteractiveTransition(percent)
+            transition.percentTransition?.updateInteractiveTransition(percent)
         default :
             transition.interacting = false
             if percent > transition.interactivePrecent {
                 transition.cancelPop = false
-                percentTransition!.completionSpeed = 1.0 - percentTransition!.percentComplete
-                percentTransition?.finishInteractiveTransition()
+                transition.percentTransition?.completionSpeed = 1.0 - transition.percentTransition!.percentComplete
+                transition.percentTransition?.finishInteractiveTransition()
                 fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
-                percentTransition?.cancelInteractiveTransition()
+                transition.percentTransition?.cancelInteractiveTransition()
             }
-            percentTransition = nil
+            transition.percentTransition = nil
         }
     }
 }

@@ -26,7 +26,7 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     /// Option, For Interaction
 //    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
     /// Option, set false, if you don't need edge slide, default is true
-    var edgeSlidePop: Bool{get set}
+//    var edgeSlidePop: Bool{get set}
     /**
      Option
      
@@ -36,26 +36,21 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
 }
 
 public protocol TransitionInteractiveable {
-    
-    var panGestureRecognizer: UIPanGestureRecognizer{get set}
-    
-    var percentTransition: UIPercentDrivenInteractiveTransition{get set}
-    
+    /// Option
+    var panGestureRecognizer: UIPanGestureRecognizer?{get set}
+    /// Require
+    var percentTransition: UIPercentDrivenInteractiveTransition?{get set}
+    /// Option
     var interactivePrecent: CGFloat{get}
-    
+    /// Require
     var interacting: Bool{get set}
-    
+    /// Require
     var cancelPop: Bool{get set}
+    /// Option
+    var edgeSlidePop: Bool{get set}
 }
 
 public extension TRViewControllerAnimatedTransitioning {
-    
-//    public var interacting: Bool {
-//        get {
-//            return false
-//        }
-//        set {}
-//    }
     
     public var completion: (() -> Void)? {
         get {
@@ -64,33 +59,29 @@ public extension TRViewControllerAnimatedTransitioning {
         set {}
     }
     
-//    public var interactivePrecent: CGFloat {
-//        get {
-//            return 0.3
-//        }
-//    }
+    func popToVCIndex(index: Int) {}
     
-//    public var cancelPop: Bool {
-//        get {
-//            return false
-//        }
-//        set {}
-//    }
+}
+
+public extension TransitionInteractiveable {
+    public var panGestureRecognizer: UIPanGestureRecognizer? {
+        get {
+            return nil
+        }
+        set {}
+    }
     
-//    public var percentTransition: UIPercentDrivenInteractiveTransition? {
-//        get {
-//            return nil
-//        }
-//        set {}
-//    }
-    
+    public var interactivePrecent: CGFloat {
+        get {
+            return 0.3
+        }
+    }
+
     public var edgeSlidePop: Bool {
         get {
             return true
         }
         set {}
     }
-    
-    func popToVCIndex(index: Int) {}
     
 }
