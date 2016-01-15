@@ -96,13 +96,18 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         
         percent = min(1.0, max(0, percent))
         
+        percentTransition = percentTransition ?? {
+            let percentTransition = UIPercentDrivenInteractiveTransition()
+            percentTransition.startInteractiveTransition(transitionContext!)
+            toVC!.navigationController!.tr_popViewController()
+            return percentTransition
+        }()
+        
         switch sender.state {
         case .Began :
             interacting = true
-            percentTransition = UIPercentDrivenInteractiveTransition()// TODO
-            percentTransition?.startInteractiveTransition(transitionContext!)
-            toVC!.navigationController!.tr_popViewController()
         case .Changed :
+            interacting = true
             percentTransition?.updateInteractiveTransition(percent)
         default :
             interacting = false
