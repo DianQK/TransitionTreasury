@@ -114,7 +114,46 @@
                     <view key="view" contentMode="scaleToFill" id="gOu-0d-WVH">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzy-rD-miZ">
+                                <rect key="frame" x="278" y="69" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHR-8o-ykc">
+                                <rect key="frame" x="276" y="231" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-qy-ED1">
+                                <rect key="frame" x="277" y="150" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRJ-iC-o64">
+                                <rect key="frame" x="276" y="312" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.2175178619" blue="0.22646251910000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QRJ-iC-o64" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="Cdg-tb-yFl"/>
+                            <constraint firstItem="SCC-qy-ED1" firstAttribute="top" secondItem="Pzy-rD-miZ" secondAttribute="bottom" constant="60" id="KQJ-ve-FyV"/>
+                            <constraint firstItem="Pzy-rD-miZ" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="KWe-0g-NXk"/>
+                            <constraint firstItem="QRJ-iC-o64" firstAttribute="top" secondItem="BHR-8o-ykc" secondAttribute="bottom" constant="60" id="NYR-SE-oGb"/>
+                            <constraint firstItem="BHR-8o-ykc" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="SG3-lb-QLo"/>
+                            <constraint firstItem="SCC-qy-ED1" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="SoZ-L3-9dG"/>
+                            <constraint firstItem="QRJ-iC-o64" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="TOC-O7-Pfh"/>
+                            <constraint firstItem="Pzy-rD-miZ" firstAttribute="top" secondItem="xqi-dW-XMb" secondAttribute="bottom" constant="69" id="YVA-cP-5mG"/>
+                            <constraint firstItem="Pzy-rD-miZ" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="gZU-XW-bUY"/>
+                            <constraint firstItem="BHR-8o-ykc" firstAttribute="top" secondItem="SCC-qy-ED1" secondAttribute="bottom" constant="60" id="gbk-8E-rK9"/>
+                            <constraint firstItem="BHR-8o-ykc" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="hFp-N9-8ER"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Modal" id="Jof-y5-WIS">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="h0Q-Iv-VFP">
@@ -151,11 +190,24 @@
                                     <action selector="popClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="YZ7-Cy-PCM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wal-0q-6W6">
+                                <rect key="frame" x="511" y="28" width="69" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Present">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PresentClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="n6F-lu-jIs"/>
+                                    <action selector="popClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="jHb-5W-EPx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28200979771057638" green="0.91914154728848174" blue="0.31099941218154886" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wal-0q-6W6" secondAttribute="trailing" constant="20" id="bI2-0R-EKn"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="8" id="hI9-2Q-MAt"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="leading" secondItem="bc8-Qx-hs7" secondAttribute="leading" constant="20" id="iU3-aB-UhP"/>
+                            <constraint firstItem="wal-0q-6W6" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="8" id="kOm-AN-YPT"/>
                         </constraints>
                     </view>
                 </viewController>

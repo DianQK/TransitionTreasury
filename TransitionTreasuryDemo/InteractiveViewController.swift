@@ -26,6 +26,16 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func PresentClick(sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+        vc.modalDelegate = self
+        let nav = UINavigationController(rootViewController: vc)
+        tr_presentViewController(nav, method: .Scanbot(gesture: nil), completion: {
+            print("Present finished")
+        })
+    }
+    
     @IBAction func popClick(sender: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }

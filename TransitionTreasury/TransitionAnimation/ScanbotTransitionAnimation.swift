@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/// Beta
 public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
@@ -24,11 +24,15 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     private let panGesture: UIPanGestureRecognizer?
     
+    private var shadowOpacityBackup: Float?
+    private var shadowOffsetBackup: CGSize?
+    private var shadowRadiusBackup: CGFloat?
+    
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.3
+        return 3
     }
     
-    init(gesture: UIPanGestureRecognizer?, status: TransitionStatus = .Push) {
+    init(gesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
         panGesture = gesture
         transitionStatus = status
         super.init()
@@ -41,18 +45,43 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-        containView?.addSubview(fromVC!.view)
+        var fromVCStartY: CGFloat = 0
+        var fromVCEndY = UIScreen.mainScreen().bounds.height
+        
+        var toVCStartY = -UIScreen.mainScreen().bounds.height/3
+        var toVCEndY: CGFloat = 0
+        shadowOpacityBackup = shadowOpacityBackup ?? fromVC?.view.layer.shadowOpacity
+        shadowOffsetBackup = shadowOffsetBackup ?? fromVC?.view.layer.shadowOffset
+        shadowRadiusBackup = shadowRadiusBackup ?? fromVC?.view.layer.shadowRadius
+        
+        if transitionStatus == .Dismiss {
+            swap(&fromVC, &toVC)
+            swap(&fromVCStartY, &fromVCEndY)
+            swap(&toVCStartY, &toVCEndY)
+        }
+        
         containView?.addSubview(toVC!.view)
-        toVC!.view.layer.opacity = 0
+        containView?.addSubview(fromVC!.view)
+        toVC?.view.frame.origin.y =  toVCStartY
+        fromVC?.view.frame.origin.y = fromVCStartY
+        fromVC?.view.layer.shadowOpacity = 0.5
+        fromVC?.view.layer.shadowOffset = CGSize(width: 0, height: -1)
+        fromVC?.view.layer.shadowRadius = 3
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-            toVC!.view.layer.opacity = 1
+            toVC?.view.frame.origin.y = toVCEndY
+            fromVC?.view.frame.origin.y = fromVCEndY
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                if self.transitionStatus == .Dismiss {
+                    fromVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
+                    fromVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
+                    fromVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
+                }
         }
     }
     
@@ -70,7 +99,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         switch sender.state {
         case .Began :
             interacting = true
-            percentTransition = UIPercentDrivenInteractiveTransition()
+            percentTransition = UIPercentDrivenInteractiveTransition()// TODO
             percentTransition?.startInteractiveTransition(transitionContext!)
             toVC!.navigationController!.tr_popViewController()
         case .Changed :
