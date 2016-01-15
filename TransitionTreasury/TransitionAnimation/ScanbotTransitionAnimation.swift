@@ -61,7 +61,6 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let toVC = transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)
 
-        
         let view = fromVC!.view
         
         var percent = sender.translationInView(view).y / view.bounds.size.height
@@ -82,6 +81,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
                 cancelPop = false
                 percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()
+                panGesture?.removeTarget(self, action: Selector("slideTransition:"))
             } else {
                 cancelPop = true
                 percentTransition?.cancelInteractiveTransition()

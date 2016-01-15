@@ -39,8 +39,7 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
             tr_presentViewController(nav, method: .Scanbot(gesture: sender), completion: {
                 print("Present finished")
             })
-        default :
-            print("")
+        default : break
         }
     }
 
