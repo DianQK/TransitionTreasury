@@ -139,9 +139,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0Z-xP-Xrf">
+                                <rect key="frame" x="20" y="20" width="45" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissClick:" destination="RtC-pi-0g6" eventType="touchUpInside" id="0Oe-cL-zoZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.2175178619" blue="0.22646251910000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="k0Z-xP-Xrf" firstAttribute="leading" secondItem="gOu-0d-WVH" secondAttribute="leading" constant="20" id="4IX-iK-cah"/>
                             <constraint firstItem="QRJ-iC-o64" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="Cdg-tb-yFl"/>
                             <constraint firstItem="SCC-qy-ED1" firstAttribute="top" secondItem="Pzy-rD-miZ" secondAttribute="bottom" constant="60" id="KQJ-ve-FyV"/>
                             <constraint firstItem="Pzy-rD-miZ" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="KWe-0g-NXk"/>
@@ -150,6 +161,7 @@
                             <constraint firstItem="SCC-qy-ED1" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="SoZ-L3-9dG"/>
                             <constraint firstItem="QRJ-iC-o64" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="TOC-O7-Pfh"/>
                             <constraint firstItem="Pzy-rD-miZ" firstAttribute="top" secondItem="xqi-dW-XMb" secondAttribute="bottom" constant="69" id="YVA-cP-5mG"/>
+                            <constraint firstItem="k0Z-xP-Xrf" firstAttribute="top" secondItem="xqi-dW-XMb" secondAttribute="bottom" constant="20" id="fsr-g6-ISA"/>
                             <constraint firstItem="Pzy-rD-miZ" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="gZU-XW-bUY"/>
                             <constraint firstItem="BHR-8o-ykc" firstAttribute="top" secondItem="SCC-qy-ED1" secondAttribute="bottom" constant="60" id="gbk-8E-rK9"/>
                             <constraint firstItem="BHR-8o-ykc" firstAttribute="centerX" secondItem="gOu-0d-WVH" secondAttribute="centerX" id="hFp-N9-8ER"/>
@@ -171,7 +183,7 @@
         <!--Interactive View Controller-->
         <scene sceneID="QIW-IC-jMh">
             <objects>
-                <viewController storyboardIdentifier="InteractiveViewController" id="f5q-LJ-Sgy" customClass="InteractiveViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InteractiveViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="f5q-LJ-Sgy" customClass="InteractiveViewController" customModule="TransitionTreasuryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KAe-s0-yQC"/>
                         <viewControllerLayoutGuide type="bottom" id="abg-ZG-4e8"/>
