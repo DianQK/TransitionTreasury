@@ -16,6 +16,14 @@
 * TaaskyFlip    
 * Elevate  
 
+## [2.0.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.0.0)
+
+#### Fixed
+* Fix **Fade** and **Page** not use `completion` block.
+
+#### Other
+* Update protocol to `TransitionInteractiveable`, `ViewControllerTransitionable`, `ModalTransitionDelegate`, `NavgationTransitionable`
+
 ## [1.1.3](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.3)
 
 #### Fixed

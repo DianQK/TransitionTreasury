@@ -50,7 +50,10 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     }
     
     public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
+        return transition.interacting ? transition.percentTransition : nil
     }
     
 }

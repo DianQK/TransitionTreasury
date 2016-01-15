@@ -16,7 +16,7 @@ import UIKit
  - Page:          Page Motion
  - Custom:        Custom your animation
  */
-public enum TRPushMethod {
+public enum TRPushMethod: TransitionAnimationable {
     case OMIN(keyView: UIView)
     case IBanTang(keyView: UIView)
     case Fade
@@ -25,7 +25,7 @@ public enum TRPushMethod {
 //    case Storehouse(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case let .OMIN(key) :
             return OMINTransitionAnimation(key: key)
@@ -53,7 +53,7 @@ public enum TRPushMethod {
  - PopTip:      Pop A Tip VC
  - Custom:      Custom your Animation
  */
-public enum TRPresentMethod {
+public enum TRPresentMethod: TransitionAnimationable {
     case Twitter
     case Fade
     case PopTip(visibleHeight: CGFloat)
@@ -62,7 +62,7 @@ public enum TRPresentMethod {
     case Scanbot(gesture: UIPanGestureRecognizer?)
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case .Twitter :
             return TwitterTransitionAnimation()
@@ -96,4 +96,8 @@ public enum TransitionStatus {
     case Present
     case Dismiss
     case Finish
+}
+
+public protocol TransitionAnimationable {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning
 }

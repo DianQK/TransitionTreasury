@@ -32,9 +32,10 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         panGesture = gesture
         transitionStatus = status
         super.init()
-        panGesture?.addTarget(self, action: Selector("slideTransition:"))
         if panGesture != nil {
+            panGesture?.addTarget(self, action: Selector("slideTransition:"))
             interacting = true
+            percentTransition = UIPercentDrivenInteractiveTransition()
         }
     }
     
@@ -56,7 +57,38 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     }
     
     public func slideTransition(sender: UIPanGestureRecognizer) {
+
+        let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        let toVC = transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)
+
         
+        let view = fromVC!.view
+        
+        var percent = sender.translationInView(view).y / view.bounds.size.height
+        
+        percent = min(1.0, max(0, percent))
+        
+        switch sender.state {
+        case .Began :
+            interacting = true
+            percentTransition = UIPercentDrivenInteractiveTransition()
+            percentTransition?.startInteractiveTransition(transitionContext!)
+            toVC!.navigationController!.tr_popViewController()
+        case .Changed :
+            percentTransition?.updateInteractiveTransition(percent)
+        default :
+            interacting = false
+            if percent > interactivePrecent {
+                cancelPop = false
+                percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
+                percentTransition?.finishInteractiveTransition()
+            } else {
+                cancelPop = true
+                percentTransition?.cancelInteractiveTransition()
+            }
+            percentTransition = nil
+        }
+
     }
     
 }
