@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, NavgationTransitionable {
     }
     
     @IBAction func popClick(sender: AnyObject) {
-        navigationController?.tr_popViewController({
+        navigationController?.tr_popViewController(completion: { () -> Void in
             print("Pop finished.")
         })
     }

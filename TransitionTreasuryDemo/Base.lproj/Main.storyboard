@@ -218,11 +218,17 @@
                                     <action selector="PresentClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="n6F-lu-jIs"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="img_swipe_down" translatesAutoresizingMaskIntoConstraints="NO" id="bca-Xu-wfS">
+                                <rect key="frame" x="260" y="248" width="81" height="104"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.28200979771057638" green="0.91914154728848174" blue="0.31099941218154886" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="bca-Xu-wfS" firstAttribute="centerX" secondItem="bc8-Qx-hs7" secondAttribute="centerX" id="09R-2Y-RXJ"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="top" secondItem="bc8-Qx-hs7" secondAttribute="top" constant="28" id="DmY-LG-15O"/>
                             <constraint firstItem="wal-0q-6W6" firstAttribute="top" secondItem="bc8-Qx-hs7" secondAttribute="top" constant="28" id="Qqy-It-n8H"/>
+                            <constraint firstItem="bca-Xu-wfS" firstAttribute="centerY" secondItem="bc8-Qx-hs7" secondAttribute="centerY" id="Xip-Rc-6sx"/>
                             <constraint firstAttribute="trailing" secondItem="wal-0q-6W6" secondAttribute="trailing" constant="20" id="bI2-0R-EKn"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="8" id="hI9-2Q-MAt"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="leading" secondItem="bc8-Qx-hs7" secondAttribute="leading" constant="20" id="iU3-aB-UhP"/>
@@ -318,5 +324,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="450" height="74"/>
+        <image name="img_swipe_down" width="81" height="104"/>
     </resources>
 </document>
