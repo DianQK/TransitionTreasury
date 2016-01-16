@@ -15,14 +15,21 @@
 * PopTip   
 * TaaskyFlip    
 * Elevate  
+* Scanbot
 
 ## [2.0.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.0.0)
 
+#### Added
+* Support Gesture for Present & Push.
+* Add **Scanbot** Present transition animation.
+
 #### Fixed
 * Fix **Fade** and **Page** not use `completion` block.
+* Fix **Twitter** shake bug.
+  * For more, see [Autolayout: Add constraint to superview and not Top Layout Guide?](http://stackoverflow.com/questions/28766210/autolayout-add-constraint-to-superview-and-not-top-layout-guide).
 
 #### Other
-* Update protocol to `TransitionInteractiveable`, `ViewControllerTransitionable`, `ModalTransitionDelegate`, `NavgationTransitionable`
+* Update protocol to `TransitionInteractiveable`, `ViewControllerTransitionable`, `ModalTransitionDelegate`, `NavgationTransitionable`.
 
 ## [1.1.3](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.3)
 
