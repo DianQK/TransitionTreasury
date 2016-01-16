@@ -39,9 +39,12 @@ public extension UIViewController {
     /**
      Transition treasury dismiss ViewController.
      */
-    public func tr_dismissViewController(completion: (() -> Void)? = nil) {
+    public func tr_dismissViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) {
         let transitionDelegate = (self as? ViewControllerTransitionable)?.tr_transition
         transitionDelegate?.transition.transitionStatus = .Dismiss
+        if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
+            interactiveTransition.interacting = interactive
+        }
         presentedViewController?.transitioningDelegate = transitionDelegate
         let fullCompletion = {
             completion?()
@@ -76,16 +79,16 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      
      - parameter data: callback data
      */
-    func modalViewControllerDismiss(callbackData data:AnyObject?)
+    func modalViewControllerDismiss(interactive interactive: Bool, callbackData data:AnyObject?)
 }
 
 
 // MARK: - Implement dismiss
 public extension ModalViewControllerDelegate where Self:UIViewController  {
-    func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
+    func modalViewControllerDismiss(interactive interactive: Bool = false, callbackData data:AnyObject? = nil) {
         if data != nil {
             debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:)` to get data.")
         }
-        tr_dismissViewController()
+        tr_dismissViewController(interactive: interactive, completion: nil)
     }
 }

@@ -69,7 +69,7 @@ class MainViewController: UIViewController, ModalTransitionDelegate {
         presentTransition.append(PresentTransition(name: "PopTip", imageName: "Alipay60x60", presentMethod: .PopTip(visibleHeight: 500), interactive: false))
         presentTransition.append(PresentTransition(name: "TaaskyFlip", imageName: "Taasky60x60", presentMethod: .TaaskyFlip(blurEffect: true), interactive: false))
         presentTransition.append(PresentTransition(name: "Elevate", imageName: "Elevate60x60", presentMethod: .Elevate(maskView: logoImageView, to: UIScreen.mainScreen().tr_center), interactive: false))
-        presentTransition.append(PresentTransition(name: "Scanbot", imageName: "Scanbot60x60", presentMethod: .Scanbot(gesture: nil), interactive: true))
+        presentTransition.append(PresentTransition(name: "Scanbot", imageName: "Scanbot60x60", presentMethod: .Scanbot(present: nil, dismiss: nil), interactive: true))
         
     }
 

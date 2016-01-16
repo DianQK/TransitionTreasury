@@ -29,7 +29,7 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
     @IBAction func PresentClick(sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
         vc.modalDelegate = self
-        tr_presentViewController(vc, method: .Scanbot(gesture: nil), completion: {
+        tr_presentViewController(vc, method: .Scanbot(present: nil, dismiss: vc.dismissGestureRecognizer), completion: {
             print("Present finished")
         })
     }
@@ -46,11 +46,15 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
             }
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
             vc.modalDelegate = self
-            tr_presentViewController(vc, method: .Scanbot(gesture: sender), completion: {
+            tr_presentViewController(vc, method: .Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
                 print("Present finished")
             })
         default : break
         }
+    }
+    
+    func modalViewControllerDismiss(interactive interactive: Bool, callbackData data: AnyObject?) {
+        tr_dismissViewController(interactive: interactive, completion: nil)
     }
 
 }

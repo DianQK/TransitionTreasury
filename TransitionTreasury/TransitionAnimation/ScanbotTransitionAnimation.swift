@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/// Beta
+/// Like Scanbot present.
 public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
@@ -22,25 +22,32 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public var edgeSlidePop: Bool = false
     
-    private let panGesture: UIPanGestureRecognizer?
+    public var completion: (() -> Void)?
+    
+    private let presentPanGesture: UIPanGestureRecognizer?
+    
+    private let dismissPanGesture: UIPanGestureRecognizer?
     
     private var shadowOpacityBackup: Float?
     private var shadowOffsetBackup: CGSize?
     private var shadowRadiusBackup: CGFloat?
     
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 3
+        return 0.3
     }
     
-    init(gesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
-        panGesture = gesture
+    init(presentGesture: UIPanGestureRecognizer?, dismissGesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
+        presentPanGesture = presentGesture
+        dismissPanGesture = dismissGesture
         transitionStatus = status
         super.init()
-        if panGesture != nil {
-            panGesture?.addTarget(self, action: Selector("slideTransition:"))
+        if presentPanGesture != nil {
+            presentPanGesture?.addTarget(self, action: Selector("slideTransition:"))
             interacting = true
             percentTransition = UIPercentDrivenInteractiveTransition()
         }
+        print(dismissPanGesture)
+        dismissPanGesture?.addTarget(self, action: Selector("slideTransition:"))
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -77,6 +84,12 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             fromVC?.view.frame.origin.y = fromVCEndY
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                if !self.cancelPop {
+                    if finished {
+                        self.completion?()
+                        self.completion = nil
+                    }
+                }
                 if self.transitionStatus == .Dismiss {
                     fromVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
                     fromVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
@@ -88,18 +101,18 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     public func slideTransition(sender: UIPanGestureRecognizer) {
 
         let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)
 
         let view = fromVC!.view
         
-        var percent = sender.translationInView(view).y / view.bounds.size.height
+        let offsetY: CGFloat = transitionStatus == .Present ? sender.translationInView(view).y : -sender.translationInView(view).y
+        
+        var percent = offsetY / view.bounds.size.height
         
         percent = min(1.0, max(0, percent))
         
         percentTransition = percentTransition ?? {
             let percentTransition = UIPercentDrivenInteractiveTransition()
             percentTransition.startInteractiveTransition(transitionContext!)
-            toVC?.navigationController?.tr_popViewController()
             return percentTransition
         }()
         
@@ -115,12 +128,19 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
                 cancelPop = false
                 percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finishInteractiveTransition()
-                panGesture?.removeTarget(self, action: Selector("slideTransition:"))
+                switch transitionStatus {
+                case .Present :
+                    presentPanGesture?.removeTarget(self, action: Selector("slideTransition:"))
+                case .Dismiss :
+                    dismissPanGesture?.removeTarget(self, action: Selector("slideTransition:"))
+                    percentTransition = nil
+                default : break
+                }
             } else {
                 cancelPop = true
                 percentTransition?.cancelInteractiveTransition()
+                percentTransition = UIPercentDrivenInteractiveTransition()
             }
-            percentTransition = nil
         }
 
     }

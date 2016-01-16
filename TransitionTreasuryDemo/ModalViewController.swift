@@ -12,6 +12,12 @@ import TransitionTreasury
 class ModalViewController: UIViewController {
     
     weak var modalDelegate: ModalViewControllerDelegate?
+    
+    lazy var dismissGestureRecognizer: UIPanGestureRecognizer = {
+        let pan = UIPanGestureRecognizer(target: self, action: Selector("panDismiss:"))
+        self.view.addGestureRecognizer(pan)
+        return pan
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +30,23 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func dismissClick(sender: AnyObject) {
-        modalDelegate?.modalViewControllerDismiss(callbackData: ["title":title ?? ""])
+        modalDelegate?.modalViewControllerDismiss(interactive: false, callbackData: ["title":title ?? ""])
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func panDismiss(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .Began :
+            guard sender.translationInView(view).y < 0 else {
+                break
+            }
+            modalDelegate?.modalViewControllerDismiss(interactive: true, callbackData: ["title":title ?? ""])
+        default : break
+        }
     }
     
     deinit {
