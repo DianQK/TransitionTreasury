@@ -89,7 +89,13 @@
                             <constraint firstItem="tyn-nb-CPP" firstAttribute="leading" secondItem="VP2-pQ-OpO" secondAttribute="leading" id="gbe-V0-AgU"/>
                             <constraint firstItem="tyn-nb-CPP" firstAttribute="top" secondItem="WkT-8M-YRk" secondAttribute="bottom" id="j3c-qE-XYA"/>
                             <constraint firstItem="WkT-8M-YRk" firstAttribute="width" secondItem="VP2-pQ-OpO" secondAttribute="width" id="mmZ-AJ-h0U"/>
+                            <constraint firstItem="WkT-8M-YRk" firstAttribute="top" secondItem="VP2-pQ-OpO" secondAttribute="top" constant="20" id="rXg-o9-eTb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2az-m4-C9d"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="TransitionTreasury" id="7mu-u5-QaS"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -210,18 +216,29 @@
                                 </state>
                                 <connections>
                                     <action selector="PresentClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="n6F-lu-jIs"/>
-                                    <action selector="popClick:" destination="f5q-LJ-Sgy" eventType="touchUpInside" id="jHb-5W-EPx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28200979771057638" green="0.91914154728848174" blue="0.31099941218154886" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="PvZ-iO-o8L" firstAttribute="top" secondItem="bc8-Qx-hs7" secondAttribute="top" constant="28" id="DmY-LG-15O"/>
+                            <constraint firstItem="wal-0q-6W6" firstAttribute="top" secondItem="bc8-Qx-hs7" secondAttribute="top" constant="28" id="Qqy-It-n8H"/>
                             <constraint firstAttribute="trailing" secondItem="wal-0q-6W6" secondAttribute="trailing" constant="20" id="bI2-0R-EKn"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="8" id="hI9-2Q-MAt"/>
                             <constraint firstItem="PvZ-iO-o8L" firstAttribute="leading" secondItem="bc8-Qx-hs7" secondAttribute="leading" constant="20" id="iU3-aB-UhP"/>
-                            <constraint firstItem="wal-0q-6W6" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="8" id="kOm-AN-YPT"/>
+                            <constraint firstItem="wal-0q-6W6" firstAttribute="top" secondItem="KAe-s0-yQC" secondAttribute="bottom" constant="12" id="kOm-AN-YPT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hI9-2Q-MAt"/>
+                                <exclude reference="kOm-AN-YPT"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="presentButton" destination="wal-0q-6W6" id="N60-BF-DTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7F6-fm-RMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
