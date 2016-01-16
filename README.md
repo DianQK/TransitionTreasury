@@ -132,7 +132,7 @@ When you need to pop, just call `public func tr_popViewController(completion: ((
 If we present `MainViewController` to `ModalViewController`:     
 
 * `MainViewController` should conform `ModalViewControllerDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?` 
-* `ModalViewController` should conform `ModalViewControllerDelegate`, and add `weak var modalDelegate: ModalViewControllerDelegate?`  
+* `ModalViewController` should conform `MainViewControllerDelegate`, and add `weak var modalDelegate: ModalViewControllerDelegate?`  
 
 Example：       
 
