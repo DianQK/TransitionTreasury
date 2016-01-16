@@ -24,12 +24,9 @@ public extension UINavigationController {
     /**
      Transition treasury pop viewController.
      */
-    public func tr_popViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) -> UIViewController? {
+    public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
         let transitionDelegate = (topViewController as? NavgationTransitionable)?.tr_transition
         let popViewController = topViewController
-        if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
-            interactiveTransition.interacting = interactive
-        }
         transitionDelegate?.completion = {
             completion?()
             (popViewController as? NavgationTransitionable)?.tr_transition = nil
