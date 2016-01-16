@@ -26,11 +26,9 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func PresentClick(sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
         vc.modalDelegate = self
-//        let nav = UINavigationController(rootViewController: vc)
         tr_presentViewController(vc, method: .Scanbot(gesture: nil), completion: {
             print("Present finished")
         })
@@ -43,9 +41,11 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
     func interactiveTransition(sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .Began :
+            guard sender.translationInView(view).y > 0 else {
+                break
+            }
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
             vc.modalDelegate = self
-            let nav = UINavigationController(rootViewController: vc)
             tr_presentViewController(vc, method: .Scanbot(gesture: sender), completion: {
                 print("Present finished")
             })

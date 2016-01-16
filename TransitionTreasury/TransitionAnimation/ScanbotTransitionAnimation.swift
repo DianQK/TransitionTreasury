@@ -99,7 +99,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         percentTransition = percentTransition ?? {
             let percentTransition = UIPercentDrivenInteractiveTransition()
             percentTransition.startInteractiveTransition(transitionContext!)
-            toVC!.navigationController!.tr_popViewController()
+            toVC?.navigationController?.tr_popViewController()
             return percentTransition
         }()
         

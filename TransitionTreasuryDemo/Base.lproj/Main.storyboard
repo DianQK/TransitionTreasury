@@ -236,9 +236,6 @@
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <connections>
-                        <outlet property="presentButton" destination="wal-0q-6W6" id="N60-BF-DTA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7F6-fm-RMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
