@@ -8,13 +8,15 @@
 
 import UIKit
 /// Like IBanTang, View Move
-public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public private(set) var keyView: UIView
     
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition?
     
     public var completion: (() -> Void)?
     
@@ -24,7 +26,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     lazy public private(set) var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
-    init(key: UIView, status: TransitionStatus = .Push) {
+    public init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key
         transitionStatus = status
         super.init()

@@ -21,7 +21,7 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TRPresentMethod, status: TransitionStatus = .Present) {
+    public init(method: TRPresentTransitionMethod, status: TransitionStatus = .Present) {
         transition = method.transitionAnimation()
         super.init()
     }
@@ -43,12 +43,17 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     }
     
     public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
         return transition.interacting ? transition.percentTransition : nil
     }
     
     public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil
+        guard let transition = transition as? TransitionInteractiveable else {
+            return nil
+        }
+        return transition.interacting ? transition.percentTransition : nil
     }
     
 }

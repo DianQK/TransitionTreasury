@@ -9,7 +9,7 @@
 import UIKit
 import TransitionTreasury
 
-class SecondViewController: UIViewController, TRTransition {
+class SecondViewController: UIViewController, NavgationTransitionable {
     
     var tr_transition: TRNavgationTransitionDelegate?
 
@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, TRTransition {
     }
     
     @IBAction func popClick(sender: AnyObject) {
-        navigationController?.tr_popViewController({
+        navigationController?.tr_popViewController({ () -> Void in
             print("Pop finished.")
         })
     }

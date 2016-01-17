@@ -13,20 +13,10 @@ import UIKit
 public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedTransitioning {
     /// Required implement.
     var transitionStatus: TransitionStatus{get set}
-    /// Option implement.
-    var interacting: Bool{get set}
     /// Rquired implement.
     var transitionContext: UIViewControllerContextTransitioning?{get set}
     /// Option
     var completion: (() -> Void)?{get set}
-    /// Option, For Interaction
-    var cancelPop: Bool{get set}
-    /// Option, For Interaction
-    var interactivePrecent: CGFloat{get}
-    /// Option, For Interaction
-    var percentTransition: UIPercentDrivenInteractiveTransition?{set get}
-    /// Option, set false, if you don't need edge slide, default is true
-    var edgeSlidePop: Bool{get set}
     /**
      Option
      
@@ -35,16 +25,36 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
     func popToVCIndex(index: Int)
 }
 
+public protocol TransitionInteractiveable {
+    /// Option, if you implement, you must support your animation Push & Present interactive.
+    var panGestureRecognizer: UIPanGestureRecognizer?{get set}
+    /// Require
+    var percentTransition: UIPercentDrivenInteractiveTransition?{get set}
+    /// Option
+    var interactivePrecent: CGFloat{get}
+    /// Require
+    var interacting: Bool{get set}
+    /// Require
+    var cancelPop: Bool{get set}
+    /// Option
+    var edgeSlidePop: Bool{get set}
+}
+
 public extension TRViewControllerAnimatedTransitioning {
     
-    public var interacting: Bool {
+    public var completion: (() -> Void)? {
         get {
-            return false
+            return nil
         }
         set {}
     }
     
-    public var completion: (() -> Void)? {
+    func popToVCIndex(index: Int) {}
+    
+}
+
+public extension TransitionInteractiveable {
+    public var panGestureRecognizer: UIPanGestureRecognizer? {
         get {
             return nil
         }
@@ -56,28 +66,12 @@ public extension TRViewControllerAnimatedTransitioning {
             return 0.3
         }
     }
-    
-    public var cancelPop: Bool {
-        get {
-            return false
-        }
-        set {}
-    }
-    
-    public var percentTransition: UIPercentDrivenInteractiveTransition? {
-        get {
-            return nil
-        }
-        set {}
-    }
-    
+
     public var edgeSlidePop: Bool {
         get {
             return true
         }
         set {}
     }
-    
-    func popToVCIndex(index: Int) {}
     
 }

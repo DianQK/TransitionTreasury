@@ -9,14 +9,22 @@
 import UIKit
 import TransitionTreasury
 
-class ModalViewController: UIViewController, MainViewControllerDelegate {
+class ModalViewController: UIViewController {
     
     weak var modalDelegate: ModalViewControllerDelegate?
+    
+    @IBOutlet weak var backButton: UIButton!
+    lazy var dismissGestureRecognizer: UIPanGestureRecognizer = {
+        let pan = UIPanGestureRecognizer(target: self, action: Selector("panDismiss:"))
+        self.view.addGestureRecognizer(pan)
+        return pan
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        backButton.hidden = !(navigationController?.navigationBarHidden ?? true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -30,6 +38,17 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func panDismiss(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .Began :
+            guard sender.translationInView(view).y < 0 else {
+                break
+            }
+            modalDelegate?.modalViewControllerDismiss(interactive: true, callbackData: nil)
+        default : break
+        }
     }
     
     deinit {

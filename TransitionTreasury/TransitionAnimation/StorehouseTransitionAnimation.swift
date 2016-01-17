@@ -28,7 +28,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     lazy public private(set) var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
-    init(key: UIView, status: TransitionStatus = .Push) {
+    public init(key: UIView, status: TransitionStatus = .Push) {
         keyView = key
         transitionStatus = status
         super.init()
@@ -72,7 +72,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
         
-        print(toVC)
+//        print(toVC)
         
         toVC?.view.layer.mask = maskLayer
 //        toVC?.view.layer.transform = endTransform

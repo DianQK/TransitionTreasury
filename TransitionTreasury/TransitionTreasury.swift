@@ -16,7 +16,7 @@ import UIKit
  - Page:          Page Motion
  - Custom:        Custom your animation
  */
-public enum TRPushMethod {
+public enum TRPushTransitionMethod: TransitionAnimationable {
     case OMIN(keyView: UIView)
     case IBanTang(keyView: UIView)
     case Fade
@@ -25,7 +25,7 @@ public enum TRPushMethod {
 //    case Storehouse(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case let .OMIN(key) :
             return OMINTransitionAnimation(key: key)
@@ -53,15 +53,16 @@ public enum TRPushMethod {
  - PopTip:      Pop A Tip VC
  - Custom:      Custom your Animation
  */
-public enum TRPresentMethod {
+public enum TRPresentTransitionMethod: TransitionAnimationable {
     case Twitter
     case Fade
     case PopTip(visibleHeight: CGFloat)
     case TaaskyFlip(blurEffect: Bool)
     case Elevate(maskView: UIView, to: CGPoint)
+    case Scanbot(present: UIPanGestureRecognizer?, dismiss: UIPanGestureRecognizer?)
     case Custom(TRViewControllerAnimatedTransitioning)
     
-    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case .Twitter :
             return TwitterTransitionAnimation()
@@ -73,7 +74,23 @@ public enum TRPresentMethod {
             return TaaskyFlipTransitionAnimation(blurEffect: blur)
         case let .Elevate(view, position) :
             return ElevateTransitionAnimation(maskView: view, toPosition: position)
+        case let .Scanbot(presentGesture, dismissGesture) :
+            return ScanbotTransitionAnimation(presentGesture: presentGesture, dismissGesture: dismissGesture)
         case let .Custom(transition) :
+            return transition
+        }
+    }
+}
+
+public enum TRTabBarTransitionMethod: TransitionAnimationable {
+    case Fade
+    case Custom(TRViewControllerAnimatedTransitioning)
+    
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+        switch self {
+        case .Fade :
+            return FadeTransitionAnimation(status: .TabBar)
+        case .Custom(let transition) :
             return transition
         }
     }
@@ -92,12 +109,9 @@ public enum TransitionStatus {
     case Pop
     case Present
     case Dismiss
-    case Finish
+    case TabBar
 }
 
-// TODO
-//public enum TransitionPresentStatus {
-//    case Present
-//    case Dismiss
-//}
-
+public protocol TransitionAnimationable {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning
+}

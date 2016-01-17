@@ -8,13 +8,15 @@
 
 import UIKit
 /// Fade Out In Animation
-public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
     public var percentTransition: UIPercentDrivenInteractiveTransition?
+    
+    public var completion: (() -> Void)?
 
     public var cancelPop: Bool = false
 
@@ -23,8 +25,8 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.3
     }
-    
-    init(status: TransitionStatus = .Push) {
+
+    public init(status: TransitionStatus = .Push) {
         transitionStatus = status
         super.init()
     }
@@ -43,6 +45,13 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             toVC!.view.layer.opacity = 1
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                if !self.cancelPop {
+                    if finished {
+                        self.completion?()
+                        self.completion = nil
+                    }
+                }
+                self.cancelPop = false
         }
     }
     

@@ -8,13 +8,15 @@
 
 import UIKit
 
-public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var keyView: UIView
     
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition?
     
     public var completion: (() -> Void)?
     
@@ -26,7 +28,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     private lazy var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
-    init(key: UIView, toFrame frame:CGRect, status: TransitionStatus = .Push) {
+    public init(key: UIView, toFrame frame:CGRect, status: TransitionStatus = .Push) {
         keyView = key
         toFrame = frame
         transitionStatus = status

@@ -17,13 +17,12 @@ TransitionTreasury is a viewController transition framework in Swift.
 
 ## Features    
 
-* [x] Push & Present & TabBar transition animation
+* [x] Push & Present
 * [x] Easy create transition & extension
 * [x] Support completion callback
 * [x] Support modal viewController data callback
 * [x] Support Custom Transition
 * [x] Support Update Status Bar Style
-* [x] Support Push & Present Gesture.
 * [x] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/wiki)
 
 ## Requirements   
@@ -104,31 +103,24 @@ For more information about how to use Carthage, please see its [project page](ht
 
 ### Make a Push   
 
-If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `NavgationTransitionable`, and add code `var tr_transition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
+If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `TRTransition`, and add code `var tr_transition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
 
-When you need to push, just call `public func tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, completion: (() -> Void)?)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
+When you need to push, just call `public func tr_pushViewController(viewcontroller: UIViewController, method: TRPushMethod, completion: (() -> Void)?)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
 
 Example：   
 
 ```swift
-/// FirstViewController.swift
-class FirstViewController: UIViewController {
-
-    func push() {
-        let vc = SecondViewController()
-        navigationController?.tr_pushViewController(vc, method: .Fade, completion: {
-                print("Push finish")
-            })
-    }
-}
-
-/// SecondViewController.swift
-class SecondViewController: UIViewController, TRTransition {
+class OMINViewController: UIViewController, TRTransition {
     
     var tr_transition: TRNavgationTransitionDelegate?
 
-    func pop() {
-        tr_popViewController()
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let view = touches.first?.view {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OMINViewController")
+            navigationController?.tr_pushViewController(vc, method: .OMIN(keyView: view), completion: {
+                print("Push finish")
+            })
+        }
     }
 }
 ```    
@@ -139,53 +131,38 @@ When you need to pop, just call `public func tr_popViewController(completion: ((
 
 If we present `MainViewController` to `ModalViewController`:     
 
-* `MainViewController` should conform `ModalTransitionDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?` 
-* Add `weak var modalDelegate: ModalViewControllerDelegate?` for `ModalViewController`.
+* `MainViewController` should conform `ModalViewControllerDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?` 
+* `ModalViewController` should conform `ModalViewControllerDelegate`, and add `weak var modalDelegate: ModalViewControllerDelegate?`  
 
 Example：       
 
 ```Swift
 /// MainViewController.swift
-class MainViewController: UIViewController, ModalTransitionDelegate {
+var tr_transition: TRViewControllerTransitionDelegate?
 
-    var tr_transition: TRViewControllerTransitionDelegate?
-
-    func present() {
-        let vc = ModalViewController()
-        vc.modalDelegate = self // Don't forget to set modalDelegate
-        tr_presentViewController(vc, method: .Fade, completion: {
-                print("Present finished.")
-            })
+@IBAction func tr_presentVC(sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+        vc.modalDelegate = self
+        let nav = UINavigationController(rootViewController: vc)
+        tr_presentViewController(nav, method: .Twitter, completion: nil)
     }
-}
 
 /// ModalViewController.swift
-class ModalViewController: UIViewController {
-    
-    weak var modalDelegate: ModalViewControllerDelegate?
+weak var modalDelegate: ModalViewControllerDelegate?
 
-    func dismiss() {
-        modalDelegate?.modalViewControllerDismiss(callbackData: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
-}
-```
-
-if you need `callbackData` , your `MianViewController` should implement :
-
-```swift
-func modalViewControllerDismiss(interactive interactive: Bool, callbackData data:AnyObject?)
-
-// or
-
-func modalViewControllerDismiss(callbackData data:AnyObject?)
-```
-
-`interactive` just for interactive dismiss, for more see Advanced Usage.
+    
+    @IBAction func pop(sender: AnyObject) {
+        modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])
+    }
+````
 
 > Note:      
-> If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:AnyObject?)`. 
-> If you don't want to use `ModalTransitionDelegate`, you can use `ViewControllerTransitionable` which only for Animation.
-> Warning:    
+> If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:Dictionary<String,AnyObject>?)`.     
 > You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](http://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
 
 ## Advanced Usage
@@ -212,52 +189,21 @@ navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAn
 
 ### Status Bar Style     
 
+> @Available >~ 1.1.0    
+
 If you want to update status bar style, you should add key `View controller-based status bar appearance` in **info.plist**, and set value is `false`.   
 
 Then like **Basic Usage**, just add param `statusBarStyle`:       
 
 ```swift
 // Push & Pop
-tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
 
 // Present & Dismiss
-tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default)
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
 ```    
-
-### Interactive Transition Animation
-
-See TransitionTreasuryDemo Scheme:   
-
-```swift
-func interactiveTransition(sender: UIPanGestureRecognizer) {
-        switch sender.state {
-        case .Began :
-            guard sender.translationInView(view).y > 0 else {
-                break
-            }
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
-            vc.modalDelegate = self
-            tr_presentViewController(vc, method: .Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
-                print("Present finished")
-            })
-        default : break
-        }
-    }
-```
-> Warning:
-> Make sure you just call `tr_presentViewController(_:_:_:)` once.
-
-### TabBar Transition Animation
-
-Add this code on where you set `tabBarController.delegate = self`.
-
-```swift
-func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return TRTabBarTransitionMethod.Fade.transitionAnimation()
-    }
-```
-
-You can see TransitionTreasuryTabBarDemo Scheme.
 
 ## License
 

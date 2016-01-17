@@ -8,11 +8,13 @@
 
 import UIKit
 /// OminFocus app push transition implement.
-public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
 
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition?
 
     public var completion: (() -> Void)?
 
