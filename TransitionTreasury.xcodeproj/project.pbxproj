@@ -13,6 +13,14 @@
 		260B388F1C4A907900835CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260B388D1C4A907900835CDC /* Main.storyboard */; };
 		260B38911C4A907900835CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260B38901C4A907900835CDC /* Assets.xcassets */; };
 		260B38941C4A907900835CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260B38921C4A907900835CDC /* LaunchScreen.storyboard */; };
+		260B389C1C4B1BC000835CDC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B389B1C4B1BC000835CDC /* README.md */; };
+		260B389E1C4B1BC900835CDC /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B389D1C4B1BC900835CDC /* CHANGELOG.md */; };
+		260B38A61C4B1BD300835CDC /* Advance-Usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A01C4B1BD300835CDC /* Advance-Usage.md */; };
+		260B38A71C4B1BD300835CDC /* Animation-Guide.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A11C4B1BD300835CDC /* Animation-Guide.md */; };
+		260B38A81C4B1BD300835CDC /* Basic-Usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A21C4B1BD300835CDC /* Basic-Usage.md */; };
+		260B38A91C4B1BD300835CDC /* Home.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A31C4B1BD300835CDC /* Home.md */; };
+		260B38AA1C4B1BD300835CDC /* Introduction.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A41C4B1BD300835CDC /* Introduction.md */; };
+		260B38AB1C4B1BD300835CDC /* TransitionTreasury 1.x README.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */; };
 		260C69EB1C47C3950077758E /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */; };
 		260C69ED1C486AE60077758E /* InteractiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EC1C486AE60077758E /* InteractiveViewController.swift */; };
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
@@ -41,7 +49,6 @@
 		26E0E77D1C3A687B00797517 /* StorehouseTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0E77C1C3A687B00797517 /* StorehouseTransitionAnimation.swift */; };
 		26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */; };
 		26FDFF191C33C4A600CB3995 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
-		26FDFF261C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF251C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift */; };
 		26FDFF2E1C33C63900CB3995 /* OMINTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF2D1C33C63900CB3995 /* OMINTransitionAnimationTests.swift */; };
 		26FDFF321C33CCE400CB3995 /* PopTipTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF311C33CCE400CB3995 /* PopTipTransitionAnimationTests.swift */; };
 		26FDFF341C33CFCA00CB3995 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF331C33CFCA00CB3995 /* MainViewController.swift */; };
@@ -65,13 +72,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 263B43901C32E6BD0093593E;
 			remoteInfo = TransitionTreasury;
-		};
-		26FDFF281C33C4B700CB3995 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 26FE2CBA1C26D80C005F4DDC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 26FE2CC11C26D80C005F4DDC;
-			remoteInfo = TransitionTreasuryDemo;
 		};
 		26FDFF2F1C33C71F00CB3995 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -112,6 +112,14 @@
 		260B38901C4A907900835CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		260B38931C4A907900835CDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		260B38951C4A907900835CDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260B389B1C4B1BC000835CDC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		260B389D1C4B1BC900835CDC /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		260B38A01C4B1BD300835CDC /* Advance-Usage.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Advance-Usage.md"; sourceTree = "<group>"; };
+		260B38A11C4B1BD300835CDC /* Animation-Guide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Animation-Guide.md"; sourceTree = "<group>"; };
+		260B38A21C4B1BD300835CDC /* Basic-Usage.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Basic-Usage.md"; sourceTree = "<group>"; };
+		260B38A31C4B1BD300835CDC /* Home.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
+		260B38A41C4B1BD300835CDC /* Introduction.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Introduction.md; sourceTree = "<group>"; };
+		260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "TransitionTreasury 1.x README.md"; sourceTree = "<group>"; };
 		260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
 		260C69EC1C486AE60077758E /* InteractiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveViewController.swift; sourceTree = "<group>"; };
 		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -144,9 +152,6 @@
 		26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryTests.swift; sourceTree = "<group>"; };
 		26FDFF181C33C4A600CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26FDFF231C33C4B700CB3995 /* TransitionTreasuryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26FDFF251C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryDemoTests.swift; sourceTree = "<group>"; };
-		26FDFF271C33C4B700CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26FDFF2D1C33C63900CB3995 /* OMINTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimationTests.swift; sourceTree = "<group>"; };
 		26FDFF311C33CCE400CB3995 /* PopTipTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimationTests.swift; sourceTree = "<group>"; };
 		26FDFF331C33CFCA00CB3995 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -185,13 +190,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		26FDFF201C33C4B700CB3995 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		26FE2CBF1C26D80C005F4DDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +220,29 @@
 			children = (
 			);
 			path = TabbarTransition;
+			sourceTree = "<group>";
+		};
+		260B389A1C4B1BB200835CDC /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				260B389F1C4B1BD300835CDC /* Documentation */,
+				260B389D1C4B1BC900835CDC /* CHANGELOG.md */,
+				260B389B1C4B1BC000835CDC /* README.md */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		260B389F1C4B1BD300835CDC /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				260B38A01C4B1BD300835CDC /* Advance-Usage.md */,
+				260B38A11C4B1BD300835CDC /* Animation-Guide.md */,
+				260B38A21C4B1BD300835CDC /* Basic-Usage.md */,
+				260B38A31C4B1BD300835CDC /* Home.md */,
+				260B38A41C4B1BD300835CDC /* Introduction.md */,
+				260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */,
+			);
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 		263B43751C32E54D0093593E /* TransitionTreasuryDemo */ = {
@@ -296,23 +317,14 @@
 			path = TransitionTreasuryTests;
 			sourceTree = "<group>";
 		};
-		26FDFF241C33C4B700CB3995 /* TransitionTreasuryDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				26FDFF251C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift */,
-				26FDFF271C33C4B700CB3995 /* Info.plist */,
-			);
-			path = TransitionTreasuryDemoTests;
-			sourceTree = "<group>";
-		};
 		26FE2CB91C26D80C005F4DDC = {
 			isa = PBXGroup;
 			children = (
+				260B389A1C4B1BB200835CDC /* Document */,
 				263B43921C32E6BD0093593E /* TransitionTreasury */,
 				263B43751C32E54D0093593E /* TransitionTreasuryDemo */,
 				260B38861C4A907900835CDC /* TransitionTreasuryTabbarDemo */,
 				26FDFF151C33C4A600CB3995 /* TransitionTreasuryTests */,
-				26FDFF241C33C4B700CB3995 /* TransitionTreasuryDemoTests */,
 				26FE2CC31C26D80C005F4DDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -323,7 +335,6 @@
 				26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */,
 				263B43911C32E6BD0093593E /* TransitionTreasury.framework */,
 				26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */,
-				26FDFF231C33C4B700CB3995 /* TransitionTreasuryDemoTests.xctest */,
 				260B38851C4A907900835CDC /* TransitionTreasuryTabbarDemo.app */,
 			);
 			name = Products;
@@ -397,24 +408,6 @@
 			productReference = 26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		26FDFF221C33C4B700CB3995 /* TransitionTreasuryDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 26FDFF2A1C33C4B700CB3995 /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemoTests" */;
-			buildPhases = (
-				26FDFF1F1C33C4B700CB3995 /* Sources */,
-				26FDFF201C33C4B700CB3995 /* Frameworks */,
-				26FDFF211C33C4B700CB3995 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				26FDFF291C33C4B700CB3995 /* PBXTargetDependency */,
-			);
-			name = TransitionTreasuryDemoTests;
-			productName = TransitionTreasuryDemoTests;
-			productReference = 26FDFF231C33C4B700CB3995 /* TransitionTreasuryDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26FE2CD41C26D80C005F4DDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemo" */;
@@ -446,7 +439,6 @@
 				TargetAttributes = {
 					260B38841C4A907900835CDC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = HY634B3FW2;
 					};
 					263B43901C32E6BD0093593E = {
 						CreatedOnToolsVersion = 7.2;
@@ -454,11 +446,6 @@
 					26FDFF131C33C4A600CB3995 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = HY634B3FW2;
-					};
-					26FDFF221C33C4B700CB3995 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = HY634B3FW2;
-						TestTargetID = 26FE2CC11C26D80C005F4DDC;
 					};
 					26FE2CC11C26D80C005F4DDC = {
 						CreatedOnToolsVersion = 7.2;
@@ -478,11 +465,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */,
 				263B43901C32E6BD0093593E /* TransitionTreasury */,
-				26FDFF131C33C4A600CB3995 /* TransitionTreasuryTests */,
-				26FDFF221C33C4B700CB3995 /* TransitionTreasuryDemoTests */,
+				26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */,
 				260B38841C4A907900835CDC /* TransitionTreasuryTabbarDemo */,
+				26FDFF131C33C4A600CB3995 /* TransitionTreasuryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -506,13 +492,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		26FDFF121C33C4A600CB3995 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26FDFF211C33C4B700CB3995 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,22 +565,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		26FDFF1F1C33C4B700CB3995 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26FDFF261C33C4B700CB3995 /* TransitionTreasuryDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		26FE2CBE1C26D80C005F4DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				260B38AA1C4B1BD300835CDC /* Introduction.md in Sources */,
+				260B389C1C4B1BC000835CDC /* README.md in Sources */,
 				260C69ED1C486AE60077758E /* InteractiveViewController.swift in Sources */,
 				2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */,
+				260B38AB1C4B1BD300835CDC /* TransitionTreasury 1.x README.md in Sources */,
+				260B38A71C4B1BD300835CDC /* Animation-Guide.md in Sources */,
+				260B38A91C4B1BD300835CDC /* Home.md in Sources */,
+				260B38A61C4B1BD300835CDC /* Advance-Usage.md in Sources */,
+				260B38A81C4B1BD300835CDC /* Basic-Usage.md in Sources */,
 				26FF06AB1C337459003DAC25 /* MainViewController.swift in Sources */,
 				263B43821C32E54D0093593E /* AppDelegate.swift in Sources */,
+				260B389E1C4B1BC900835CDC /* CHANGELOG.md in Sources */,
 				263B43891C32E54D0093593E /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,11 +592,6 @@
 			isa = PBXTargetDependency;
 			target = 263B43901C32E6BD0093593E /* TransitionTreasury */;
 			targetProxy = 26FDFF1A1C33C4A600CB3995 /* PBXContainerItemProxy */;
-		};
-		26FDFF291C33C4B700CB3995 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */;
-			targetProxy = 26FDFF281C33C4B700CB3995 /* PBXContainerItemProxy */;
 		};
 		26FDFF301C33C71F00CB3995 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -671,8 +645,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabbarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,8 +658,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabbarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -757,32 +733,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasuryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		26FDFF2B1C33C4B700CB3995 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TransitionTreasuryDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasuryDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransitionTreasuryDemo.app/TransitionTreasuryDemo";
-			};
-			name = Debug;
-		};
-		26FDFF2C1C33C4B700CB3995 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TransitionTreasuryDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasuryDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransitionTreasuryDemo.app/TransitionTreasuryDemo";
 			};
 			name = Release;
 		};
@@ -909,6 +859,7 @@
 				260B38971C4A907900835CDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		263B43961C32E6BD0093593E /* Build configuration list for PBXNativeTarget "TransitionTreasury" */ = {
 			isa = XCConfigurationList;
@@ -924,15 +875,6 @@
 			buildConfigurations = (
 				26FDFF1C1C33C4A600CB3995 /* Debug */,
 				26FDFF1D1C33C4A600CB3995 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		26FDFF2A1C33C4B700CB3995 /* Build configuration list for PBXNativeTarget "TransitionTreasuryDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26FDFF2B1C33C4B700CB3995 /* Debug */,
-				26FDFF2C1C33C4B700CB3995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

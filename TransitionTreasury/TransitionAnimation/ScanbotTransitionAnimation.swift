@@ -36,7 +36,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         return 0.3
     }
     
-    init(presentGesture: UIPanGestureRecognizer?, dismissGesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
+    public init(presentGesture: UIPanGestureRecognizer?, dismissGesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
         presentPanGesture = presentGesture
         dismissPanGesture = dismissGesture
         transitionStatus = status

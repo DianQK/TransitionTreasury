@@ -16,7 +16,7 @@ import UIKit
  - Page:          Page Motion
  - Custom:        Custom your animation
  */
-public enum TRPushMethod: TransitionAnimationable {
+public enum TRPushTransitionMethod: TransitionAnimationable {
     case OMIN(keyView: UIView)
     case IBanTang(keyView: UIView)
     case Fade
@@ -53,7 +53,7 @@ public enum TRPushMethod: TransitionAnimationable {
  - PopTip:      Pop A Tip VC
  - Custom:      Custom your Animation
  */
-public enum TRPresentMethod: TransitionAnimationable {
+public enum TRPresentTransitionMethod: TransitionAnimationable {
     case Twitter
     case Fade
     case PopTip(visibleHeight: CGFloat)
@@ -82,6 +82,20 @@ public enum TRPresentMethod: TransitionAnimationable {
     }
 }
 
+public enum TRTabBarTransitionMethod: TransitionAnimationable {
+    case Fade
+    case Custom(TRViewControllerAnimatedTransitioning)
+    
+    public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+        switch self {
+        case .Fade :
+            return FadeTransitionAnimation(status: .TabBar)
+        case .Custom(let transition) :
+            return transition
+        }
+    }
+}
+
 /**
  ViewController Transition Status
  
@@ -95,7 +109,7 @@ public enum TransitionStatus {
     case Pop
     case Present
     case Dismiss
-    case Finish
+    case TabBar
 }
 
 public protocol TransitionAnimationable {

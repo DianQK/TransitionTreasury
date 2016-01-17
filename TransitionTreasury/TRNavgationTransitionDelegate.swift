@@ -47,7 +47,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TRPushMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
+    public init(method: TRPushTransitionMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
         if let transition = transition as? TransitionInteractiveable where transition.edgeSlidePop {

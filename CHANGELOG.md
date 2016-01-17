@@ -22,6 +22,7 @@
 #### Added
 * Support Gesture for Present & Push.
 * Add **Scanbot** Present transition animation.
+* Support TabBar Transition Animation.
 
 #### Fixed
 * Fix **Fade** and **Page** not use `completion` block.

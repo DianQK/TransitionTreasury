@@ -25,8 +25,8 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.3
     }
-    // TODO: des
-    init(status: TransitionStatus = .Push) {
+
+    public init(status: TransitionStatus = .Push) {
         transitionStatus = status
         super.init()
     }

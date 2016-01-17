@@ -21,7 +21,7 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TRPresentMethod, status: TransitionStatus = .Present) {
+    public init(method: TRPresentTransitionMethod, status: TransitionStatus = .Present) {
         transition = method.transitionAnimation()
         super.init()
     }
