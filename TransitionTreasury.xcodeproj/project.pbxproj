@@ -27,6 +27,8 @@
 		263B43851C32E54D0093593E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263B437A1C32E54D0093593E /* Main.storyboard */; };
 		263B43891C32E54D0093593E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263B437F1C32E54D0093593E /* ModalViewController.swift */; };
 		263B43941C32E6BD0093593E /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 263B43931C32E6BD0093593E /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		265AF7BF1C4B476A00081AD0 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
+		265AF7C01C4B476A00081AD0 /* TransitionTreasury.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2669403B1C43ABF8008A5A5D /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */; };
 		26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */; };
 		26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */; };
@@ -58,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		265AF7C11C4B476B00081AD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26FE2CBA1C26D80C005F4DDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 263B43901C32E6BD0093593E;
+			remoteInfo = TransitionTreasury;
+		};
 		26FDFF1A1C33C4A600CB3995 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26FE2CBA1C26D80C005F4DDC /* Project object */;
@@ -82,6 +91,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		265AF7C31C4B476B00081AD0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				265AF7C01C4B476A00081AD0 /* TransitionTreasury.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26FF06B01C33800F003DAC25 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265AF7BF1C4B476A00081AD0 /* TransitionTreasury.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,10 +367,12 @@
 				260B38811C4A907900835CDC /* Sources */,
 				260B38821C4A907900835CDC /* Frameworks */,
 				260B38831C4A907900835CDC /* Resources */,
+				265AF7C31C4B476B00081AD0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				265AF7C21C4B476B00081AD0 /* PBXTargetDependency */,
 			);
 			name = TransitionTreasuryTabBarDemo;
 			productName = TransitionTreasuryTabbarDemo;
@@ -565,6 +588,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		265AF7C21C4B476B00081AD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 263B43901C32E6BD0093593E /* TransitionTreasury */;
+			targetProxy = 265AF7C11C4B476B00081AD0 /* PBXContainerItemProxy */;
+		};
 		26FDFF1B1C33C4A600CB3995 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 263B43901C32E6BD0093593E /* TransitionTreasury */;
@@ -623,11 +651,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -636,11 +667,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -649,6 +683,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -673,6 +708,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
