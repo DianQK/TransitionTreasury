@@ -14,6 +14,7 @@ class ModalViewController: UIViewController {
     weak var modalDelegate: ModalViewControllerDelegate?
     
     @IBOutlet weak var backButton: UIButton!
+    
     lazy var dismissGestureRecognizer: UIPanGestureRecognizer = {
         let pan = UIPanGestureRecognizer(target: self, action: Selector("panDismiss:"))
         self.view.addGestureRecognizer(pan)

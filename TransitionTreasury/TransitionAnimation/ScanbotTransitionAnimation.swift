@@ -14,7 +14,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition?
+    public var percentTransition: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()
     
     public var cancelPop: Bool = false
     
@@ -44,9 +44,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         if presentPanGesture != nil {
             presentPanGesture?.addTarget(self, action: Selector("slideTransition:"))
             interacting = true
-            percentTransition = UIPercentDrivenInteractiveTransition()
         }
-        print(dismissPanGesture)
         dismissPanGesture?.addTarget(self, action: Selector("slideTransition:"))
     }
     

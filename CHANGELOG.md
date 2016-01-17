@@ -17,6 +17,11 @@
 * Elevate  
 * Scanbot
 
+## [2.0.1](https://github.com/DianQK/TransitionTreasury/releases/tag/2.0.1)
+
+#### Fixed
+* Fix no interactive animation, after click present for **Scanbot**.
+
 ## [2.0.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.0.0)
 
 #### Added
