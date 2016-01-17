@@ -72,7 +72,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
         
-        print(toVC)
+//        print(toVC)
         
         toVC?.view.layer.mask = maskLayer
 //        toVC?.view.layer.transform = endTransform

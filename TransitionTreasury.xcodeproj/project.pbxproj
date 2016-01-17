@@ -13,14 +13,6 @@
 		260B388F1C4A907900835CDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260B388D1C4A907900835CDC /* Main.storyboard */; };
 		260B38911C4A907900835CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260B38901C4A907900835CDC /* Assets.xcassets */; };
 		260B38941C4A907900835CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260B38921C4A907900835CDC /* LaunchScreen.storyboard */; };
-		260B389C1C4B1BC000835CDC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B389B1C4B1BC000835CDC /* README.md */; };
-		260B389E1C4B1BC900835CDC /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B389D1C4B1BC900835CDC /* CHANGELOG.md */; };
-		260B38A61C4B1BD300835CDC /* Advance-Usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A01C4B1BD300835CDC /* Advance-Usage.md */; };
-		260B38A71C4B1BD300835CDC /* Animation-Guide.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A11C4B1BD300835CDC /* Animation-Guide.md */; };
-		260B38A81C4B1BD300835CDC /* Basic-Usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A21C4B1BD300835CDC /* Basic-Usage.md */; };
-		260B38A91C4B1BD300835CDC /* Home.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A31C4B1BD300835CDC /* Home.md */; };
-		260B38AA1C4B1BD300835CDC /* Introduction.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A41C4B1BD300835CDC /* Introduction.md */; };
-		260B38AB1C4B1BD300835CDC /* TransitionTreasury 1.x README.md in Sources */ = {isa = PBXBuildFile; fileRef = 260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */; };
 		260C69EB1C47C3950077758E /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */; };
 		260C69ED1C486AE60077758E /* InteractiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EC1C486AE60077758E /* InteractiveViewController.swift */; };
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
@@ -215,13 +207,6 @@
 			path = TransitionTreasuryTabbarDemo;
 			sourceTree = "<group>";
 		};
-		260B38991C4A910A00835CDC /* TabbarTransition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabbarTransition;
-			sourceTree = "<group>";
-		};
 		260B389A1C4B1BB200835CDC /* Document */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +249,6 @@
 		263B43921C32E6BD0093593E /* TransitionTreasury */ = {
 			isa = PBXGroup;
 			children = (
-				260B38991C4A910A00835CDC /* TabbarTransition */,
 				26978F7A1C3558CF001B4C25 /* TransitionAnimation */,
 				26FF06C91C3380DE003DAC25 /* TransitionTreasury.swift */,
 				26FF06CF1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift */,
@@ -569,18 +553,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				260B38AA1C4B1BD300835CDC /* Introduction.md in Sources */,
-				260B389C1C4B1BC000835CDC /* README.md in Sources */,
 				260C69ED1C486AE60077758E /* InteractiveViewController.swift in Sources */,
 				2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */,
-				260B38AB1C4B1BD300835CDC /* TransitionTreasury 1.x README.md in Sources */,
-				260B38A71C4B1BD300835CDC /* Animation-Guide.md in Sources */,
-				260B38A91C4B1BD300835CDC /* Home.md in Sources */,
-				260B38A61C4B1BD300835CDC /* Advance-Usage.md in Sources */,
-				260B38A81C4B1BD300835CDC /* Basic-Usage.md in Sources */,
 				26FF06AB1C337459003DAC25 /* MainViewController.swift in Sources */,
 				263B43821C32E54D0093593E /* AppDelegate.swift in Sources */,
-				260B389E1C4B1BC900835CDC /* CHANGELOG.md in Sources */,
 				263B43891C32E54D0093593E /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

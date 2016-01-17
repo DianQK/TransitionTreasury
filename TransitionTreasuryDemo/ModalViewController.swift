@@ -13,6 +13,7 @@ class ModalViewController: UIViewController {
     
     weak var modalDelegate: ModalViewControllerDelegate?
     
+    @IBOutlet weak var backButton: UIButton!
     lazy var dismissGestureRecognizer: UIPanGestureRecognizer = {
         let pan = UIPanGestureRecognizer(target: self, action: Selector("panDismiss:"))
         self.view.addGestureRecognizer(pan)
@@ -23,6 +24,7 @@ class ModalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        backButton.hidden = !(navigationController?.navigationBarHidden ?? true)
     }
     
     override func viewDidAppear(animated: Bool) {

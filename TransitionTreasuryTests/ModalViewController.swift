@@ -21,6 +21,7 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        @IBOutlet weak var backButton: UIButton!
         // Dispose of any resources that can be recreated.
     }
     

@@ -181,6 +181,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="backButton" destination="k0Z-xP-Xrf" id="WzW-RA-1ug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-cm-bve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

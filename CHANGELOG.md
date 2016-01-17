@@ -31,6 +31,7 @@
 
 #### Other
 * Update protocol to `TransitionInteractiveable`, `ViewControllerTransitionable`, `ModalTransitionDelegate`, `NavgationTransitionable`.
+* Update enum to `TRPushTransitionMethod`, `TRPresentTransitionMethod`, `TRTabBarTransitionMethod`.
 
 ## [1.1.3](https://github.com/DianQK/TransitionTreasury/releases/tag/1.1.3)
 

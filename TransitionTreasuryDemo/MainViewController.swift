@@ -12,14 +12,14 @@ import TransitionTreasury
 struct PushTransition {
     let name: String
     let imageName: String
-    let pushMethod: TRPushMethod
+    let pushMethod: TRPushTransitionMethod
     let interactive: Bool
 }
 
 struct PresentTransition {
     let name: String
     let imageName: String
-    let presentMethod: TRPresentMethod
+    let presentMethod: TRPresentTransitionMethod
     let interactive: Bool
 }
 
@@ -132,7 +132,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             }
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
             vc.title = pushTransition[indexPath.row].name
-            let updateTransition: TRPushMethod = {
+            let updateTransition: TRPushTransitionMethod = {
                 switch self.pushTransition[indexPath.row].name {
                 case "OmniFocus" :
                     return .OMIN(keyView: cell)
@@ -159,7 +159,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             vc.modalDelegate = self
             vc.title = presentTransition[indexPath.row].name
             let nav = UINavigationController(rootViewController: vc)
-            let updateTransition: TRPresentMethod = {
+            let updateTransition: TRPresentTransitionMethod = {
                 switch self.presentTransition[indexPath.row].name {
                 case "Elevate" :
                     return .Elevate(maskView: cell.imageView!, to: UIScreen.mainScreen().tr_center)

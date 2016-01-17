@@ -17,7 +17,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 
 ## Features    
 
-* [x] Push & Present
+* [x] Push & Present & TabBar transition animation
 * [x] Easy create transition & extension
 * [x] Support completion callback
 * [x] Support modal viewController data callback
