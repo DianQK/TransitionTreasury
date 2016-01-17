@@ -32,7 +32,7 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func dismissClick(sender: AnyObject) {
-        modalDelegate?.modalViewControllerDismiss(interactive: false, callbackData: ["title":title ?? ""])
+        modalDelegate?.modalViewControllerDismiss(callbackData: ["title":title ?? ""])
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +46,7 @@ class ModalViewController: UIViewController {
             guard sender.translationInView(view).y < 0 else {
                 break
             }
-            modalDelegate?.modalViewControllerDismiss(interactive: true, callbackData: ["title":title ?? ""])
+            modalDelegate?.modalViewControllerDismiss(interactive: true, callbackData: nil)
         default : break
         }
     }

@@ -1,8 +1,8 @@
-## Custom Animation  
+### Custom Animation   
 
 Now, there is just **Custom Animation**, other usages are coming after next version.
 
-like **Basic-Usage**, just replace `method` paramters to `Custom(TRViewControllerAnimatedTransitioning)`, provide your animation object.  
+Like **Basic-Usage**, just replace `method` paramters to `Custom(TRViewControllerAnimatedTransitioning)`, provide your animation object.  
 
 > Note:   
 > Thanks to Swift's Enum. I can write more concise code.   
@@ -16,22 +16,53 @@ navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAn
             })
 ```     
 
-> About write your animation, you can read [Animation-Guide](Animation-Guide), I happy to you will share your animation for this project.
+> About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I happy to you will share your animation for this project.   
 
-## Status Bar Style     
-
-> @Available >~ 1.1.0    
+### Status Bar Style     
 
 If you want to update status bar style, you should add key `View controller-based status bar appearance` in **info.plist**, and set value is `false`.   
 
-Then like **Basic Usage**, just add param `statusBarStyle`:    
+Then like **Basic Usage**, just add param `statusBarStyle`:       
 
 ```swift
 // Push & Pop
-tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default)    
-tr_pushViewController(viewController: UIViewController, method: TRPushMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
+tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)    
 
 // Present & Dismiss
-tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default)
-tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentMethod, statusBarStyle: UIStatusBarStyle = .Default, completion: (() -> Void)? = nil)
-```   
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)
+```    
+
+### Interactive Transition Animation
+
+See TransitionTreasuryDemo Scheme:   
+
+```swift
+func interactiveTransition(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .Began :
+            guard sender.translationInView(view).y > 0 else {
+                break
+            }
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+            vc.modalDelegate = self
+            tr_presentViewController(vc, method: .Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
+                print("Present finished")
+            })
+        default : break
+        }
+    }
+```
+> Warning:
+> Make sure you just call `tr_presentViewController(_:_:_:)` once.
+
+### TabBar Transition Animation
+
+Add this code on where you set `tabBarController.delegate = self`.
+
+```swift
+func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return TRTabBarTransitionMethod.Fade.transitionAnimation()
+    }
+```
+
+You can see TransitionTreasuryTabBarDemo Scheme.

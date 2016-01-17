@@ -80,6 +80,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      - parameter data: callback data
      */
     func modalViewControllerDismiss(interactive interactive: Bool, callbackData data:AnyObject?)
+    func modalViewControllerDismiss(callbackData data:AnyObject?)
 }
 
 
@@ -87,8 +88,15 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
 public extension ModalViewControllerDelegate where Self:UIViewController  {
     func modalViewControllerDismiss(interactive interactive: Bool = false, callbackData data:AnyObject? = nil) {
         if data != nil {
-            debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:)` to get data.")
+            debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:_:)` to get data.")
         }
         tr_dismissViewController(interactive: interactive, completion: nil)
+    }
+    
+    func modalViewControllerDismiss(callbackData data:AnyObject?) {
+        if data != nil {
+            debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:)` to get data.")
+        }
+        tr_dismissViewController(completion: nil)
     }
 }

@@ -96,7 +96,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		260B38851C4A907900835CDC /* TransitionTreasuryTabbarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasuryTabbarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		260B38851C4A907900835CDC /* TransitionTreasuryTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionTreasuryTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260B38871C4A907900835CDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260B38891C4A907900835CDC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		260B388B1C4A907900835CDC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		260B38861C4A907900835CDC /* TransitionTreasuryTabbarDemo */ = {
+		260B38861C4A907900835CDC /* TransitionTreasuryTabBarDemo */ = {
 			isa = PBXGroup;
 			children = (
 				260B38871C4A907900835CDC /* AppDelegate.swift */,
@@ -204,6 +204,7 @@
 				260B38921C4A907900835CDC /* LaunchScreen.storyboard */,
 				260B38951C4A907900835CDC /* Info.plist */,
 			);
+			name = TransitionTreasuryTabBarDemo;
 			path = TransitionTreasuryTabbarDemo;
 			sourceTree = "<group>";
 		};
@@ -307,7 +308,7 @@
 				260B389A1C4B1BB200835CDC /* Document */,
 				263B43921C32E6BD0093593E /* TransitionTreasury */,
 				263B43751C32E54D0093593E /* TransitionTreasuryDemo */,
-				260B38861C4A907900835CDC /* TransitionTreasuryTabbarDemo */,
+				260B38861C4A907900835CDC /* TransitionTreasuryTabBarDemo */,
 				26FDFF151C33C4A600CB3995 /* TransitionTreasuryTests */,
 				26FE2CC31C26D80C005F4DDC /* Products */,
 			);
@@ -319,7 +320,7 @@
 				26FE2CC21C26D80C005F4DDC /* TransitionTreasuryDemo.app */,
 				263B43911C32E6BD0093593E /* TransitionTreasury.framework */,
 				26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */,
-				260B38851C4A907900835CDC /* TransitionTreasuryTabbarDemo.app */,
+				260B38851C4A907900835CDC /* TransitionTreasuryTabBarDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,9 +339,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		260B38841C4A907900835CDC /* TransitionTreasuryTabbarDemo */ = {
+		260B38841C4A907900835CDC /* TransitionTreasuryTabBarDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 260B38981C4A907900835CDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryTabbarDemo" */;
+			buildConfigurationList = 260B38981C4A907900835CDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryTabBarDemo" */;
 			buildPhases = (
 				260B38811C4A907900835CDC /* Sources */,
 				260B38821C4A907900835CDC /* Frameworks */,
@@ -350,9 +351,9 @@
 			);
 			dependencies = (
 			);
-			name = TransitionTreasuryTabbarDemo;
+			name = TransitionTreasuryTabBarDemo;
 			productName = TransitionTreasuryTabbarDemo;
-			productReference = 260B38851C4A907900835CDC /* TransitionTreasuryTabbarDemo.app */;
+			productReference = 260B38851C4A907900835CDC /* TransitionTreasuryTabBarDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		263B43901C32E6BD0093593E /* TransitionTreasury */ = {
@@ -451,7 +452,7 @@
 			targets = (
 				263B43901C32E6BD0093593E /* TransitionTreasury */,
 				26FE2CC11C26D80C005F4DDC /* TransitionTreasuryDemo */,
-				260B38841C4A907900835CDC /* TransitionTreasuryTabbarDemo */,
+				260B38841C4A907900835CDC /* TransitionTreasuryTabBarDemo */,
 				26FDFF131C33C4A600CB3995 /* TransitionTreasuryTests */,
 			);
 		};
@@ -625,7 +626,7 @@
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabbarDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -638,7 +639,7 @@
 				INFOPLIST_FILE = TransitionTreasuryTabbarDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabbarDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionTreasuryTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -828,7 +829,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		260B38981C4A907900835CDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryTabbarDemo" */ = {
+		260B38981C4A907900835CDC /* Build configuration list for PBXNativeTarget "TransitionTreasuryTabBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				260B38961C4A907900835CDC /* Debug */,

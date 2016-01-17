@@ -21,7 +21,7 @@
 
 #### Added
 * Support Gesture for Present & Push.
-* Add **Scanbot** Present transition animation.
+* Add **Scanbot** Present transition animation(Scanbot support interactive animation).
 * Support TabBar Transition Animation.
 
 #### Fixed
