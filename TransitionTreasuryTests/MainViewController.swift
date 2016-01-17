@@ -9,7 +9,7 @@
 import UIKit
 import TransitionTreasury
 
-class MainViewController: UIViewController, ModalViewControllerDelegate {
+class MainViewController: UIViewController, ModalTransitionDelegate {
     
     var tr_transition: TRViewControllerTransitionDelegate?
 

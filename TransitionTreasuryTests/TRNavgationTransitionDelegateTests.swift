@@ -41,7 +41,7 @@ class TRNavgationTransitionDelegateTests: XCTestCase {
             self.mainVC!.navigationController?.tr_pushViewController(secondVC, method: .Fade)
             XCTAssertNotNil(secondVC.tr_transition, "TRTransitionDelegate should be load.")
             XCTAssertNotNil(self.mainVC?.navigationController?.delegate, "Delegate should be set.")
-            XCTAssertNotNil(secondVC.tr_transition?.transition.previousStatusBarStyle, "Transition should support update status bar style.")
+            XCTAssertNotNil(secondVC.tr_transition?.previousStatusBarStyle, "Transition should support update status bar style.")
             XCTAssertEqual(secondVC.tr_transition, self.mainVC?.navigationController?.delegate as? TRNavgationTransitionDelegate, "Transition delegate should be equal delegate.")
             secondVC.navigationController?.tr_popViewController()
         }
@@ -51,15 +51,5 @@ class TRNavgationTransitionDelegateTests: XCTestCase {
         XCTAssertNil(mainVC?.navigationController?.delegate, "Delegate should be nil after pop.")
         
     }
-    
-    func testCompletion() {
-        let secondVC = SecondViewController()
-        let nav = UINavigationController(rootViewController: self.mainVC!)
-        nav.tr_pushViewController(secondVC, method: .Fade, completion: {
-            print("Push finished.")
-        })
-        XCTAssertNil(secondVC.tr_transition?.completion, "Completion should be nil.")
-    }
-    
     
 }

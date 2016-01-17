@@ -19,7 +19,7 @@ class OMINTransitionAnimationTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         keyView = UIView()
-        transition = OMINTransitionAnimation(key: keyView)
+        transition = OMINTransitionAnimation(key: keyView!)
     }
     
     override func tearDown() {

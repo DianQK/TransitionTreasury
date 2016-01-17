@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import TransitionTreasury
+@testable import TransitionTreasury
 
-class ModalViewController: UIViewController, MainViewControllerDelegate {
+class ModalViewController: UIViewController {
     
     weak var modalDelegate: ModalViewControllerDelegate?
 
@@ -21,7 +21,6 @@ class ModalViewController: UIViewController, MainViewControllerDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        @IBOutlet weak var backButton: UIButton!
         // Dispose of any resources that can be recreated.
     }
     

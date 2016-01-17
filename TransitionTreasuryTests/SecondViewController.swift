@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import TransitionTreasury
+@testable import TransitionTreasury
 
-class SecondViewController: UIViewController, TRTransition {
+class SecondViewController: UIViewController, NavgationTransitionable {
     
     var tr_transition: TRNavgationTransitionDelegate?
 

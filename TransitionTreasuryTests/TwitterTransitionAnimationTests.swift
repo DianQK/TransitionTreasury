@@ -30,7 +30,7 @@ class TwitterTransitionAnimationTests: XCTestCase {
     }
     
     func testTransitionDuration() {
-        XCTAssertEqual(0.6, transition?.transitionDuration(nil), "Transition Duration should be 0.6s.")
+        XCTAssertEqual(0.3, transition?.transitionDuration(nil), "Transition Duration should be 0.3s.")
     }
     
 }
