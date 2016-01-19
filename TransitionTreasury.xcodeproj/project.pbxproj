@@ -287,10 +287,10 @@
 				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
 				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
 				2676A5001C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift */,
-				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
-				263B43951C32E6BD0093593E /* Info.plist */,
 				2676A4FC1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift */,
 				2676A4FE1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift */,
+				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
+				263B43951C32E6BD0093593E /* Info.plist */,
 			);
 			path = TransitionTreasury;
 			sourceTree = "<group>";

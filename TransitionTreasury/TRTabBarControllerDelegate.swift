@@ -21,11 +21,11 @@ public protocol TRTabBarControllerDelegate: class, NSObjectProtocol {
     @available(iOS 2.0, *)
     func tr_tabBarController(tabBarController: UITabBarController, didEndCustomizingViewControllers viewControllers: [UIViewController], changed: Bool)
     
-//    @available(iOS 7.0, *)
-//    func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask
-//    @available(iOS 7.0, *)
-//    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation
-//    
+    @available(iOS 7.0, *)
+    func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask
+    @available(iOS 7.0, *)
+    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation
+
 //    @available(iOS 7.0, *)
 //    func tr_tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?
 //    
@@ -55,13 +55,13 @@ public extension TRTabBarControllerDelegate {
         
     }
     
-//    func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
-//        
-//    }
-//    
-//    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation {
-//        
-//    }
+    func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
+        return UIApplication.sharedApplication().supportedInterfaceOrientationsForWindow(nil)
+    }
+
+    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation {
+        return UIInterfaceOrientation.Unknown
+    }
     
 //    func tr_tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
 //        

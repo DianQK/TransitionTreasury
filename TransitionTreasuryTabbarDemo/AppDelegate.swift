@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TRTabBarControllerDelegat
     }
     
     func tr_tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        print(viewController)
+        print("You did select \(viewController.dynamicType).")
     }
 
     func applicationWillResignActive(application: UIApplication) {
