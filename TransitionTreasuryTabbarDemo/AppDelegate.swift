@@ -10,20 +10,21 @@ import UIKit
 import TransitionTreasury
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TRTabBarControllerDelegate {
 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         if let tabBarController = window?.rootViewController as? UITabBarController {
-            tabBarController.delegate = self
+            tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: .Fade)
+            tabBarController.tr_delegate = self
         }
         return true
     }
     
-    func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return TRTabBarTransitionMethod.Fade.transitionAnimation()
+    func tr_tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        print(viewController)
     }
 
     func applicationWillResignActive(application: UIApplication) {

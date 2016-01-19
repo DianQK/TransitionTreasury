@@ -30,6 +30,9 @@
 		265AF7BF1C4B476A00081AD0 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		265AF7C01C4B476A00081AD0 /* TransitionTreasury.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2669403B1C43ABF8008A5A5D /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */; };
+		2676A4FD1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A4FC1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift */; };
+		2676A4FF1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A4FE1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift */; };
+		2676A5011C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676A5001C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift */; };
 		26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */; };
 		26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */; };
 		26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */; };
@@ -150,6 +153,9 @@
 		263B43931C32E6BD0093593E /* TransitionTreasury.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
 		263B43951C32E6BD0093593E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRStatusBarStyle.swift; sourceTree = "<group>"; };
+		2676A4FC1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTabBarControllerDelegate.swift; sourceTree = "<group>"; };
+		2676A4FE1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TRTransition.swift"; sourceTree = "<group>"; };
+		2676A5001C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTabBarTransitionDelegate.swift; sourceTree = "<group>"; };
 		26978F7B1C3558CF001B4C25 /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F7C1C3558CF001B4C25 /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		26978F7D1C3558CF001B4C25 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -280,8 +286,11 @@
 				2669403A1C43ABF8008A5A5D /* TRStatusBarStyle.swift */,
 				26FF06CE1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift */,
 				26FF06D21C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift */,
+				2676A5001C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift */,
 				263B43931C32E6BD0093593E /* TransitionTreasury.h */,
 				263B43951C32E6BD0093593E /* Info.plist */,
+				2676A4FC1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift */,
+				2676A4FE1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift */,
 			);
 			path = TransitionTreasury;
 			sourceTree = "<group>";
@@ -541,12 +550,15 @@
 				26978F841C3558CF001B4C25 /* ElevateTransitionAnimation.swift in Sources */,
 				26978F861C3558CF001B4C25 /* IBanTangTransitionAnimation.swift in Sources */,
 				26C4C6501C36A7AB00151251 /* BlixtTransitionAnimation.swift in Sources */,
+				2676A5011C4E715200F4AF56 /* TRTabBarTransitionDelegate.swift in Sources */,
 				26FF06E01C3380DE003DAC25 /* UIViewController+TRPresent.swift in Sources */,
+				2676A4FF1C4E6EE800F4AF56 /* UITabBarController+TRTransition.swift in Sources */,
 				26978F871C3558CF001B4C25 /* OMINTransitionAnimation.swift in Sources */,
 				26FF06DB1C3380DE003DAC25 /* TRViewControllerAnimatedTransitioning.swift in Sources */,
 				26978F8A1C3558CF001B4C25 /* PopTipTransitionAnimation.swift in Sources */,
 				26978F8B1C3558CF001B4C25 /* TaaskyFlipTransitionAnimation.swift in Sources */,
 				26FF06DE1C3380DE003DAC25 /* TRViewControllerTransitionDelegate.swift in Sources */,
+				2676A4FD1C4E239400F4AF56 /* TRTabBarControllerDelegate.swift in Sources */,
 				26FF06DF1C3380DE003DAC25 /* UINavigationController+TRPushPop.swift in Sources */,
 				26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */,
 				26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */,
