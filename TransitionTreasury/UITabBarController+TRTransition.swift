@@ -27,14 +27,16 @@ public extension UITabBarController {
     
     public weak var tr_delegate: TRTabBarControllerDelegate? {
         get {
+            if tr_transitionDelegate == nil {
+                debugPrint("Warning: You forget set tr_transitionDelegate.")
+            }
             return tr_transitionDelegate?.tr_delegate
-//            return objc_getAssociatedObject(self, &delegate_key) as? TRTabBarControllerDelegate
         }
         set {
+            if tr_transitionDelegate == nil {
+                debugPrint("Warning: You forget set tr_transitionDelegate.")
+            }
             tr_transitionDelegate?.tr_delegate = newValue
-//            objc_setAssociatedObject(self,
-//                &delegate_key, newValue,
-//                .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
