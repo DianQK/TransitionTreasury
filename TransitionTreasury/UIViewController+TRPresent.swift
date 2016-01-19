@@ -15,6 +15,11 @@ public extension UIViewController {
     public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         (self as? ViewControllerTransitionable)?.tr_transition = transitionDelegate
+        if let viewController = self as? ViewControllerTransitionable {
+            viewController.tr_transition = transitionDelegate
+        } else {
+            debugPrint("Warning: viewController \(self) should conform 'ViewControllerTransitionable'.")
+        }
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         let fullCompletion = {
