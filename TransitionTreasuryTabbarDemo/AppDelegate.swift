@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TRTabBarControllerDelegat
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         if let tabBarController = window?.rootViewController as? UITabBarController {
-            tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: .Fade)
+            tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: .Swipe)
             tabBarController.tr_delegate = self
         }
         return true

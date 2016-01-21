@@ -15,6 +15,7 @@
 		260B38941C4A907900835CDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260B38921C4A907900835CDC /* LaunchScreen.storyboard */; };
 		260C69EB1C47C3950077758E /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */; };
 		260C69ED1C486AE60077758E /* InteractiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260C69EC1C486AE60077758E /* InteractiveViewController.swift */; };
+		260D13961C50E542008C8D48 /* SwipeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260D13951C50E542008C8D48 /* SwipeTransitionAnimation.swift */; };
 		2621D49F1C339A730071B275 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D49E1C339A730071B275 /* SecondViewController.swift */; };
 		2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */; };
 		262F1DF51C33F74A00E078AE /* TwitterTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */; };
@@ -137,6 +138,7 @@
 		260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "TransitionTreasury 1.x README.md"; sourceTree = "<group>"; };
 		260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
 		260C69EC1C486AE60077758E /* InteractiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveViewController.swift; sourceTree = "<group>"; };
+		260D13951C50E542008C8D48 /* SwipeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimation.swift; sourceTree = "<group>"; };
 		2621D49E1C339A730071B275 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2621D4A01C33B11F0071B275 /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
 		262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimationTests.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				26C4C64F1C36A7AB00151251 /* BlixtTransitionAnimation.swift */,
 				26E0E77C1C3A687B00797517 /* StorehouseTransitionAnimation.swift */,
 				260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */,
+				260D13951C50E542008C8D48 /* SwipeTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				26FF06DF1C3380DE003DAC25 /* UINavigationController+TRPushPop.swift in Sources */,
 				26978F851C3558CF001B4C25 /* FadeTransitionAnimation.swift in Sources */,
 				26FF06D51C3380DE003DAC25 /* TransitionTreasury.swift in Sources */,
+				260D13961C50E542008C8D48 /* SwipeTransitionAnimation.swift in Sources */,
 				2669403B1C43ABF8008A5A5D /* TRStatusBarStyle.swift in Sources */,
 				26FF06DA1C3380DE003DAC25 /* TRNavgationTransitionDelegate.swift in Sources */,
 				2621D4A11C33B11F0071B275 /* TransitionAnimationHelper.swift in Sources */,
