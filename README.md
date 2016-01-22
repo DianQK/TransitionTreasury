@@ -249,13 +249,14 @@ func interactiveTransition(sender: UIPanGestureRecognizer) {
 
 ### TabBar Transition Animation
 
-Add this code on where you set `tabBarController.delegate = self`.
+Just Add this code:
 
 ```swift
-func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return TRTabBarTransitionMethod.Fade.transitionAnimation()
-    }
+tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: .Swipe)
 ```
+
+> Note:
+> If you need `delegate`, please use `tr_delegate`.
 
 You can see TransitionTreasuryTabBarDemo Scheme.
 

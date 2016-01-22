@@ -133,7 +133,6 @@
 		260B38A01C4B1BD300835CDC /* Advance-Usage.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Advance-Usage.md"; sourceTree = "<group>"; };
 		260B38A11C4B1BD300835CDC /* Animation-Guide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Animation-Guide.md"; sourceTree = "<group>"; };
 		260B38A21C4B1BD300835CDC /* Basic-Usage.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Basic-Usage.md"; sourceTree = "<group>"; };
-		260B38A31C4B1BD300835CDC /* Home.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
 		260B38A41C4B1BD300835CDC /* Introduction.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Introduction.md; sourceTree = "<group>"; };
 		260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "TransitionTreasury 1.x README.md"; sourceTree = "<group>"; };
 		260C69EA1C47C3950077758E /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -253,7 +252,6 @@
 				260B38A01C4B1BD300835CDC /* Advance-Usage.md */,
 				260B38A11C4B1BD300835CDC /* Animation-Guide.md */,
 				260B38A21C4B1BD300835CDC /* Basic-Usage.md */,
-				260B38A31C4B1BD300835CDC /* Home.md */,
 				260B38A41C4B1BD300835CDC /* Introduction.md */,
 				260B38A51C4B1BD300835CDC /* TransitionTreasury 1.x README.md */,
 			);
