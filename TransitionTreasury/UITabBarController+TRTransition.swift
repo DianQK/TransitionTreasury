@@ -11,6 +11,8 @@ import UIKit
 private var transition_key: Void?
 private var delegate_key: Void?
 
+public typealias ViewControllerIndex = Int
+
 public extension UITabBarController {
     
     public var tr_transitionDelegate: TRTabBarTransitionDelegate? {
@@ -38,6 +40,15 @@ public extension UITabBarController {
             }
             tr_transitionDelegate?.tr_delegate = newValue
         }
+    }
+    
+    public func tr_selected(index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) {
+        if let transitionAnimation = tr_transitionDelegate?.transitionAnimation as? TabBarTransitionInteractiveable {
+            transitionAnimation.gestureRecognizer = gesture
+            transitionAnimation.interacting = true
+            transitionAnimation.completion = completion
+        }
+        selectedIndex = index
     }
     
 }

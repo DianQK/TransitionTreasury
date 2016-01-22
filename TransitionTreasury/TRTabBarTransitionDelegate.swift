@@ -48,7 +48,10 @@ public class TRTabBarTransitionDelegate: NSObject, UITabBarControllerDelegate {
     }
     
     public func tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil
+        guard let transitionAnimation = transitionAnimation as? TabBarTransitionInteractiveable else {
+            return nil
+        }
+        return transitionAnimation.interacting ? transitionAnimation.percentTransition : nil
     }
     
     public func tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {

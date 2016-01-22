@@ -8,19 +8,27 @@
 
 import UIKit
 
-public class SwipeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class SwipeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TabBarTransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
     
     public var transitionContext: UIViewControllerContextTransitioning?
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition?
-    
     public var completion: (() -> Void)?
     
-    public var cancelPop: Bool = false
+    public var gestureRecognizer: UIGestureRecognizer? {
+        didSet {
+            gestureRecognizer?.addTarget(self, action: Selector("interactiveTransition:"))
+        }
+    }
+    
+    public var percentTransition: UIPercentDrivenInteractiveTransition = UIPercentDrivenInteractiveTransition()
+    
+    public var interactivePrecent: CGFloat = 0.3
     
     public var interacting: Bool = false
+    
+    private var tabBarTransitionDirection: TabBarTransitionDirection = .Right
     
     public init(status: TransitionStatus = .TabBar) {
         transitionStatus = status
@@ -41,14 +49,15 @@ public class SwipeTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             fatalError("VC not in TabBarController.")
         }
         
-        print(fromVCIndex,toVCIndex)
-        
         let fromVCStartPositionX: CGFloat = 0
         var fromVCEndPositionX: CGFloat = -UIScreen.mainScreen().bounds.width
         var toVCStartPositionX: CGFloat = UIScreen.mainScreen().bounds.width
         let toVCEndPositionX: CGFloat = 0
         
-        if fromVCIndex > toVCIndex {
+        tabBarTransitionDirection = TabBarTransitionDirection.TransitionDirection(fromVCIndex, toVCIndex: toVCIndex)
+        print(tabBarTransitionDirection)
+        
+        if tabBarTransitionDirection == .Left {
             swap(&fromVCEndPositionX, &toVCStartPositionX)
         }
         
@@ -63,6 +72,40 @@ public class SwipeTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             toVC?.view.layer.position.x = toVCEndPositionX + toVC!.view.layer.bounds.width / 2
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                if !transitionContext.transitionWasCancelled() && finished {
+                    self.completion?()
+                    self.completion = nil
+                }
+        }
+    }
+    
+    public func interactiveTransition(sender: UIPanGestureRecognizer) {
+        let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        
+        let view = fromVC!.view
+        
+        let offsetX: CGFloat = tabBarTransitionDirection == .Left ? sender.translationInView(view).x : -sender.translationInView(view).x
+        
+        var percent = offsetX / view.bounds.size.width
+        
+        percent = min(1.0, max(0, percent))
+        
+        switch sender.state {
+        case .Began :
+            percentTransition.startInteractiveTransition(transitionContext!)
+            interacting = true
+        case .Changed :
+            interacting = true
+            percentTransition.updateInteractiveTransition(percent)
+        default :
+            interacting = false
+            if percent > interactivePrecent {
+                percentTransition.completionSpeed = 1.0 - percentTransition.percentComplete
+                percentTransition.finishInteractiveTransition()
+                gestureRecognizer?.removeTarget(self, action: Selector("interactiveTransition:"))
+            } else {
+                percentTransition.cancelInteractiveTransition()
+            }
         }
     }
     

@@ -26,11 +26,6 @@ public protocol TRTabBarControllerDelegate: class, NSObjectProtocol {
     @available(iOS 7.0, *)
     func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation
 
-//    @available(iOS 7.0, *)
-//    func tr_tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?
-//    
-//    @available(iOS 7.0, *)
-//    func tr_tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?
 }
 
 public extension TRTabBarControllerDelegate {
@@ -63,11 +58,4 @@ public extension TRTabBarControllerDelegate {
         return UIInterfaceOrientation.Unknown
     }
     
-//    func tr_tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        
-//    }
-//    
-//    func tr_tabBarController(tabBarController: UITabBarController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        
-//    }
 }

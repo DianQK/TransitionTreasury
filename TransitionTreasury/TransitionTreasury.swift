@@ -118,3 +118,51 @@ public enum TransitionStatus {
 public protocol TransitionAnimationable {
     func transitionAnimation() -> TRViewControllerAnimatedTransitioning
 }
+
+public enum TabBarTransitionDirection {
+    case Left
+    case Right
+    
+    static func TransitionDirection(fromVCindex: ViewControllerIndex, toVCIndex: ViewControllerIndex) -> TabBarTransitionDirection {
+        if fromVCindex > toVCIndex {
+            return .Left
+        } else {
+            return .Right
+        }
+    }
+}
+
+extension TabBarTransitionDirection : CustomStringConvertible {
+    public var description: String {
+        get {
+            switch self {
+            case .Left :
+                return "Transition to Left"
+            case .Right :
+                return "Transition to Right"
+            }
+        }
+    }
+}
+
+public protocol TabBarTransitionInteractiveable : class, NSObjectProtocol{
+    /// Option, if you implement, you must support your animation Push & Present interactive.
+    var gestureRecognizer: UIGestureRecognizer?{get set}
+    /// Require
+    var percentTransition: UIPercentDrivenInteractiveTransition{get set}
+    /// Option
+    var interactivePrecent: CGFloat{get}
+    /// Require
+    var interacting: Bool{get set}
+    /// Option
+    var completion: (() -> Void)?{get set}
+}
+
+public extension TabBarTransitionInteractiveable {
+    public var completion: (() -> Void)? {
+        get {
+            return nil
+        }
+        set {}
+    }
+}
