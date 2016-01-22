@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = ['TransitionTreasury/*.{h,swift}','TransitionTreasury/TransitionAnimation/*.swift']
+  s.source_files = ['TransitionTreasury/*.{h,swift}','TransitionTreasury/*Transition/*.{h,swift}','TransitionTreasury/TransitionAnimation/*.swift']
   s.public_header_files = ["TransitionTreasury/TransitionTreasury.h"]
 
   s.requires_arc = true
