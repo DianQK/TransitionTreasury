@@ -1,5 +1,5 @@
 //
-//  SwipeTransitionAnimation.swift
+//  SlideTransitionAnimation.swift
 //  TransitionTreasury
 //
 //  Created by DianQK on 16/1/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SwipeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TabBarTransitionInteractiveable {
+public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TabBarTransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus
     

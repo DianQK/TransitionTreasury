@@ -17,6 +17,16 @@
 * Elevate  
 * Scanbot
 
+#### TabBar
+* Fade
+* Slide
+
+## [2.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.1.0)
+
+#### Added
+* Support Gesture for TabBar Transition.
+* Add **Slide** for TabBar Transition.
+
 ## [2.0.1](https://github.com/DianQK/TransitionTreasury/releases/tag/2.0.1)
 
 #### Fixed
@@ -76,7 +86,7 @@
 ## [1.0.2](https://github.com/DianQK/TransitionTreasury/releases/tag/1.0.2)
 
 #### Fixed   
-* Fix can't get `keyView` for some animation. 
+* Fix can't get `keyView` for some animation.
   * Updated by dingge1991 in Issues [#1](https://github.com/DianQK/TransitionTreasury/issues/1)
 * Remove `keyView` from `TRViewControllerTransitionDelegate` extension
 
@@ -100,4 +110,3 @@
 
 #### Fixed   
 * Fix Twitter & Page `transform` backup.  
-

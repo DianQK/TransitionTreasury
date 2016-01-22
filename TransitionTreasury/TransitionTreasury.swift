@@ -84,15 +84,15 @@ public enum TRPresentTransitionMethod: TransitionAnimationable {
 
 public enum TRTabBarTransitionMethod: TransitionAnimationable {
     case Fade
-    case Swipe
+    case Slide
     case Custom(TRViewControllerAnimatedTransitioning)
     
     public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
         case .Fade :
             return FadeTransitionAnimation(status: .TabBar)
-        case .Swipe :
-            return SwipeTransitionAnimation()
+        case .Slide :
+            return SlideTransitionAnimation()
         case .Custom(let transition) :
             return transition
         }
