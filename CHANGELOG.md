@@ -8,6 +8,7 @@
 * Fade    
 * Page     
 * Blixt
+* Default
 
 #### Present & Dismiss    
 * Twitter     
@@ -20,6 +21,12 @@
 #### TabBar
 * Fade
 * Slide
+
+## [2.2.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.2.0)
+
+#### Added
+* Add **Default** transition animation for Push.
+* Improve **Page** animation performance.
 
 ## [2.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.1.0)
 

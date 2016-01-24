@@ -7,7 +7,7 @@
 //
 
 import UIKit
-/// Page Motion
+/// Apple Default Push Transition
 public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
     public var transitionStatus: TransitionStatus

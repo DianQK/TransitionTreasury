@@ -487,7 +487,6 @@
 					};
 					263B43901C32E6BD0093593E = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = HY634B3FW2;
 					};
 					26FDFF131C33C4A600CB3995 = {
 						CreatedOnToolsVersion = 7.2;
