@@ -51,6 +51,7 @@
 		26B470BF1C5267AC00E6BA2E /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A71C5267AC00E6BA2E /* TransitionTreasury.swift */; };
 		26B470C01C5267AC00E6BA2E /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A81C5267AC00E6BA2E /* TRStatusBarStyle.swift */; };
 		26B470C11C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */; };
+		26B470D21C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */; };
 		26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */; };
 		26FDFF191C33C4A600CB3995 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FDFF2E1C33C63900CB3995 /* OMINTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF2D1C33C63900CB3995 /* OMINTransitionAnimationTests.swift */; };
@@ -174,6 +175,7 @@
 		26B470A71C5267AC00E6BA2E /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
 		26B470A81C5267AC00E6BA2E /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRStatusBarStyle.swift; sourceTree = "<group>"; };
 		26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultPushTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryTests.swift; sourceTree = "<group>"; };
 		26FDFF181C33C4A600CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				26B470A31C5267AC00E6BA2E /* StorehouseTransitionAnimation.swift */,
 				26B470A41C5267AC00E6BA2E /* TaaskyFlipTransitionAnimation.swift */,
 				26B470A51C5267AC00E6BA2E /* TwitterTransitionAnimation.swift */,
+				26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 					};
 					263B43901C32E6BD0093593E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HY634B3FW2;
 					};
 					26FDFF131C33C4A600CB3995 = {
 						CreatedOnToolsVersion = 7.2;
@@ -491,6 +495,7 @@
 					};
 					26FE2CC11C26D80C005F4DDC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HY634B3FW2;
 					};
 				};
 			};
@@ -587,6 +592,7 @@
 				26B470AE1C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift in Sources */,
 				26B470B11C5267AC00E6BA2E /* BlixtTransitionAnimation.swift in Sources */,
 				26B470B71C5267AC00E6BA2E /* PhotoTransitionAnimation.swift in Sources */,
+				26B470D21C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift in Sources */,
 				26B470BD1C5267AC00E6BA2E /* TwitterTransitionAnimation.swift in Sources */,
 				26B470B31C5267AC00E6BA2E /* FadeTransitionAnimation.swift in Sources */,
 				26B470BF1C5267AC00E6BA2E /* TransitionTreasury.swift in Sources */,
@@ -733,6 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -758,6 +765,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionTreasury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

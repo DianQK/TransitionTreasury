@@ -22,6 +22,7 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
     case Fade
     case Page
     case Blixt(keyView: UIView, to: CGRect)
+    case Default
 //    case Storehouse(keyView: UIView)
     case Custom(TRViewControllerAnimatedTransitioning)
     
@@ -41,6 +42,8 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
 //            return StorehouseTransitionAnimation(key: view)
         case let .Custom(transition) :
             return transition
+        case .Default :
+            return DefaultPushTransitionAnimation()
         }
     }
 }

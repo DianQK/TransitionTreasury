@@ -62,6 +62,7 @@ class MainViewController: UIViewController, ModalTransitionDelegate {
         pushTransition.append(PushTransition(name: "Fade", imageName: "WeChat60x60", pushMethod: .Fade, interactive: false))
         pushTransition.append(PushTransition(name: "Page", imageName: "MeituanMovie60x60", pushMethod: .Page, interactive: false))
         pushTransition.append(PushTransition(name: "Blixt", imageName: "Blixt60x60", pushMethod: .Blixt(keyView: logoImageView, to: CGRect(x: 30, y: 360, width: logoImageView.frame.size.width / 3, height: logoImageView.frame.size.height / 3)), interactive: false))
+        pushTransition.append(PushTransition(name: "Default", imageName: "", pushMethod: .Default, interactive: false))
 //        pushTransition.append(PushTransition(name: "Storehouse", imageName: "Storehouse60x60", pushMethod: .Storehouse(keyView: logoImageView), interactive: false))
         
         presentTransition.append(PresentTransition(name: "Twitter", imageName: "Twitter60x60", presentMethod: .Twitter, interactive: false))
