@@ -73,6 +73,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         toVC?.view.layer.shadowOpacity = 0.5
         toVC?.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         toVC?.view.layer.shadowRadius = 5
+        toVC?.view.layer.shadowPath = CGPathCreateWithRect(toVC!.view.layer.bounds, nil)
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             self.maskView.layer.opacity = endOpacity
