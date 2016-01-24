@@ -22,6 +22,11 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
     
     public var interacting: Bool = false
     
+    private var shadowOpacityBackup: Float?
+    private var shadowOffsetBackup: CGSize?
+    private var shadowRadiusBackup: CGFloat?
+    private var shadowPathBackup: CGPath?
+    
     public init(status: TransitionStatus = .Push) {
         transitionStatus = status
         super.init()
@@ -55,6 +60,10 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
         fromVC?.view.frame.origin.x = fromVCStartX
         
         toVC?.view.frame.origin.x = toVCStartX
+        shadowOpacityBackup = toVC?.view.layer.shadowOpacity
+        shadowOffsetBackup = toVC?.view.layer.shadowOffset
+        shadowRadiusBackup = toVC?.view.layer.shadowRadius
+        shadowPathBackup = toVC?.view.layer.shadowPath
         toVC?.view.layer.shadowOpacity = 0.3
         toVC?.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         toVC?.view.layer.shadowRadius = 5
@@ -68,6 +77,10 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
                 if !self.cancelPop {
                     toVC?.view.layer.shadowOpacity = 0
                     if finished {
+                        toVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
+                        toVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
+                        toVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
+                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPathCreateWithRect(CGRectZero, nil)
                         self.completion?()
                         self.completion = nil
                     }

@@ -23,6 +23,10 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     public var interacting: Bool = false
     
     private var transformBackup: CATransform3D?
+    private var shadowOpacityBackup: Float?
+    private var shadowOffsetBackup: CGSize?
+    private var shadowRadiusBackup: CGFloat?
+    private var shadowPathBackup: CGPath?
     
     private lazy var maskView: UIView = {
         let maskView = UIView(frame: UIScreen.mainScreen().bounds)
@@ -70,6 +74,10 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         
         maskView.layer.opacity = startOpacity
         toVC?.view.layer.position.x = startPositionX + toVC!.view.layer.bounds.width / 2
+        shadowOpacityBackup = toVC?.view.layer.shadowOpacity
+        shadowOffsetBackup = toVC?.view.layer.shadowOffset
+        shadowRadiusBackup = toVC?.view.layer.shadowRadius
+        shadowPathBackup = toVC?.view.layer.shadowPath
         toVC?.view.layer.shadowOpacity = 0.5
         toVC?.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         toVC?.view.layer.shadowRadius = 5
@@ -88,6 +96,10 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                         fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
                     }
                     if finished {
+                        toVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
+                        toVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
+                        toVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
+                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPathCreateWithRect(CGRectZero, nil)
                         self.completion?()
                         self.completion = nil
                     }
