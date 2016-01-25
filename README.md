@@ -13,7 +13,9 @@
 
 TransitionTreasury is a viewController transition framework in Swift.      
 
-> **You can see [transitiontreasury.com](http://transitiontreasury.com)**
+<p align="center">
+## **You can see [transitiontreasury.com](http://transitiontreasury.com)**
+</p>
 
 ## Features    
 
@@ -124,7 +126,7 @@ class FirstViewController: UIViewController {
 
 /// SecondViewController.swift
 class SecondViewController: UIViewController, TRTransition {
-    
+
     var tr_transition: TRNavgationTransitionDelegate?
 
     func pop() {
@@ -139,7 +141,7 @@ When you need to pop, just call `public func tr_popViewController(completion: ((
 
 If we present `MainViewController` to `ModalViewController`:     
 
-* `MainViewController` should conform `ModalTransitionDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?` 
+* `MainViewController` should conform `ModalTransitionDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?`
 * Add `weak var modalDelegate: ModalViewControllerDelegate?` for `ModalViewController`.
 
 Example：       
@@ -161,7 +163,7 @@ class MainViewController: UIViewController, ModalTransitionDelegate {
 
 /// ModalViewController.swift
 class ModalViewController: UIViewController {
-    
+
     weak var modalDelegate: ModalViewControllerDelegate?
 
     func dismiss() {
@@ -183,7 +185,7 @@ func modalViewControllerDismiss(callbackData data:AnyObject?)
 `interactive` just for interactive dismiss, for more see Advanced Usage.
 
 > Note:      
-> If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:AnyObject?)`. 
+> If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:AnyObject?)`.
 > If you don't want to use `ModalTransitionDelegate`, you can use `ViewControllerTransitionable` which only for Animation.
 > Warning:    
 > You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](http://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
