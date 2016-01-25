@@ -127,7 +127,8 @@ public class PhotoTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
                 interacting = true
                 percentTransition = UIPercentDrivenInteractiveTransition()
                 percentTransition!.startInteractiveTransition(transitionContext!)
-                showVC?.tr_dismissViewController()
+                showVC?.presentedViewController?.transitioningDelegate = nil
+                showVC?.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 interacting = false
             }

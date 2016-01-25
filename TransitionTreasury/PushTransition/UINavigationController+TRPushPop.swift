@@ -12,14 +12,11 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, method: TRPushTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
         transitionDelegate.completion = completion
-        if let viewController = viewController as? NavgationTransitionable {
-            viewController.tr_transition = transitionDelegate
-        } else {
-            debugPrint("Warning: viewController \(viewController) should conform 'NavgationTransitionable'.")
-        }
+        viewController.tr_transition = transitionDelegate
+        
         delegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         transitionDelegate.currentStatusBarStyle = statusBarStyle
@@ -42,11 +39,11 @@ public extension UINavigationController {
     /**
      Transition treasury pop to viewController.
      */
-    public func tr_popToViewController(viewController: UIViewController, completion: (() -> Void)? = nil) -> [UIViewController]? {
+    public func tr_popToViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
-        let transitionDelegate = (viewController as? NavgationTransitionable)?.tr_transition
+        let transitionDelegate = viewController.tr_transition
         transitionDelegate?.transition.transitionStatus = .Pop
         transitionDelegate?.completion = completion
         transitionDelegate?.transition.popToVCIndex(index)

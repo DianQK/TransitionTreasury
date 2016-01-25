@@ -7,19 +7,25 @@
 //
 
 import UIKit
+
+/**
+ *  Enable Transition for Present.
+ */
+public protocol ViewControllerTransitionable: class, NSObjectProtocol {
+    /// Retain transition delegate.
+    var tr_transition: TRViewControllerTransitionDelegate?{get set}
+}
+
 // MARK: - Transition Treasury UIViewController Extension.
-public extension UIViewController {
+public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury present viewController.
      */
     public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
-        (self as? ViewControllerTransitionable)?.tr_transition = transitionDelegate
-        if let viewController = self as? ViewControllerTransitionable {
-            viewController.tr_transition = transitionDelegate
-        } else {
-            debugPrint("Warning: viewController \(self) should conform 'ViewControllerTransitionable'.")
-        }
+        
+        tr_transition = transitionDelegate
+        
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
         let fullCompletion = {
@@ -45,7 +51,7 @@ public extension UIViewController {
      Transition treasury dismiss ViewController.
      */
     public func tr_dismissViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) {
-        let transitionDelegate = (self as? ViewControllerTransitionable)?.tr_transition
+        let transitionDelegate = tr_transition
         transitionDelegate?.transition.transitionStatus = .Dismiss
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive
@@ -54,7 +60,7 @@ public extension UIViewController {
         let fullCompletion = {
             completion?()
             transitionDelegate?.previousStatusBarStyle?.updateStatusBarStyle()
-            (self as? ViewControllerTransitionable)?.tr_transition = nil
+            self.tr_transition = nil
         }
         transitionDelegate?.transition.completion = fullCompletion
         if transitionDelegate?.transition.completion != nil {
@@ -66,14 +72,6 @@ public extension UIViewController {
 }
 /// Modal Transition & Delegate.
 public typealias ModalTransitionDelegate = protocol<ViewControllerTransitionable,ModalViewControllerDelegate>
-
-/**
- *  Enable Transition for Present.
- */
-public protocol ViewControllerTransitionable: class, NSObjectProtocol {
-    /// Retain transition delegate.
-    var tr_transition: TRViewControllerTransitionDelegate?{get set}
-}
 
 /**
  *  Your `MianViewController` should conform this delegate.
@@ -90,7 +88,7 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
 
 
 // MARK: - Implement dismiss
-public extension ModalViewControllerDelegate where Self:UIViewController  {
+public extension ModalViewControllerDelegate where Self: ViewControllerTransitionable, Self: UIViewController {
     func modalViewControllerDismiss(interactive interactive: Bool = false, callbackData data:AnyObject? = nil) {
         if data != nil {
             debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:_:)` to get data.")
