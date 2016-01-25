@@ -52,7 +52,9 @@ class MainViewController: UIViewController, ModalTransitionDelegate {
     
     func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
         presentResultLabel.text = "CallbackData: \(data?["title"] as? String ?? "")."
-        tr_dismissViewController()
+        tr_dismissViewController(completion: {
+            print("Dismiss finished.")
+        })
         
     }
     
