@@ -22,10 +22,17 @@
 * Fade
 * Slide
 
+## [2.2.1](https://github.com/DianQK/TransitionTreasury/releases/tag/2.2.1)
+
+#### Fixed
+* Add type restriction on ViewControllerTransitionable and NavgationTransitionable methods([Pull 6](https://github.com/DianQK/TransitionTreasury/pull/6))
+
 ## [2.2.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.2.0)
 
 #### Added
 * Add **Default** transition animation for Push.
+
+#### Fixed
 * Improve **Page** animation performance.
 
 ## [2.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/2.1.0)
