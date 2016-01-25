@@ -14,7 +14,7 @@
 TransitionTreasury is a viewController transition framework in Swift.      
 
 <p align="center">
-<h1>You can see [transitiontreasury.com](http://transitiontreasury.com)</h1>
+<h1>You can see http://transitiontreasury.com</h1>
 </p>
 
 ## Features    
