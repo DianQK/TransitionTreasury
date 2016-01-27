@@ -56,14 +56,14 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     
     public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if operation == .Push {
+        switch operation {
+        case .Push :
+            transition.transitionStatus = .Push
             return transition
-        } else if operation == .Pop {
-            if transition.transitionStatus == .Push {
-                transition.transitionStatus = .Pop
-            }
+        case .Pop :
+            transition.transitionStatus = .Pop
             return transition
-        } else {
+        case .None :
             return nil
         }
     }

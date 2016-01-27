@@ -32,7 +32,6 @@ public extension UINavigationController {
             completion?()
             (popViewController as? NavgationTransitionable)?.tr_transition = nil
         }
-        transitionDelegate?.transition.transitionStatus = .Pop
         delegate = transitionDelegate
         return popViewControllerAnimated(true)
     }
@@ -44,7 +43,6 @@ public extension UINavigationController {
             fatalError("No this viewController for pop!!!")
         }
         let transitionDelegate = viewController.tr_transition
-        transitionDelegate?.transition.transitionStatus = .Pop
         transitionDelegate?.completion = completion
         transitionDelegate?.transition.popToVCIndex(index)
         delegate = transitionDelegate
@@ -64,7 +62,6 @@ public extension UINavigationController {
         }
         let transitionDelegate = (viewControllers[1] as? NavgationTransitionable)?.tr_transition
         transitionDelegate?.completion = completion
-        transitionDelegate?.transition.transitionStatus = .Pop
         transitionDelegate?.transition.popToVCIndex(0)
         delegate = transitionDelegate
         return {
