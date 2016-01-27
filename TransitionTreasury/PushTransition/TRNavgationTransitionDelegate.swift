@@ -59,6 +59,9 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         if operation == .Push {
             return transition
         } else if operation == .Pop {
+            if transition.transitionStatus == .Push {
+                transition.transitionStatus = .Pop
+            }
             return transition
         } else {
             return nil
