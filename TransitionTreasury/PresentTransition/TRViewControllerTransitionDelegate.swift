@@ -35,10 +35,12 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
     }
     
     public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .Present
         return transition
     }
     
     public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .Dismiss
         return transition
     }
     
