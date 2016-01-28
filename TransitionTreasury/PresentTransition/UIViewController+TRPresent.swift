@@ -52,7 +52,6 @@ public extension ViewControllerTransitionable where Self: UIViewController {
      */
     public func tr_dismissViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) {
         let transitionDelegate = tr_transition
-        transitionDelegate?.transition.transitionStatus = .Dismiss
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive
         }
@@ -96,7 +95,7 @@ public extension ModalViewControllerDelegate where Self: ViewControllerTransitio
         tr_dismissViewController(interactive: interactive, completion: nil)
     }
     
-    func modalViewControllerDismiss(callbackData data:AnyObject?) {
+    func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
         if data != nil {
             debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:)` to get data.")
         }
