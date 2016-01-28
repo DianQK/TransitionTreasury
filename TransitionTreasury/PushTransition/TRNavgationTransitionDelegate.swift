@@ -62,6 +62,12 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             return transition
         case .Pop :
             transition.transitionStatus = .Pop
+            // If the device gets rotated the To-View's frame doesn't get updated.
+            // This prevents black bars in the To-ViewController
+            if fromVC.view.frame != toVC.view.frame {
+                toVC.view.frame = fromVC.view.frame
+                toVC.view.layoutIfNeeded()
+            }
             return transition
         case .None :
             return nil
