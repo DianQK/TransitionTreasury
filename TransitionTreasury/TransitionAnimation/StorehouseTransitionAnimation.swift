@@ -84,7 +84,7 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         transformAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         transformAnimation.delegate = self
         // FIXME: - transform
-        animationCount++
+        animationCount += 1
         toVC?.view.layer.addAnimation(transformAnimation, forKey: "transform")
         
         let pathAnimation = CABasicAnimation(tr_keyPath: .path)
@@ -94,14 +94,14 @@ public class StorehouseTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pathAnimation.delegate = self
         
-        animationCount++
+        animationCount += 1
         maskLayer.addAnimation(pathAnimation, forKey: "path")
         
 
     }
     
     override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        animationCount--
+        animationCount -= 1
         if animationCount == 0 {
         
         if !self.cancelPop {
