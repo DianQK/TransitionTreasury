@@ -88,7 +88,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskLayerAnimation.delegate = self
         
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
-        animationCount++
+        animationCount += 1
         
         let maskViewPositionAnimation = CABasicAnimation(tr_keyPath: .position)
         maskViewPositionAnimation.fromValue = NSValue(CGPoint: startPosition)
@@ -98,11 +98,11 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskViewPositionAnimation.delegate = self
         
         maskViewCopy.layer.addAnimation(maskViewPositionAnimation, forKey: "position")
-        animationCount++
+        animationCount += 1
     }
     
     override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        animationCount--
+        animationCount -= 1
         if animationCount == 0 {
             transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled())
             transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
