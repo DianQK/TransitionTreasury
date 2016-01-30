@@ -11,7 +11,7 @@ import TransitionTreasury
 
 class SecondViewController: UIViewController, NavgationTransitionable {
     
-    var tr_transition: TRNavgationTransitionDelegate?
+    var tr_pushTransition: TRNavgationTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class SecondViewController: UIViewController, NavgationTransitionable {
         Advande Usage (Get keyView or KeyViewCopy)
         Issue: https://github.com/DianQK/TransitionTreasury/issues/1
         */
-        if let transitionAnimation = tr_transition?.transition as? IBanTangTransitionAnimation {
+        if let transitionAnimation = tr_pushTransition?.transition as? IBanTangTransitionAnimation {
             print(transitionAnimation.keyView)
             print(transitionAnimation.keyViewCopy)
         }

@@ -25,7 +25,7 @@ struct PresentTransition {
 
 class MainViewController: UIViewController, ModalTransitionDelegate {
     
-    var tr_transition: TRViewControllerTransitionDelegate?
+    var tr_presentTransition: TRViewControllerTransitionDelegate?
     
     var pushTransition = [PushTransition]()
 

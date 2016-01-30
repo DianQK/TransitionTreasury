@@ -11,7 +11,7 @@ import TransitionTreasury
 
 class InteractiveViewController: UIViewController, ModalTransitionDelegate {
     
-    var tr_transition: TRViewControllerTransitionDelegate?
+    var tr_presentTransition: TRViewControllerTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
