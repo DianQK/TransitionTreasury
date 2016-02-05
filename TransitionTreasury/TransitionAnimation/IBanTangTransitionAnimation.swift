@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Like IBanTang, View Move
 public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

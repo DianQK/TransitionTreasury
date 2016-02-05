@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Pop Your Tip ViewController.
 public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     

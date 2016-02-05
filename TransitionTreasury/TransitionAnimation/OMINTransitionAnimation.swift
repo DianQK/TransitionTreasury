@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// OminFocus app push transition implement.
 public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
 

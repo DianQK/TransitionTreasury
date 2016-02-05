@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Page Motion
 public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

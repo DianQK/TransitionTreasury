@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 
 public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     

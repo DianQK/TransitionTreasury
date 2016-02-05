@@ -14,7 +14,7 @@ public class TRTabBarTransitionDelegate: NSObject, UITabBarControllerDelegate {
     
     weak var tr_delegate: TRTabBarControllerDelegate?
     
-    public init(method: TRTabBarTransitionMethod) {
+    public init(method: TransitionAnimationable) {
         transitionAnimation = method.transitionAnimation()
         super.init()
     }

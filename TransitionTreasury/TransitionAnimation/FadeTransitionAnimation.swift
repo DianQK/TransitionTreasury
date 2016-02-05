@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Fade Out In Animation
 public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

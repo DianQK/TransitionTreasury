@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Like Elevate
 public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     

@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import TransitionTreasury
+@testable import TransitionAnimation
 
 class TRViewControllerTransitionDelegateTests: XCTestCase {
     
@@ -32,9 +33,9 @@ class TRViewControllerTransitionDelegateTests: XCTestCase {
             modalVC.modalDelegate = self.mainVC
             weakModalVC = modalVC
             XCTAssertNotNil(weakModalVC, "WeakModalVC should not be nil.")
-            self.mainVC?.tr_presentViewController(modalVC, method: .Fade)
-            XCTAssertNotNil(self.mainVC?.tr_transition, "TRTransition should not be nil.")
-            XCTAssertNotNil(self.mainVC?.tr_transition?.previousStatusBarStyle, "Transition should support update status bar style.")
+            self.mainVC?.tr_presentViewController(modalVC, method: TRPresentTransitionMethod.Fade)
+            XCTAssertNotNil(self.mainVC?.tr_presentTransition, "TRTransition should not be nil.")
+            XCTAssertNotNil(self.mainVC?.tr_presentTransition?.previousStatusBarStyle, "Transition should support update status bar style.")
             XCTAssertNotNil(modalVC.transitioningDelegate, "TransitionDelegate should not be nil.")
             modalVC.modalDelegate!.modalViewControllerDismiss(callbackData: nil)
         }

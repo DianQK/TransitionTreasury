@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name = 'TransitionTreasury'
-  s.version = '2.2.1'
+  s.name = 'TransitionAnimation'
+  s.version = '3.0.0'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Easier way to push your viewController.'
   s.homepage = 'https://github.com/DianQK/TransitionTreasury'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = ['TransitionTreasury/*.{h,swift}','TransitionTreasury/*Transition/*.{h,swift}','TransitionTreasury/TransitionAnimation/*.swift']
+  s.source_files = ['TransitionTreasury/TransitionAnimation/*.swift']
   s.public_header_files = ["TransitionTreasury/TransitionTreasury.h"]
 
   s.requires_arc = true

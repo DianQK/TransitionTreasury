@@ -9,8 +9,6 @@
 import UIKit
 /// Transition(Push & Pop) Animation Delegate Object
 public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDelegate {
-    /// Control transition precent
-//    var percentTransition: UIPercentDrivenInteractiveTransition?
     /// The transition animation object
     public var transition: TRViewControllerAnimatedTransitioning
     
@@ -47,7 +45,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TRPushTransitionMethod, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
+    public init(method: TransitionAnimationable, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
         if let transition = transition as? TransitionInteractiveable where transition.edgeSlidePop {
@@ -69,9 +67,11 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     
     public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        
         guard let transition = transition as? TransitionInteractiveable else {
             return nil
         }
+        
         return transition.interacting ? transition.percentTransition : nil
     }
     

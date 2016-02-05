@@ -12,7 +12,7 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, method: TRPushTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
         transitionDelegate.completion = completion
         viewController.tr_pushTransition = transitionDelegate

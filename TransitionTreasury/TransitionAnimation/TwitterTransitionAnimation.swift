@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransitionTreasury
 /// Like Twitter Present.
 public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
