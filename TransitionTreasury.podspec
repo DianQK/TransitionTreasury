@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
 
   s.subspec "Animations" do |ss|
     ss.source_files = "TransitionTreasury/TransitionAnimation/*.swift"
+    ss.dependency "TransitionTreasury/Core"
   end
 end
