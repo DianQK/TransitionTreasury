@@ -39,24 +39,24 @@
 		26B470C11C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */; };
 		26BEB6161C64526E001510CE /* TransitionAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEB60F1C64526E001510CE /* TransitionAnimation.framework */; };
 		26BEB6171C64526E001510CE /* TransitionAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEB60F1C64526E001510CE /* TransitionAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		26BEB62B1C645341001510CE /* BlixtTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470991C5267AC00E6BA2E /* BlixtTransitionAnimation.swift */; };
-		26BEB62C1C645341001510CE /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4709A1C5267AC00E6BA2E /* ElevateTransitionAnimation.swift */; };
-		26BEB62D1C645341001510CE /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4709B1C5267AC00E6BA2E /* FadeTransitionAnimation.swift */; };
-		26BEB62E1C645341001510CE /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4709C1C5267AC00E6BA2E /* IBanTangTransitionAnimation.swift */; };
-		26BEB62F1C645341001510CE /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4709D1C5267AC00E6BA2E /* OMINTransitionAnimation.swift */; };
-		26BEB6301C645341001510CE /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4709E1C5267AC00E6BA2E /* PageTransitionAnimation.swift */; };
-		26BEB6311C645341001510CE /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A01C5267AC00E6BA2E /* PopTipTransitionAnimation.swift */; };
-		26BEB6321C645341001510CE /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A11C5267AC00E6BA2E /* ScanbotTransitionAnimation.swift */; };
-		26BEB6331C645341001510CE /* SlideTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A21C5267AC00E6BA2E /* SlideTransitionAnimation.swift */; };
-		26BEB6341C645341001510CE /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A41C5267AC00E6BA2E /* TaaskyFlipTransitionAnimation.swift */; };
-		26BEB6351C645341001510CE /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A51C5267AC00E6BA2E /* TwitterTransitionAnimation.swift */; };
-		26BEB6361C645341001510CE /* DefaultPushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */; };
-		26BEB6371C645341001510CE /* TRTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6081C645235001510CE /* TRTransitionAnimations.swift */; };
 		26BEB6401C64558D001510CE /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BEB63D1C64558D001510CE /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26BEB6411C645647001510CE /* TransitionAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEB60F1C64526E001510CE /* TransitionAnimation.framework */; };
 		26BEB6421C645647001510CE /* TransitionAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEB60F1C64526E001510CE /* TransitionAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26BEB6451C645688001510CE /* TransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BEB63C1C64558D001510CE /* TransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26BEB6461C6456C6001510CE /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
+		26BEB6621C645BFD001510CE /* BlixtTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6481C645BF6001510CE /* BlixtTransitionAnimation.swift */; };
+		26BEB6631C645BFD001510CE /* DefaultPushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6491C645BF6001510CE /* DefaultPushTransitionAnimation.swift */; };
+		26BEB6641C645BFD001510CE /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64A1C645BF6001510CE /* ElevateTransitionAnimation.swift */; };
+		26BEB6651C645BFD001510CE /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64B1C645BF6001510CE /* FadeTransitionAnimation.swift */; };
+		26BEB6661C645BFD001510CE /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64C1C645BF6001510CE /* IBanTangTransitionAnimation.swift */; };
+		26BEB6671C645BFD001510CE /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64D1C645BF6001510CE /* OMINTransitionAnimation.swift */; };
+		26BEB6681C645BFD001510CE /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64E1C645BF6001510CE /* PageTransitionAnimation.swift */; };
+		26BEB6691C645BFD001510CE /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB64F1C645BF6001510CE /* PopTipTransitionAnimation.swift */; };
+		26BEB66A1C645BFD001510CE /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6501C645BF6001510CE /* ScanbotTransitionAnimation.swift */; };
+		26BEB66B1C645BFD001510CE /* SlideTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6511C645BF6001510CE /* SlideTransitionAnimation.swift */; };
+		26BEB66C1C645BFD001510CE /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6521C645BF6001510CE /* TaaskyFlipTransitionAnimation.swift */; };
+		26BEB66D1C645BFD001510CE /* TRTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6531C645BF6001510CE /* TRTransitionAnimations.swift */; };
+		26BEB66E1C645BFD001510CE /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6541C645BF6001510CE /* TwitterTransitionAnimation.swift */; };
 		26FDFF171C33C4A600CB3995 /* TransitionTreasuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */; };
 		26FDFF191C33C4A600CB3995 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
 		26FDFF2E1C33C63900CB3995 /* OMINTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDFF2D1C33C63900CB3995 /* OMINTransitionAnimationTests.swift */; };
@@ -170,27 +170,27 @@
 		26B470951C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		26B470961C5267AC00E6BA2E /* TRTabBarTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTabBarTransitionDelegate.swift; sourceTree = "<group>"; };
 		26B470971C5267AC00E6BA2E /* UITabBarController+TRTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TRTransition.swift"; sourceTree = "<group>"; };
-		26B470991C5267AC00E6BA2E /* BlixtTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlixtTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/BlixtTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B4709A1C5267AC00E6BA2E /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElevateTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B4709B1C5267AC00E6BA2E /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/FadeTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B4709C1C5267AC00E6BA2E /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IBanTangTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B4709D1C5267AC00E6BA2E /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OMINTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/OMINTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B4709E1C5267AC00E6BA2E /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/PageTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B470A01C5267AC00E6BA2E /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopTipTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B470A11C5267AC00E6BA2E /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanbotTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B470A21C5267AC00E6BA2E /* SlideTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/SlideTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B470A41C5267AC00E6BA2E /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaaskyFlipTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
-		26B470A51C5267AC00E6BA2E /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
 		26B470A61C5267AC00E6BA2E /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
 		26B470A71C5267AC00E6BA2E /* TransitionTreasury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
 		26B470A81C5267AC00E6BA2E /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRStatusBarStyle.swift; sourceTree = "<group>"; };
 		26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
-		26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultPushTransitionAnimation.swift; path = ../TransitionTreasury/TransitionAnimation/DefaultPushTransitionAnimation.swift; sourceTree = "<group>"; };
-		26BEB6081C645235001510CE /* TRTransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TRTransitionAnimations.swift; path = ../TransitionTreasury/TransitionAnimation/TRTransitionAnimations.swift; sourceTree = "<group>"; };
 		26BEB60F1C64526E001510CE /* TransitionAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BEB63B1C64558D001510CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26BEB63C1C64558D001510CE /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
 		26BEB63D1C64558D001510CE /* TransitionTreasury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionTreasury.h; sourceTree = "<group>"; };
+		26BEB6481C645BF6001510CE /* BlixtTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlixtTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB6491C645BF6001510CE /* DefaultPushTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultPushTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64A1C645BF6001510CE /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64B1C645BF6001510CE /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64C1C645BF6001510CE /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64D1C645BF6001510CE /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64E1C645BF6001510CE /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB64F1C645BF6001510CE /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB6501C645BF6001510CE /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB6511C645BF6001510CE /* SlideTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB6521C645BF6001510CE /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
+		26BEB6531C645BF6001510CE /* TRTransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTransitionAnimations.swift; sourceTree = "<group>"; };
+		26BEB6541C645BF6001510CE /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
 		26FDFF141C33C4A600CB3995 /* TransitionTreasuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTreasuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FDFF161C33C4A600CB3995 /* TransitionTreasuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTreasuryTests.swift; sourceTree = "<group>"; };
 		26FDFF181C33C4A600CB3995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		263B43921C32E6BD0093593E /* TransitionTreasury */ = {
 			isa = PBXGroup;
 			children = (
-				26BEB6101C64526E001510CE /* TransitionAnimation */,
+				26BEB6471C645BF6001510CE /* TransitionAnimation */,
 				26B4708E1C5267AC00E6BA2E /* PresentTransition */,
 				26B470911C5267AC00E6BA2E /* PushTransition */,
 				26B470941C5267AC00E6BA2E /* TabBarTransition */,
@@ -322,27 +322,6 @@
 			path = TabBarTransition;
 			sourceTree = "<group>";
 		};
-		26BEB6101C64526E001510CE /* TransitionAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				26B470991C5267AC00E6BA2E /* BlixtTransitionAnimation.swift */,
-				26B4709A1C5267AC00E6BA2E /* ElevateTransitionAnimation.swift */,
-				26B4709B1C5267AC00E6BA2E /* FadeTransitionAnimation.swift */,
-				26B4709C1C5267AC00E6BA2E /* IBanTangTransitionAnimation.swift */,
-				26B4709D1C5267AC00E6BA2E /* OMINTransitionAnimation.swift */,
-				26B4709E1C5267AC00E6BA2E /* PageTransitionAnimation.swift */,
-				26B470A01C5267AC00E6BA2E /* PopTipTransitionAnimation.swift */,
-				26B470A11C5267AC00E6BA2E /* ScanbotTransitionAnimation.swift */,
-				26B470A21C5267AC00E6BA2E /* SlideTransitionAnimation.swift */,
-				26B470A41C5267AC00E6BA2E /* TaaskyFlipTransitionAnimation.swift */,
-				26B470A51C5267AC00E6BA2E /* TwitterTransitionAnimation.swift */,
-				26B470D11C54C7E100E6BA2E /* DefaultPushTransitionAnimation.swift */,
-				26BEB6081C645235001510CE /* TRTransitionAnimations.swift */,
-			);
-			name = TransitionAnimation;
-			path = ../TransitionAnimation;
-			sourceTree = "<group>";
-		};
 		26BEB63A1C64558D001510CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +330,26 @@
 				26BEB63D1C64558D001510CE /* TransitionTreasury.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26BEB6471C645BF6001510CE /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				26BEB6481C645BF6001510CE /* BlixtTransitionAnimation.swift */,
+				26BEB6491C645BF6001510CE /* DefaultPushTransitionAnimation.swift */,
+				26BEB64A1C645BF6001510CE /* ElevateTransitionAnimation.swift */,
+				26BEB64B1C645BF6001510CE /* FadeTransitionAnimation.swift */,
+				26BEB64C1C645BF6001510CE /* IBanTangTransitionAnimation.swift */,
+				26BEB64D1C645BF6001510CE /* OMINTransitionAnimation.swift */,
+				26BEB64E1C645BF6001510CE /* PageTransitionAnimation.swift */,
+				26BEB64F1C645BF6001510CE /* PopTipTransitionAnimation.swift */,
+				26BEB6501C645BF6001510CE /* ScanbotTransitionAnimation.swift */,
+				26BEB6511C645BF6001510CE /* SlideTransitionAnimation.swift */,
+				26BEB6521C645BF6001510CE /* TaaskyFlipTransitionAnimation.swift */,
+				26BEB6531C645BF6001510CE /* TRTransitionAnimations.swift */,
+				26BEB6541C645BF6001510CE /* TwitterTransitionAnimation.swift */,
+			);
+			path = TransitionAnimation;
 			sourceTree = "<group>";
 		};
 		26FDFF151C33C4A600CB3995 /* TransitionTreasuryTests */ = {
@@ -639,19 +638,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26BEB6321C645341001510CE /* ScanbotTransitionAnimation.swift in Sources */,
-				26BEB6371C645341001510CE /* TRTransitionAnimations.swift in Sources */,
-				26BEB6311C645341001510CE /* PopTipTransitionAnimation.swift in Sources */,
-				26BEB6301C645341001510CE /* PageTransitionAnimation.swift in Sources */,
-				26BEB6341C645341001510CE /* TaaskyFlipTransitionAnimation.swift in Sources */,
-				26BEB6351C645341001510CE /* TwitterTransitionAnimation.swift in Sources */,
-				26BEB62F1C645341001510CE /* OMINTransitionAnimation.swift in Sources */,
-				26BEB62C1C645341001510CE /* ElevateTransitionAnimation.swift in Sources */,
-				26BEB62E1C645341001510CE /* IBanTangTransitionAnimation.swift in Sources */,
-				26BEB6331C645341001510CE /* SlideTransitionAnimation.swift in Sources */,
-				26BEB62B1C645341001510CE /* BlixtTransitionAnimation.swift in Sources */,
-				26BEB62D1C645341001510CE /* FadeTransitionAnimation.swift in Sources */,
-				26BEB6361C645341001510CE /* DefaultPushTransitionAnimation.swift in Sources */,
+				26BEB6671C645BFD001510CE /* OMINTransitionAnimation.swift in Sources */,
+				26BEB66E1C645BFD001510CE /* TwitterTransitionAnimation.swift in Sources */,
+				26BEB66A1C645BFD001510CE /* ScanbotTransitionAnimation.swift in Sources */,
+				26BEB66C1C645BFD001510CE /* TaaskyFlipTransitionAnimation.swift in Sources */,
+				26BEB6691C645BFD001510CE /* PopTipTransitionAnimation.swift in Sources */,
+				26BEB6641C645BFD001510CE /* ElevateTransitionAnimation.swift in Sources */,
+				26BEB6681C645BFD001510CE /* PageTransitionAnimation.swift in Sources */,
+				26BEB6661C645BFD001510CE /* IBanTangTransitionAnimation.swift in Sources */,
+				26BEB66D1C645BFD001510CE /* TRTransitionAnimations.swift in Sources */,
+				26BEB6621C645BFD001510CE /* BlixtTransitionAnimation.swift in Sources */,
+				26BEB6631C645BFD001510CE /* DefaultPushTransitionAnimation.swift in Sources */,
+				26BEB6651C645BFD001510CE /* FadeTransitionAnimation.swift in Sources */,
+				26BEB66B1C645BFD001510CE /* SlideTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
