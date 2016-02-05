@@ -9,6 +9,25 @@
 import UIKit
 import TransitionTreasury
 
+enum DemoTransition {
+    case FadePush
+    case TwitterPresent
+    case SlideTabBar
+}
+
+extension DemoTransition: TransitionAnimationable {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+        switch self {
+        case .FadePush:
+            return FadeTransitionAnimation()
+        case .TwitterPresent :
+            return TwitterTransitionAnimation()
+        case .SlideTabBar :
+            return SlideTransitionAnimation()
+        }
+    }
+}
+
 struct PushTransition {
     let name: String
     let imageName: String
