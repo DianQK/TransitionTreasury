@@ -8,10 +8,11 @@
 
 import UIKit
 @testable import TransitionTreasury
+@testable import TransitionAnimation
 
 class SecondViewController: UIViewController, NavgationTransitionable {
     
-    var tr_transition: TRNavgationTransitionDelegate?
+    var tr_pushTransition: TRNavgationTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

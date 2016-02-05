@@ -12,10 +12,10 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, method: TRPushTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .Push, gestureFor: viewController)
         transitionDelegate.completion = completion
-        viewController.tr_transition = transitionDelegate
+        viewController.tr_pushTransition = transitionDelegate
         
         delegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
@@ -26,11 +26,11 @@ public extension UINavigationController {
      Transition treasury pop viewController.
      */
     public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
-        let transitionDelegate = (topViewController as? NavgationTransitionable)?.tr_transition
+        let transitionDelegate = (topViewController as? NavgationTransitionable)?.tr_pushTransition
         let popViewController = topViewController
         transitionDelegate?.completion = {
             completion?()
-            (popViewController as? NavgationTransitionable)?.tr_transition = nil
+            (popViewController as? NavgationTransitionable)?.tr_pushTransition = nil
         }
         delegate = transitionDelegate
         return popViewControllerAnimated(true)
@@ -42,13 +42,13 @@ public extension UINavigationController {
         guard let index = viewControllers.indexOf(viewController) else {
             fatalError("No this viewController for pop!!!")
         }
-        let transitionDelegate = viewController.tr_transition
+        let transitionDelegate = viewController.tr_pushTransition
         transitionDelegate?.completion = completion
         transitionDelegate?.transition.popToVCIndex(index)
         delegate = transitionDelegate
         return {
             popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
-                (viewController as? NavgationTransitionable)?.tr_transition = nil
+                (viewController as? NavgationTransitionable)?.tr_pushTransition = nil
                 return viewController
             })
             }()
@@ -60,13 +60,13 @@ public extension UINavigationController {
         guard viewControllers.count > 1 else {
             return popToRootViewControllerAnimated(true)
         }
-        let transitionDelegate = (viewControllers[1] as? NavgationTransitionable)?.tr_transition
+        let transitionDelegate = (viewControllers[1] as? NavgationTransitionable)?.tr_pushTransition
         transitionDelegate?.completion = completion
         transitionDelegate?.transition.popToVCIndex(0)
         delegate = transitionDelegate
         return {
             popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
-                (viewController as? NavgationTransitionable)?.tr_transition = nil
+                (viewController as? NavgationTransitionable)?.tr_pushTransition = nil
                 return viewController
             })
             }()
@@ -76,5 +76,5 @@ public extension UINavigationController {
 /// Retain transiton delegate
 public protocol NavgationTransitionable: class {
     /// Transiton delegate
-    var tr_transition: TRNavgationTransitionDelegate?{get set}
+    var tr_pushTransition: TRNavgationTransitionDelegate?{get set}
 }

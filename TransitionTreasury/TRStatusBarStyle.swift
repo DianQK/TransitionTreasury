@@ -10,6 +10,12 @@ import UIKit
 /**
  TransitionTreasury Status Bar Style.
  */
+public enum StatusBarStyle {
+    case Default
+    case Light
+    case Hide
+}
+
 public enum TRStatusBarStyle {
     case Default
     @available(iOS 7.0, *)

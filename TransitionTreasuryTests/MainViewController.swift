@@ -8,10 +8,11 @@
 
 import UIKit
 import TransitionTreasury
+@testable import TransitionAnimation
 
 class MainViewController: UIViewController, ModalTransitionDelegate {
     
-    var tr_transition: TRViewControllerTransitionDelegate?
+    var tr_presentTransition: TRViewControllerTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

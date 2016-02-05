@@ -28,6 +28,10 @@ TransitionTreasury is a viewController transition framework in Swift.
 * [x] Support Push & Present & TabBar Gesture.
 * [x] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/wiki)
 
+## Migration Guides
+
+* [TransitionTreasury 3.0 Migration Guide](https://github.com/Alamofire/Alamofire/blob/master/Documentation/TransitionTreasury 3.0 Migration Guide.md)
+
 ## Requirements   
 
 * iOS 8.0+
@@ -54,13 +58,21 @@ To integrate TransitionTreasury into your Xcode project using CocoaPods, specify
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury'
+pod 'TransitionTreasury', '~> 3.0'
 ```
 
 Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+In any file you'd like to use TransitionTreasury in, don't forget to import the framework with import TransitionTreasury.
+
+For TransitionAnimation extensions, this project will include them as dependencies. You can do this via CocoaPods subspecs.
+
+```ruby
+pod 'TransitionTreasury/Animations'
 ```
 
 ### Carthage    
@@ -74,7 +86,7 @@ $ brew install carthage
 
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
-```ogdl
+```
 github "DianQK/TransitionTreasury"
 ```
 
@@ -98,6 +110,7 @@ and add the paths to the frameworks you want to use under “Input Files”:
 
 ```bash
 $(SRCROOT)/Carthage/Build/iOS/TransitionTreasury.framework
+$(SRCROOT)/Carthage/Build/iOS/TransitionAnimation.framework // If need
 ```
 
 For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).
@@ -118,7 +131,7 @@ class FirstViewController: UIViewController {
 
     func push() {
         let vc = SecondViewController()
-        navigationController?.tr_pushViewController(vc, method: .Fade, completion: {
+        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.Fade, completion: {
                 print("Push finish")
             })
     }
@@ -155,7 +168,7 @@ class MainViewController: UIViewController, ModalTransitionDelegate {
     func present() {
         let vc = ModalViewController()
         vc.modalDelegate = self // Don't forget to set modalDelegate
-        tr_presentViewController(vc, method: .Fade, completion: {
+        tr_presentViewController(vc, method: TRPresentTransitionMethod.Fade, completion: {
                 print("Present finished.")
             })
     }
@@ -192,25 +205,46 @@ func modalViewControllerDismiss(callbackData data:AnyObject?)
 
 ## Advanced Usage
 
-### Custom Animation   
+### Create Your Transition Enum (Recommend!!!!)
 
-Now, there is just **Custom Animation**, other usages are coming after next version.
-
-Like **Basic-Usage**, just replace `method` paramters to `Custom(TRViewControllerAnimatedTransitioning)`, provide your animation object.  
-
-> Note:   
-> Thanks to Swift's Enum. I can write more concise code.   
-> You also can use exist transition animation, just a joke~, here just be used to show an example.     
-
-Example：    
+Maybe like this:
 
 ```swift
-navigationController?.tr_pushViewController(vc, method: .Custom(OMINTransitionAnimation(key: view)), completion: {
-                print("Push finished")
-            })
-```     
+enum DemoTransition {
+    case FadePush
+    case TwitterPresent
+    case SlideTabBar
+}
 
-> About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I happy to you will share your animation for this project.   
+extension DemoTransition: TransitionAnimationable {
+    func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
+        switch self {
+        case .FadePush:
+            return FadeTransitionAnimation()
+        case .TwitterPresent :
+            return TwitterTransitionAnimation()
+        case .SlideTabBar :
+            return SlideTransitionAnimation()
+        }
+    }
+}
+```
+
+Then you can use your transition, maybe like this:
+
+```Swift
+tr_pushViewController(viewController: viewController, method: DemoTransition.FadePush)
+tr_presentViewController(viewControllerToPresent: viewController, method: DemoTransition.TwitterPresent)
+```
+
+Well, you can create your animation, see **Custom Animation**.
+
+### Custom Animation   
+
+Just conform `TRViewControllerAnimatedTransitioning`. If you need interactive, conform `TransitionInteractiveable`.
+
+About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I am happy that you will share your animation for this project.
+Also, you can see `TransitionTreasury/TransitionAnimation`, there are some Animations. You can write follow this.  
 
 ### Status Bar Style     
 
@@ -220,10 +254,10 @@ Then like **Basic Usage**, just add param `statusBarStyle`:
 
 ```swift
 // Push & Pop
-tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod.Fade, statusBarStyle: UIStatusBarStyle = .Default)    
 
 // Present & Dismiss
-tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: UIStatusBarStyle = .Default)
+tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod.Fade, statusBarStyle: UIStatusBarStyle = .Default)
 ```    
 
 ### Interactive Transition Animation
@@ -239,7 +273,7 @@ func interactiveTransition(sender: UIPanGestureRecognizer) {
             }
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
             vc.modalDelegate = self
-            tr_presentViewController(vc, method: .Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
+            tr_presentViewController(vc, method: TRPresentTransitionMethod.Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
                 print("Present finished")
             })
         default : break
@@ -254,13 +288,13 @@ func interactiveTransition(sender: UIPanGestureRecognizer) {
 Just Add this code:
 
 ```swift
-tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: .Swipe)
+tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: TRTabBarTransitionDelegate.Slide)
 ```
 
 > Note:
 > If you need `delegate`, please use `tr_delegate`.
 
-You can see TransitionTreasuryTabBarDemo Scheme.
+You can see `Demo/TabBarDemo`.
 
 ## License
 

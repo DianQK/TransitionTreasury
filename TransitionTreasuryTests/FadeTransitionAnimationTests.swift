@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import TransitionTreasury
+@testable import TransitionAnimation
 
 class FadeTransitionAnimationTests: XCTestCase {
     

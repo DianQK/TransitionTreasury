@@ -13,7 +13,7 @@ import UIKit
  */
 public protocol ViewControllerTransitionable: class, NSObjectProtocol {
     /// Retain transition delegate.
-    var tr_transition: TRViewControllerTransitionDelegate?{get set}
+    var tr_presentTransition: TRViewControllerTransitionDelegate?{get set}
 }
 
 // MARK: - Transition Treasury UIViewController Extension.
@@ -21,10 +21,10 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury present viewController.
      */
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         
-        tr_transition = transitionDelegate
+        tr_presentTransition = transitionDelegate
         
         viewControllerToPresent.transitioningDelegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
@@ -51,7 +51,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
      Transition treasury dismiss ViewController.
      */
     public func tr_dismissViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) {
-        let transitionDelegate = tr_transition
+        let transitionDelegate = tr_presentTransition
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive
         }
@@ -59,7 +59,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
         let fullCompletion = {
             completion?()
             transitionDelegate?.previousStatusBarStyle?.updateStatusBarStyle()
-            self.tr_transition = nil
+            self.tr_presentTransition = nil
         }
         transitionDelegate?.transition.completion = fullCompletion
         if transitionDelegate?.transition.completion != nil {
