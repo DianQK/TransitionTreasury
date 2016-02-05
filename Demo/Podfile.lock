@@ -1,0 +1,21 @@
+PODS:
+  - TransitionTreasury (3.0.0):
+    - TransitionTreasury/Core (= 3.0.0)
+  - TransitionTreasury/Animations (3.0.0):
+    - TransitionTreasury/Core
+  - TransitionTreasury/Core (3.0.0)
+
+DEPENDENCIES:
+  - TransitionTreasury (from `../`)
+  - TransitionTreasury/Animations (from `../`)
+
+EXTERNAL SOURCES:
+  TransitionTreasury:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TransitionTreasury: ca0c652d4c785f86cba43ad343164ec00e305ca1
+
+PODFILE CHECKSUM: 526e5b4d30b2dc2a58397b1c3dc9664acbccb008
+
+COCOAPODS: 1.0.0.beta.3

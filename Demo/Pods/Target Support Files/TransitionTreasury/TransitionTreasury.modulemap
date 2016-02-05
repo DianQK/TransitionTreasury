@@ -1,0 +1,6 @@
+framework module TransitionTreasury {
+  umbrella header "TransitionTreasury-umbrella.h"
+
+  export *
+  module * { export * }
+}

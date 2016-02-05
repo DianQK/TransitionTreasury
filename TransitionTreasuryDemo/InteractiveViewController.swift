@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TransitionTreasury
 import TransitionAnimation
 
 class InteractiveViewController: UIViewController, ModalTransitionDelegate {

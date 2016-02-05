@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TransitionTreasury
 /// Apple Default Push Transition
 public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

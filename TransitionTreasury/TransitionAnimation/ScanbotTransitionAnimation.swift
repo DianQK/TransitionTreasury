@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TransitionTreasury
 /// Like Scanbot present.
 public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
