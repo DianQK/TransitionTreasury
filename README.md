@@ -26,11 +26,11 @@ TransitionTreasury is a viewController transition framework in Swift.
 * [x] Support Custom Transition
 * [x] Support Update Status Bar Style
 * [x] Support Push & Present & TabBar Gesture.
-* [x] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/wiki)
+* [x] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/tree/master/Documentation)
 
 ## Migration Guides
 
-* [TransitionTreasury 3.0 Migration Guide](https://github.com/Alamofire/Alamofire/blob/master/Documentation/TransitionTreasury 3.0 Migration Guide.md)
+* [TransitionTreasury 3.0 Migration Guide](https://github.com/DianQK/TransitionTreasury/blob/master/Documentation/TransitionTreasury 3.0 Migration Guide.md)
 
 ## Requirements   
 
