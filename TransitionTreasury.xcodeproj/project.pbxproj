@@ -193,6 +193,7 @@
 		26BEB6471C645BF6001510CE /* TransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				26BEB6531C645BF6001510CE /* TRTransitionAnimations.swift */,
 				26BEB67A1C646137001510CE /* TransitionAnimationHelper.swift */,
 				26BEB6481C645BF6001510CE /* BlixtTransitionAnimation.swift */,
 				26BEB6491C645BF6001510CE /* DefaultPushTransitionAnimation.swift */,
@@ -205,7 +206,6 @@
 				26BEB6501C645BF6001510CE /* ScanbotTransitionAnimation.swift */,
 				26BEB6511C645BF6001510CE /* SlideTransitionAnimation.swift */,
 				26BEB6521C645BF6001510CE /* TaaskyFlipTransitionAnimation.swift */,
-				26BEB6531C645BF6001510CE /* TRTransitionAnimations.swift */,
 				26BEB6541C645BF6001510CE /* TwitterTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
