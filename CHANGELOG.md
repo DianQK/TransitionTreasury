@@ -22,6 +22,14 @@
 * Fade
 * Slide
 
+## [3.0.0](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.0)
+
+#### Added
+* Update podspec, you can only use TransitionFramework without Animation.
+
+#### Fixed
+* Fix can't use Push and Present at the same time. Update tr_transition into tr_presentTransition & tr_pushTranstion.
+
 ## [2.2.1](https://github.com/DianQK/TransitionTreasury/releases/tag/2.2.1)
 
 #### Fixed

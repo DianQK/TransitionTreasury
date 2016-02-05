@@ -28,6 +28,10 @@ TransitionTreasury is a viewController transition framework in Swift.
 * [x] Support Push & Present & TabBar Gesture.
 * [x] [Complete Documentation](https://github.com/DianQK/TransitionTreasury/wiki)
 
+## Migration Guides
+
+* [TransitionTreasury 3.0 Migration Guide](https://github.com/Alamofire/Alamofire/blob/master/Documentation/TransitionTreasury 3.0 Migration Guide.md)
+
 ## Requirements   
 
 * iOS 8.0+
@@ -54,13 +58,21 @@ To integrate TransitionTreasury into your Xcode project using CocoaPods, specify
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury'
+pod 'TransitionTreasury', '~> 3.0'
 ```
 
 Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+In any file you'd like to use TransitionTreasury in, don't forget to import the framework with import TransitionTreasury.
+
+For TransitionAnimation extensions, this project will include them as dependencies. You can do this via CocoaPods subspecs.
+
+```ruby
+pod 'TransitionTreasury/Animations'
 ```
 
 ### Carthage    
@@ -74,7 +86,7 @@ $ brew install carthage
 
 To integrate TransitionTreasury into your Xcode project using Carthage, specify it in your `Cartfile`:
 
-```ogdl
+```
 github "DianQK/TransitionTreasury"
 ```
 
@@ -98,6 +110,7 @@ and add the paths to the frameworks you want to use under “Input Files”:
 
 ```bash
 $(SRCROOT)/Carthage/Build/iOS/TransitionTreasury.framework
+$(SRCROOT)/Carthage/Build/iOS/TransitionAnimation.framework // If need
 ```
 
 For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).
