@@ -58,7 +58,7 @@ To integrate TransitionTreasury into your Xcode project using CocoaPods, specify
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury', '~> 3.0'
+pod 'TransitionTreasury', '~> 3.0.1'
 ```
 
 Then, run the following command:
