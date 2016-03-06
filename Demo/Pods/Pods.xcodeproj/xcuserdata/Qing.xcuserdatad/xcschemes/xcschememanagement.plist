@@ -8,20 +8,16 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>Pods-TabBarDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TransitionTreasury.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>TransitionTreasury.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -32,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>CE2ACFFB771A817B65C0971B1A19F6C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0B597770CDC6CD2066CB10BFA2C8600</key>
 		<dict>
 			<key>primary</key>
 			<true/>

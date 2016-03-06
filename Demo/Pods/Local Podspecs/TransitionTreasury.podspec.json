@@ -1,6 +1,6 @@
 {
   "name": "TransitionTreasury",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/DianQK/TransitionTreasury.git",
-    "tag": "3.0.0"
+    "tag": "3.0.1"
   },
   "default_subspecs": "Core",
   "platforms": {
