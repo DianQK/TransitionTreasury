@@ -49,26 +49,26 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             fatalError("VC not in TabBarController.")
         }
         
-        let fromVCStartPositionX: CGFloat = 0
-        var fromVCEndPositionX: CGFloat = -UIScreen.mainScreen().bounds.width
-        var toVCStartPositionX: CGFloat = UIScreen.mainScreen().bounds.width
-        let toVCEndPositionX: CGFloat = 0
+        let fromVCStartOriginX: CGFloat = 0
+        var fromVCEndOriginX: CGFloat = -UIScreen.mainScreen().bounds.width
+        var toVCStartOriginX: CGFloat = UIScreen.mainScreen().bounds.width
+        let toVCEndOriginX: CGFloat = 0
         
         tabBarTransitionDirection = TabBarTransitionDirection.TransitionDirection(fromVCIndex, toVCIndex: toVCIndex)
         
         if tabBarTransitionDirection == .Left {
-            swap(&fromVCEndPositionX, &toVCStartPositionX)
+            swap(&fromVCEndOriginX, &toVCStartOriginX)
         }
         
         containView?.addSubview(fromVC!.view)
         containView?.addSubview(toVC!.view)
         
-        fromVC?.view.layer.position.x = fromVCStartPositionX + toVC!.view.layer.bounds.width / 2
-        toVC?.view.layer.position.x = toVCStartPositionX + toVC!.view.layer.bounds.width / 2
+        fromVC?.view.frame.origin.x = fromVCStartOriginX
+        toVC?.view.frame.origin.x = toVCStartOriginX
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
-            fromVC?.view.layer.position.x = fromVCEndPositionX + toVC!.view.layer.bounds.width / 2
-            toVC?.view.layer.position.x = toVCEndPositionX + toVC!.view.layer.bounds.width / 2
+            fromVC?.view.frame.origin.x = fromVCEndOriginX
+            toVC?.view.frame.origin.x = toVCEndOriginX
             }) { (finished) -> Void in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !transitionContext.transitionWasCancelled() && finished {
@@ -79,11 +79,10 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     }
     
     public func interactiveTransition(sender: UIPanGestureRecognizer) {
-        let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
         
-        let view = fromVC!.view
+        guard let view = sender.view else { return }
         
-        let offsetX: CGFloat = tabBarTransitionDirection == .Left ? sender.translationInView(view).x : -sender.translationInView(view).x
+        let offsetX = tabBarTransitionDirection == .Left ? sender.translationInView(view).x : -sender.translationInView(view).x
         
         var percent = offsetX / view.bounds.size.width
         
