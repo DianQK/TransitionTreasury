@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2667483D1C8D8753009D5A53 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2667483C1C8D8753009D5A53 /* ThirdViewController.swift */; };
 		26BEB68A1C646250001510CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6891C646250001510CE /* AppDelegate.swift */; };
 		26BEB68F1C646250001510CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BEB68D1C646250001510CE /* Main.storyboard */; };
 		26BEB6911C646250001510CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BEB6901C646250001510CE /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		0070C0E807612A1222628B78 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		100C7F86C9BB84EA8BFF1718 /* Pods_TabBarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC2C962449A8E5BB65FAB63 /* Pods-TabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBarDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabBarDemo/Pods-TabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2667483C1C8D8753009D5A53 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		26BEB6861C646250001510CE /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BEB6891C646250001510CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BEB68E1C646250001510CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				26BEB6B91C646426001510CE /* FirstViewController.swift */,
 				26BEB6BA1C646426001510CE /* SecondViewController.swift */,
+				2667483C1C8D8753009D5A53 /* ThirdViewController.swift */,
 				26BEB6A91C646415001510CE /* AppDelegate.swift */,
 				26BEB6AB1C646415001510CE /* ViewController.swift */,
 				26BEB6AD1C646415001510CE /* Main.storyboard */,
@@ -361,6 +364,7 @@
 			files = (
 				26BEB6BC1C646426001510CE /* SecondViewController.swift in Sources */,
 				26BEB6BB1C646426001510CE /* FirstViewController.swift in Sources */,
+				2667483D1C8D8753009D5A53 /* ThirdViewController.swift in Sources */,
 				26BEB6AC1C646415001510CE /* ViewController.swift in Sources */,
 				26BEB6AA1C646415001510CE /* AppDelegate.swift in Sources */,
 			);
@@ -494,7 +498,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.dianqk.Demo-T";
+				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -509,7 +513,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.dianqk.Demo-T";
+				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

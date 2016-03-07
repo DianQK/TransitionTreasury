@@ -9,21 +9,19 @@
 import UIKit
 import TransitionTreasury
 
-class InteractiveViewController: UIViewController, ModalTransitionDelegate {
+class InteractiveViewController: UIViewController, ModalTransitionDelegate, NavgationTransitionable {
     
     var tr_presentTransition: TRViewControllerTransitionDelegate?
+    
+    var tr_pushTransition: TRNavgationTransitionDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         let pan = UIPanGestureRecognizer(target: self, action: "interactiveTransition:")
+        pan.delegate = self
         view.addGestureRecognizer(pan)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func PresentClick(sender: UIButton) {
@@ -57,4 +55,13 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate {
         tr_dismissViewController(interactive: interactive, completion: nil)
     }
 
+}
+
+extension InteractiveViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let ges = gestureRecognizer as? UIPanGestureRecognizer {
+            return ges.translationInView(ges.view).y != 0
+        }
+        return false
+    }
 }

@@ -12,12 +12,6 @@ import TransitionTreasury
 class SecondViewController: UIViewController, NavgationTransitionable {
     
     var tr_pushTransition: TRNavgationTransitionDelegate?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,11 +32,6 @@ class SecondViewController: UIViewController, NavgationTransitionable {
         navigationController?.tr_popViewController({ () -> Void in
             print("Pop finished.")
         })
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     deinit {
