@@ -17,19 +17,12 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         view.addGestureRecognizer(gesture)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func swipeTransition(sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .Began :
-            print("Began")
             if sender.translationInView(sender.view).x < 0 {
                 tabBarController?.tr_selected(1, gesture: sender)
             }

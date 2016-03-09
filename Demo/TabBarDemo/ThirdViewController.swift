@@ -25,7 +25,7 @@ class ThirdViewController: UIViewController {
         switch sender.state {
         case .Began :
             print("Began")
-            if sender.translationInView(sender.view).x > 0 {
+            if sender.translationInView(sender.view).x >= 0 {
                 tabBarController?.tr_selected(1, gesture: sender)
             }
         default : break

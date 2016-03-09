@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
         switch sender.state {
         case .Began :
             print("Began")
-            if sender.translationInView(sender.view).x > 0 {
+            if sender.translationInView(sender.view).x >= 0 {
                 tabBarController?.tr_selected(0, gesture: sender)
             } else if sender.translationInView(sender.view).x < 0 {
                 tabBarController?.tr_selected(2, gesture: sender)
