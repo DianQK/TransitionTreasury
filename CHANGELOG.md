@@ -22,6 +22,10 @@
 * Fade
 * Slide
 
+## [3.0.2](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.2)
+#### Fixed
+* Fix `Slide` aniamtion crash
+
 ## [3.0.1](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.1)
 #### Fixed
 * Remove unused code from `TRStatusBarStyle.swift`

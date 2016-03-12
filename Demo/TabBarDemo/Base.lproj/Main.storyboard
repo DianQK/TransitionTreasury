@@ -45,6 +45,46 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Third-->
+        <scene sceneID="L0G-PZ-11Q">
+            <objects>
+                <viewController id="nw6-3K-Pgc" customClass="ThirdViewController" customModule="TabBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZcT-O3-z7y"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bht-bl-DcO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3k2-9k-1eh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="eFd-Tg-hzV">
+                                <rect key="frame" x="215.5" y="279.5" width="169.5" height="41.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEc-lG-vhX">
+                                <rect key="frame" x="200.5" y="326" width="200" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eFd-Tg-hzV" firstAttribute="centerX" secondItem="3k2-9k-1eh" secondAttribute="centerX" id="0tv-5K-KhX"/>
+                            <constraint firstItem="NEc-lG-vhX" firstAttribute="centerX" secondItem="3k2-9k-1eh" secondAttribute="centerX" id="A70-SD-YgY"/>
+                            <constraint firstItem="eFd-Tg-hzV" firstAttribute="centerY" secondItem="3k2-9k-1eh" secondAttribute="centerY" id="cJO-JL-g1e"/>
+                            <constraint firstItem="NEc-lG-vhX" firstAttribute="top" secondItem="eFd-Tg-hzV" secondAttribute="bottom" constant="5" id="jQ7-S4-Evh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" image="first" id="MY2-vJ-EG0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bI-gz-jvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="771"/>
+        </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -98,6 +138,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="nw6-3K-Pgc" kind="relationship" relationship="viewControllers" id="G2A-gj-d9f"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

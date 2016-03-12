@@ -12,3 +12,8 @@ target 'Demo' do
   platform :ios, '8.0'
   libraries
 end
+
+target 'TabBarDemo' do
+    platform :ios, '8.0'
+    libraries
+end
