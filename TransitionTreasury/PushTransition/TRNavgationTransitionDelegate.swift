@@ -59,8 +59,11 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             transition.transitionStatus = .Push
             return transition
         case .Pop :
-            transition.transitionStatus = .Pop
-            return transition
+            //Use right transition when back-button was tapped.
+            let transitionDelegate = (fromVC as? NavgationTransitionable)?.tr_pushTransition
+            let newTransition = transitionDelegate?.transition ?? self.transition
+            newTransition.transitionStatus = .Pop
+            return newTransition
         case .None :
             return nil
         }
