@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     lazy var gesture: UIPanGestureRecognizer = {
-        let gesture = UIPanGestureRecognizer(target: self, action: Selector("swipeTransition:"))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(FirstViewController.swipeTransition(_:)))
         return gesture
     }()
 

@@ -11,7 +11,7 @@ import UIKit
 class ThirdViewController: UIViewController {
 
     lazy var gesture: UIPanGestureRecognizer = {
-        let gesture = UIPanGestureRecognizer(target: self, action: Selector("swipeTransition:"))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(ThirdViewController.swipeTransition(_:)))
         return gesture
     }()
     

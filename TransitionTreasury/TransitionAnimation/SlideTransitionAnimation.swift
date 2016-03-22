@@ -18,7 +18,7 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var gestureRecognizer: UIGestureRecognizer? {
         didSet {
-            gestureRecognizer?.addTarget(self, action: Selector("interactiveTransition:"))
+            gestureRecognizer?.addTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(_:)))
         }
     }
     
@@ -100,7 +100,7 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             if percent > interactivePrecent {
                 percentTransition.completionSpeed = 1.0 - percentTransition.percentComplete
                 percentTransition.finishInteractiveTransition()
-                gestureRecognizer?.removeTarget(self, action: Selector("interactiveTransition:"))
+                gestureRecognizer?.removeTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(_:)))
             } else {
                 percentTransition.cancelInteractiveTransition()
             }

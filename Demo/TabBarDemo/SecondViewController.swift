@@ -11,7 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
     
     lazy var gesture: UIPanGestureRecognizer = {
-        let gesture = UIPanGestureRecognizer(target: self, action: Selector("swipeTransition:"))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(SecondViewController.swipeTransition(_:)))
         return gesture
     }()
 

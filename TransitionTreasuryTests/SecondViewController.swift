@@ -8,7 +8,6 @@
 
 import UIKit
 @testable import TransitionTreasury
-@testable import TransitionAnimation
 
 class SecondViewController: UIViewController, NavgationTransitionable {
     

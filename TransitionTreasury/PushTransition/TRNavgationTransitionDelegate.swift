@@ -32,7 +32,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     /// The edge gesture for pop
     lazy var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
-        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: Selector("tr_edgePan:"))
+        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TRNavgationTransitionDelegate.tr_edgePan(_:)))
         edgePanGestureRecognizer.edges = .Left
         return edgePanGestureRecognizer
     }()

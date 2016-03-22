@@ -42,10 +42,10 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         transitionStatus = status
         super.init()
         if presentPanGesture != nil {
-            presentPanGesture?.addTarget(self, action: Selector("slideTransition:"))
+            presentPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
             interacting = true
         }
-        dismissPanGesture?.addTarget(self, action: Selector("slideTransition:"))
+        dismissPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
     }
     
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -128,9 +128,9 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
                 percentTransition?.finishInteractiveTransition()
                 switch transitionStatus {
                 case .Present :
-                    presentPanGesture?.removeTarget(self, action: Selector("slideTransition:"))
+                    presentPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
                 case .Dismiss :
-                    dismissPanGesture?.removeTarget(self, action: Selector("slideTransition:"))
+                    dismissPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
                     percentTransition = nil
                 default : break
                 }

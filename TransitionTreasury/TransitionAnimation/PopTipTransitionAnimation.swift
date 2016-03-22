@@ -21,7 +21,7 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
     private var mainVC: UIViewController?
     
     lazy private var tapGestureRecognizer: UITapGestureRecognizer = {
-        let tap = UITapGestureRecognizer(target: self, action: Selector("tapDismiss:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PopTipTransitionAnimation.tapDismiss(_:)))
         return tap
     }()
     

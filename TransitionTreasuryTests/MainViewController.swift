@@ -8,7 +8,6 @@
 
 import UIKit
 import TransitionTreasury
-@testable import TransitionAnimation
 
 class MainViewController: UIViewController, ModalTransitionDelegate {
     

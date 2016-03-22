@@ -19,7 +19,7 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate, Navg
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let pan = UIPanGestureRecognizer(target: self, action: "interactiveTransition:")
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(InteractiveViewController.interactiveTransition(_:)))
         pan.delegate = self
         view.addGestureRecognizer(pan)
     }
