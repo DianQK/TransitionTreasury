@@ -22,6 +22,10 @@
 * Fade
 * Slide
 
+## [3.0.3](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.3)
+#### Fixed
+* Support Swift 2.2 & Xcode 7.3
+
 ## [3.0.2](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.2)
 #### Fixed
 * Fix `Slide` aniamtion crash

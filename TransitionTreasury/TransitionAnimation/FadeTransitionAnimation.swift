@@ -3,10 +3,12 @@
 //  TransitionTreasury
 //
 //  Created by DianQK on 12/22/15.
-//  Copyright © 2015 TransitionTreasury. All rights reserved.
+//  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
-import UIKit
+#if TR_MODULE
+import TransitionTreasury
+#endif
 /// Fade Out In Animation
 public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

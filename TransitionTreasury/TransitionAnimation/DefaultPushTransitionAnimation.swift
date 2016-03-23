@@ -6,7 +6,9 @@
 //  Copyright © 2016年 TransitionTreasury. All rights reserved.
 //
 
-import UIKit
+#if TR_MODULE
+import TransitionTreasury
+#endif
 /// Apple Default Push Transition
 public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

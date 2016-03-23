@@ -3,11 +3,12 @@
 //  TransitionTreasury
 //
 //  Created by DianQK on 12/30/15.
-//  Copyright © 2015 TransitionTreasury. All rights reserved.
+//  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
 import XCTest
 @testable import TransitionTreasury
+@testable import TransitionAnimation
 
 class TRNavgationTransitionDelegateTests: XCTestCase {
     
@@ -38,7 +39,10 @@ class TRNavgationTransitionDelegateTests: XCTestCase {
             XCTAssertNotNil(weakSecondVC, "WeakSecondVC should be load.")
             let nav = UINavigationController(rootViewController: self.mainVC!)
             XCTAssertEqual(nav, self.mainVC?.navigationController, "NavgationController should be equal.")
-            self.mainVC!.navigationController?.tr_pushViewController(secondVC, method: TRPushTransitionMethod.Fade)
+//            self.mainVC!.navigationController?.tr_pushViewController(secondVC, method: TRPushTransitionMethod.Fade)
+            
+            
+            self.mainVC?.navigationController?.tr_pushViewController(secondVC, method: TRPushTransitionMethod.Fade)
             XCTAssertNotNil(secondVC.tr_pushTransition, "TRTransitionDelegate should be load.")
             XCTAssertNotNil(self.mainVC?.navigationController?.delegate, "Delegate should be set.")
             XCTAssertNotNil(secondVC.tr_pushTransition?.previousStatusBarStyle, "Transition should support update status bar style.")

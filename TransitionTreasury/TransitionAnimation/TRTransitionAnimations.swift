@@ -5,8 +5,9 @@
 //  Created by 宋宋 on 16/2/5.
 //  Copyright © 2016年 TransitionTreasury. All rights reserved.
 //
-
-import UIKit
+#if TR_MODULE
+import TransitionTreasury
+#endif
 /**
  ViewController Push Methods
  

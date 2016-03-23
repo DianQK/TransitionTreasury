@@ -6,7 +6,9 @@
 //  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
-import UIKit
+#if TR_MODULE
+import TransitionTreasury
+#endif
 /// Like Scanbot present.
 public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

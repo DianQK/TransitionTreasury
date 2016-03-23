@@ -3,11 +3,12 @@
 //  TransitionTreasury
 //
 //  Created by DianQK on 12/30/15.
-//  Copyright © 2015 TransitionTreasury. All rights reserved.
+//  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
 import XCTest
 @testable import TransitionTreasury
+@testable import TransitionAnimation
 
 class TRViewControllerTransitionDelegateTests: XCTestCase {
     
@@ -29,19 +30,16 @@ class TRViewControllerTransitionDelegateTests: XCTestCase {
         weak var weakModalVC: ModalViewController?
         let transitioning: () -> Void = {
             let  modalVC = ModalViewController()
-            modalVC.modalDelegate = self.mainVC
+            modalVC.modalDelegate = self.mainVC as? ModalTransitionDelegate
             weakModalVC = modalVC
             XCTAssertNotNil(weakModalVC, "WeakModalVC should not be nil.")
-            self.mainVC?.tr_presentViewController(modalVC, method: TRPresentTransitionMethod.Fade)
+            self.mainVC?.tr_presentViewController(modalVC, method:  TRPresentTransitionMethod.Fade)
             XCTAssertNotNil(self.mainVC?.tr_presentTransition, "TRTransition should not be nil.")
             XCTAssertNotNil(self.mainVC?.tr_presentTransition?.previousStatusBarStyle, "Transition should support update status bar style.")
             XCTAssertNotNil(modalVC.transitioningDelegate, "TransitionDelegate should not be nil.")
             modalVC.modalDelegate!.modalViewControllerDismiss(callbackData: nil)
         }
         transitioning()
-        // ????
-//        XCTAssertNil(weakModalVC, "WeakModalVC should be nil after dismiss.")
-//        XCTAssertNil(mainVC?.tr_transition, "TRTRansition should be nil after dismiss.")
     }
     
 }

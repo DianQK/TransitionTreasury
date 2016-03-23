@@ -3,7 +3,7 @@
 //  TransitionTreasury
 //
 //  Created by DianQK on 12/30/15.
-//  Copyright © 2015 TransitionTreasury. All rights reserved.
+//  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
