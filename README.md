@@ -75,7 +75,7 @@ For TransitionAnimation extensions, this project will include them as dependenci
 pod 'TransitionAnimation', '~>3.0.3'
 ```
 
-### Carthage    
+<s>### Carthage    
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Cocoa application. To install the carthage tool, you can use [Homebrew](http://brew.sh).
 
@@ -113,7 +113,7 @@ $(SRCROOT)/Carthage/Build/iOS/TransitionTreasury.framework
 $(SRCROOT)/Carthage/Build/iOS/TransitionAnimation.framework // If need
 ```
 
-For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).
+For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).</s>
 
 ## Usage    
 
