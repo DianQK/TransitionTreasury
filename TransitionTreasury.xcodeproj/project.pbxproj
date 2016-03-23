@@ -21,20 +21,20 @@
 		262924211CA22C3100A2BDBF /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924051CA22C2A00A2BDBF /* TransitionAnimationHelper.swift */; };
 		262924221CA22C3100A2BDBF /* TRTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924061CA22C2A00A2BDBF /* TRTransitionAnimations.swift */; };
 		262924231CA22C3100A2BDBF /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924071CA22C2A00A2BDBF /* TwitterTransitionAnimation.swift */; };
+		262924241CA22EBB00A2BDBF /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4708F1C5267AC00E6BA2E /* TRViewControllerTransitionDelegate.swift */; };
+		262924251CA22EBB00A2BDBF /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470901C5267AC00E6BA2E /* UIViewController+TRPresent.swift */; };
+		262924261CA22EBB00A2BDBF /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470921C5267AC00E6BA2E /* TRNavgationTransitionDelegate.swift */; };
+		262924271CA22EBB00A2BDBF /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470931C5267AC00E6BA2E /* UINavigationController+TRPushPop.swift */; };
+		262924281CA22EBB00A2BDBF /* TRTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470951C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift */; };
+		262924291CA22EBB00A2BDBF /* TRTabBarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470961C5267AC00E6BA2E /* TRTabBarTransitionDelegate.swift */; };
+		2629242A1CA22EBB00A2BDBF /* UITabBarController+TRTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470971C5267AC00E6BA2E /* UITabBarController+TRTransition.swift */; };
+		2629242B1CA22EBB00A2BDBF /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A71C5267AC00E6BA2E /* TransitionTreasury.swift */; };
+		2629242C1CA22EBB00A2BDBF /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */; };
+		2629242D1CA22EBB00A2BDBF /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A81C5267AC00E6BA2E /* TRStatusBarStyle.swift */; };
 		262F1DF51C33F74A00E078AE /* TwitterTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF41C33F74A00E078AE /* TwitterTransitionAnimationTests.swift */; };
 		262F1DF71C33F7E600E078AE /* FadeTransitionAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF61C33F7E600E078AE /* FadeTransitionAnimationTests.swift */; };
 		262F1DF91C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DF81C33F84000E078AE /* TRNavgationTransitionDelegateTests.swift */; };
 		262F1DFB1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F1DFA1C3403D200E078AE /* TRViewControllerTransitionDelegateTests.swift */; };
-		26B470AA1C5267AC00E6BA2E /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4708F1C5267AC00E6BA2E /* TRViewControllerTransitionDelegate.swift */; };
-		26B470AB1C5267AC00E6BA2E /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470901C5267AC00E6BA2E /* UIViewController+TRPresent.swift */; };
-		26B470AC1C5267AC00E6BA2E /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470921C5267AC00E6BA2E /* TRNavgationTransitionDelegate.swift */; };
-		26B470AD1C5267AC00E6BA2E /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470931C5267AC00E6BA2E /* UINavigationController+TRPushPop.swift */; };
-		26B470AE1C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470951C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift */; };
-		26B470AF1C5267AC00E6BA2E /* TRTabBarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470961C5267AC00E6BA2E /* TRTabBarTransitionDelegate.swift */; };
-		26B470B01C5267AC00E6BA2E /* UITabBarController+TRTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470971C5267AC00E6BA2E /* UITabBarController+TRTransition.swift */; };
-		26B470BF1C5267AC00E6BA2E /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A71C5267AC00E6BA2E /* TransitionTreasury.swift */; };
-		26B470C01C5267AC00E6BA2E /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A81C5267AC00E6BA2E /* TRStatusBarStyle.swift */; };
-		26B470C11C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B470A91C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift */; };
 		26BEB6401C64558D001510CE /* TransitionTreasury.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BEB63D1C64558D001510CE /* TransitionTreasury.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26BEB6451C645688001510CE /* TransitionAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26BEB63C1C64558D001510CE /* TransitionAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26BEB6461C6456C6001510CE /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263B43911C32E6BD0093593E /* TransitionTreasury.framework */; };
@@ -388,16 +388,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B470B01C5267AC00E6BA2E /* UITabBarController+TRTransition.swift in Sources */,
-				26B470AC1C5267AC00E6BA2E /* TRNavgationTransitionDelegate.swift in Sources */,
-				26B470AB1C5267AC00E6BA2E /* UIViewController+TRPresent.swift in Sources */,
-				26B470AA1C5267AC00E6BA2E /* TRViewControllerTransitionDelegate.swift in Sources */,
-				26B470AD1C5267AC00E6BA2E /* UINavigationController+TRPushPop.swift in Sources */,
-				26B470C01C5267AC00E6BA2E /* TRStatusBarStyle.swift in Sources */,
-				26B470AF1C5267AC00E6BA2E /* TRTabBarTransitionDelegate.swift in Sources */,
-				26B470AE1C5267AC00E6BA2E /* TRTabBarControllerDelegate.swift in Sources */,
-				26B470BF1C5267AC00E6BA2E /* TransitionTreasury.swift in Sources */,
-				26B470C11C5267AC00E6BA2E /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				262924241CA22EBB00A2BDBF /* TRViewControllerTransitionDelegate.swift in Sources */,
+				262924251CA22EBB00A2BDBF /* UIViewController+TRPresent.swift in Sources */,
+				262924261CA22EBB00A2BDBF /* TRNavgationTransitionDelegate.swift in Sources */,
+				262924271CA22EBB00A2BDBF /* UINavigationController+TRPushPop.swift in Sources */,
+				262924281CA22EBB00A2BDBF /* TRTabBarControllerDelegate.swift in Sources */,
+				262924291CA22EBB00A2BDBF /* TRTabBarTransitionDelegate.swift in Sources */,
+				2629242A1CA22EBB00A2BDBF /* UITabBarController+TRTransition.swift in Sources */,
+				2629242B1CA22EBB00A2BDBF /* TransitionTreasury.swift in Sources */,
+				2629242C1CA22EBB00A2BDBF /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				2629242D1CA22EBB00A2BDBF /* TRStatusBarStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
