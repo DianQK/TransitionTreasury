@@ -11,4 +11,6 @@ Pod::Spec.new do |s|
   s.source_files = ['TransitionAnimation/*.swift']
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
+
+  s.dependency 'TransitionTreasury', '~> 3.0'
 end
