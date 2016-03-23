@@ -6,9 +6,7 @@
 //  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
-#if TR_MODULE
 import TransitionTreasury
-#endif
 /// Fade Out In Animation
 public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     

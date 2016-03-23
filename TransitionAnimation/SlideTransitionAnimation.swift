@@ -6,9 +6,7 @@
 //  Copyright © 2016年 TransitionTreasury. All rights reserved.
 //
 
-#if TR_MODULE
 import TransitionTreasury
-#endif
 
 public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TabBarTransitionInteractiveable {
     

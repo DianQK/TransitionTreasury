@@ -6,9 +6,7 @@
 //  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
-#if TR_MODULE
 import TransitionTreasury
-#endif
 /// OminFocus app push transition implement.
 public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
 

@@ -6,9 +6,8 @@
 //  Copyright © 2016 TransitionTreasury. All rights reserved.
 //
 
-#if TR_MODULE
 import TransitionTreasury
-#endif
+
 /// Like Twitter Present.
 public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     

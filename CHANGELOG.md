@@ -26,6 +26,9 @@
 #### Fixed
 * Support Swift 2.2 & Xcode 7.3
 
+#### Other
+* Add TransitionAnimation.podspec
+
 ## [3.0.2](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.2)
 #### Fixed
 * Fix `Slide` aniamtion crash
