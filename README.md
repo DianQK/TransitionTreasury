@@ -35,7 +35,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 ## Requirements   
 
 * iOS 8.0+
-* Xcode 7.1+
+* Xcode 7.3+
 
 ## Communication
 
@@ -115,13 +115,16 @@ $(SRCROOT)/Carthage/Build/iOS/TransitionAnimation.framework // If need
 
 For more information about how to use Carthage, please see its [project page](https://github.com/Carthage/Carthage).</s>
 
-## Usage    
+## Usage   
+
+> You can check out [Example](https://github.com/DianQK/TransitionTreasury/tree/master/Example) or [Demo](https://github.com/DianQK/TransitionTreasury/tree/master/Demo) .  
+> Don't forget `pod install` for [Example](https://github.com/DianQK/TransitionTreasury/tree/master/Example) .    
 
 ### Make a Push   
 
-If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `NavgationTransitionable`, and add code `var tr_transition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
+If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `NavgationTransitionable`, and add code `var tr_pushTransition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
 
-When you need to push, just call `public func tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod, completion: (() -> Void)?)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
+When you need to push, just call `public func tr_pushViewController<T : UIViewController where T : NavgationTransitionable>(viewController: T, method: TransitionAnimationable, statusBarStyle: TransitionTreasury.TRStatusBarStyle = default, completion: (() -> Void)? = default)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
 
 Example：   
 
@@ -138,9 +141,9 @@ class FirstViewController: UIViewController {
 }
 
 /// SecondViewController.swift
-class SecondViewController: UIViewController, TRTransition {
+class SecondViewController: UIViewController, NavgationTransitionable {
 
-    var tr_transition: TRNavgationTransitionDelegate?
+    var tr_pushTransition: TRNavgationTransitionDelegate?
 
     func pop() {
         tr_popViewController()
@@ -154,7 +157,7 @@ When you need to pop, just call `public func tr_popViewController(completion: ((
 
 If we present `MainViewController` to `ModalViewController`:     
 
-* `MainViewController` should conform `ModalTransitionDelegate`, and add `var tr_transition: TRViewControllerTransitionDelegate?`
+* `MainViewController` should conform `ModalTransitionDelegate`, and add `var tr_presentTransition: TRViewControllerTransitionDelegate?`
 * Add `weak var modalDelegate: ModalViewControllerDelegate?` for `ModalViewController`.
 
 Example：       
@@ -163,7 +166,7 @@ Example：
 /// MainViewController.swift
 class MainViewController: UIViewController, ModalTransitionDelegate {
 
-    var tr_transition: TRViewControllerTransitionDelegate?
+    var tr_presentTransition: TRViewControllerTransitionDelegate?
 
     func present() {
         let vc = ModalViewController()
