@@ -1,0 +1,11 @@
+platform :ios, "8.0"
+use_frameworks!
+
+target 'Example' do
+pod 'TransitionTreasury', '~>3.0.3'
+pod 'TransitionAnimation', '~>3.0.3'
+end
+
+target 'ExampleWithoutAnimation' do
+pod 'TransitionTreasury', '~>3.0.3'
+end

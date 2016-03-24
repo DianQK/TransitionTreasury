@@ -1,0 +1,16 @@
+PODS:
+  - TransitionAnimation (3.0.3):
+    - TransitionTreasury (~> 3.0)
+  - TransitionTreasury (3.0.3)
+
+DEPENDENCIES:
+  - TransitionAnimation (~> 3.0.3)
+  - TransitionTreasury (~> 3.0.3)
+
+SPEC CHECKSUMS:
+  TransitionAnimation: 33d7e6addab7ec74bc28b62e75f3cdc0219006b4
+  TransitionTreasury: 135d50ff34c736b3200b356d3b4e198861ca661f
+
+PODFILE CHECKSUM: c575f31201929c2aab224cd8a49d94a4881206a0
+
+COCOAPODS: 1.0.0.beta.4
