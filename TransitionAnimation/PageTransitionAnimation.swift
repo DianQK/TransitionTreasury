@@ -87,7 +87,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             self.maskView.layer.opacity = endOpacity
             fromVC?.view.layer.transform = transform3D
             toVC?.view.layer.position.x = endPositionX + toVC!.view.layer.bounds.width / 2
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     toVC?.view.layer.shadowOpacity = 0

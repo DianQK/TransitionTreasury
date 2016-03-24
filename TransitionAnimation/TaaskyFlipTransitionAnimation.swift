@@ -65,7 +65,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             toVC?.view.layer.transform = endTransform
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 toVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
                 toVC?.view.layer.position = self.positionBackup ?? CGPoint(x: toVC!.view.layer.position.x, y: toVC!.view.layer.position.y - toVC!.view.layer.bounds.height / 2)

@@ -90,9 +90,9 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: (bounce ? 0.8 : 1), initialSpringVelocity: (bounce ? 0.6 : 1), options: .CurveEaseInOut, animations: {
             toVC?.view.layer.frame = finalFrame
             self.maskView.alpha = finalOpacity
-            }, completion: { (finished) -> Void in
+            }) { finished in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-    })
+        }
     
     }
     

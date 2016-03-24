@@ -72,7 +72,7 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC?.view.frame.origin.x = fromVCEndX
             toVC?.view.frame.origin.x = toVCEndX
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     toVC?.view.layer.shadowOpacity = 0

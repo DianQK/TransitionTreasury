@@ -69,7 +69,7 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC?.view.frame.origin.x = fromVCEndOriginX
             toVC?.view.frame.origin.x = toVCEndOriginX
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !transitionContext.transitionWasCancelled() && finished {
                     self.completion?()

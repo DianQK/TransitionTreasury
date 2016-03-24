@@ -82,7 +82,7 @@ public class OMINTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC!.view.layer.position.y -= topHeight
             self.bottomView.layer.position.y += bottomHeight
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 self.bottomView.removeFromSuperview()
                 if !self.cancelPop {

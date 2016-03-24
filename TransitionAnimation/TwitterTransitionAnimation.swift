@@ -66,7 +66,7 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC?.view.layer.transform = transform
             toVC?.view.layer.frame = finalFrame
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if self.transitionStatus == .Dismiss && finished {
                     fromVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)

@@ -144,9 +144,9 @@
 				262924021CA22C2A00A2BDBF /* ScanbotTransitionAnimation.swift */,
 				262924031CA22C2A00A2BDBF /* SlideTransitionAnimation.swift */,
 				262924041CA22C2A00A2BDBF /* TaaskyFlipTransitionAnimation.swift */,
+				262924071CA22C2A00A2BDBF /* TwitterTransitionAnimation.swift */,
 				262924051CA22C2A00A2BDBF /* TransitionAnimationHelper.swift */,
 				262924061CA22C2A00A2BDBF /* TRTransitionAnimations.swift */,
-				262924071CA22C2A00A2BDBF /* TwitterTransitionAnimation.swift */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,7 +540,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.dianqk.TransitionAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.TransitionAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

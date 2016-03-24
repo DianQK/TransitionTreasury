@@ -57,14 +57,14 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         keyView.layer.opacity = 0
         
         func bounce(completion: (() -> Void)? = nil) {
-            UIView.animateWithDuration(0.1, animations: {
+            UIView.animateWithDuration(0.1) {
                 self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame.tr_shape(precent: 0.97), fromView: self.keyView.superview)
-            })
+            }
             UIView.animateWithDuration(0.1, delay: 0.1, options: .CurveEaseInOut, animations: {
                 self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)
-                }, completion: { (finished) -> Void in
+                }) { finished in
                     completion?()
-            })
+            }
         }
         
         if transitionStatus == .Push {
@@ -84,8 +84,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             default :
                 fatalError("You set false status.")
             }
-            }) { (finished) -> Void in
-                
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if finished && !self.cancelPop {
                     toVC?.view.addSubview(self.keyViewCopy)

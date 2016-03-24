@@ -75,7 +75,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
             default :
                 fatalError("You set false status.")
             }
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     if finished {

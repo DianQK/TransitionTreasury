@@ -43,7 +43,7 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             toVC!.view.layer.opacity = 1
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     if finished {

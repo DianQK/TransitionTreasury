@@ -80,7 +80,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             toVC?.view.frame.origin.y = toVCEndY
             fromVC?.view.frame.origin.y = fromVCEndY
-            }) { (finished) -> Void in
+            }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
                 if !self.cancelPop {
                     if finished {
