@@ -16,7 +16,7 @@ import TransitionTreasury
  - Page:          Page Motion
  */
 public enum TRPushTransitionMethod: TransitionAnimationable {
-    case OMIN(keyView: UIView)
+    case OMNI(keyView: UIView)
     case IBanTang(keyView: UIView)
     case Fade
     case Page
@@ -25,8 +25,8 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
     
     public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
-        case let .OMIN(key) :
-            return OMINTransitionAnimation(key: key)
+        case let .OMNI(key) :
+            return OMNITransitionAnimation(key: key)
         case let .IBanTang(key) :
             return IBanTangTransitionAnimation(key: key)
         case .Fade :

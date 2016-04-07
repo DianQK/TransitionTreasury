@@ -12,7 +12,7 @@
 		262924181CA22C3100A2BDBF /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262923FC1CA22C2A00A2BDBF /* ElevateTransitionAnimation.swift */; };
 		262924191CA22C3100A2BDBF /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262923FD1CA22C2A00A2BDBF /* FadeTransitionAnimation.swift */; };
 		2629241A1CA22C3100A2BDBF /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262923FE1CA22C2A00A2BDBF /* IBanTangTransitionAnimation.swift */; };
-		2629241B1CA22C3100A2BDBF /* OMINTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262923FF1CA22C2A00A2BDBF /* OMINTransitionAnimation.swift */; };
+		2629241B1CA22C3100A2BDBF /* OMNITransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262923FF1CA22C2A00A2BDBF /* OMNITransitionAnimation.swift */; };
 		2629241C1CA22C3100A2BDBF /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924001CA22C2A00A2BDBF /* PageTransitionAnimation.swift */; };
 		2629241D1CA22C3100A2BDBF /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924011CA22C2A00A2BDBF /* PopTipTransitionAnimation.swift */; };
 		2629241E1CA22C3100A2BDBF /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262924021CA22C2A00A2BDBF /* ScanbotTransitionAnimation.swift */; };
@@ -64,7 +64,7 @@
 		262923FC1CA22C2A00A2BDBF /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
 		262923FD1CA22C2A00A2BDBF /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		262923FE1CA22C2A00A2BDBF /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
-		262923FF1CA22C2A00A2BDBF /* OMINTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMINTransitionAnimation.swift; sourceTree = "<group>"; };
+		262923FF1CA22C2A00A2BDBF /* OMNITransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMNITransitionAnimation.swift; sourceTree = "<group>"; };
 		262924001CA22C2A00A2BDBF /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
 		262924011CA22C2A00A2BDBF /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
 		262924021CA22C2A00A2BDBF /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				262923FC1CA22C2A00A2BDBF /* ElevateTransitionAnimation.swift */,
 				262923FD1CA22C2A00A2BDBF /* FadeTransitionAnimation.swift */,
 				262923FE1CA22C2A00A2BDBF /* IBanTangTransitionAnimation.swift */,
-				262923FF1CA22C2A00A2BDBF /* OMINTransitionAnimation.swift */,
+				262923FF1CA22C2A00A2BDBF /* OMNITransitionAnimation.swift */,
 				262924001CA22C2A00A2BDBF /* PageTransitionAnimation.swift */,
 				262924011CA22C2A00A2BDBF /* PopTipTransitionAnimation.swift */,
 				262924021CA22C2A00A2BDBF /* ScanbotTransitionAnimation.swift */,
@@ -405,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2629241B1CA22C3100A2BDBF /* OMINTransitionAnimation.swift in Sources */,
+				2629241B1CA22C3100A2BDBF /* OMNITransitionAnimation.swift in Sources */,
 				262924221CA22C3100A2BDBF /* TRTransitionAnimations.swift in Sources */,
 				262924211CA22C3100A2BDBF /* TransitionAnimationHelper.swift in Sources */,
 				2629241E1CA22C3100A2BDBF /* ScanbotTransitionAnimation.swift in Sources */,
