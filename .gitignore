@@ -18,3 +18,5 @@ xcuserdata
 *.mobileprovision
 DerivedData
 Pods
+
+*.xcuserstate
