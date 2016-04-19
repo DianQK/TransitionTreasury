@@ -22,6 +22,11 @@
 * Fade
 * Slide
 
+## [3.0.4](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.4)
+#### Fixed
+* Fix name `ONMI` to `OMNI`
+* Fix Demo BuildFailed
+
 ## [3.0.3](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.3)
 #### Fixed
 * Support Swift 2.2 & Xcode 7.3
