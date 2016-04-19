@@ -1,6 +1,6 @@
 {
   "name": "TransitionTreasury",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -14,29 +14,14 @@
   },
   "source": {
     "git": "https://github.com/DianQK/TransitionTreasury.git",
-    "tag": "3.0.1"
+    "tag": "3.0.3"
   },
-  "default_subspecs": "Core",
+  "source_files": [
+    "TransitionTreasury/*.swift",
+    "TransitionTreasury/*/*.swift"
+  ],
   "platforms": {
     "ios": "8.0"
   },
-  "requires_arc": true,
-  "subspecs": [
-    {
-      "name": "Core",
-      "source_files": [
-        "TransitionTreasury/*.swift",
-        "TransitionTreasury/*Transition/*.swift"
-      ]
-    },
-    {
-      "name": "Animations",
-      "source_files": "TransitionTreasury/TransitionAnimation/*.swift",
-      "dependencies": {
-        "TransitionTreasury/Core": [
-
-        ]
-      }
-    }
-  ]
+  "requires_arc": true
 }

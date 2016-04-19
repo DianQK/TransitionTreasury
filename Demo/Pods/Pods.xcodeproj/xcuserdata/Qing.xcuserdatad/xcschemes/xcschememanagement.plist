@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TransitionAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TransitionTreasury.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5C08AF95E2387CAA628042DDB7B4004A</key>
+		<key>18CE09B799E5FEF1385CAAD3CB4E45EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE2ACFFB771A817B65C0971B1A19F6C0</key>
+		<key>24B39A59DCE7A5CA4A77D2727D37D6EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0B597770CDC6CD2066CB10BFA2C8600</key>
+		<key>962FF07F727000D6D3467FDC540A8514</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF2C7E825929935CA5B9A49627BB7371</key>
 		<dict>
 			<key>primary</key>
 			<true/>

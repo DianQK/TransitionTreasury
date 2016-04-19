@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TransitionAnimation'
-  s.version = '3.0.3'
+  s.version = '3.0.4'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Transition Animation with TransitionTreasury'
   s.homepage = 'https://github.com/DianQK/TransitionTreasury'

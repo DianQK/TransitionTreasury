@@ -5,7 +5,7 @@ use_frameworks!
 # Our Libraries
 def libraries
   pod 'TransitionTreasury', :path => "../"
-  pod 'TransitionTreasury/Animations', :path => "../"
+  pod 'TransitionAnimation', :path => "../"
 end
 
 target 'Demo' do
