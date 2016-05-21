@@ -208,7 +208,7 @@ func modalViewControllerDismiss(callbackData data:AnyObject?)
 
 ## Advanced Usage
 
-### Create Your Transition Enum (Recommend!!!!)
+### Create Your Transition Enum (Recommended!!!!)
 
 Maybe like this:
 
@@ -240,20 +240,20 @@ tr_pushViewController(viewController: viewController, method: DemoTransition.Fad
 tr_presentViewController(viewControllerToPresent: viewController, method: DemoTransition.TwitterPresent)
 ```
 
-Well, you can create your animation, see **Custom Animation**.
+Well, you can create your own animation, see **Custom Animation**.
 
 ### Custom Animation   
 
-Just conform `TRViewControllerAnimatedTransitioning`. If you need interactive, conform `TransitionInteractiveable`.
+Just conform to `TRViewControllerAnimatedTransitioning`. If you need interactive functionality, conform to `TransitionInteractiveable`.
 
-About write your animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I am happy that you will share your animation for this project.
-Also, you can see `TransitionTreasury/TransitionAnimation`, there are some Animations. You can write follow this.  
+About writing your own animation, you can read [Animation-Guide](https://github.com/DianQK/TransitionTreasury/wiki/Animation-Guide), I would be happy if you would share your animation for this project.
+Also, check out `TransitionTreasury/TransitionAnimation`, there are some Animations there. You can write follow this.  
 
 ### Status Bar Style     
 
-If you want to update status bar style, you should add key `View controller-based status bar appearance` in **info.plist**, and set value is `false`.   
+If you want to update the status bar style, you should add the key `View controller-based status bar appearance` in your **info.plist**, and set its value to `false`.   
 
-Then like **Basic Usage**, just add param `statusBarStyle`:       
+Then, like in **Basic Usage**, just add param `statusBarStyle`:       
 
 ```swift
 // Push & Pop
@@ -288,7 +288,7 @@ func interactiveTransition(sender: UIPanGestureRecognizer) {
 
 ### TabBar Transition Animation
 
-Just Add this code:
+Just add this code:
 
 ```swift
 tabBarController.tr_transitionDelegate = TRTabBarTransitionDelegate(method: TRTabBarTransitionDelegate.Slide)
