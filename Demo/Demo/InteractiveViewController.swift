@@ -39,7 +39,7 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate, Navg
 	func interactiveTransition(sender: UIPanGestureRecognizer) {
 		switch sender.state {
 		case .Began:
-			guard sender.translationInView(view).y > 0 else {
+			guard sender.velocityInView(view).y > 0 else {
 				break
 			}
 			let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
