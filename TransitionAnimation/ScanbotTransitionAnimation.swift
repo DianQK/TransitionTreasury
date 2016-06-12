@@ -100,47 +100,46 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
 
         let fromVC = transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
 
-        let view = fromVC!.view
-        
-        let offsetY: CGFloat = transitionStatus == .Present ? sender.translationInView(view).y : -sender.translationInView(view).y
-        
-        var percent = offsetY / view.bounds.size.height
-        
-        percent = min(1.0, max(0, percent))
-        
-        percentTransition = percentTransition ?? {
-            let percentTransition = UIPercentDrivenInteractiveTransition()
-            percentTransition.startInteractiveTransition(transitionContext!)
-            return percentTransition
-        }()
-        
-        switch sender.state {
-        case .Began :
-            interacting = true
-        case .Changed :
-            interacting = true
-            percentTransition?.updateInteractiveTransition(percent)
-        default :
-            interacting = false
-            if percent > interactivePrecent {
-                cancelPop = false
-                percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
-                percentTransition?.finishInteractiveTransition()
-                switch transitionStatus {
-                case .Present :
-                    presentPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
-                case .Dismiss :
-                    dismissPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
-                    percentTransition = nil
-                default : break
+        // check to see if vc is not nil
+        if let view = fromVC?.view {
+            let offsetY: CGFloat = transitionStatus == .Present ? sender.translationInView(view).y : -sender.translationInView(view).y
+            
+            var percent = offsetY / view.bounds.size.height
+            
+            percent = min(1.0, max(0, percent))
+            
+            percentTransition = percentTransition ?? {
+                let percentTransition = UIPercentDrivenInteractiveTransition()
+                percentTransition.startInteractiveTransition(transitionContext!)
+                return percentTransition
+                }()
+            
+            switch sender.state {
+            case .Began :
+                interacting = true
+            case .Changed :
+                interacting = true
+                percentTransition?.updateInteractiveTransition(percent)
+            default :
+                interacting = false
+                if percent > interactivePrecent {
+                    cancelPop = false
+                    percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
+                    percentTransition?.finishInteractiveTransition()
+                    switch transitionStatus {
+                    case .Present :
+                        presentPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
+                    case .Dismiss :
+                        dismissPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
+                        percentTransition = nil
+                    default : break
+                    }
+                } else {
+                    cancelPop = true
+                    percentTransition?.cancelInteractiveTransition()
+                    percentTransition = UIPercentDrivenInteractiveTransition()
                 }
-            } else {
-                cancelPop = true
-                percentTransition?.cancelInteractiveTransition()
-                percentTransition = UIPercentDrivenInteractiveTransition()
             }
         }
-
     }
-    
 }
