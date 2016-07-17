@@ -26,14 +26,14 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         
         let containView = transitionContext.containerView()
         
@@ -55,15 +55,15 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         toVC?.view.layer.position = CGPoint(x: toVC!.view.layer.position.x + toVC!.view.layer.bounds.width / 2, y: toVC!.view.layer.position.y)
         toVC?.view.layer.transform = startTransform
         
-        containView?.addSubview(fromVC!.view)
+        containView.addSubview(fromVC!.view)
         if blurEffect && (transitionStatus == .Present) {
             let effectView = UIVisualEffectView(frame: fromVC!.view.frame)
-            effectView.effect = UIBlurEffect(style: .Dark)
-            containView?.addSubview(effectView)
+            effectView.effect = UIBlurEffect(style: .dark)
+            containView.addSubview(effectView)
         }
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(toVC!.view)
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             toVC?.view.layer.transform = endTransform
             }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())

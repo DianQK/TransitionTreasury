@@ -9,22 +9,20 @@
 import UIKit
 
 public protocol TRTabBarControllerDelegate: class, NSObjectProtocol {
-    @available(iOS 3.0, *)
-    func tr_tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool
-    @available(iOS 2.0, *)
-    func tr_tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController)
-    
-    @available(iOS 3.0, *)
-    func tr_tabBarController(tabBarController: UITabBarController, willBeginCustomizingViewControllers viewControllers: [UIViewController])
-    @available(iOS 3.0, *)
-    func tr_tabBarController(tabBarController: UITabBarController, willEndCustomizingViewControllers viewControllers: [UIViewController], changed: Bool)
-    @available(iOS 2.0, *)
-    func tr_tabBarController(tabBarController: UITabBarController, didEndCustomizingViewControllers viewControllers: [UIViewController], changed: Bool)
-    
-    @available(iOS 7.0, *)
-    func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask
-    @available(iOS 7.0, *)
-    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation
+
+    func tr_tabBarController(_ tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool
+
+    func tr_tabBarController(_ tabBarController: UITabBarController, didSelectViewController viewController: UIViewController)
+
+    func tr_tabBarController(_ tabBarController: UITabBarController, willBeginCustomizingViewControllers viewControllers: [UIViewController])
+
+    func tr_tabBarController(_ tabBarController: UITabBarController, willEndCustomizingViewControllers viewControllers: [UIViewController], changed: Bool)
+
+    func tr_tabBarController(_ tabBarController: UITabBarController, didEndCustomizingViewControllers viewControllers: [UIViewController], changed: Bool)
+
+    func tr_tabBarControllerSupportedInterfaceOrientations(_ tabBarController: UITabBarController) -> UIInterfaceOrientationMask
+
+    func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(_ tabBarController: UITabBarController) -> UIInterfaceOrientation
 
 }
 
@@ -51,11 +49,11 @@ public extension TRTabBarControllerDelegate {
     }
     
     func tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
-        return UIApplication.sharedApplication().supportedInterfaceOrientationsForWindow(nil)
+        return UIApplication.shared().supportedInterfaceOrientations(for: nil)
     }
 
     func tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: UITabBarController) -> UIInterfaceOrientation {
-        return UIInterfaceOrientation.Unknown
+        return UIInterfaceOrientation.unknown
     }
     
 }

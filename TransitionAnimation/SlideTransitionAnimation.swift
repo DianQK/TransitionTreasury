@@ -18,7 +18,7 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     public var gestureRecognizer: UIGestureRecognizer? {
         didSet {
-            gestureRecognizer?.addTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(_:)))
+            gestureRecognizer?.addTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(sender:)))
         }
     }
     
@@ -35,38 +35,38 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         guard let tabBarController = fromVC?.tabBarController else { fatalError("No TabBarController.") }
-        guard let fromVCIndex = tabBarController.viewControllers?.indexOf(fromVC!), toVCIndex = tabBarController.viewControllers?.indexOf(toVC!) else {
+        guard let fromVCIndex = tabBarController.viewControllers?.index(of: fromVC!), toVCIndex = tabBarController.viewControllers?.index(of: toVC!) else {
             fatalError("VC not in TabBarController.")
         }
         
         let fromVCStartOriginX: CGFloat = 0
-        var fromVCEndOriginX: CGFloat = -UIScreen.mainScreen().bounds.width
-        var toVCStartOriginX: CGFloat = UIScreen.mainScreen().bounds.width
+        var fromVCEndOriginX: CGFloat = -UIScreen.main().bounds.width
+        var toVCStartOriginX: CGFloat = UIScreen.main().bounds.width
         let toVCEndOriginX: CGFloat = 0
         
-        tabBarTransitionDirection = TabBarTransitionDirection.TransitionDirection(fromVCIndex, toVCIndex: toVCIndex)
+        tabBarTransitionDirection = TabBarTransitionDirection.TransitionDirection(fromVCindex: fromVCIndex, toVCIndex: toVCIndex)
         
         if tabBarTransitionDirection == .Left {
             swap(&fromVCEndOriginX, &toVCStartOriginX)
         }
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         
         fromVC?.view.frame.origin.x = fromVCStartOriginX
         toVC?.view.frame.origin.x = toVCStartOriginX
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             fromVC?.view.frame.origin.x = fromVCEndOriginX
             toVC?.view.frame.origin.x = toVCEndOriginX
             }) { finished in
@@ -82,27 +82,27 @@ public class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         
         guard let view = sender.view else { return }
         
-        let offsetX = tabBarTransitionDirection == .Left ? sender.translationInView(view).x : -sender.translationInView(view).x
+        let offsetX = tabBarTransitionDirection == .Left ? sender.translation(in: view).x : -sender.translation(in: view).x
         
         var percent = offsetX / view.bounds.size.width
         
         percent = min(1.0, max(0, percent))
         
         switch sender.state {
-        case .Began :
+        case .began :
             percentTransition.startInteractiveTransition(transitionContext!)
             interacting = true
-        case .Changed :
+        case .changed :
             interacting = true
-            percentTransition.updateInteractiveTransition(percent)
+            percentTransition.update(percent)
         default :
             interacting = false
             if percent > interactivePrecent {
                 percentTransition.completionSpeed = 1.0 - percentTransition.percentComplete
-                percentTransition.finishInteractiveTransition()
-                gestureRecognizer?.removeTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(_:)))
+                percentTransition.finish()
+                gestureRecognizer?.removeTarget(self, action: #selector(SlideTransitionAnimation.interactiveTransition(sender:)))
             } else {
-                percentTransition.cancelInteractiveTransition()
+                percentTransition.cancel()
             }
         }
     }

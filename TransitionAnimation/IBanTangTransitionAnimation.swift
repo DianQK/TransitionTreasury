@@ -32,38 +32,38 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
         let lightMaskLayer: CALayer = {
             let layer =  CALayer()
-            layer.frame = CGRect(origin: CGPointZero, size: toVC!.view.bounds.size)
-            layer.backgroundColor = toVC!.view.backgroundColor?.CGColor
+            layer.frame = CGRect(origin: CGPoint.zero, size: toVC!.view.bounds.size)
+            layer.backgroundColor = toVC!.view.backgroundColor?.cgColor
             let maskAnimation = CABasicAnimation(tr_keyPath: .opacity)
             maskAnimation.fromValue = 0
             maskAnimation.toValue = 1
-            maskAnimation.duration = transitionDuration(transitionContext)
-            layer.addAnimation(maskAnimation, forKey: "")
+            maskAnimation.duration = transitionDuration(using: transitionContext)
+            layer.add(maskAnimation, forKey: "")
             return layer
         }()
         
-        containView?.addSubview(toVC!.view)
-        containView?.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
 
         if transitionStatus == .Push {
-            containView?.layer.addSublayer(lightMaskLayer)
-            keyViewCopy.layer.position = containView!.convertPoint(keyView.layer.position, fromView: keyView.superview)
-            containView?.addSubview(keyViewCopy)
+            containView.layer.addSublayer(lightMaskLayer)
+            keyViewCopy.layer.position = containView.convert(keyView.layer.position, from: keyView.superview)
+            containView.addSubview(keyViewCopy)
         }
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             switch self.transitionStatus {
             case .Push :
                 self.keyViewCopy.layer.position.y = self.keyViewCopy.layer.bounds.height / 2
@@ -71,7 +71,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
             case .Pop where self.interacting == false :
                 fromVC!.view.layer.opacity = 0
-                self.keyViewCopy.layer.position = containView!.convertPoint(self.keyView.layer.position, fromView: self.keyView.superview)
+                self.keyViewCopy.layer.position = containView.convert(self.keyView.layer.position, from: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }

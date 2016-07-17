@@ -22,7 +22,7 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
 
     public var interacting: Bool = false
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
@@ -31,17 +31,17 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         super.init()
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         toVC!.view.layer.opacity = 0
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             toVC!.view.layer.opacity = 1
             }) { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled())

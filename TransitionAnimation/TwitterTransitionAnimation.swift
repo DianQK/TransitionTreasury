@@ -26,24 +26,24 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         
         let containView = transitionContext.containerView()
-        let screenBounds = UIScreen.mainScreen().bounds
+        let screenBounds = UIScreen.main().bounds
         var angle = M_PI/48
         var transform = CATransform3DIdentity
         transform.m34 = -1.0/500.0
         
         transformBackup = fromVC?.view.layer.transform
         
-        var startFrame = CGRectOffset(screenBounds, 0, screenBounds.size.height)
+        var startFrame = screenBounds.offsetBy(dx: 0, dy: screenBounds.size.height)
         var finalFrame = screenBounds
         
         if transitionStatus == .Dismiss {
@@ -60,10 +60,10 @@ public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         
         toVC?.view.layer.frame = startFrame
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             fromVC?.view.layer.transform = transform
             toVC?.view.layer.frame = finalFrame
             }) { finished in

@@ -39,18 +39,18 @@ public extension ViewControllerTransitionable where Self: UIViewController {
         /**
         *  http://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again
         */
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async { 
             if transitionDelegate.transition.completion != nil { // Choose who deal completion
-                self.presentViewController(viewControllerToPresent, animated: true, completion: nil)
+                self.present(viewControllerToPresent, animated: true, completion: nil)
             } else {
-                self.presentViewController(viewControllerToPresent, animated: true, completion: fullCompletion)
+                self.present(viewControllerToPresent, animated: true, completion: fullCompletion)
             }
-            });
+        }
     }
     /**
      Transition treasury dismiss ViewController.
      */
-    public func tr_dismissViewController(interactive interactive: Bool = false, completion: (() -> Void)? = nil) {
+    public func tr_dismissViewController(interactive: Bool = false, completion: (() -> Void)? = nil) {
         let transitionDelegate = tr_presentTransition
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive
@@ -63,9 +63,9 @@ public extension ViewControllerTransitionable where Self: UIViewController {
         }
         transitionDelegate?.transition.completion = fullCompletion
         if transitionDelegate?.transition.completion != nil {
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         } else {
-            dismissViewControllerAnimated(true, completion: fullCompletion)
+            dismiss(animated: true, completion: fullCompletion)
         }
     }
 }
@@ -81,14 +81,14 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      
      - parameter data: callback data
      */
-    func modalViewControllerDismiss(interactive interactive: Bool, callbackData data:AnyObject?)
+    func modalViewControllerDismiss(interactive: Bool, callbackData data:AnyObject?)
     func modalViewControllerDismiss(callbackData data:AnyObject?)
 }
 
 
 // MARK: - Implement dismiss
 public extension ModalViewControllerDelegate where Self: ViewControllerTransitionable, Self: UIViewController {
-    func modalViewControllerDismiss(interactive interactive: Bool = false, callbackData data:AnyObject? = nil) {
+    func modalViewControllerDismiss(interactive: Bool = false, callbackData data:AnyObject? = nil) {
         if data != nil {
             debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:_:)` to get data.")
         }

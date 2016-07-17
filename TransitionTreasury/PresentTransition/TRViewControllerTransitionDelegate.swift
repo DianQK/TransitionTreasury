@@ -44,14 +44,14 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
         return transition
     }
     
-    public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         guard let transition = transition as? TransitionInteractiveable else {
             return nil
         }
         return transition.interacting ? transition.percentTransition : nil
     }
     
-    public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         guard let transition = transition as? TransitionInteractiveable else {
             return nil
         }

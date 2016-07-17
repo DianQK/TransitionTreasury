@@ -35,33 +35,33 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
         let leftX: CGFloat = 0
-        let rightX = UIScreen.mainScreen().bounds.width
+        let rightX = UIScreen.main().bounds.width
         
         fromVC?.view.layer.frame.origin.x = leftX
         toVC?.view.layer.frame.origin.x = transitionStatus == .Push ? rightX : -rightX
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
-        containView?.tr_addSubview(keyViewCopy, convertFrom: (transitionStatus == .Push ? keyView : keyViewCopy))
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
+        containView.tr_addSubview(view: keyViewCopy, convertFrom: (transitionStatus == .Push ? keyView : keyViewCopy))
         keyView.layer.opacity = 0
         
         func bounce(completion: (() -> Void)? = nil) {
-            UIView.animateWithDuration(0.1) {
-                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame.tr_shape(precent: 0.97), fromView: self.keyView.superview)
+            UIView.animate(withDuration: 0.1) {
+                self.keyViewCopy.frame = containView.convert(self.keyView.frame.tr_shape(precent: 0.97), from: self.keyView.superview)
             }
-            UIView.animateWithDuration(0.1, delay: 0.1, options: .CurveEaseInOut, animations: {
-                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)
+            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseInOut, animations: {
+                self.keyViewCopy.frame = containView.convert(self.keyView.frame, from: self.keyView.superview)
                 }) { finished in
                     completion?()
             }
@@ -71,7 +71,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             bounce()
         }
         
-        UIView.animateWithDuration(transitionDuration(transitionContext) - 0.2, delay: 0.2, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext) - 0.2, delay: 0.2, options: .curveEaseInOut, animations: {
             switch self.transitionStatus {
             case .Push :
                 fromVC?.view.layer.frame.origin.x = -rightX
@@ -80,7 +80,7 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
             case .Pop :
                 fromVC?.view.layer.frame.origin.x = rightX
                 toVC?.view.layer.frame.origin.x = leftX
-                self.keyViewCopy.frame = containView!.convertRect(self.keyView.frame, fromView: self.keyView.superview)
+                self.keyViewCopy.frame = containView.convert(self.keyView.frame, from: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }

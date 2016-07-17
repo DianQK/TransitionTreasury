@@ -32,8 +32,8 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     /// The edge gesture for pop
     lazy var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
-        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TRNavgationTransitionDelegate.tr_edgePan(_:)))
-        edgePanGestureRecognizer.edges = .Left
+        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TRNavgationTransitionDelegate.tr_edgePan(recognizer:)))
+        edgePanGestureRecognizer.edges = .left
         return edgePanGestureRecognizer
     }()
     /**
@@ -53,15 +53,15 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         }
     }
     
-    public func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
-        case .Push :
+        case .push :
             transition.transitionStatus = .Push
             return transition
-        case .Pop :
+        case .pop :
             transition.transitionStatus = .Pop
             return transition
-        case .None :
+        case .none :
             return nil
         }
     }
@@ -75,7 +75,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         return transition.interacting ? transition.percentTransition : nil
     }
     
-    public func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         switch transition.transitionStatus {
         case .Push :
             currentStatusBarStyle?.updateStatusBarStyle()
@@ -88,37 +88,38 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     
     public func tr_edgePan(recognizer: UIPanGestureRecognizer) {
         
-        let fromVC = transition.transitionContext?.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transition.transitionContext?.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let fromVC = transition.transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let toVC = transition.transitionContext?.viewController(forKey: UITransitionContextToViewControllerKey)
         
         guard var transition = transition as? TransitionInteractiveable else {
             return
         }
+        guard let view = fromVC?.view else {
+            return
+        }
         
-        let view = fromVC!.view
-        
-        var percent = recognizer.translationInView(view).x / view.bounds.size.width
+        var percent = recognizer.translation(in: view).x / view.bounds.size.width
         
         percent = min(1.0, max(0, percent))
 
         switch recognizer.state {
-        case .Began :
+        case .began :
             transition.interacting = true
             transition.percentTransition = UIPercentDrivenInteractiveTransition()
             transition.percentTransition?.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
             toVC!.navigationController!.tr_popViewController()
-        case .Changed :
-            transition.percentTransition?.updateInteractiveTransition(percent)
+        case .changed :
+            transition.percentTransition?.update(percent)
         default :
             transition.interacting = false
             if percent > transition.interactivePrecent {
                 transition.cancelPop = false
                 transition.percentTransition?.completionSpeed = 1.0 - transition.percentTransition!.percentComplete
-                transition.percentTransition?.finishInteractiveTransition()
+                transition.percentTransition?.finish()
                 fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
-                transition.percentTransition?.cancelInteractiveTransition()
+                transition.percentTransition?.cancel()
             }
             transition.percentTransition = nil
         }

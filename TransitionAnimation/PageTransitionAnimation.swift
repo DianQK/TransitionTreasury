@@ -29,8 +29,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     private var shadowPathBackup: CGPath?
     
     private lazy var maskView: UIView = {
-        let maskView = UIView(frame: UIScreen.mainScreen().bounds)
-        maskView.backgroundColor = UIColor.blackColor()
+        let maskView = UIView(frame: UIScreen.main().bounds)
+        maskView.backgroundColor = UIColor.black()
         return maskView
     }()
     
@@ -39,17 +39,17 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-        var startPositionX: CGFloat = UIScreen.mainScreen().bounds.width
+        var startPositionX: CGFloat = UIScreen.main().bounds.width
         var endPositionX: CGFloat = 0
         
         var startOpacity: Float = 0
@@ -68,8 +68,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             transform3D = CATransform3DTranslate(transform3D, 0, 0, -35)
         }
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         fromVC?.view.addSubview(maskView)
         
         maskView.layer.opacity = startOpacity
@@ -81,9 +81,9 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         toVC?.view.layer.shadowOpacity = 0.5
         toVC?.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         toVC?.view.layer.shadowRadius = 5
-        toVC?.view.layer.shadowPath = CGPathCreateWithRect(toVC!.view.layer.bounds, nil)
+        toVC?.view.layer.shadowPath = CGPath(rect: toVC!.view.layer.bounds, transform: nil)
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             self.maskView.layer.opacity = endOpacity
             fromVC?.view.layer.transform = transform3D
             toVC?.view.layer.position.x = endPositionX + toVC!.view.layer.bounds.width / 2
@@ -99,7 +99,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                         toVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
                         toVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
                         toVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
-                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPathCreateWithRect(CGRectZero, nil)
+                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPath(rect: CGRect.zero, transform: nil)
                         self.completion?()
                         self.completion = nil
                     }

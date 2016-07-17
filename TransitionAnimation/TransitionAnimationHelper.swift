@@ -60,7 +60,7 @@ public extension CGSize {
         case true :
             return self
         case false :
-            return tr_widthFit(width)
+            return tr_widthFit(width: width)
         }
     }
     /**
@@ -71,7 +71,7 @@ public extension CGSize {
         case true :
             return self
         case false :
-            return tr_heightFit(height)
+            return tr_heightFit(height: height)
         }
     }
 }
@@ -89,15 +89,15 @@ public extension CGRect {
     /** 
      Return a rectangle that precent the source rectangle, with the same center point.
      */
-    public func tr_shape(precent precent: CGFloat) -> CGRect {
-        return CGRectInset(self, width * (1 - precent), height * (1 - precent))
+    public func tr_shape(precent: CGFloat) -> CGRect {
+        return self.insetBy(dx: width * (1 - precent), dy: height * (1 - precent))
     }
     /**
      Just F**k Xcode.
      */
     public var tr_ns_value: NSValue {
         get {
-            return NSValue(CGRect: self)
+            return NSValue(cgRect: self)
         }
     }
 }
@@ -118,15 +118,15 @@ public extension UIView {
      Create copy snapshot view.
      */
     public func tr_copyWithSnapshot() -> UIView {
-        let view = snapshotViewAfterScreenUpdates(false)
-        view.frame = frame
-        return view
+        let view = snapshotView(afterScreenUpdates: false)
+        view?.frame = frame
+        return view!
     }
     /**
      Add view with convert point.
      */
     public func tr_addSubview(view: UIView, convertFrom fromView: UIView) {
-        view.layer.position = convertPoint(fromView.layer.position, fromView: fromView.superview)
+        view.layer.position = convert(fromView.layer.position, from: fromView.superview)
         addSubview(view)
     }
     
@@ -138,7 +138,7 @@ public extension CATransform3D {
      */
     public var tr_ns_value: NSValue {
         get {
-            return NSValue(CATransform3D: self)
+            return NSValue(caTransform3D: self)
         }
     }
 }

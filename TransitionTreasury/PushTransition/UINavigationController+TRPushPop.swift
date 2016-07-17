@@ -25,26 +25,27 @@ public extension UINavigationController {
     /**
      Transition treasury pop viewController.
      */
+    @discardableResult
     public func tr_popViewController(completion: (() -> Void)? = nil) -> UIViewController? {
         let transitionDelegate = (topViewController as? NavgationTransitionable)?.tr_pushTransition
-        let popViewController = topViewController
-        transitionDelegate?.completion = {
+        transitionDelegate?.completion = { [weak self] in
             completion?()
-            (popViewController as? NavgationTransitionable)?.tr_pushTransition = nil
+            (self?.topViewController as? NavgationTransitionable)?.tr_pushTransition = nil
         }
         delegate = transitionDelegate
-        return popViewControllerAnimated(true)
+        
+        return popViewController(animated: true)
     }
     /**
      Transition treasury pop to viewController.
      */
     public func tr_popToViewController<T: UIViewController where T: NavgationTransitionable>(viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? {
-        guard let index = viewControllers.indexOf(viewController) else {
+        guard let index = viewControllers.index(of: viewController) else {
             fatalError("No this viewController for pop!!!")
         }
         let transitionDelegate = viewController.tr_pushTransition
         transitionDelegate?.completion = completion
-        transitionDelegate?.transition.popToVCIndex(index)
+        transitionDelegate?.transition.popToVCIndex(index: index)
         delegate = transitionDelegate
         return {
             popToViewController(viewController, animated: true)?.flatMap({ (viewController) -> UIViewController? in
@@ -58,14 +59,14 @@ public extension UINavigationController {
      */
     public func tr_popToRootViewController(completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard viewControllers.count > 1 else {
-            return popToRootViewControllerAnimated(true)
+            return popToRootViewController(animated: true)
         }
         let transitionDelegate = (viewControllers[1] as? NavgationTransitionable)?.tr_pushTransition
         transitionDelegate?.completion = completion
-        transitionDelegate?.transition.popToVCIndex(0)
+        transitionDelegate?.transition.popToVCIndex(index: 0)
         delegate = transitionDelegate
         return {
-            popToRootViewControllerAnimated(true)?.flatMap({ (viewController) -> UIViewController? in
+            popToRootViewController(animated: true)?.flatMap({ (viewController) -> UIViewController? in
                 (viewController as? NavgationTransitionable)?.tr_pushTransition = nil
                 return viewController
             })

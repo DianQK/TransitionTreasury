@@ -19,24 +19,24 @@ public enum TRStatusBarStyle {
     func updateStatusBarStyle(animated: Bool = true) {
         switch self {
         case .Default :
-            UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
-            UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: animated)
+            UIApplication.shared().setStatusBarHidden(false, with: .fade)
+            UIApplication.shared().setStatusBarStyle(.default, animated: animated)
         case .LightContent :
-            UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
-            UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: animated)
+            UIApplication.shared().setStatusBarHidden(false, with: .fade)
+            UIApplication.shared().setStatusBarStyle(.lightContent, animated: animated)
         case .Hide :
-            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+            UIApplication.shared().setStatusBarHidden(true, with: .fade)
         }
     }
     
-    static func ConvertToTRStatusBarStyle(statusBarStyle: UIStatusBarStyle, statusBarHidden: Bool = UIApplication.sharedApplication().statusBarHidden) -> TRStatusBarStyle {
+    static func ConvertToTRStatusBarStyle(statusBarStyle: UIStatusBarStyle, statusBarHidden: Bool = UIApplication.shared().isStatusBarHidden) -> TRStatusBarStyle {
         guard statusBarHidden == false else {
             return .Hide
         }
         switch statusBarStyle {
-        case .LightContent :
+        case .lightContent :
             return .LightContent
-        case .Default :
+        case .default :
             return .Default
         default :
             fatalError("No support this status bar style")
@@ -44,6 +44,6 @@ public enum TRStatusBarStyle {
     }
     
     static func CurrentlyTRStatusBarStyle() -> TRStatusBarStyle {
-        return ConvertToTRStatusBarStyle(UIApplication.sharedApplication().statusBarStyle)
+        return ConvertToTRStatusBarStyle(statusBarStyle: UIApplication.shared().statusBarStyle)
     }
 }

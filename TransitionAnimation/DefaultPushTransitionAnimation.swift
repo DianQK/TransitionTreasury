@@ -32,20 +32,20 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
         super.init()
     }
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
         var fromVCStartX: CGFloat = 0
-        var fromVCEndX = -UIScreen.mainScreen().bounds.width/3
+        var fromVCEndX = -UIScreen.main().bounds.width/3
         
-        var toVCStartX = UIScreen.mainScreen().bounds.width
+        var toVCStartX = UIScreen.main().bounds.width
         var toVCEndX: CGFloat = 0
         
         if transitionStatus == .Pop {
@@ -54,8 +54,8 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
             swap(&toVCStartX, &toVCEndX)
         }
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         
         fromVC?.view.frame.origin.x = fromVCStartX
         
@@ -67,9 +67,9 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
         toVC?.view.layer.shadowOpacity = 0.3
         toVC?.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         toVC?.view.layer.shadowRadius = 5
-        toVC?.view.layer.shadowPath = CGPathCreateWithRect(toVC!.view.layer.bounds, nil)
+        toVC?.view.layer.shadowPath = CGPath(rect: toVC!.view.layer.bounds, transform: nil)
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             fromVC?.view.frame.origin.x = fromVCEndX
             toVC?.view.frame.origin.x = toVCEndX
             }) { finished in
@@ -80,7 +80,7 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
                         toVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
                         toVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
                         toVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
-                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPathCreateWithRect(CGRectZero, nil)
+                        toVC?.view.layer.shadowPath = self.shadowPathBackup ?? CGPath(rect: CGRect.zero, transform: nil)
                         self.completion?()
                         self.completion = nil
                     }
