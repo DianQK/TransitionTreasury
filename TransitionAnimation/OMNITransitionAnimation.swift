@@ -53,7 +53,7 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         
         if transitionStatus == .Push {
             
-            topHeight = containView!.convertPoint(keyView.layer.position, fromView: keyView.superview).y + keyView.layer.bounds.size.height / 2
+            topHeight = containView.convertPoint(keyView.layer.position, fromView: keyView.superview).y + keyView.layer.bounds.size.height / 2
             bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
             
             bottomView.frame = CGRect(x: 0, y: topHeight, width: fromVC!.view.layer.bounds.size.width, height: bottomHeight)
@@ -64,7 +64,7 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                 let image = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
                 let inRect = CGRect(x: 0, y: topHeight * scale, width: fromVC!.view.layer.bounds.size.width * scale, height: bottomHeight * scale)
-                let clip = CGImageCreateWithImageInRect(image.CGImage,inRect)
+                let clip = CGImageCreateWithImageInRect(image!.CGImage!,inRect)
                 return clip
                 }()
             
@@ -75,9 +75,9 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             topHeight = -topHeight
             bottomHeight = -bottomHeight
         }
-        containView?.addSubview(toVC!.view)
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(bottomView)
+        containView.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(bottomView)
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
             fromVC!.view.layer.position.y -= topHeight

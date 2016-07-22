@@ -54,13 +54,13 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
             return layer
         }()
         
-        containView?.addSubview(toVC!.view)
-        containView?.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
 
         if transitionStatus == .Push {
-            containView?.layer.addSublayer(lightMaskLayer)
-            keyViewCopy.layer.position = containView!.convertPoint(keyView.layer.position, fromView: keyView.superview)
-            containView?.addSubview(keyViewCopy)
+            containView.layer.addSublayer(lightMaskLayer)
+            keyViewCopy.layer.position = containView.convertPoint(keyView.layer.position, fromView: keyView.superview)
+            containView.addSubview(keyViewCopy)
         }
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
@@ -71,7 +71,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
             case .Pop where self.interacting == false :
                 fromVC!.view.layer.opacity = 0
-                self.keyViewCopy.layer.position = containView!.convertPoint(self.keyView.layer.position, fromView: self.keyView.superview)
+                self.keyViewCopy.layer.position = containView.convertPoint(self.keyView.layer.position, fromView: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }

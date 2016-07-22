@@ -60,7 +60,7 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         var startOpacity: CGFloat = 0
         var finalOpacity: CGFloat = 0.3
         
-        containView?.addSubview(fromVC!.view)
+        containView.addSubview(fromVC!.view)
         
         if transitionStatus == .Dismiss {
             swap(&fromVC, &toVC)
@@ -74,10 +74,10 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
                 fromVC!.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
                 let image = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext()
-                return image.CGImage
+                return image!.CGImage
                 }()
             bottomView.addGestureRecognizer(tapGestureRecognizer)
-            containView?.addSubview(bottomView)
+            containView.addSubview(bottomView)
             maskView.frame = screenBounds
             maskView.alpha = startOpacity
             bottomView.addSubview(maskView)
@@ -86,7 +86,7 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         
         toVC?.view.layer.frame = startFrame
         
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(toVC!.view)
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, usingSpringWithDamping: (bounce ? 0.8 : 1), initialSpringVelocity: (bounce ? 0.6 : 1), options: .CurveEaseInOut, animations: {
             toVC?.view.layer.frame = finalFrame
             self.maskView.alpha = finalOpacity

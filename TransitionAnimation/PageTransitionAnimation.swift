@@ -68,8 +68,8 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             transform3D = CATransform3DTranslate(transform3D, 0, 0, -35)
         }
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         fromVC?.view.addSubview(maskView)
         
         maskView.layer.opacity = startOpacity

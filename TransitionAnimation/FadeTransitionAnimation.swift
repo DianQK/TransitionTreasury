@@ -37,8 +37,8 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let containView = transitionContext.containerView()
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         toVC!.view.layer.opacity = 0
         
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
