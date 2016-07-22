@@ -54,8 +54,8 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
             swap(&toVCStartX, &toVCEndX)
         }
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         
         fromVC?.view.frame.origin.x = fromVCStartX
         

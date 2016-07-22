@@ -89,7 +89,7 @@ public extension CGRect {
     /** 
      Return a rectangle that precent the source rectangle, with the same center point.
      */
-    public func tr_shape(precent precent: CGFloat) -> CGRect {
+    public func tr_shape(precent: CGFloat) -> CGRect {
         return CGRectInset(self, width * (1 - precent), height * (1 - precent))
     }
     /**
@@ -119,8 +119,8 @@ public extension UIView {
      */
     public func tr_copyWithSnapshot() -> UIView {
         let view = snapshotViewAfterScreenUpdates(false)
-        view.frame = frame
-        return view
+        view!.frame = frame
+        return view!
     }
     /**
      Add view with convert point.

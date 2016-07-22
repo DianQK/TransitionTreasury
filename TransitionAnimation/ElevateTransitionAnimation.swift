@@ -8,7 +8,7 @@
 
 import TransitionTreasury
 /// Like Elevate
-public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, CAAnimationDelegate {
     
     public var transitionStatus: TransitionStatus
     
@@ -74,8 +74,8 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskViewCopy.layer.position = endPosition
         
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         toVC?.view.addSubview(maskViewCopy)
         toVC?.view.layer.mask = maskLayer
 
@@ -101,7 +101,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         animationCount += 1
     }
     
-    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         animationCount -= 1
         if animationCount == 0 {
             transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled())

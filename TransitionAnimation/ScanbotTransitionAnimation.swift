@@ -69,8 +69,8 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             swap(&toVCStartY, &toVCEndY)
         }
         
-        containView?.addSubview(toVC!.view)
-        containView?.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
         toVC?.view.frame.origin.y =  toVCStartY
         fromVC?.view.frame.origin.y = fromVCStartY
         fromVC?.view.layer.shadowOpacity = 0.5
