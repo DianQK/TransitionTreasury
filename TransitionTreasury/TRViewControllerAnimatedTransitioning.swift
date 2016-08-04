@@ -22,7 +22,7 @@ public protocol TRViewControllerAnimatedTransitioning: UIViewControllerAnimatedT
      
      - parameter index: index of navgationViewController.viewcontrollers
      */
-    func popToVCIndex(index: Int)
+    func popToVCIndex(_ index: Int)
 }
 
 public protocol TransitionInteractiveable {
@@ -49,7 +49,7 @@ public extension TRViewControllerAnimatedTransitioning {
         set {}
     }
     
-    func popToVCIndex(index: Int) {}
+    func popToVCIndex(_ index: Int) {}
     
 }
 

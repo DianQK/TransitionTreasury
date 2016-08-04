@@ -29,12 +29,12 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     private var shadowPathBackup: CGPath?
     
     private lazy var maskView: UIView = {
-        let maskView = UIView(frame: UIScreen.main().bounds)
-        maskView.backgroundColor = UIColor.black()
+        let maskView = UIView(frame: UIScreen.main.bounds)
+        maskView.backgroundColor = UIColor.black
         return maskView
     }()
     
-    public init(status: TransitionStatus = .Push) {
+    public init(status: TransitionStatus = .push) {
         transitionStatus = status
         super.init()
     }
@@ -47,9 +47,9 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
-        var startPositionX: CGFloat = UIScreen.main().bounds.width
+        var startPositionX: CGFloat = UIScreen.main.bounds.width
         var endPositionX: CGFloat = 0
         
         var startOpacity: Float = 0
@@ -60,7 +60,7 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         var transform3D: CATransform3D = CATransform3DIdentity
         transform3D.m34 = -1.0/500.0
         
-        if transitionStatus == .Pop {
+        if transitionStatus == .pop {
             swap(&fromVC, &toVC)
             swap(&startPositionX, &endPositionX)
             swap(&startOpacity, &endOpacity)
@@ -88,10 +88,10 @@ public class PageTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             fromVC?.view.layer.transform = transform3D
             toVC?.view.layer.position.x = endPositionX + toVC!.view.layer.bounds.width / 2
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     toVC?.view.layer.shadowOpacity = 0
-                    if self.transitionStatus == .Pop && finished && !self.cancelPop {
+                    if self.transitionStatus == .pop && finished && !self.cancelPop {
                         self.maskView.removeFromSuperview()
                         fromVC?.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
                     }

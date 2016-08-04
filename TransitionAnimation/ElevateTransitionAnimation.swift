@@ -22,7 +22,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     private var animationCount: Int = 0
     
-    public init(maskView view: UIView, toPosition position: CGPoint, status: TransitionStatus = .Present) {
+    public init(maskView view: UIView, toPosition position: CGPoint, status: TransitionStatus = .present) {
         maskView = view
         toPosition = position
         transitionStatus = status
@@ -37,7 +37,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         var startPosition = toVC!.view.convert(maskView.layer.position, from: maskView.superview)
         var endPosition = toPosition
@@ -46,7 +46,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         maskLayer.position = startPosition
         maskLayer.contents = maskView.layer.contents
         
-        func distance(point: CGPoint, size: CGSize) -> CGFloat {
+        func distance(_ point: CGPoint, size: CGSize) -> CGFloat {
             switch (point.x < size.width / 2, point.y < size.height / 2) {
             case (true, true) :
                 return sqrt((point.x - size.width)*(point.x - size.width) + (point.y - size.height)*(point.y - size.height))
@@ -59,12 +59,12 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             }
         }
         
-        let distanceResult = distance(point: startPosition, size: toVC!.view.layer.bounds.size)
+        let distanceResult = distance(startPosition, size: toVC!.view.layer.bounds.size)
         
         var startSize = maskView.layer.bounds.size
-        var endSize = maskView.layer.bounds.size.tr_heightFill(height: distanceResult * 2).tr_widthFill(width: distanceResult * 2)
+        var endSize = maskView.layer.bounds.size.tr_heightFill(distanceResult * 2).tr_widthFill(distanceResult * 2)
         
-        if transitionStatus == .Dismiss {
+        if transitionStatus == .dismiss {
             swap(&fromVC, &toVC)
             swap(&startSize, &endSize)
             swap(&startPosition, &endPosition)
@@ -107,7 +107,7 @@ extension ElevateTransitionAnimation: CAAnimationDelegate {
     public func animationEnded(_ transitionCompleted: Bool) {
         animationCount -= 1
         if animationCount == 0 {
-            transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled())
+            transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled)
             transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
             transitionContext?.viewController(forKey: UITransitionContextToViewControllerKey)?.view.layer.mask = nil
         }

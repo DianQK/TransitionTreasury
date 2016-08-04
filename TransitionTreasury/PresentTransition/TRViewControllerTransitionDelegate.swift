@@ -21,26 +21,26 @@ public class TRViewControllerTransitionDelegate: NSObject, UIViewControllerTrans
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TransitionAnimationable, status: TransitionStatus = .Present) {
+    public init(method: TransitionAnimationable, status: TransitionStatus = .present) {
         transition = method.transitionAnimation()
         super.init()
     }
     /**
      Update transition status
      
-     - parameter status: .Present or .Dismiss
+     - parameter status: .Present or .dismiss
      */
-    public func updateStatus(status: TransitionStatus) {
+    public func updateStatus(_ status: TransitionStatus) {
         transition.transitionStatus = status
     }
     
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionStatus = .Present
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .present
         return transition
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionStatus = .Dismiss
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionStatus = .dismiss
         return transition
     }
     

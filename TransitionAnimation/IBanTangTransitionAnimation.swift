@@ -26,7 +26,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
     
     lazy public private(set) var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
-    public init(key: UIView, status: TransitionStatus = .Push) {
+    public init(key: UIView, status: TransitionStatus = .push) {
         keyView = key
         transitionStatus = status
         super.init()
@@ -40,7 +40,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         self.transitionContext = transitionContext
         let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         let lightMaskLayer: CALayer = {
             let layer =  CALayer()
@@ -57,7 +57,7 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         containView.addSubview(toVC!.view)
         containView.addSubview(fromVC!.view)
 
-        if transitionStatus == .Push {
+        if transitionStatus == .push {
             containView.layer.addSublayer(lightMaskLayer)
             keyViewCopy.layer.position = containView.convert(keyView.layer.position, from: keyView.superview)
             containView.addSubview(keyViewCopy)
@@ -65,25 +65,25 @@ public class IBanTangTransitionAnimation: NSObject, TRViewControllerAnimatedTran
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             switch self.transitionStatus {
-            case .Push :
+            case .push :
                 self.keyViewCopy.layer.position.y = self.keyViewCopy.layer.bounds.height / 2
-            case .Pop where self.interacting == true :
+            case .pop where self.interacting == true :
                 fromVC!.view.layer.position.x = fromVC!.view.layer.bounds.width * 1.5
-            case .Pop where self.interacting == false :
+            case .pop where self.interacting == false :
                 fromVC!.view.layer.opacity = 0
                 self.keyViewCopy.layer.position = containView.convert(self.keyView.layer.position, from: self.keyView.superview)
             default :
                 fatalError("You set false status.")
             }
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     if finished {
                         self.completion?()
                         self.completion = nil
                     }
                 }
-                if self.transitionStatus == .Push {
+                if self.transitionStatus == .push {
                     toVC?.view.addSubview(self.keyViewCopy)
                     lightMaskLayer.removeFromSuperlayer()
                 }

@@ -32,7 +32,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     }
     /// The edge gesture for pop
     lazy var edgePanGestureRecognizer: UIScreenEdgePanGestureRecognizer = {
-        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TRNavgationTransitionDelegate.tr_edgePan(recognizer:)))
+        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(TRNavgationTransitionDelegate.tr_edgePan(_:)))
         edgePanGestureRecognizer.edges = .left
         return edgePanGestureRecognizer
     }()
@@ -45,10 +45,10 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
      
      - returns: Transition Animation Delegate Object
      */
-    public init(method: TransitionAnimationable, status: TransitionStatus = .Push, gestureFor viewController: UIViewController?) {
+    public init(method: TransitionAnimationable, status: TransitionStatus = .push, gestureFor viewController: UIViewController?) {
         transition = method.transitionAnimation()
         super.init()
-        if let transition = transition as? TransitionInteractiveable where transition.edgeSlidePop {
+        if let transition = transition as? TransitionInteractiveable , transition.edgeSlidePop {
             viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
         }
     }
@@ -56,17 +56,17 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
         case .push :
-            transition.transitionStatus = .Push
+            transition.transitionStatus = .push
             return transition
         case .pop :
-            transition.transitionStatus = .Pop
+            transition.transitionStatus = .pop
             return transition
         case .none :
             return nil
         }
     }
     
-    public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
         guard let transition = transition as? TransitionInteractiveable else {
             return nil
@@ -77,16 +77,16 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
     
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         switch transition.transitionStatus {
-        case .Push :
+        case .push :
             currentStatusBarStyle?.updateStatusBarStyle()
-        case .Pop :
+        case .pop :
             previousStatusBarStyle?.updateStatusBarStyle()
         default :
             fatalError("No this transition status here.")
         }
     }
     
-    public func tr_edgePan(recognizer: UIPanGestureRecognizer) {
+    public func tr_edgePan(_ recognizer: UIPanGestureRecognizer) {
         
         let fromVC = transition.transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)
         let toVC = transition.transitionContext?.viewController(forKey: UITransitionContextToViewControllerKey)

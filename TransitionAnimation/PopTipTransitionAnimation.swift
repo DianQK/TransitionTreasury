@@ -21,13 +21,13 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
     private var mainVC: UIViewController?
     
     lazy private var tapGestureRecognizer: UITapGestureRecognizer = {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(PopTipTransitionAnimation.tapDismiss(tap:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PopTipTransitionAnimation.tapDismiss(_:)))
         return tap
     }()
     
     lazy private var maskView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black()
+        view.backgroundColor = UIColor.black
         return view
     }()
     
@@ -35,7 +35,7 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
     
     private let bounce: Bool
     
-    public init(visibleHeight height: CGFloat, bounce: Bool = false, status: TransitionStatus = .Present) {
+    public init(visibleHeight height: CGFloat, bounce: Bool = false, status: TransitionStatus = .present) {
         transitionStatus = status
         visibleHeight = height
         self.bounce = bounce
@@ -51,8 +51,8 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         
-        let containView = transitionContext.containerView()
-        let screenBounds = UIScreen.main().bounds
+        let containView = transitionContext.containerView
+        let screenBounds = UIScreen.main.bounds
         
         var startFrame = screenBounds.offsetBy(dx: 0, dy: screenBounds.size.height)
         var finalFrame = screenBounds.offsetBy(dx: 0, dy: screenBounds.height - visibleHeight)
@@ -62,14 +62,14 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         
         containView.addSubview(fromVC!.view)
         
-        if transitionStatus == .Dismiss {
+        if transitionStatus == .dismiss {
             swap(&fromVC, &toVC)
             swap(&startFrame, &finalFrame)
             swap(&startOpacity, &finalOpacity)
-        } else if transitionStatus == .Present {
+        } else if transitionStatus == .present {
             let bottomView = UIView(frame: screenBounds)
             bottomView.layer.contents = {
-                let scale = UIScreen.main().scale
+                let scale = UIScreen.main.scale
                 UIGraphicsBeginImageContextWithOptions(fromVC!.view.bounds.size, true, scale)
                 fromVC!.view.layer.render(in: UIGraphicsGetCurrentContext()!)
                 let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -91,12 +91,12 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
             toVC?.view.layer.frame = finalFrame
             self.maskView.alpha = finalOpacity
             }) { finished in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     
     }
     
-    func tapDismiss(tap: UITapGestureRecognizer) {
+    func tapDismiss(_ tap: UITapGestureRecognizer) {
         mainVC?.presentedViewController?.transitioningDelegate = nil
         mainVC?.dismiss(animated: true, completion: nil)
     }

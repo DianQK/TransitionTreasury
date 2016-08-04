@@ -27,7 +27,7 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
     private var shadowRadiusBackup: CGFloat?
     private var shadowPathBackup: CGPath?
     
-    public init(status: TransitionStatus = .Push) {
+    public init(status: TransitionStatus = .push) {
         transitionStatus = status
         super.init()
     }
@@ -40,15 +40,15 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         var fromVCStartX: CGFloat = 0
-        var fromVCEndX = -UIScreen.main().bounds.width/3
+        var fromVCEndX = -UIScreen.main.bounds.width/3
         
-        var toVCStartX = UIScreen.main().bounds.width
+        var toVCStartX = UIScreen.main.bounds.width
         var toVCEndX: CGFloat = 0
         
-        if transitionStatus == .Pop {
+        if transitionStatus == .pop {
             swap(&fromVC, &toVC)
             swap(&fromVCStartX, &fromVCEndX)
             swap(&toVCStartX, &toVCEndX)
@@ -73,7 +73,7 @@ public class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedT
             fromVC?.view.frame.origin.x = fromVCEndX
             toVC?.view.frame.origin.x = toVCEndX
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     toVC?.view.layer.shadowOpacity = 0
                     if finished {

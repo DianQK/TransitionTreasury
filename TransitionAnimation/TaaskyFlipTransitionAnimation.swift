@@ -20,7 +20,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
     
     private var positionBackup: CGPoint?
     
-    public init(blurEffect blur: Bool = true, status: TransitionStatus = .Present) {
+    public init(blurEffect blur: Bool = true, status: TransitionStatus = .present) {
         blurEffect = blur
         transitionStatus = status
         super.init()
@@ -35,7 +35,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
         
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         let angle = M_PI/2
         var startTransform = CATransform3DIdentity
@@ -44,7 +44,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         var endTransform = CATransform3DIdentity
         endTransform.m34 = -1.0/500.0
         
-        if transitionStatus == .Dismiss {
+        if transitionStatus == .dismiss {
             swap(&fromVC, &toVC)
             swap(&startTransform, &endTransform)
         }
@@ -56,7 +56,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         toVC?.view.layer.transform = startTransform
         
         containView.addSubview(fromVC!.view)
-        if blurEffect && (transitionStatus == .Present) {
+        if blurEffect && (transitionStatus == .present) {
             let effectView = UIVisualEffectView(frame: fromVC!.view.frame)
             effectView.effect = UIBlurEffect(style: .dark)
             containView.addSubview(effectView)
@@ -66,7 +66,7 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             toVC?.view.layer.transform = endTransform
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 toVC?.view.layer.anchorPoint = self.anchorPointBackup ?? CGPoint(x: 0.5, y: 0.5)
                 toVC?.view.layer.position = self.positionBackup ?? CGPoint(x: toVC!.view.layer.position.x, y: toVC!.view.layer.position.y - toVC!.view.layer.bounds.height / 2)
         }

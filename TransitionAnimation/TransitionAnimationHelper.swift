@@ -41,37 +41,37 @@ public extension CGSize {
     /**
      Fit width without shape change.
      */
-    public func tr_widthFit(width: CGFloat) -> CGSize {
+    public func tr_widthFit(_ width: CGFloat) -> CGSize {
         let widthPresent = width / self.width
         return CGSize(width: width, height: widthPresent * height)
     }
     /**
      Fit height without shape change.
      */
-    public func tr_heightFit(height: CGFloat) -> CGSize {
+    public func tr_heightFit(_ height: CGFloat) -> CGSize {
         let heightPresent = height / self.height
         return CGSize(width: heightPresent * width, height: height)
     }
     /**
      Fill width without shape change.
      */
-    public func tr_widthFill(width: CGFloat) -> CGSize {
+    public func tr_widthFill(_ width: CGFloat) -> CGSize {
         switch self.width >= width {
         case true :
             return self
         case false :
-            return tr_widthFit(width: width)
+            return tr_widthFit(width)
         }
     }
     /**
      Fit height without shape change.
      */
-    public func tr_heightFill(height: CGFloat) -> CGSize {
+    public func tr_heightFill(_ height: CGFloat) -> CGSize {
         switch self.height >= height {
         case true :
             return self
         case false :
-            return tr_heightFit(height: height)
+            return tr_heightFit(height)
         }
     }
 }
@@ -89,7 +89,7 @@ public extension CGRect {
     /** 
      Return a rectangle that precent the source rectangle, with the same center point.
      */
-    public func tr_shape(precent: CGFloat) -> CGRect {
+    public func tr_shape(_ precent: CGFloat) -> CGRect {
         return self.insetBy(dx: width * (1 - precent), dy: height * (1 - precent))
     }
     /**
@@ -125,7 +125,7 @@ public extension UIView {
     /**
      Add view with convert point.
      */
-    public func tr_addSubview(view: UIView, convertFrom fromView: UIView) {
+    public func tr_addSubview(_ view: UIView, convertFrom fromView: UIView) {
         view.layer.position = convert(fromView.layer.position, from: fromView.superview)
         addSubview(view)
     }

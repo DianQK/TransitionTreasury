@@ -42,7 +42,7 @@ public extension UITabBarController {
         }
     }
     
-    public func tr_selected(index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) {
+    public func tr_selected(_ index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) {
         if let transitionAnimation = tr_transitionDelegate?.transitionAnimation as? TabBarTransitionInteractiveable {
             transitionAnimation.gestureRecognizer = gesture
             transitionAnimation.interacting = true

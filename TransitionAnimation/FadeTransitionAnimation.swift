@@ -26,7 +26,7 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         return 0.3
     }
 
-    public init(status: TransitionStatus = .Push) {
+    public init(status: TransitionStatus = .push) {
         transitionStatus = status
         super.init()
     }
@@ -35,7 +35,7 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         self.transitionContext = transitionContext
         let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         containView.addSubview(fromVC!.view)
         containView.addSubview(toVC!.view)
@@ -44,7 +44,7 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             toVC!.view.layer.opacity = 1
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     if finished {
                         self.completion?()

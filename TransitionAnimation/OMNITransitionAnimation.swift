@@ -26,7 +26,7 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     public private(set) var keyView: UIView
     
-    public init(key: UIView, status: TransitionStatus = .Push) {
+    public init(key: UIView, status: TransitionStatus = .push) {
         keyView = key
         transitionStatus = status
         super.init()
@@ -40,25 +40,25 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         var topHeight: CGFloat = 0
         var bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
         
-        if transitionStatus == .Pop {
+        if transitionStatus == .pop {
             swap(&fromVC, &toVC)
             topHeight = fromVC!.view.bounds.height - bottomView.bounds.height
             bottomHeight = bottomView.bounds.height
         }
         
-        if transitionStatus == .Push {
+        if transitionStatus == .push {
             
             topHeight = containView.convert(keyView.layer.position, from: keyView.superview).y + keyView.layer.bounds.size.height / 2
             bottomHeight = fromVC!.view.layer.bounds.size.height - topHeight
             
             bottomView.frame = CGRect(x: 0, y: topHeight, width: fromVC!.view.layer.bounds.size.width, height: bottomHeight)
             bottomView.layer.contents = {
-                let scale = UIScreen.main().scale
+                let scale = UIScreen.main.scale
                 UIGraphicsBeginImageContextWithOptions(fromVC!.view.bounds.size, true, scale)
                 fromVC!.view.layer.render(in: UIGraphicsGetCurrentContext()!)
                 let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
@@ -83,10 +83,10 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
             fromVC!.view.layer.position.y -= topHeight
             self.bottomView.layer.position.y += bottomHeight
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 self.bottomView.removeFromSuperview()
                 if !self.cancelPop {
-                    if self.transitionStatus == .Pop {
+                    if self.transitionStatus == .pop {
                         transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
                         transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)?.view.layer.mask = nil
                     }

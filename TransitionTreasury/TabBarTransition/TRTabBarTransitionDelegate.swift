@@ -40,14 +40,14 @@ public class TRTabBarTransitionDelegate: NSObject, UITabBarControllerDelegate {
     }
     
     public func tabBarControllerSupportedInterfaceOrientations(_ tabBarController: UITabBarController) -> UIInterfaceOrientationMask {
-        return tr_delegate?.tr_tabBarControllerSupportedInterfaceOrientations(tabBarController: tabBarController) ?? UIApplication.shared().supportedInterfaceOrientations(for: nil)
+        return tr_delegate?.tr_tabBarControllerSupportedInterfaceOrientations(tabBarController) ?? UIApplication.shared.supportedInterfaceOrientations(for: nil)
     }
 
     public func tabBarControllerPreferredInterfaceOrientationForPresentation(_ tabBarController: UITabBarController) -> UIInterfaceOrientation {
-        return tr_delegate?.tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController: tabBarController) ?? UIInterfaceOrientation.unknown
+        return tr_delegate?.tr_tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController) ?? UIInterfaceOrientation.unknown
     }
     
-    public func tabBarController(tabBarController: UITabBarController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func tabBarController(_ tabBarController: UITabBarController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         guard let transitionAnimation = transitionAnimation as? TabBarTransitionInteractiveable else {
             return nil
         }

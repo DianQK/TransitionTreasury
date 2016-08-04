@@ -36,34 +36,34 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         return 0.3
     }
     
-    public init(presentGesture: UIPanGestureRecognizer?, dismissGesture: UIPanGestureRecognizer?, status: TransitionStatus = .Present) {
+    public init(presentGesture: UIPanGestureRecognizer?, dismissGesture: UIPanGestureRecognizer?, status: TransitionStatus = .present) {
         presentPanGesture = presentGesture
         dismissPanGesture = dismissGesture
         transitionStatus = status
         super.init()
         if presentPanGesture != nil {
-            presentPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(sender:)))
+            presentPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
             interacting = true
         }
-        dismissPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(sender:)))
+        dismissPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
     }
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
         var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let containView = transitionContext.containerView
         
         var fromVCStartY: CGFloat = 0
-        var fromVCEndY = UIScreen.main().bounds.height
+        var fromVCEndY = UIScreen.main.bounds.height
         
-        var toVCStartY = -UIScreen.main().bounds.height/3
+        var toVCStartY = -UIScreen.main.bounds.height/3
         var toVCEndY: CGFloat = 0
         shadowOpacityBackup = shadowOpacityBackup ?? fromVC?.view.layer.shadowOpacity
         shadowOffsetBackup = shadowOffsetBackup ?? fromVC?.view.layer.shadowOffset
         shadowRadiusBackup = shadowRadiusBackup ?? fromVC?.view.layer.shadowRadius
         
-        if transitionStatus == .Dismiss {
+        if transitionStatus == .dismiss {
             swap(&fromVC, &toVC)
             swap(&fromVCStartY, &fromVCEndY)
             swap(&toVCStartY, &toVCEndY)
@@ -81,14 +81,14 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
             toVC?.view.frame.origin.y = toVCEndY
             fromVC?.view.frame.origin.y = fromVCEndY
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     if finished {
                         self.completion?()
                         self.completion = nil
                     }
                 }
-                if self.transitionStatus == .Dismiss {
+                if self.transitionStatus == .dismiss {
                     fromVC?.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
                     fromVC?.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
                     fromVC?.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
@@ -96,13 +96,13 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         }
     }
     
-    public func slideTransition(sender: UIPanGestureRecognizer) {
+    public func slideTransition(_ sender: UIPanGestureRecognizer) {
 
         let fromVC = transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)
 
         let view = fromVC!.view
         
-        let offsetY: CGFloat = transitionStatus == .Present ? sender.translation(in: view).y : -sender.translation(in: view).y
+        let offsetY: CGFloat = transitionStatus == .present ? sender.translation(in: view).y : -sender.translation(in: view).y
         
         var percent = offsetY / (view?.bounds.size.height)!
         
@@ -127,10 +127,10 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
                 percentTransition?.completionSpeed = 1.0 - percentTransition!.percentComplete
                 percentTransition?.finish()
                 switch transitionStatus {
-                case .Present :
-                    presentPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(sender:)))
-                case .Dismiss :
-                    dismissPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(sender:)))
+                case .present :
+                    presentPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
+                case .dismiss :
+                    dismissPanGesture?.removeTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
                     percentTransition = nil
                 default : break
                 }

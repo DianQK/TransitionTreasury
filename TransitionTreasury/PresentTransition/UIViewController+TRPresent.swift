@@ -21,13 +21,13 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury present viewController.
      */
-    public func tr_presentViewController(viewControllerToPresent: UIViewController, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .Default, completion: (() -> Void)? = nil) {
+    public func tr_presentViewController(_ viewControllerToPresent: UIViewController, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         
         tr_presentTransition = transitionDelegate
         
         viewControllerToPresent.transitioningDelegate = transitionDelegate
-        transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.CurrentlyTRStatusBarStyle()
+        transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.currentlyTRStatusBarStyle()
         let fullCompletion = {
             completion?()
             statusBarStyle.updateStatusBarStyle()
@@ -50,7 +50,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury dismiss ViewController.
      */
-    public func tr_dismissViewController(interactive: Bool = false, completion: (() -> Void)? = nil) {
+    public func tr_dismissViewController(_ interactive: Bool = false, completion: (() -> Void)? = nil) {
         let transitionDelegate = tr_presentTransition
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive
@@ -70,7 +70,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     }
 }
 /// Modal Transition & Delegate.
-public typealias ModalTransitionDelegate = protocol<ViewControllerTransitionable,ModalViewControllerDelegate>
+public typealias ModalTransitionDelegate = ViewControllerTransitionable & ModalViewControllerDelegate
 
 /**
  *  Your `MianViewController` should conform this delegate.
@@ -81,18 +81,18 @@ public protocol ModalViewControllerDelegate: class, NSObjectProtocol {
      
      - parameter data: callback data
      */
-    func modalViewControllerDismiss(interactive: Bool, callbackData data:AnyObject?)
+    func modalViewControllerDismiss(_ interactive: Bool, callbackData data:AnyObject?)
     func modalViewControllerDismiss(callbackData data:AnyObject?)
 }
 
 
 // MARK: - Implement dismiss
 public extension ModalViewControllerDelegate where Self: ViewControllerTransitionable, Self: UIViewController {
-    func modalViewControllerDismiss(interactive: Bool = false, callbackData data:AnyObject? = nil) {
+    func modalViewControllerDismiss(_ interactive: Bool = false, callbackData data:AnyObject? = nil) {
         if data != nil {
             debugPrint("WARNING: You set callbackData, but you forget implement this `modalViewControllerDismiss(_:_:)` to get data.")
         }
-        tr_dismissViewController(interactive: interactive, completion: nil)
+        tr_dismissViewController(interactive, completion: nil)
     }
     
     func modalViewControllerDismiss(callbackData data:AnyObject? = nil) {
