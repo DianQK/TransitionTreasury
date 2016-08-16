@@ -12,7 +12,7 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController<T: UIViewController where T: NavgationTransitionable>(_ viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) {
+    public func tr_pushViewController<T: UIViewController>(_ viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) where T: NavgationTransitionable {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .push, gestureFor: viewController)
         transitionDelegate.completion = completion
         viewController.tr_pushTransition = transitionDelegate
@@ -39,7 +39,7 @@ public extension UINavigationController {
     /**
      Transition treasury pop to viewController.
      */
-    public func tr_popToViewController<T: UIViewController where T: NavgationTransitionable>(_ viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? {
+    public func tr_popToViewController<T: UIViewController>(_ viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? where T: NavgationTransitionable {
         guard let index = viewControllers.index(of: viewController) else {
             fatalError("No this viewController for pop!!!")
         }
