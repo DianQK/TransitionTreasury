@@ -21,13 +21,13 @@ class SecondViewController: UIViewController {
         view.addGestureRecognizer(gesture)
     }
     
-    func swipeTransition(sender: UIPanGestureRecognizer) {
+    func swipeTransition(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
-        case .Began :
+        case .began :
             print("Began")
-            if sender.translationInView(sender.view).x >= 0 {
+            if sender.translation(in: sender.view).x >= 0 {
                 tabBarController?.tr_selected(0, gesture: sender)
-            } else if sender.translationInView(sender.view).x < 0 {
+            } else if sender.translation(in: sender.view).x < 0 {
                 tabBarController?.tr_selected(2, gesture: sender)
             }
             

@@ -9,56 +9,56 @@
 import TransitionTreasury
 
 public enum Transition: TransitionAnimationable {
-    case Push
-    case Present
+    case push
+    case present
     
     public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
-        case .Push:
+        case .push:
             return FadeTransitionAnimation()
-        case .Present:
-            return FadeTransitionAnimation(status: .Present)
+        case .present:
+            return FadeTransitionAnimation(status: .present)
         }
     }
 }
 
-public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
+open class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition?
+    open var percentTransition: UIPercentDrivenInteractiveTransition?
     
-    public var completion: (() -> Void)?
+    open var completion: (() -> Void)?
 
-    public var cancelPop: Bool = false
+    open var cancelPop: Bool = false
 
-    public var interacting: Bool = false
+    open var interacting: Bool = false
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
-    public init(status: TransitionStatus = .Push) {
+    public init(status: TransitionStatus = .push) {
         transitionStatus = status
         super.init()
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        let containView = transitionContext.containerView()
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
+        let containView = transitionContext.containerView
         
-        containView?.addSubview(fromVC!.view)
-        containView?.addSubview(toVC!.view)
+        containView.addSubview(fromVC!.view)
+        containView.addSubview(toVC!.view)
         toVC!.view.layer.opacity = 0
         
-        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             toVC!.view.layer.opacity = 1
             }) { finished in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 if !self.cancelPop {
                     if finished {
                         self.completion?()

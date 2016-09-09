@@ -150,12 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 260C31D01CA40CF700081BDE /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				BCB3429EE6F7935B99C4FC1B /* Check Pods Manifest.lock */,
+				BCB3429EE6F7935B99C4FC1B /* [CP] Check Pods Manifest.lock */,
 				260C31BA1CA40CF700081BDE /* Sources */,
 				260C31BB1CA40CF700081BDE /* Frameworks */,
 				260C31BC1CA40CF700081BDE /* Resources */,
-				1A67AC5EE6CCCC7F04F367A3 /* Embed Pods Frameworks */,
-				A8AFF13827397390E7C864E0 /* Copy Pods Resources */,
+				1A67AC5EE6CCCC7F04F367A3 /* [CP] Embed Pods Frameworks */,
+				A8AFF13827397390E7C864E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,12 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 260C31EC1CA40E4A00081BDE /* Build configuration list for PBXNativeTarget "ExampleWithoutAnimation" */;
 			buildPhases = (
-				B858768016D92F8042F1BFEE /* Check Pods Manifest.lock */,
+				B858768016D92F8042F1BFEE /* [CP] Check Pods Manifest.lock */,
 				260C31D91CA40E4A00081BDE /* Sources */,
 				260C31DA1CA40E4A00081BDE /* Frameworks */,
 				260C31DB1CA40E4A00081BDE /* Resources */,
-				B3995CA9A1500433DC5CD40E /* Embed Pods Frameworks */,
-				00162237AF96E99A78F79CED /* Copy Pods Resources */,
+				B3995CA9A1500433DC5CD40E /* [CP] Embed Pods Frameworks */,
+				00162237AF96E99A78F79CED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,9 +198,13 @@
 				TargetAttributes = {
 					260C31BD1CA40CF700081BDE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4ER83K7G3W;
+						LastSwiftMigration = 0800;
 					};
 					260C31DC1CA40E4A00081BDE = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4ER83K7G3W;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -247,14 +251,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00162237AF96E99A78F79CED /* Copy Pods Resources */ = {
+		00162237AF96E99A78F79CED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,14 +266,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleWithoutAnimation/Pods-ExampleWithoutAnimation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1A67AC5EE6CCCC7F04F367A3 /* Embed Pods Frameworks */ = {
+		1A67AC5EE6CCCC7F04F367A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +281,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A8AFF13827397390E7C864E0 /* Copy Pods Resources */ = {
+		A8AFF13827397390E7C864E0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +296,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3995CA9A1500433DC5CD40E /* Embed Pods Frameworks */ = {
+		B3995CA9A1500433DC5CD40E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +311,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleWithoutAnimation/Pods-ExampleWithoutAnimation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B858768016D92F8042F1BFEE /* Check Pods Manifest.lock */ = {
+		B858768016D92F8042F1BFEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +326,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BCB3429EE6F7935B99C4FC1B /* Check Pods Manifest.lock */ = {
+		BCB3429EE6F7935B99C4FC1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,10 +485,13 @@
 			baseConfigurationReference = 035DA15C4798CF52656E0DCF /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ER83K7G3W;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -493,10 +500,13 @@
 			baseConfigurationReference = 667FBFEFC2E5DACFBC4EE97B /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ER83K7G3W;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -505,10 +515,13 @@
 			baseConfigurationReference = 44DBB5A8F4DFF2023CBA9734 /* Pods-ExampleWithoutAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ER83K7G3W;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ExampleWithoutAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.ExampleWithoutAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -517,10 +530,13 @@
 			baseConfigurationReference = 21D23C863ECB836D0FB2E2D8 /* Pods-ExampleWithoutAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ER83K7G3W;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ExampleWithoutAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.transitiontreasury.ExampleWithoutAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

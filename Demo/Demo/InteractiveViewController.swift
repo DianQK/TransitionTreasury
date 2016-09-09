@@ -24,42 +24,43 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate, Navg
 		view.addGestureRecognizer(pan)
 	}
 
-	@IBAction func PresentClick(sender: UIButton) {
-		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+	@IBAction func PresentClick(_ sender: UIButton) {
+		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
 		vc.modalDelegate = self
-		tr_presentViewController(vc, method: TRPresentTransitionMethod.Scanbot(present: nil, dismiss: vc.dismissGestureRecognizer), completion: {
+		tr_presentViewController(vc, method: TRPresentTransitionMethod.scanbot(present: nil, dismiss: vc.dismissGestureRecognizer), completion: {
 			print("Present finished")
 		})
 	}
 
-	@IBAction func popClick(sender: UIButton) {
-		navigationController?.popViewControllerAnimated(true)
+	@IBAction func popClick(_ sender: UIButton) {
+        
+		_ = navigationController?.popViewController(animated: true)
 	}
 
-	func interactiveTransition(sender: UIPanGestureRecognizer) {
+	func interactiveTransition(_ sender: UIPanGestureRecognizer) {
 		switch sender.state {
-		case .Began:
-			guard sender.velocityInView(view).y > 0 else {
+		case .began:
+			guard sender.velocity(in: view).y > 0 else {
 				break
 			}
-			let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+			let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
 			vc.modalDelegate = self
-			tr_presentViewController(vc, method: TRPresentTransitionMethod.Scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
+			tr_presentViewController(vc, method: TRPresentTransitionMethod.scanbot(present: sender, dismiss: vc.dismissGestureRecognizer), completion: {
 				print("Present finished")
 			})
 			default: break
 		}
 	}
 
-	func modalViewControllerDismiss(interactive interactive: Bool, callbackData data: AnyObject?) {
-		tr_dismissViewController(interactive: interactive, completion: nil)
+	func modalViewControllerDismiss(interactive: Bool, callbackData data: AnyObject?) {
+		tr_dismissViewController(interactive, completion: nil)
 	}
 }
 
 extension InteractiveViewController: UIGestureRecognizerDelegate {
-	func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+	func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
 		if let ges = gestureRecognizer as? UIPanGestureRecognizer {
-			return ges.translationInView(ges.view).y != 0
+			return ges.translation(in: ges.view).y != 0
 		}
 		return false
 	}

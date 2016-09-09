@@ -13,7 +13,7 @@ class ModalViewController: UIViewController {
     
     weak var modalDelegate: ModalViewControllerDelegate?
 
-    @IBAction func dissmissClick(sender: UIButton) {
+    @IBAction func dissmissClick(_ sender: UIButton) {
         modalDelegate?.modalViewControllerDismiss(callbackData: nil)
     }
     

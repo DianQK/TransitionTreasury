@@ -25,15 +25,16 @@ class ModalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        backButton.hidden = !(navigationController?.navigationBarHidden ?? true)
+        backButton.isHidden = !(navigationController?.isNavigationBarHidden ?? true)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    @IBAction func dismissClick(sender: AnyObject) {
-        modalDelegate?.modalViewControllerDismiss(callbackData: ["title":title ?? ""])
+    @IBAction func dismissClick(_ sender: AnyObject) {
+         let dict = ["title":title ?? ""]
+        modalDelegate?.modalViewControllerDismiss(callbackData: dict)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,13 +42,13 @@ class ModalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func panDismiss(sender: UIPanGestureRecognizer) {
+    func panDismiss(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
-        case .Began :
-            guard sender.translationInView(view).y < 0 else {
+        case .began :
+            guard sender.translation(in: view).y < 0 else {
                 break
             }
-            modalDelegate?.modalViewControllerDismiss(interactive: true, callbackData: nil)
+            modalDelegate?.modalViewControllerDismiss(true, callbackData: nil)
         default : break
         }
     }

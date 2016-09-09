@@ -50,8 +50,8 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         let containView = transitionContext.containerView
         
         var fromVCStartY: CGFloat = 0
@@ -98,7 +98,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public func slideTransition(_ sender: UIPanGestureRecognizer) {
 
-        let fromVC = transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)
+        let fromVC = transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from)
 
         let view = fromVC!.view
         

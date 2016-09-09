@@ -20,7 +20,7 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public private(set) lazy var maskViewCopy: UIView = self.maskView.tr_copyWithContents()
     
-    private var animationCount: Int = 0
+    fileprivate var animationCount: Int = 0
     
     public init(maskView view: UIView, toPosition position: CGPoint, status: TransitionStatus = .present) {
         maskView = view
@@ -35,8 +35,8 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         let containView = transitionContext.containerView
         
         var startPosition = toVC!.view.convert(maskView.layer.position, from: maskView.superview)
@@ -108,8 +108,8 @@ extension ElevateTransitionAnimation: CAAnimationDelegate {
         animationCount -= 1
         if animationCount == 0 {
             transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled)
-            transitionContext?.viewController(forKey: UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
-            transitionContext?.viewController(forKey: UITransitionContextToViewControllerKey)?.view.layer.mask = nil
+            transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from)?.view.layer.mask = nil
+            transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.to)?.view.layer.mask = nil
         }
     }
 }

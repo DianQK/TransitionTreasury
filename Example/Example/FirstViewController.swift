@@ -19,16 +19,16 @@ class FirstViewController: UIViewController, ModalTransitionDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func pushClick(sender: UIButton) {
-        let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
-        navigationController?.tr_pushViewController(second, method: TRPushTransitionMethod.Page)
+    @IBAction func pushClick(_ sender: UIButton) {
+        let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        navigationController?.tr_pushViewController(second, method: TRPushTransitionMethod.page)
     }
     
     
-    @IBAction func presentClick(sender: UIButton) {
-        let model = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ModalViewController") as! ModalViewController
+    @IBAction func presentClick(_ sender: UIButton) {
+        let model = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
         model.modalDelegate = self
-        tr_presentViewController(model, method: TRPresentTransitionMethod.Twitter)
+        tr_presentViewController(model, method: TRPresentTransitionMethod.twitter)
     }
     
     func modalViewControllerDismiss(callbackData data: AnyObject?) {
