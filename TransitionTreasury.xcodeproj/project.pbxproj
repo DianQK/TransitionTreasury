@@ -337,7 +337,6 @@
 					};
 					26FDFF131C33C4A600CB3995 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = HY634B3FW2;
 					};
 				};
 			};
@@ -560,6 +559,7 @@
 		26FDFF1C1C33C4A600CB3995 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TransitionTreasuryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -571,6 +571,7 @@
 		26FDFF1D1C33C4A600CB3995 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TransitionTreasuryTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
