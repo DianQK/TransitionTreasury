@@ -33,8 +33,8 @@ public class FadeTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        let fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
-        let toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         let containView = transitionContext.containerView
         
         containView.addSubview(fromVC!.view)

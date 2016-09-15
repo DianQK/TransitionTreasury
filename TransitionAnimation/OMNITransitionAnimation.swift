@@ -38,8 +38,8 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
-        var fromVC = transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)
-        var toVC = transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)
+        var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         let containView = transitionContext.containerView
         
         var topHeight: CGFloat = 0
@@ -87,8 +87,8 @@ public class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
                 self.bottomView.removeFromSuperview()
                 if !self.cancelPop {
                     if self.transitionStatus == .pop {
-                        transitionContext.viewController(forKey: UITransitionContextFromViewControllerKey)?.view.layer.mask = nil
-                        transitionContext.viewController(forKey: UITransitionContextToViewControllerKey)?.view.layer.mask = nil
+                        transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)?.view.layer.mask = nil
+                        transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)?.view.layer.mask = nil
                     }
                     if finished {
                         self.completion?()
