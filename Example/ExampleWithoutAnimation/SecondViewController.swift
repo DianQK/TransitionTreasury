@@ -13,7 +13,7 @@ class SecondViewController: UIViewController, NavgationTransitionable {
     
     var tr_pushTransition: TRNavgationTransitionDelegate?
 
-    @IBAction func popClick(sender: UIButton) {
+    @IBAction func popClick(_ sender: UIButton) {
         navigationController?.tr_popViewController()
     }
     

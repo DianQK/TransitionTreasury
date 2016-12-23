@@ -12,3 +12,6 @@ target 'Example' do
   libraries
 end
 
+target 'ExampleWithoutAnimation' do
+    libraries
+end

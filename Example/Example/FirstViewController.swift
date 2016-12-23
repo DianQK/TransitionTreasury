@@ -14,11 +14,6 @@ class FirstViewController: UIViewController, ModalTransitionDelegate {
     
     var tr_presentTransition: TRViewControllerTransitionDelegate?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     @IBAction func pushClick(_ sender: UIButton) {
         let second = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         navigationController?.tr_pushViewController(second, method: TRPushTransitionMethod.page)
