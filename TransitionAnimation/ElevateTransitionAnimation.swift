@@ -8,17 +8,17 @@
 
 import TransitionTreasury
 /// Like Elevate
-public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+open class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public let maskView: UIView
+    open let maskView: UIView
     
-    public let toPosition: CGPoint
+    open let toPosition: CGPoint
     
-    public private(set) lazy var maskViewCopy: UIView = self.maskView.tr_copyWithContents()
+    open fileprivate(set) lazy var maskViewCopy: UIView = self.maskView.tr_copyWithContents()
     
     fileprivate var animationCount: Int = 0
     
@@ -29,11 +29,11 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
@@ -104,7 +104,8 @@ public class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
 }
 
 extension ElevateTransitionAnimation: CAAnimationDelegate {
-    public func animationEnded(_ transitionCompleted: Bool) {
+
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         animationCount -= 1
         if animationCount == 0 {
             transitionContext?.completeTransition(!transitionContext!.transitionWasCancelled)
@@ -112,4 +113,5 @@ extension ElevateTransitionAnimation: CAAnimationDelegate {
             transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.to)?.view.layer.mask = nil
         }
     }
+
 }

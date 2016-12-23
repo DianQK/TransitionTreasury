@@ -8,31 +8,31 @@
 
 import TransitionTreasury
 /// Like Scanbot present.
-public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
+open class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()
+    open var percentTransition: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()
     
-    public var cancelPop: Bool = false
+    open var cancelPop: Bool = false
     
-    public var interacting: Bool = false
+    open var interacting: Bool = false
     
-    public var edgeSlidePop: Bool = false
+    open var edgeSlidePop: Bool = false
     
-    public var completion: (() -> Void)?
+    open var completion: (() -> Void)?
     
-    private let presentPanGesture: UIPanGestureRecognizer?
+    fileprivate let presentPanGesture: UIPanGestureRecognizer?
     
-    private let dismissPanGesture: UIPanGestureRecognizer?
+    fileprivate let dismissPanGesture: UIPanGestureRecognizer?
     
-    private var shadowOpacityBackup: Float?
-    private var shadowOffsetBackup: CGSize?
-    private var shadowRadiusBackup: CGFloat?
+    fileprivate var shadowOpacityBackup: Float?
+    fileprivate var shadowOffsetBackup: CGSize?
+    fileprivate var shadowRadiusBackup: CGFloat?
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
@@ -48,7 +48,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         dismissPanGesture?.addTarget(self, action: #selector(ScanbotTransitionAnimation.slideTransition(_:)))
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
@@ -96,7 +96,7 @@ public class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTrans
         }
     }
     
-    public func slideTransition(_ sender: UIPanGestureRecognizer) {
+    open func slideTransition(_ sender: UIPanGestureRecognizer) {
 
         let fromVC = transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from)
 

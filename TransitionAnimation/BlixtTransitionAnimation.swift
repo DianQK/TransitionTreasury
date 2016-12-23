@@ -8,25 +8,25 @@
 
 import TransitionTreasury
 
-public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
+open class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning, TransitionInteractiveable {
     
-    public var keyView: UIView
+    open var keyView: UIView
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public var percentTransition: UIPercentDrivenInteractiveTransition?
+    open var percentTransition: UIPercentDrivenInteractiveTransition?
     
-    public var completion: (() -> Void)?
+    open var completion: (() -> Void)?
     
-    public var cancelPop: Bool = false
+    open var cancelPop: Bool = false
     
-    public var interacting: Bool = false
+    open var interacting: Bool = false
     
-    public let toFrame: CGRect
+    open let toFrame: CGRect
     
-    private lazy var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
+    fileprivate lazy var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     
     public init(key: UIView, toFrame frame:CGRect, status: TransitionStatus = .push) {
         keyView = key
@@ -35,11 +35,11 @@ public class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)

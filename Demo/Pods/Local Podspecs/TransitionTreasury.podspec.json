@@ -1,6 +1,6 @@
 {
   "name": "TransitionTreasury",
-  "version": "3.0.4",
+  "version": "3.1.0",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/DianQK/TransitionTreasury.git",
-    "tag": "3.0.4"
+    "tag": "3.1.0"
   },
   "source_files": [
     "TransitionTreasury/*.swift",

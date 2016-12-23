@@ -9,28 +9,28 @@
 import TransitionTreasury
 
 /// Like Twitter Present.
-public class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+open class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    private var anchorPointBackup: CGPoint?
+    fileprivate var anchorPointBackup: CGPoint?
     
-    private var positionBackup: CGPoint?
+    fileprivate var positionBackup: CGPoint?
     
-    private var transformBackup: CATransform3D?
+    fileprivate var transformBackup: CATransform3D?
     
     public init(status: TransitionStatus = .present) {
         transitionStatus = status
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)

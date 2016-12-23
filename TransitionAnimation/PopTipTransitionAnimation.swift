@@ -8,32 +8,32 @@
 
 import TransitionTreasury
 /// Pop Your Tip ViewController.
-public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+open class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public var cancelPop: Bool = false
+    open var cancelPop: Bool = false
     
-    public var interacting: Bool = false
+    open var interacting: Bool = false
     
-    private var mainVC: UIViewController?
+    fileprivate var mainVC: UIViewController?
     
-    lazy private var tapGestureRecognizer: UITapGestureRecognizer = {
+    lazy fileprivate var tapGestureRecognizer: UITapGestureRecognizer = {
         let tap = UITapGestureRecognizer(target: self, action: #selector(PopTipTransitionAnimation.tapDismiss(_:)))
         return tap
     }()
     
-    lazy private var maskView: UIView = {
+    lazy fileprivate var maskView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.black
         return view
     }()
     
-    public private(set) var visibleHeight: CGFloat
+    open fileprivate(set) var visibleHeight: CGFloat
     
-    private let bounce: Bool
+    fileprivate let bounce: Bool
     
     public init(visibleHeight height: CGFloat, bounce: Bool = false, status: TransitionStatus = .present) {
         transitionStatus = status
@@ -42,11 +42,11 @@ public class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransi
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)

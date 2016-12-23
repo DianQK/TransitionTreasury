@@ -9,11 +9,10 @@ def libraries
 end
 
 target 'Demo' do
-  platform :ios, '8.0'
-  libraries
+    libraries
 end
 
 target 'TabBarDemo' do
-    platform :ios, '8.0'
-    libraries
+  libraries
 end
+

@@ -16,7 +16,7 @@ public extension UINavigationController {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .push, gestureFor: viewController)
         transitionDelegate.completion = completion
         viewController.tr_pushTransition = transitionDelegate
-        
+
         delegate = transitionDelegate
         transitionDelegate.previousStatusBarStyle = TRStatusBarStyle.currentlyTRStatusBarStyle()
         transitionDelegate.currentStatusBarStyle = statusBarStyle

@@ -8,17 +8,17 @@
 
 import TransitionTreasury
 
-public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
+open class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTransitioning {
     
-    public var transitionStatus: TransitionStatus
+    open var transitionStatus: TransitionStatus
     
-    public var transitionContext: UIViewControllerContextTransitioning?
+    open var transitionContext: UIViewControllerContextTransitioning?
     
-    public private(set) var blurEffect: Bool = true
+    open fileprivate(set) var blurEffect: Bool = true
     
-    private var anchorPointBackup: CGPoint?
+    fileprivate var anchorPointBackup: CGPoint?
     
-    private var positionBackup: CGPoint?
+    fileprivate var positionBackup: CGPoint?
     
     public init(blurEffect blur: Bool = true, status: TransitionStatus = .present) {
         blurEffect = blur
@@ -26,11 +26,11 @@ public class TaaskyFlipTransitionAnimation: NSObject, TRViewControllerAnimatedTr
         super.init()
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         var fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
         var toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)

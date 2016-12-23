@@ -13,7 +13,7 @@ import TransitionAnimation
 class SecondViewController: UIViewController, NavgationTransitionable {
 	var tr_pushTransition: TRNavgationTransitionDelegate?
 
-	override func viewDidAppear(animated: Bool) {
+	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		/**
 		 Advande Usage (Get keyView or KeyViewCopy)
@@ -28,8 +28,8 @@ class SecondViewController: UIViewController, NavgationTransitionable {
 		}
 	}
 
-	@IBAction func popClick(sender: AnyObject) {
-		navigationController?.tr_popViewController({ () -> Void in
+	@IBAction func popClick(_ sender: AnyObject) {
+		_ = navigationController?.tr_popViewController({ () -> Void in
 			print("Pop finished.")
 		})
 	}
