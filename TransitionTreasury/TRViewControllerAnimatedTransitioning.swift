@@ -38,6 +38,8 @@ public protocol TransitionInteractiveable {
     var cancelPop: Bool{get set}
     /// Option
     var edgeSlidePop: Bool{get set}
+    
+    func finishByCancelled(_ isCancelled:Bool) -> Void
 }
 
 public extension TRViewControllerAnimatedTransitioning {
@@ -74,4 +76,6 @@ public extension TransitionInteractiveable {
         set {}
     }
     
+    public func finishByCancelled(_ isCancelled:Bool) -> Void {
+    }
 }

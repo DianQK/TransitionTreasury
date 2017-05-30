@@ -49,7 +49,8 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         transition = method.transitionAnimation()
         super.init()
         if let transition = transition as? TransitionInteractiveable , transition.edgeSlidePop {
-            viewController?.view.addGestureRecognizer(edgePanGestureRecognizer)
+            let panGesture = transition.panGestureRecognizer ?? edgePanGestureRecognizer
+            viewController?.view.addGestureRecognizer(panGesture)
         }
     }
     
@@ -105,8 +106,9 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         switch recognizer.state {
         case .began :
             transition.interacting = true
-            transition.percentTransition = UIPercentDrivenInteractiveTransition()
-            transition.percentTransition?.startInteractiveTransition((transition as! TRViewControllerAnimatedTransitioning).transitionContext!)
+            if transition.percentTransition == nil {
+                transition.percentTransition = UIPercentDrivenInteractiveTransition()
+            }
             toVC!.navigationController!.tr_popViewController()
         case .changed :
             transition.percentTransition?.update(percent)
@@ -116,10 +118,12 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
                 transition.cancelPop = false
                 transition.percentTransition?.completionSpeed = 1.0 - transition.percentTransition!.percentComplete
                 transition.percentTransition?.finish()
+                transition.finishByCancelled(false)
                 fromVC?.view.removeGestureRecognizer(edgePanGestureRecognizer)
             } else {
                 transition.cancelPop = true
                 transition.percentTransition?.cancel()
+                transition.finishByCancelled(true)
             }
             transition.percentTransition = nil
         }
