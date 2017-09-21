@@ -22,6 +22,16 @@
 * Fade
 * Slide
 
+## [4.1.0](https://github.com/DianQK/TransitionTreasury/releases/tag/4.1.0)
+#### Support Swift 3 & Xcode 9
+#### Fixed
+* Fix OMNI animation position on iOS 11
+* Fix crash on Scanbot animation
+* Set `navigationController.delegate` is `nil` on push or pop completed. 
+
+## [4.0.0](https://github.com/DianQK/TransitionTreasury/releases/tag/4.0.0)
+#### Support Swift 3
+
 ## [3.0.4](https://github.com/DianQK/TransitionTreasury/releases/tag/3.0.4)
 #### Fixed
 * Fix name `ONMI` to `OMNI`

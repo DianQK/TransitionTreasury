@@ -74,6 +74,7 @@ open class OMNITransitionAnimation: NSObject, TRViewControllerAnimatedTransition
         } else {
             topHeight = -topHeight
             bottomHeight = -bottomHeight
+            fromVC!.view.layer.position.y += topHeight // workaround: iOS 11 will reset position after push.
         }
         containView.addSubview(toVC!.view)
         containView.addSubview(fromVC!.view)
