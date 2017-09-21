@@ -37,7 +37,7 @@ open class TwitterTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         
         let containView = transitionContext.containerView
         let screenBounds = UIScreen.main.bounds
-        var angle = M_PI/48
+        var angle = Double.pi / 48
         var transform = CATransform3DIdentity
         transform.m34 = -1.0/500.0
         
