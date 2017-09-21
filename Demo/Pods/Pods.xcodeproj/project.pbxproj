@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01B6C03E3FC7274E4E9E7E53CEDDB023 /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C42546C53D2C14FF292D58ED9A6F9F3 /* TRViewControllerAnimatedTransitioning.swift */; };
 		072AC3952AF1BEB88FB4FB7022B6E052 /* Pods-TabBarDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D84F9BA5CA68BB3803786A1AA0CE99A /* Pods-TabBarDemo-dummy.m */; };
+		0AA979231EDD7748002986A7 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA979221EDD7748002986A7 /* DefaultPercentDrivenInteractiveTransition.swift */; };
 		0F91601E1324B32097B06B901159718A /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DB63F0A012AA4D0691A2BFFF5EBDB5 /* TransitionAnimationHelper.swift */; };
 		104C58458C6DEBCC46B8358D3CDA3320 /* TransitionAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D4DA3790E2EA649C808568F55ADCD2 /* TransitionAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1294EE44CCCB3520E682D2B87A8A7D28 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EAB9C8C350A9382FDF27FEB8D10DD6 /* TransitionTreasury.framework */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		02C678B36282FA8E4E2E555146008E15 /* Pods_TabBarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		063D86405F09C75FF63ACB55F3585FE6 /* TRTabBarTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTabBarTransitionDelegate.swift; sourceTree = "<group>"; };
+		0AA979221EDD7748002986A7 /* DefaultPercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultPercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
 		0D50FA71126344D071912A1054B979FD /* TransitionTreasury.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
 		0D70BA11EC7A7E12224CC506269F311B /* TRTransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTransitionAnimations.swift; sourceTree = "<group>"; };
 		11F22D274CCD266E7533668B5548538F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 		C958D9C27810285894D97572374BAA02 /* TransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				0AA979221EDD7748002986A7 /* DefaultPercentDrivenInteractiveTransition.swift */,
 				353F177013E72FB1F68AC20D5C8474A7 /* BlixtTransitionAnimation.swift */,
 				967852A20BDCE2FA020B27F52ED07DE7 /* DefaultPushTransitionAnimation.swift */,
 				3C0B5CD5563809ACDE0B90706802A7D8 /* ElevateTransitionAnimation.swift */,
@@ -536,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				536C73DA1FB553922FE8F9A614264DD5 /* BlixtTransitionAnimation.swift in Sources */,
+				0AA979231EDD7748002986A7 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */,
 				AABDE91769B416792E6BA50307E2DC3D /* DefaultPushTransitionAnimation.swift in Sources */,
 				310E5410D16CF9C899F6237A32CDAF92 /* ElevateTransitionAnimation.swift in Sources */,
 				EBE6A38E1F726D406A094D35D35D22E8 /* FadeTransitionAnimation.swift in Sources */,

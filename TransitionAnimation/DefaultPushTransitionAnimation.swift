@@ -14,7 +14,9 @@ open class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTra
     
     open var transitionContext: UIViewControllerContextTransitioning?
     
-    open var percentTransition: UIPercentDrivenInteractiveTransition?
+    public lazy var percentTransition: UIPercentDrivenInteractiveTransition? = {
+        return DefaultPercentDrivenInteractiveTransition()
+    }()
     
     open var completion: (() -> Void)?
     
@@ -30,6 +32,12 @@ open class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTra
     public init(status: TransitionStatus = .push) {
         transitionStatus = status
         super.init()
+    }
+    
+    public func finishByCancelled(_ isCancelled: Bool) {
+        if let percentTransition = percentTransition as? DefaultPercentDrivenInteractiveTransition{
+            percentTransition.finishBy(cancelled: isCancelled)
+        }
     }
     
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -88,5 +96,4 @@ open class DefaultPushTransitionAnimation: NSObject, TRViewControllerAnimatedTra
                 self.cancelPop = false
         }
     }
-    
 }
