@@ -14,7 +14,10 @@ public extension UINavigationController {
      */
     public func tr_pushViewController<T: UIViewController>(_ viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) where T: NavgationTransitionable {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .push, gestureFor: viewController)
-        transitionDelegate.completion = completion
+        transitionDelegate.completion = { [weak self] in
+            completion?()
+            self?.delegate = nil
+        }
         viewController.tr_pushTransition = transitionDelegate
 
         delegate = transitionDelegate
@@ -31,6 +34,7 @@ public extension UINavigationController {
         transitionDelegate?.completion = { [weak self] in
             completion?()
             (self?.topViewController as? NavgationTransitionable)?.tr_pushTransition = nil
+            self?.delegate = nil
         }
         delegate = transitionDelegate
         
@@ -44,7 +48,10 @@ public extension UINavigationController {
             fatalError("No this viewController for pop!!!")
         }
         let transitionDelegate = viewController.tr_pushTransition
-        transitionDelegate?.completion = completion
+        transitionDelegate?.completion = { [weak self] in
+            completion?()
+            self?.delegate = nil
+        }
         transitionDelegate?.transition.popToVCIndex(index)
         delegate = transitionDelegate
         return {
@@ -62,7 +69,10 @@ public extension UINavigationController {
             return popToRootViewController(animated: true)
         }
         let transitionDelegate = (viewControllers[1] as? NavgationTransitionable)?.tr_pushTransition
-        transitionDelegate?.completion = completion
+        transitionDelegate?.completion = { [weak self] in
+            completion?()
+            self?.delegate = nil
+        }
         transitionDelegate?.transition.popToVCIndex(0)
         delegate = transitionDelegate
         return {
