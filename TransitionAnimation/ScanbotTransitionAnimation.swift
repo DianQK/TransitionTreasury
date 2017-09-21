@@ -98,9 +98,9 @@ open class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     open func slideTransition(_ sender: UIPanGestureRecognizer) {
 
-        let fromVC = transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from)
+        guard let fromVC = transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from) else { return }
 
-        let view = fromVC!.view
+        let view = fromVC.view
         
         let offsetY: CGFloat = transitionStatus == .present ? sender.translation(in: view).y : -sender.translation(in: view).y
         
