@@ -21,6 +21,7 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
     case fade
     case page
     case blixt(keyView: UIView, to: CGRect)
+    case custom(customAnimated: TRViewControllerAnimatedTransitioning)
     case `default`
     
     public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
@@ -35,6 +36,8 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
             return PageTransitionAnimation()
         case let .blixt(view, frame) :
             return BlixtTransitionAnimation(key: view, toFrame: frame)
+        case let .custom(customAnimated: TRViewControllerAnimatedTransitioning)
+            return animated
         case .default :
             return DefaultPushTransitionAnimation()
         }
@@ -56,6 +59,7 @@ public enum TRPresentTransitionMethod: TransitionAnimationable {
     case taaskyFlip(blurEffect: Bool)
     case elevate(maskView: UIView, to: CGPoint)
     case scanbot(present: UIPanGestureRecognizer?, dismiss: UIPanGestureRecognizer?)
+    case custom(customAnimated: TRViewControllerAnimatedTransitioning)
     
     public func transitionAnimation() -> TRViewControllerAnimatedTransitioning {
         switch self {
@@ -71,6 +75,8 @@ public enum TRPresentTransitionMethod: TransitionAnimationable {
             return ElevateTransitionAnimation(maskView: view, toPosition: position)
         case let .scanbot(presentGesture, dismissGesture) :
             return ScanbotTransitionAnimation(presentGesture: presentGesture, dismissGesture: dismissGesture)
+        case let .custom(customAnimated: TRViewControllerAnimatedTransitioning)
+            return animated
         }
     }
 }
