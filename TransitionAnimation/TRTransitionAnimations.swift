@@ -37,7 +37,7 @@ public enum TRPushTransitionMethod: TransitionAnimationable {
         case let .blixt(view, frame) :
             return BlixtTransitionAnimation(key: view, toFrame: frame)
         case let .custom(customAnimated: TRViewControllerAnimatedTransitioning):
-            return animated
+            return customAnimated
         case .default :
             return DefaultPushTransitionAnimation()
         }
@@ -76,7 +76,7 @@ public enum TRPresentTransitionMethod: TransitionAnimationable {
         case let .scanbot(presentGesture, dismissGesture) :
             return ScanbotTransitionAnimation(presentGesture: presentGesture, dismissGesture: dismissGesture)
         case let .custom(customAnimated: TRViewControllerAnimatedTransitioning):
-            return animated
+            return customAnimated
         }
     }
 }
