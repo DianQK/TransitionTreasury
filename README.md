@@ -134,7 +134,7 @@ class FirstViewController: UIViewController {
 
     func push() {
         let vc = SecondViewController()
-        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.Fade, completion: {
+        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.fade, completion: {
                 print("Push finish")
             })
     }
@@ -257,7 +257,7 @@ Then, like in **Basic Usage**, just add param `statusBarStyle`:
 
 ```swift
 // Push & Pop
-tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod.Fade, statusBarStyle: UIStatusBarStyle = .Default)    
+tr_pushViewController(viewController: UIViewController, method: TRPushTransitionMethod.fade, statusBarStyle: UIStatusBarStyle = .Default)    
 
 // Present & Dismiss
 tr_presentViewController(viewControllerToPresent: UIViewController, method: TRPresentTransitionMethod.Fade, statusBarStyle: UIStatusBarStyle = .Default)
