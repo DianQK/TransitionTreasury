@@ -58,7 +58,7 @@ To integrate TransitionTreasury into your Xcode project using CocoaPods, specify
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury', '~> 4.0.0'
+pod 'TransitionTreasury', '~> 5.0'
 ```
 
 Then, run the following command:
@@ -72,7 +72,7 @@ In any file you'd like to use TransitionTreasury in, don't forget to import the 
 For TransitionAnimation extensions, this project will include them as dependencies. You can do this via CocoaPods subspecs.
 
 ```ruby
-pod 'TransitionAnimation', '~> 4.0.0'
+pod 'TransitionAnimation', '~> 5.0'
 ```
 
 <s>### Carthage    
