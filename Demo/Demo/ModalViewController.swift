@@ -32,7 +32,7 @@ class ModalViewController: UIViewController {
     }
 
     
-    func panDismiss(_ sender: UIPanGestureRecognizer) {
+    @objc func panDismiss(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began :
             guard sender.translation(in: view).y < 0 else {

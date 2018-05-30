@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
         view.addGestureRecognizer(gesture)
     }
     
-    func swipeTransition(_ sender: UIPanGestureRecognizer) {
+    @objc func swipeTransition(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began :
             if sender.translation(in: sender.view).x < 0 {

@@ -87,7 +87,7 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
         }
     }
     
-    public func tr_edgePan(_ recognizer: UIPanGestureRecognizer) {
+    @objc public func tr_edgePan(_ recognizer: UIPanGestureRecognizer) {
         
         let fromVC = transition.transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from)
         let toVC = transition.transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.to)

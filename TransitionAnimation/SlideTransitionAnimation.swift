@@ -79,7 +79,7 @@ open class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransitio
         }
     }
     
-    open func interactiveTransition(_ sender: UIPanGestureRecognizer) {
+    @objc open func interactiveTransition(_ sender: UIPanGestureRecognizer) {
         
         guard let view = sender.view else { return }
         

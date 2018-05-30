@@ -96,7 +96,7 @@ open class ScanbotTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         }
     }
     
-    open func slideTransition(_ sender: UIPanGestureRecognizer) {
+    @objc open func slideTransition(_ sender: UIPanGestureRecognizer) {
 
         guard let fromVC = transitionContext?.viewController(forKey: UITransitionContextViewControllerKey.from) else { return }
 

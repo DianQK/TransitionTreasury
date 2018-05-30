@@ -37,7 +37,7 @@ class InteractiveViewController: UIViewController, ModalTransitionDelegate, Navg
 		_ = navigationController?.popViewController(animated: true)
 	}
 
-	func interactiveTransition(_ sender: UIPanGestureRecognizer) {
+	@objc func interactiveTransition(_ sender: UIPanGestureRecognizer) {
 		switch sender.state {
 		case .began:
 			guard sender.velocity(in: view).y > 0 else {

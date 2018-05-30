@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
         view.addGestureRecognizer(gesture)
     }
     
-    func swipeTransition(_ sender: UIPanGestureRecognizer) {
+    @objc func swipeTransition(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began :
             print("Began")

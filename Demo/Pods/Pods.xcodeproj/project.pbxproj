@@ -7,44 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D59B8B0AE4EF78A640EEE0A31AA606 /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E042163DA580AD1695BFA43BFF7E2 /* UINavigationController+TRPushPop.swift */; };
-		0DB1500000FF0B76EFEC00E10622FFF8 /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96EEE5A22F788754F2742668E8BC1C8 /* TRNavgationTransitionDelegate.swift */; };
-		1DC9EDC22196DFD527B7A1E852A2D364 /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7428AA3F24926643DB866F34FEAA64F /* PopTipTransitionAnimation.swift */; };
-		24565146A0A73A1709EFC13D1E51E0E4 /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42FB3849D84FEFECCD227A542637C67 /* PageTransitionAnimation.swift */; };
-		26C8326AE632525AADFCB22D51D23CB0 /* OMNITransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757867C4C769EC21C30CDE70DB1F347 /* OMNITransitionAnimation.swift */; };
-		27A4E200AC5790B0496B264C32E269C1 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9072EDF3A36214417774BAD3230D22F4 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		299B6DB7BB1031957352498EA774D848 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863F7239BB205C093381D4325525165 /* Foundation.framework */; };
-		2FB9565CC1EAF984CD4135252DCC9EBE /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9987A1D07F539C4B0CA9D5C972CB96E /* IBanTangTransitionAnimation.swift */; };
-		3312BDADA353AC32D87D607B7E9ABAA0 /* TRTabBarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D86405F09C75FF63ACB55F3585FE6 /* TRTabBarTransitionDelegate.swift */; };
-		33E7FC32ABC8CC56E273ED188D8EBD8A /* TransitionTreasury-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 424BC0939ABB1C5E609BC618063D2171 /* TransitionTreasury-dummy.m */; };
-		57A8769FE3490E93DACE42CC809D6A4F /* UITabBarController+TRTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EC4D0C6F2D3CDB94524FB8251D43D /* UITabBarController+TRTransition.swift */; };
-		601C443181CCFC2E3C5FD66E124AFB8B /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAC3C10219FCDB7F101E99D70DD3B4E /* TaaskyFlipTransitionAnimation.swift */; };
-		642B0491E4C33166E94A01513CF4CDB3 /* TRTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7AB7A1301FB221AA079F9AC59815 /* TRTabBarControllerDelegate.swift */; };
-		64A5ACE7B1BF7F55DA54DC930E845708 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861DC77DA630394E9E0A890B49A9E66E /* FadeTransitionAnimation.swift */; };
-		6A0F190B3FD58BB9A69312F7F8F2D87D /* Pods-TabBarDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3C3579B8A282955B2231193790B184 /* Pods-TabBarDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74A73CD392D2BA4ED9C920B6B22B9378 /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D50FA71126344D071912A1054B979FD /* TransitionTreasury.swift */; };
-		7634917AC3DDA43FD6C96D2763201EF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863F7239BB205C093381D4325525165 /* Foundation.framework */; };
-		76683C5D7B16B7BCB2E6F7B97B30CEB6 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0CA5DF00AEFAFDF61CDE933A543A /* ElevateTransitionAnimation.swift */; };
-		7692998E18F6C36BD8DCE64EF5B577BE /* TRTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF949E01EB19E1499A31FB88118386C3 /* TRTransitionAnimations.swift */; };
-		7A99A4FB52B8D72E3A46F91F4C59A1E1 /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDCF3515A11EBEE61A88CA83839008 /* TRStatusBarStyle.swift */; };
-		7C66D0B50C03B497D5A6E801A65AB405 /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E2EB7CBF6EAB220D9ACC1B6BC3799 /* Pods-Demo-dummy.m */; };
-		8065F1A434411675B42D74929155E092 /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69191F8D4451B497BF582C06C41490C /* UIViewController+TRPresent.swift */; };
-		96BE3711C3BD549B96226A841C961910 /* SlideTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DCDD8AFDD446F7942A227AA2953807 /* SlideTransitionAnimation.swift */; };
-		9A5E9C2DF62112E5331FDE3B4A7CC039 /* BlixtTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F26F6FC05A51270A990C89D70F17A9 /* BlixtTransitionAnimation.swift */; };
-		9F073A9D6700C4F26858F1C75DB81282 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BDA5F176704B6369F8C4DE38CF6736 /* TransitionAnimationHelper.swift */; };
-		B2C89BDE499E3183D3F9B4514D2DD497 /* DefaultPushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127828B57CAD657A8DA06D288B651726 /* DefaultPushTransitionAnimation.swift */; };
+		00E7792A7388D3CA82EC851EB4247217 /* TRNavgationTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D59F263C59BD39CE8C46C27F42B98 /* TRNavgationTransitionDelegate.swift */; };
+		014B8227FD74E132DDB1D803BB21488C /* BlixtTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9AE1332152B22FD3EB4E43BBDE70F /* BlixtTransitionAnimation.swift */; };
+		057A3A4CB0C1037FF050E83728269C11 /* TransitionTreasury-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FDEA193507CE6FDB5E2D9F4CBD0152 /* TransitionTreasury-dummy.m */; };
+		114AD73EA46FB9F6AB969F308BFC4420 /* SlideTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5635318549017F083C17B99C16CF034 /* SlideTransitionAnimation.swift */; };
+		1BDD3CA7FA48CE6CDAD93D493490E4C8 /* UINavigationController+TRPushPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEFA090ACB62CA70AA61523E90551CD /* UINavigationController+TRPushPop.swift */; };
+		255B6B6760B647E52FA6ED6EFEBCC1B0 /* TransitionTreasury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DBE0A5F04E2D489DDCF999B7FF4A80 /* TransitionTreasury.swift */; };
+		260E102CE3E4ED6DC6B39B481EA15C3E /* TRTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B679EDD60B799932280D537595D6B43 /* TRTabBarControllerDelegate.swift */; };
+		27A4E200AC5790B0496B264C32E269C1 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB94EB116921CD3C266B56A3BF424606 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3431C74FDA99ED3181EA6FD4EF095D4C /* DefaultPushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EB00DE222EE032D6E10ED7FC87F9F6 /* DefaultPushTransitionAnimation.swift */; };
+		3835DCE15FC34460CB9B7855C5132CA4 /* PopTipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383EBE59BED790A807070E932D44266 /* PopTipTransitionAnimation.swift */; };
+		3AB283BA553EB610C5A6B3F7BFEB6CB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */; };
+		3C618C1D022CAEE6D271D5FDA965A1F7 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EF38539D440405AD2DB1A905EBB15 /* DefaultPercentDrivenInteractiveTransition.swift */; };
+		43E83C117D9DFAB6CEEE3B55697AB3B1 /* ElevateTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263767C65F22863D339DBDA1F380E8B9 /* ElevateTransitionAnimation.swift */; };
+		4CD8A32FCC6E8AE8B859E596D90DF8C6 /* TransitionAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C542476F2F29AB58FE8C5627842F1C /* TransitionAnimationHelper.swift */; };
+		51610FD7AC54072B7D9B8B7F5933FBA6 /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED79FC4A09AE2AA1B2CBE5A1B708946 /* TRViewControllerTransitionDelegate.swift */; };
+		521F52A6B84B757409364B10ADF82742 /* TaaskyFlipTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B88A1A1FA2BF7E32566752216BE10 /* TaaskyFlipTransitionAnimation.swift */; };
+		53D6D1FA2B38CC73B00D7079B2694B24 /* PageTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354C9007D510C2CF477FD6FD8EEADDB /* PageTransitionAnimation.swift */; };
+		69253603BA96721F8FCF0B174CFBFF29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */; };
+		6A0F190B3FD58BB9A69312F7F8F2D87D /* Pods-TabBarDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD14AF29B98695911C8830B998F2AC9 /* Pods-TabBarDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C66D0B50C03B497D5A6E801A65AB405 /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FFC5EF49A335EA91816D5A62C0D970 /* Pods-Demo-dummy.m */; };
+		861C451F25D821231AE7DF2C559DABC0 /* TRTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0E1B053F3E949D06D7F3AB2794624 /* TRTransitionAnimations.swift */; };
+		91C42DAE5C65CEB44EFE7F5F8CCD2842 /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02A64BA085CB985515CD05BCB9C7A52 /* ScanbotTransitionAnimation.swift */; };
+		95F7F3007D17DB9C10DE7910300DBEE3 /* OMNITransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88E5924235B822075A78C7B0E15F1AA /* OMNITransitionAnimation.swift */; };
+		9C5615B39337A174D135685F9CB75BF1 /* TRTabBarTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EF5D0ECB4BBDF86A529651EE54082 /* TRTabBarTransitionDelegate.swift */; };
+		B215D8DFDB8096CD17B9AA5C5116C938 /* TransitionAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C758DA83B2B87A83605005B4F278C5 /* TransitionAnimation-dummy.m */; };
 		B30CB2FB69116FD34567D41EBA1B0614 /* TransitionTreasury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EAB9C8C350A9382FDF27FEB8D10DD6 /* TransitionTreasury.framework */; };
-		B31C95A0B841D0D44D405CD8F38A956C /* TRViewControllerTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321C7AFB59C37BA22C8E9AF51027293 /* TRViewControllerTransitionDelegate.swift */; };
-		B7DAF2F60B3C92DEF3A55F737E50AB91 /* Pods-TabBarDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D84F9BA5CA68BB3803786A1AA0CE99A /* Pods-TabBarDemo-dummy.m */; };
-		BE04025834D41C7221873AC2C898FC03 /* ScanbotTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8EEBB2E2B0FC803EDF723A2EFE46AD /* ScanbotTransitionAnimation.swift */; };
-		C13ACA58B87209D7806AE4175A02843E /* TransitionAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4B6D057065FEFB9ED28E74D076271F /* TransitionAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C19C4F45E99707345FE99C5778D9C552 /* TransitionTreasury-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5132CFFB307D84CB5E9205D1186E6DFE /* TransitionTreasury-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C89A3F08FA5D8E52CBA6BB8800F043E4 /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124794AC87CCFAE330EB95D0733B87E /* TwitterTransitionAnimation.swift */; };
-		CBDF1669E89DBBC5F72CD4989B58C064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863F7239BB205C093381D4325525165 /* Foundation.framework */; };
-		DFD083A36FE427DFDDD3E5149AD14905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D863F7239BB205C093381D4325525165 /* Foundation.framework */; };
-		E3CDFA6A9C1102E227E93E744F598C48 /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C42546C53D2C14FF292D58ED9A6F9F3 /* TRViewControllerAnimatedTransitioning.swift */; };
-		F0B8E2834A29A98FE56C5EED95BB7040 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59BAF1080F1B046C20A5FDC55924FFD /* DefaultPercentDrivenInteractiveTransition.swift */; };
-		FDBFB5FE58978859A8CD79447B932A53 /* TransitionAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA6A60ECB7C68018C57CD9832D527C /* TransitionAnimation-dummy.m */; };
+		B5720BD49EEE876B2FD2492AD5F3F5C8 /* FadeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92605475DAAB88EC04F7DC2B54B14422 /* FadeTransitionAnimation.swift */; };
+		B7DAF2F60B3C92DEF3A55F737E50AB91 /* Pods-TabBarDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B5D46E16A2FB0CA0069D098764D1B /* Pods-TabBarDemo-dummy.m */; };
+		B9447B4EFA0FE64A4ED84E7394ED33BC /* TRViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89810594C7C98B39F135FA10D60D09B /* TRViewControllerAnimatedTransitioning.swift */; };
+		BDE8D9D9D827B03BF0EDE8C1D6FF966A /* UITabBarController+TRTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B0A5250F3526AB78D9A2D2391714A /* UITabBarController+TRTransition.swift */; };
+		BFBDF17E0955B4F16D4E3842CB476E62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */; };
+		C13ACA58B87209D7806AE4175A02843E /* TransitionAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CD4261F499EA1F6599B4667F9CA0D /* TransitionAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C19C4F45E99707345FE99C5778D9C552 /* TransitionTreasury-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7042C092094A274EFB263B4CDD4E7F93 /* TransitionTreasury-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C41102EBA9D1474E7098DD477293D050 /* TwitterTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA557D588C82BEA590073135E95F6DE7 /* TwitterTransitionAnimation.swift */; };
+		D813C4D95E1AE201CD6CB9F686E612F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */; };
+		D8888A6379460E1177D2694F30E50ACD /* TRStatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DADEF3E9A1352B29B5BADFAFB4253 /* TRStatusBarStyle.swift */; };
+		EB0BC8248B7ED37A678BBD2C53E5F7E3 /* UIViewController+TRPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D94FA246D87A58709B65AC3EE5DD77 /* UIViewController+TRPresent.swift */; };
+		F64E0221DCAFC376C812475CCC4EA227 /* IBanTangTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830F721DDA6873FBAB92B72590971122 /* IBanTangTransitionAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,70 +86,73 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		02C678B36282FA8E4E2E555146008E15 /* Pods_TabBarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TabBarDemo.framework; path = "Pods-TabBarDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		063D86405F09C75FF63ACB55F3585FE6 /* TRTabBarTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTabBarTransitionDelegate.swift; sourceTree = "<group>"; };
-		0D50FA71126344D071912A1054B979FD /* TransitionTreasury.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitionTreasury.swift; sourceTree = "<group>"; };
-		11DEBCBA7C4E551A97D869EE7FC654CF /* TransitionAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TransitionAnimation.modulemap; sourceTree = "<group>"; };
-		11F22D274CCD266E7533668B5548538F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		127828B57CAD657A8DA06D288B651726 /* DefaultPushTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultPushTransitionAnimation.swift; sourceTree = "<group>"; };
-		12A879174F06E839BE14E77D6D638370 /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
-		1A3EC4D0C6F2D3CDB94524FB8251D43D /* UITabBarController+TRTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TRTransition.swift"; sourceTree = "<group>"; };
-		1BA2BC2EC45A2B6FA9913F8C86D5B9C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C42546C53D2C14FF292D58ED9A6F9F3 /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
-		1EE3EAA8643D89DDEA33D990907284D4 /* TransitionAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionAnimation-prefix.pch"; sourceTree = "<group>"; };
-		20BA6A60ECB7C68018C57CD9832D527C /* TransitionAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionAnimation-dummy.m"; sourceTree = "<group>"; };
-		23ED855C98ED9FDAE713AF9C80C7982D /* TransitionAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionAnimation.xcconfig; sourceTree = "<group>"; };
-		2D84F9BA5CA68BB3803786A1AA0CE99A /* Pods-TabBarDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarDemo-dummy.m"; sourceTree = "<group>"; };
-		35FF9A8282E158172D6FFD6F2B620F28 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C1B0CA5DF00AEFAFDF61CDE933A543A /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
-		3DF868158598FBDEE3C93B6AB8FF7989 /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
-		424BC0939ABB1C5E609BC618063D2171 /* TransitionTreasury-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionTreasury-dummy.m"; sourceTree = "<group>"; };
+		0354C9007D510C2CF477FD6FD8EEADDB /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageTransitionAnimation.swift; path = TransitionAnimation/PageTransitionAnimation.swift; sourceTree = "<group>"; };
+		0445355E6A1553E59AD085EF06B1F988 /* Pods-TabBarDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TabBarDemo.modulemap"; sourceTree = "<group>"; };
+		044CF627E5E11B66D3B0C1D0037BE5A9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		09EB00DE222EE032D6E10ED7FC87F9F6 /* DefaultPushTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultPushTransitionAnimation.swift; path = TransitionAnimation/DefaultPushTransitionAnimation.swift; sourceTree = "<group>"; };
+		0A0A6195FCF960500E63F968F8A5198B /* Pods-TabBarDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		0C8B0A5250F3526AB78D9A2D2391714A /* UITabBarController+TRTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITabBarController+TRTransition.swift"; sourceTree = "<group>"; };
+		0E3B88A1A1FA2BF7E32566752216BE10 /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaaskyFlipTransitionAnimation.swift; path = TransitionAnimation/TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
+		0FD14AF29B98695911C8830B998F2AC9 /* Pods-TabBarDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarDemo-umbrella.h"; sourceTree = "<group>"; };
+		171CD4261F499EA1F6599B4667F9CA0D /* TransitionAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionAnimation-umbrella.h"; sourceTree = "<group>"; };
+		1800DEA26A95DE2199D6F709F7C2E78C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B679EDD60B799932280D537595D6B43 /* TRTabBarControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTabBarControllerDelegate.swift; sourceTree = "<group>"; };
+		1E8E32BAD699E934EA92629CA17000DE /* TransitionTreasury-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionTreasury-prefix.pch"; sourceTree = "<group>"; };
+		263767C65F22863D339DBDA1F380E8B9 /* ElevateTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElevateTransitionAnimation.swift; path = TransitionAnimation/ElevateTransitionAnimation.swift; sourceTree = "<group>"; };
+		2D68AEEFAD3A2AE86E1DC46E367568B2 /* Pods-TabBarDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarDemo-frameworks.sh"; sourceTree = "<group>"; };
+		326765BF7A6D34F4A8AE0275D2E3DFA7 /* TransitionTreasury.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionTreasury.xcconfig; sourceTree = "<group>"; };
+		37DBE0A5F04E2D489DDCF999B7FF4A80 /* TransitionTreasury.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionTreasury.swift; path = TransitionTreasury/TransitionTreasury.swift; sourceTree = "<group>"; };
+		3833585E3D4A2D6E10C243D82E263EAC /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
+		3B6B5D46E16A2FB0CA0069D098764D1B /* Pods-TabBarDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabBarDemo-dummy.m"; sourceTree = "<group>"; };
+		3FBCCA53501031493513F0528D76B3D5 /* Pods-TabBarDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarDemo-resources.sh"; sourceTree = "<group>"; };
+		416D864B10EDEC0028281885AF8A53E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		430DC924D38F5FC1961B582647175742 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Demo.framework; path = "Pods-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5132CFFB307D84CB5E9205D1186E6DFE /* TransitionTreasury-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionTreasury-umbrella.h"; sourceTree = "<group>"; };
-		52A1D3C245DB229BEE3902EBE1D52134 /* Pods-TabBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		45FFC5EF49A335EA91816D5A62C0D970 /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
+		4BEFA090ACB62CA70AA61523E90551CD /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
 		56BE17D36763AE6EB8D41653C604B992 /* TransitionAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TransitionAnimation.framework; path = TransitionAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F3C3579B8A282955B2231193790B184 /* Pods-TabBarDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabBarDemo-umbrella.h"; sourceTree = "<group>"; };
-		6294989B4C98AD9A4968437DFF74ED0E /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		6321C7AFB59C37BA22C8E9AF51027293 /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
+		596648E6F2F8288063CE937CFD85AB84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA453A2715E350E55909606124B8768 /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
+		60C758DA83B2B87A83605005B4F278C5 /* TransitionAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionAnimation-dummy.m"; sourceTree = "<group>"; };
+		61029551B96A97206FDBDB5E047AB7D4 /* TransitionAnimation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TransitionAnimation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		68EAB9C8C350A9382FDF27FEB8D10DD6 /* TransitionTreasury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransitionTreasury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D8EEBB2E2B0FC803EDF723A2EFE46AD /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
-		74C55EDBF91070A06332FDBCEA54ACAC /* Pods-TabBarDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarDemo-resources.sh"; sourceTree = "<group>"; };
-		82D5170C7CA0B9458A6BD12A76A2EF5D /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		84EDCF3515A11EBEE61A88CA83839008 /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRStatusBarStyle.swift; sourceTree = "<group>"; };
-		861DC77DA630394E9E0A890B49A9E66E /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FadeTransitionAnimation.swift; sourceTree = "<group>"; };
-		8757867C4C769EC21C30CDE70DB1F347 /* OMNITransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OMNITransitionAnimation.swift; sourceTree = "<group>"; };
-		87BDA5F176704B6369F8C4DE38CF6736 /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitionAnimationHelper.swift; sourceTree = "<group>"; };
+		7042C092094A274EFB263B4CDD4E7F93 /* TransitionTreasury-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionTreasury-umbrella.h"; sourceTree = "<group>"; };
+		74B601B516CC8B8F4F7DC2C576F0DEA4 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		773BD238FCB2DA9FF9579C52220AAD49 /* TransitionAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionAnimation.xcconfig; sourceTree = "<group>"; };
+		7742483AEAE1E43270EF6FB45352908D /* TransitionTreasury.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TransitionTreasury.modulemap; sourceTree = "<group>"; };
+		78DA489984340C55A180B8050B498C52 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		817DADEF3E9A1352B29B5BADFAFB4253 /* TRStatusBarStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TRStatusBarStyle.swift; path = TransitionTreasury/TRStatusBarStyle.swift; sourceTree = "<group>"; };
+		830F721DDA6873FBAB92B72590971122 /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBanTangTransitionAnimation.swift; path = TransitionAnimation/IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
+		83D54AB476AA4B5AEACA81623141703F /* TransitionAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TransitionAnimation.modulemap; sourceTree = "<group>"; };
 		896DE38E6C007E379A16F0F139A80253 /* TransitionTreasury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TransitionTreasury.framework; path = TransitionTreasury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B4B6D057065FEFB9ED28E74D076271F /* TransitionAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionAnimation-umbrella.h"; sourceTree = "<group>"; };
-		8B77C30BDDB8DAEB541704C662BC9E41 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F37499587FCEF74811841D258C912FE /* Pods-TabBarDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabBarDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		9072EDF3A36214417774BAD3230D22F4 /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
+		92605475DAAB88EC04F7DC2B54B14422 /* FadeTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FadeTransitionAnimation.swift; path = TransitionAnimation/FadeTransitionAnimation.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9428ABB5AB6C179E322CA5179E7164DA /* TransitionTreasury.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionTreasury.xcconfig; sourceTree = "<group>"; };
-		95A6F0807E07795B6EC226D6D62B487C /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		A124794AC87CCFAE330EB95D0733B87E /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
-		A7428AA3F24926643DB866F34FEAA64F /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
-		A78E2EB7CBF6EAB220D9ACC1B6BC3799 /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
-		AABB6A46F125996A327AA10D093B52D9 /* TransitionTreasury-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionTreasury-prefix.pch"; sourceTree = "<group>"; };
-		AB5335835D0FA5B4633E6B46A2C5031F /* Pods-TabBarDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B01CB880D850A91174F4E8E26B970A94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1EB7AB7A1301FB221AA079F9AC59815 /* TRTabBarControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTabBarControllerDelegate.swift; sourceTree = "<group>"; };
-		B7DCDD8AFDD446F7942A227AA2953807 /* SlideTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SlideTransitionAnimation.swift; sourceTree = "<group>"; };
-		B89E042163DA580AD1695BFA43BFF7E2 /* UINavigationController+TRPushPop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TRPushPop.swift"; sourceTree = "<group>"; };
-		B9987A1D07F539C4B0CA9D5C972CB96E /* IBanTangTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IBanTangTransitionAnimation.swift; sourceTree = "<group>"; };
-		BE0B48677457C6CEF1E8D7F4A6F627BB /* Pods-TabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
-		BF949E01EB19E1499A31FB88118386C3 /* TRTransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTransitionAnimations.swift; sourceTree = "<group>"; };
-		C9F26F6FC05A51270A990C89D70F17A9 /* BlixtTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlixtTransitionAnimation.swift; sourceTree = "<group>"; };
-		D69191F8D4451B497BF582C06C41490C /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
-		D863F7239BB205C093381D4325525165 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DC58946DD46190D7AF0F134A3658D8F3 /* Pods-TabBarDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TabBarDemo.modulemap"; sourceTree = "<group>"; };
-		DDAC3C10219FCDB7F101E99D70DD3B4E /* TaaskyFlipTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaaskyFlipTransitionAnimation.swift; sourceTree = "<group>"; };
-		E96EEE5A22F788754F2742668E8BC1C8 /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
-		E9F2398BC429499DA467B99CC8BBAEBB /* Pods-TabBarDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabBarDemo-frameworks.sh"; sourceTree = "<group>"; };
-		EC2DD4E615CA7C1D74F74118FAB307DE /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
-		F42FB3849D84FEFECCD227A542637C67 /* PageTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PageTransitionAnimation.swift; sourceTree = "<group>"; };
-		F59BAF1080F1B046C20A5FDC55924FFD /* DefaultPercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultPercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
-		F7F209D1B8E6F13047815E5DEB941C28 /* TransitionTreasury.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TransitionTreasury.modulemap; sourceTree = "<group>"; };
+		9EE0E1B053F3E949D06D7F3AB2794624 /* TRTransitionAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TRTransitionAnimations.swift; path = TransitionAnimation/TRTransitionAnimations.swift; sourceTree = "<group>"; };
+		A88E5924235B822075A78C7B0E15F1AA /* OMNITransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OMNITransitionAnimation.swift; path = TransitionAnimation/OMNITransitionAnimation.swift; sourceTree = "<group>"; };
+		A8A9AE1332152B22FD3EB4E43BBDE70F /* BlixtTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlixtTransitionAnimation.swift; path = TransitionAnimation/BlixtTransitionAnimation.swift; sourceTree = "<group>"; };
+		A8FDEA193507CE6FDB5E2D9F4CBD0152 /* TransitionTreasury-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionTreasury-dummy.m"; sourceTree = "<group>"; };
+		A95571A57EED0411498DB16FE6DBE29A /* TransitionAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionAnimation-prefix.pch"; sourceTree = "<group>"; };
+		AB7EF38539D440405AD2DB1A905EBB15 /* DefaultPercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultPercentDrivenInteractiveTransition.swift; path = TransitionAnimation/DefaultPercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
+		AE67EA71144AFE4A380C87377C64EF35 /* Pods-TabBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B73E672CF809792E2F78FD4BE246EEBA /* TransitionTreasury.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TransitionTreasury.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BE7152A0B83C128E615318C4C80FC43B /* Pods-TabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C383EBE59BED790A807070E932D44266 /* PopTipTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopTipTransitionAnimation.swift; path = TransitionAnimation/PopTipTransitionAnimation.swift; sourceTree = "<group>"; };
+		C6FE0323AF473DB78E66DB60DE69B905 /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C96EF5D0ECB4BBDF86A529651EE54082 /* TRTabBarTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRTabBarTransitionDelegate.swift; sourceTree = "<group>"; };
+		CD3D59F263C59BD39CE8C46C27F42B98 /* TRNavgationTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRNavgationTransitionDelegate.swift; sourceTree = "<group>"; };
+		CED79FC4A09AE2AA1B2CBE5A1B708946 /* TRViewControllerTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TRViewControllerTransitionDelegate.swift; sourceTree = "<group>"; };
+		D2D94FA246D87A58709B65AC3EE5DD77 /* UIViewController+TRPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+TRPresent.swift"; sourceTree = "<group>"; };
+		D5635318549017F083C17B99C16CF034 /* SlideTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideTransitionAnimation.swift; path = TransitionAnimation/SlideTransitionAnimation.swift; sourceTree = "<group>"; };
+		D68DE2CF2513917CA389C0DA484D6035 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D6C4FED3D154BCBA3959873314273D6F /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		DEB4AD8E2DAD983794E1953309051208 /* Pods-TabBarDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabBarDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F02A64BA085CB985515CD05BCB9C7A52 /* ScanbotTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanbotTransitionAnimation.swift; path = TransitionAnimation/ScanbotTransitionAnimation.swift; sourceTree = "<group>"; };
+		F89810594C7C98B39F135FA10D60D09B /* TRViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TRViewControllerAnimatedTransitioning.swift; path = TransitionTreasury/TRViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		F8C542476F2F29AB58FE8C5627842F1C /* TransitionAnimationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimationHelper.swift; path = TransitionAnimation/TransitionAnimationHelper.swift; sourceTree = "<group>"; };
+		FA557D588C82BEA590073135E95F6DE7 /* TwitterTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterTransitionAnimation.swift; path = TransitionAnimation/TwitterTransitionAnimation.swift; sourceTree = "<group>"; };
+		FAEF43970A36BE125D1222F47E384838 /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
+		FB94EB116921CD3C266B56A3BF424606 /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7634917AC3DDA43FD6C96D2763201EF5 /* Foundation.framework in Frameworks */,
+				3AB283BA553EB610C5A6B3F7BFEB6CB2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDF1669E89DBBC5F72CD4989B58C064 /* Foundation.framework in Frameworks */,
+				D813C4D95E1AE201CD6CB9F686E612F5 /* Foundation.framework in Frameworks */,
 				B30CB2FB69116FD34567D41EBA1B0614 /* TransitionTreasury.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299B6DB7BB1031957352498EA774D848 /* Foundation.framework in Frameworks */,
+				69253603BA96721F8FCF0B174CFBFF29 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,207 +185,181 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD083A36FE427DFDDD3E5149AD14905 /* Foundation.framework in Frameworks */,
+				BFBDF17E0955B4F16D4E3842CB476E62 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E34775D2CD61379644E32E048CE0E7F /* Support Files */ = {
+		0DD95B3697688FBB0A5CD69DD39711B9 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				11F22D274CCD266E7533668B5548538F /* Info.plist */,
-				F7F209D1B8E6F13047815E5DEB941C28 /* TransitionTreasury.modulemap */,
-				9428ABB5AB6C179E322CA5179E7164DA /* TransitionTreasury.xcconfig */,
-				424BC0939ABB1C5E609BC618063D2171 /* TransitionTreasury-dummy.m */,
-				AABB6A46F125996A327AA10D093B52D9 /* TransitionTreasury-prefix.pch */,
-				5132CFFB307D84CB5E9205D1186E6DFE /* TransitionTreasury-umbrella.h */,
+				B73E672CF809792E2F78FD4BE246EEBA /* TransitionTreasury.podspec */,
 			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/TransitionTreasury";
-			sourceTree = "<group>";
-		};
-		19D06C775A8BCE7B34FD05F55989D512 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D863F7239BB205C093381D4325525165 /* Foundation.framework */,
-			);
-			name = iOS;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		2A780D96840CABA0179A92C2ABB4CD1E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3686224F015E1A95DAB827E754E0B985 /* Pods-Demo */,
-				7CA3CB8FB7A1C9F686190E2CEF561620 /* Pods-TabBarDemo */,
+				BD571BED0F8ADDB06EAABCAAB9ADB1F0 /* Pods-Demo */,
+				53CE0D0071979918B1C5F244145AFAEF /* Pods-TabBarDemo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2B8633E51BCFC0B8A323FD41B9723032 /* PushTransition */ = {
+		3738EF2C9913B1D63969CC3431FDB3AD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E96EEE5A22F788754F2742668E8BC1C8 /* TRNavgationTransitionDelegate.swift */,
-				B89E042163DA580AD1695BFA43BFF7E2 /* UINavigationController+TRPushPop.swift */,
+				78DA489984340C55A180B8050B498C52 /* Info.plist */,
+				83D54AB476AA4B5AEACA81623141703F /* TransitionAnimation.modulemap */,
+				773BD238FCB2DA9FF9579C52220AAD49 /* TransitionAnimation.xcconfig */,
+				60C758DA83B2B87A83605005B4F278C5 /* TransitionAnimation-dummy.m */,
+				A95571A57EED0411498DB16FE6DBE29A /* TransitionAnimation-prefix.pch */,
+				171CD4261F499EA1F6599B4667F9CA0D /* TransitionAnimation-umbrella.h */,
 			);
-			name = PushTransition;
-			path = PushTransition;
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/TransitionAnimation";
 			sourceTree = "<group>";
 		};
-		3686224F015E1A95DAB827E754E0B985 /* Pods-Demo */ = {
+		53CE0D0071979918B1C5F244145AFAEF /* Pods-TabBarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				35FF9A8282E158172D6FFD6F2B620F28 /* Info.plist */,
-				3DF868158598FBDEE3C93B6AB8FF7989 /* Pods-Demo.modulemap */,
-				82D5170C7CA0B9458A6BD12A76A2EF5D /* Pods-Demo-acknowledgements.markdown */,
-				8B77C30BDDB8DAEB541704C662BC9E41 /* Pods-Demo-acknowledgements.plist */,
-				A78E2EB7CBF6EAB220D9ACC1B6BC3799 /* Pods-Demo-dummy.m */,
-				EC2DD4E615CA7C1D74F74118FAB307DE /* Pods-Demo-frameworks.sh */,
-				12A879174F06E839BE14E77D6D638370 /* Pods-Demo-resources.sh */,
-				9072EDF3A36214417774BAD3230D22F4 /* Pods-Demo-umbrella.h */,
-				95A6F0807E07795B6EC226D6D62B487C /* Pods-Demo.debug.xcconfig */,
-				6294989B4C98AD9A4968437DFF74ED0E /* Pods-Demo.release.xcconfig */,
-			);
-			name = "Pods-Demo";
-			path = "Target Support Files/Pods-Demo";
-			sourceTree = "<group>";
-		};
-		4A7A663B5064B27F13E42C79EE8366BB /* TransitionAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				C9F26F6FC05A51270A990C89D70F17A9 /* BlixtTransitionAnimation.swift */,
-				F59BAF1080F1B046C20A5FDC55924FFD /* DefaultPercentDrivenInteractiveTransition.swift */,
-				127828B57CAD657A8DA06D288B651726 /* DefaultPushTransitionAnimation.swift */,
-				3C1B0CA5DF00AEFAFDF61CDE933A543A /* ElevateTransitionAnimation.swift */,
-				861DC77DA630394E9E0A890B49A9E66E /* FadeTransitionAnimation.swift */,
-				B9987A1D07F539C4B0CA9D5C972CB96E /* IBanTangTransitionAnimation.swift */,
-				8757867C4C769EC21C30CDE70DB1F347 /* OMNITransitionAnimation.swift */,
-				F42FB3849D84FEFECCD227A542637C67 /* PageTransitionAnimation.swift */,
-				A7428AA3F24926643DB866F34FEAA64F /* PopTipTransitionAnimation.swift */,
-				6D8EEBB2E2B0FC803EDF723A2EFE46AD /* ScanbotTransitionAnimation.swift */,
-				B7DCDD8AFDD446F7942A227AA2953807 /* SlideTransitionAnimation.swift */,
-				DDAC3C10219FCDB7F101E99D70DD3B4E /* TaaskyFlipTransitionAnimation.swift */,
-				87BDA5F176704B6369F8C4DE38CF6736 /* TransitionAnimationHelper.swift */,
-				BF949E01EB19E1499A31FB88118386C3 /* TRTransitionAnimations.swift */,
-				A124794AC87CCFAE330EB95D0733B87E /* TwitterTransitionAnimation.swift */,
-			);
-			name = TransitionAnimation;
-			path = TransitionAnimation;
-			sourceTree = "<group>";
-		};
-		6A932C8A29FBE7AE43BA1746F789B380 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D7174BF7AFCC6E6A8278D86AAEEE497E /* TransitionAnimation */,
-				97540A695564027722A331085D5042D2 /* TransitionTreasury */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7CA3CB8FB7A1C9F686190E2CEF561620 /* Pods-TabBarDemo */ = {
-			isa = PBXGroup;
-			children = (
-				B01CB880D850A91174F4E8E26B970A94 /* Info.plist */,
-				DC58946DD46190D7AF0F134A3658D8F3 /* Pods-TabBarDemo.modulemap */,
-				AB5335835D0FA5B4633E6B46A2C5031F /* Pods-TabBarDemo-acknowledgements.markdown */,
-				8F37499587FCEF74811841D258C912FE /* Pods-TabBarDemo-acknowledgements.plist */,
-				2D84F9BA5CA68BB3803786A1AA0CE99A /* Pods-TabBarDemo-dummy.m */,
-				E9F2398BC429499DA467B99CC8BBAEBB /* Pods-TabBarDemo-frameworks.sh */,
-				74C55EDBF91070A06332FDBCEA54ACAC /* Pods-TabBarDemo-resources.sh */,
-				5F3C3579B8A282955B2231193790B184 /* Pods-TabBarDemo-umbrella.h */,
-				52A1D3C245DB229BEE3902EBE1D52134 /* Pods-TabBarDemo.debug.xcconfig */,
-				BE0B48677457C6CEF1E8D7F4A6F627BB /* Pods-TabBarDemo.release.xcconfig */,
+				416D864B10EDEC0028281885AF8A53E1 /* Info.plist */,
+				0445355E6A1553E59AD085EF06B1F988 /* Pods-TabBarDemo.modulemap */,
+				DEB4AD8E2DAD983794E1953309051208 /* Pods-TabBarDemo-acknowledgements.markdown */,
+				0A0A6195FCF960500E63F968F8A5198B /* Pods-TabBarDemo-acknowledgements.plist */,
+				3B6B5D46E16A2FB0CA0069D098764D1B /* Pods-TabBarDemo-dummy.m */,
+				2D68AEEFAD3A2AE86E1DC46E367568B2 /* Pods-TabBarDemo-frameworks.sh */,
+				3FBCCA53501031493513F0528D76B3D5 /* Pods-TabBarDemo-resources.sh */,
+				0FD14AF29B98695911C8830B998F2AC9 /* Pods-TabBarDemo-umbrella.h */,
+				AE67EA71144AFE4A380C87377C64EF35 /* Pods-TabBarDemo.debug.xcconfig */,
+				BE7152A0B83C128E615318C4C80FC43B /* Pods-TabBarDemo.release.xcconfig */,
 			);
 			name = "Pods-TabBarDemo";
 			path = "Target Support Files/Pods-TabBarDemo";
+			sourceTree = "<group>";
+		};
+		6B493F093CD2C1A90CE61BD32A37D9C0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0093AB6EB360695FB595A94D9ECF2717 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				6A932C8A29FBE7AE43BA1746F789B380 /* Development Pods */,
+				BCF5DD676958BCD94F5125574D6E93A8 /* Development Pods */,
 				FA60C4B422B5396FD7FEE5BFDEE186BF /* Frameworks */,
 				FBE0567D273A7EDE1FD2834F0B56CAE0 /* Products */,
 				2A780D96840CABA0179A92C2ABB4CD1E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		831069BD25778D0E9CCFB8941E2AFF06 /* TabBarTransition */ = {
+		A34DF8791FA9126D6FFA2AFE8E7ACBBF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				B1EB7AB7A1301FB221AA079F9AC59815 /* TRTabBarControllerDelegate.swift */,
-				063D86405F09C75FF63ACB55F3585FE6 /* TRTabBarTransitionDelegate.swift */,
-				1A3EC4D0C6F2D3CDB94524FB8251D43D /* UITabBarController+TRTransition.swift */,
+				044CF627E5E11B66D3B0C1D0037BE5A9 /* LICENSE */,
+				61029551B96A97206FDBDB5E047AB7D4 /* TransitionAnimation.podspec */,
 			);
-			name = TabBarTransition;
-			path = TabBarTransition;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		97540A695564027722A331085D5042D2 /* TransitionTreasury */ = {
+		AF46142C9AD4193585415BBB313E73AF /* PresentTransition */ = {
 			isa = PBXGroup;
 			children = (
-				0E34775D2CD61379644E32E048CE0E7F /* Support Files */,
-				BDBAC70514EE48432AD022C818F9BB68 /* TransitionTreasury */,
-			);
-			name = TransitionTreasury;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		99C1B1C1F77C772D2E82B2B4DF9AD02F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1BA2BC2EC45A2B6FA9913F8C86D5B9C7 /* Info.plist */,
-				11DEBCBA7C4E551A97D869EE7FC654CF /* TransitionAnimation.modulemap */,
-				23ED855C98ED9FDAE713AF9C80C7982D /* TransitionAnimation.xcconfig */,
-				20BA6A60ECB7C68018C57CD9832D527C /* TransitionAnimation-dummy.m */,
-				1EE3EAA8643D89DDEA33D990907284D4 /* TransitionAnimation-prefix.pch */,
-				8B4B6D057065FEFB9ED28E74D076271F /* TransitionAnimation-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/TransitionAnimation";
-			sourceTree = "<group>";
-		};
-		BDBAC70514EE48432AD022C818F9BB68 /* TransitionTreasury */ = {
-			isa = PBXGroup;
-			children = (
-				0D50FA71126344D071912A1054B979FD /* TransitionTreasury.swift */,
-				84EDCF3515A11EBEE61A88CA83839008 /* TRStatusBarStyle.swift */,
-				1C42546C53D2C14FF292D58ED9A6F9F3 /* TRViewControllerAnimatedTransitioning.swift */,
-				C5BDD89297A45376FFF5319FC48A3899 /* PresentTransition */,
-				2B8633E51BCFC0B8A323FD41B9723032 /* PushTransition */,
-				831069BD25778D0E9CCFB8941E2AFF06 /* TabBarTransition */,
-			);
-			name = TransitionTreasury;
-			path = TransitionTreasury;
-			sourceTree = "<group>";
-		};
-		C5BDD89297A45376FFF5319FC48A3899 /* PresentTransition */ = {
-			isa = PBXGroup;
-			children = (
-				6321C7AFB59C37BA22C8E9AF51027293 /* TRViewControllerTransitionDelegate.swift */,
-				D69191F8D4451B497BF582C06C41490C /* UIViewController+TRPresent.swift */,
+				CED79FC4A09AE2AA1B2CBE5A1B708946 /* TRViewControllerTransitionDelegate.swift */,
+				D2D94FA246D87A58709B65AC3EE5DD77 /* UIViewController+TRPresent.swift */,
 			);
 			name = PresentTransition;
-			path = PresentTransition;
+			path = TransitionTreasury/PresentTransition;
 			sourceTree = "<group>";
 		};
-		D7174BF7AFCC6E6A8278D86AAEEE497E /* TransitionAnimation */ = {
+		BCF5DD676958BCD94F5125574D6E93A8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99C1B1C1F77C772D2E82B2B4DF9AD02F /* Support Files */,
-				4A7A663B5064B27F13E42C79EE8366BB /* TransitionAnimation */,
+				C2C7386249A3FE406B14F07D6AF87ADF /* TransitionAnimation */,
+				FC862F0FE7B1EF9C73AF22450FE822D6 /* TransitionTreasury */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BD571BED0F8ADDB06EAABCAAB9ADB1F0 /* Pods-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1800DEA26A95DE2199D6F709F7C2E78C /* Info.plist */,
+				5CA453A2715E350E55909606124B8768 /* Pods-Demo.modulemap */,
+				C6FE0323AF473DB78E66DB60DE69B905 /* Pods-Demo-acknowledgements.markdown */,
+				D68DE2CF2513917CA389C0DA484D6035 /* Pods-Demo-acknowledgements.plist */,
+				45FFC5EF49A335EA91816D5A62C0D970 /* Pods-Demo-dummy.m */,
+				FAEF43970A36BE125D1222F47E384838 /* Pods-Demo-frameworks.sh */,
+				3833585E3D4A2D6E10C243D82E263EAC /* Pods-Demo-resources.sh */,
+				FB94EB116921CD3C266B56A3BF424606 /* Pods-Demo-umbrella.h */,
+				74B601B516CC8B8F4F7DC2C576F0DEA4 /* Pods-Demo.debug.xcconfig */,
+				D6C4FED3D154BCBA3959873314273D6F /* Pods-Demo.release.xcconfig */,
+			);
+			name = "Pods-Demo";
+			path = "Target Support Files/Pods-Demo";
+			sourceTree = "<group>";
+		};
+		BFFE802E3EDEC41A120EEDF151CC791E /* PushTransition */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D59F263C59BD39CE8C46C27F42B98 /* TRNavgationTransitionDelegate.swift */,
+				4BEFA090ACB62CA70AA61523E90551CD /* UINavigationController+TRPushPop.swift */,
+			);
+			name = PushTransition;
+			path = TransitionTreasury/PushTransition;
+			sourceTree = "<group>";
+		};
+		C2C7386249A3FE406B14F07D6AF87ADF /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A8A9AE1332152B22FD3EB4E43BBDE70F /* BlixtTransitionAnimation.swift */,
+				AB7EF38539D440405AD2DB1A905EBB15 /* DefaultPercentDrivenInteractiveTransition.swift */,
+				09EB00DE222EE032D6E10ED7FC87F9F6 /* DefaultPushTransitionAnimation.swift */,
+				263767C65F22863D339DBDA1F380E8B9 /* ElevateTransitionAnimation.swift */,
+				92605475DAAB88EC04F7DC2B54B14422 /* FadeTransitionAnimation.swift */,
+				830F721DDA6873FBAB92B72590971122 /* IBanTangTransitionAnimation.swift */,
+				A88E5924235B822075A78C7B0E15F1AA /* OMNITransitionAnimation.swift */,
+				0354C9007D510C2CF477FD6FD8EEADDB /* PageTransitionAnimation.swift */,
+				C383EBE59BED790A807070E932D44266 /* PopTipTransitionAnimation.swift */,
+				F02A64BA085CB985515CD05BCB9C7A52 /* ScanbotTransitionAnimation.swift */,
+				D5635318549017F083C17B99C16CF034 /* SlideTransitionAnimation.swift */,
+				0E3B88A1A1FA2BF7E32566752216BE10 /* TaaskyFlipTransitionAnimation.swift */,
+				F8C542476F2F29AB58FE8C5627842F1C /* TransitionAnimationHelper.swift */,
+				9EE0E1B053F3E949D06D7F3AB2794624 /* TRTransitionAnimations.swift */,
+				FA557D588C82BEA590073135E95F6DE7 /* TwitterTransitionAnimation.swift */,
+				A34DF8791FA9126D6FFA2AFE8E7ACBBF /* Pod */,
+				3738EF2C9913B1D63969CC3431FDB3AD /* Support Files */,
 			);
 			name = TransitionAnimation;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		E8CB7F45B55380B1C11FA059C3E6C6D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				596648E6F2F8288063CE937CFD85AB84 /* Info.plist */,
+				7742483AEAE1E43270EF6FB45352908D /* TransitionTreasury.modulemap */,
+				326765BF7A6D34F4A8AE0275D2E3DFA7 /* TransitionTreasury.xcconfig */,
+				A8FDEA193507CE6FDB5E2D9F4CBD0152 /* TransitionTreasury-dummy.m */,
+				1E8E32BAD699E934EA92629CA17000DE /* TransitionTreasury-prefix.pch */,
+				7042C092094A274EFB263B4CDD4E7F93 /* TransitionTreasury-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/TransitionTreasury";
 			sourceTree = "<group>";
 		};
 		FA60C4B422B5396FD7FEE5BFDEE186BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				68EAB9C8C350A9382FDF27FEB8D10DD6 /* TransitionTreasury.framework */,
-				19D06C775A8BCE7B34FD05F55989D512 /* iOS */,
+				6B493F093CD2C1A90CE61BD32A37D9C0 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,6 +373,33 @@
 				896DE38E6C007E379A16F0F139A80253 /* TransitionTreasury.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC862F0FE7B1EF9C73AF22450FE822D6 /* TransitionTreasury */ = {
+			isa = PBXGroup;
+			children = (
+				37DBE0A5F04E2D489DDCF999B7FF4A80 /* TransitionTreasury.swift */,
+				817DADEF3E9A1352B29B5BADFAFB4253 /* TRStatusBarStyle.swift */,
+				F89810594C7C98B39F135FA10D60D09B /* TRViewControllerAnimatedTransitioning.swift */,
+				0DD95B3697688FBB0A5CD69DD39711B9 /* Pod */,
+				AF46142C9AD4193585415BBB313E73AF /* PresentTransition */,
+				BFFE802E3EDEC41A120EEDF151CC791E /* PushTransition */,
+				E8CB7F45B55380B1C11FA059C3E6C6D9 /* Support Files */,
+				FE8ADD567AD006A390E9AF164E5384B6 /* TabBarTransition */,
+			);
+			name = TransitionTreasury;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FE8ADD567AD006A390E9AF164E5384B6 /* TabBarTransition */ = {
+			isa = PBXGroup;
+			children = (
+				1B679EDD60B799932280D537595D6B43 /* TRTabBarControllerDelegate.swift */,
+				C96EF5D0ECB4BBDF86A529651EE54082 /* TRTabBarTransitionDelegate.swift */,
+				0C8B0A5250F3526AB78D9A2D2391714A /* UITabBarController+TRTransition.swift */,
+			);
+			name = TabBarTransition;
+			path = TransitionTreasury/TabBarTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +463,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1223C5E7805C920EBC463B75796338C /* Build configuration list for PBXNativeTarget "TransitionAnimation" */;
 			buildPhases = (
-				FF84DA96FB57DEB49C0A97A5D51B7001 /* Sources */,
+				426D37891DFD14DFEC6A9A5BC542B033 /* Sources */,
 				869E5A8BBF89BD570597378AB78F8E1E /* Frameworks */,
 				E6710C9A5B6D429FDCAFB39E5C53D6A5 /* Headers */,
 			);
@@ -477,7 +481,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C408B919E34BE44A56F76564A82F42A9 /* Build configuration list for PBXNativeTarget "TransitionTreasury" */;
 			buildPhases = (
-				7D201DC09F70D0C56673280005C42B70 /* Sources */,
+				A62AFDD093CCA2CF462C151BCAA22F05 /* Sources */,
 				FFBEF35BA63B631A1315C8D5F16B2376 /* Frameworks */,
 				E45E49EC2FCEB2053E012C39F959ADC8 /* Headers */,
 			);
@@ -515,8 +519,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -547,6 +551,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		426D37891DFD14DFEC6A9A5BC542B033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014B8227FD74E132DDB1D803BB21488C /* BlixtTransitionAnimation.swift in Sources */,
+				3C618C1D022CAEE6D271D5FDA965A1F7 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */,
+				3431C74FDA99ED3181EA6FD4EF095D4C /* DefaultPushTransitionAnimation.swift in Sources */,
+				43E83C117D9DFAB6CEEE3B55697AB3B1 /* ElevateTransitionAnimation.swift in Sources */,
+				B5720BD49EEE876B2FD2492AD5F3F5C8 /* FadeTransitionAnimation.swift in Sources */,
+				F64E0221DCAFC376C812475CCC4EA227 /* IBanTangTransitionAnimation.swift in Sources */,
+				95F7F3007D17DB9C10DE7910300DBEE3 /* OMNITransitionAnimation.swift in Sources */,
+				53D6D1FA2B38CC73B00D7079B2694B24 /* PageTransitionAnimation.swift in Sources */,
+				3835DCE15FC34460CB9B7855C5132CA4 /* PopTipTransitionAnimation.swift in Sources */,
+				91C42DAE5C65CEB44EFE7F5F8CCD2842 /* ScanbotTransitionAnimation.swift in Sources */,
+				114AD73EA46FB9F6AB969F308BFC4420 /* SlideTransitionAnimation.swift in Sources */,
+				521F52A6B84B757409364B10ADF82742 /* TaaskyFlipTransitionAnimation.swift in Sources */,
+				B215D8DFDB8096CD17B9AA5C5116C938 /* TransitionAnimation-dummy.m in Sources */,
+				4CD8A32FCC6E8AE8B859E596D90DF8C6 /* TransitionAnimationHelper.swift in Sources */,
+				861C451F25D821231AE7DF2C559DABC0 /* TRTransitionAnimations.swift in Sources */,
+				C41102EBA9D1474E7098DD477293D050 /* TwitterTransitionAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52B88740A284D1F6F8A95E75BB2C73CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,44 +582,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D201DC09F70D0C56673280005C42B70 /* Sources */ = {
+		A62AFDD093CCA2CF462C151BCAA22F05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E7FC32ABC8CC56E273ED188D8EBD8A /* TransitionTreasury-dummy.m in Sources */,
-				74A73CD392D2BA4ED9C920B6B22B9378 /* TransitionTreasury.swift in Sources */,
-				0DB1500000FF0B76EFEC00E10622FFF8 /* TRNavgationTransitionDelegate.swift in Sources */,
-				7A99A4FB52B8D72E3A46F91F4C59A1E1 /* TRStatusBarStyle.swift in Sources */,
-				642B0491E4C33166E94A01513CF4CDB3 /* TRTabBarControllerDelegate.swift in Sources */,
-				3312BDADA353AC32D87D607B7E9ABAA0 /* TRTabBarTransitionDelegate.swift in Sources */,
-				E3CDFA6A9C1102E227E93E744F598C48 /* TRViewControllerAnimatedTransitioning.swift in Sources */,
-				B31C95A0B841D0D44D405CD8F38A956C /* TRViewControllerTransitionDelegate.swift in Sources */,
-				02D59B8B0AE4EF78A640EEE0A31AA606 /* UINavigationController+TRPushPop.swift in Sources */,
-				57A8769FE3490E93DACE42CC809D6A4F /* UITabBarController+TRTransition.swift in Sources */,
-				8065F1A434411675B42D74929155E092 /* UIViewController+TRPresent.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF84DA96FB57DEB49C0A97A5D51B7001 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A5E9C2DF62112E5331FDE3B4A7CC039 /* BlixtTransitionAnimation.swift in Sources */,
-				F0B8E2834A29A98FE56C5EED95BB7040 /* DefaultPercentDrivenInteractiveTransition.swift in Sources */,
-				B2C89BDE499E3183D3F9B4514D2DD497 /* DefaultPushTransitionAnimation.swift in Sources */,
-				76683C5D7B16B7BCB2E6F7B97B30CEB6 /* ElevateTransitionAnimation.swift in Sources */,
-				64A5ACE7B1BF7F55DA54DC930E845708 /* FadeTransitionAnimation.swift in Sources */,
-				2FB9565CC1EAF984CD4135252DCC9EBE /* IBanTangTransitionAnimation.swift in Sources */,
-				26C8326AE632525AADFCB22D51D23CB0 /* OMNITransitionAnimation.swift in Sources */,
-				24565146A0A73A1709EFC13D1E51E0E4 /* PageTransitionAnimation.swift in Sources */,
-				1DC9EDC22196DFD527B7A1E852A2D364 /* PopTipTransitionAnimation.swift in Sources */,
-				BE04025834D41C7221873AC2C898FC03 /* ScanbotTransitionAnimation.swift in Sources */,
-				96BE3711C3BD549B96226A841C961910 /* SlideTransitionAnimation.swift in Sources */,
-				601C443181CCFC2E3C5FD66E124AFB8B /* TaaskyFlipTransitionAnimation.swift in Sources */,
-				FDBFB5FE58978859A8CD79447B932A53 /* TransitionAnimation-dummy.m in Sources */,
-				9F073A9D6700C4F26858F1C75DB81282 /* TransitionAnimationHelper.swift in Sources */,
-				7692998E18F6C36BD8DCE64EF5B577BE /* TRTransitionAnimations.swift in Sources */,
-				C89A3F08FA5D8E52CBA6BB8800F043E4 /* TwitterTransitionAnimation.swift in Sources */,
+				057A3A4CB0C1037FF050E83728269C11 /* TransitionTreasury-dummy.m in Sources */,
+				255B6B6760B647E52FA6ED6EFEBCC1B0 /* TransitionTreasury.swift in Sources */,
+				00E7792A7388D3CA82EC851EB4247217 /* TRNavgationTransitionDelegate.swift in Sources */,
+				D8888A6379460E1177D2694F30E50ACD /* TRStatusBarStyle.swift in Sources */,
+				260E102CE3E4ED6DC6B39B481EA15C3E /* TRTabBarControllerDelegate.swift in Sources */,
+				9C5615B39337A174D135685F9CB75BF1 /* TRTabBarTransitionDelegate.swift in Sources */,
+				B9447B4EFA0FE64A4ED84E7394ED33BC /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				51610FD7AC54072B7D9B8B7F5933FBA6 /* TRViewControllerTransitionDelegate.swift in Sources */,
+				1BDD3CA7FA48CE6CDAD93D493490E4C8 /* UINavigationController+TRPushPop.swift in Sources */,
+				BDE8D9D9D827B03BF0EDE8C1D6FF966A /* UITabBarController+TRTransition.swift in Sources */,
+				EB0BC8248B7ED37A678BBD2C53E5F7E3 /* UIViewController+TRPresent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,387 +636,394 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E3C20ABC1F2834138EC834144EDF753 /* Release */ = {
+		08E29241D125819CABFBEFAB6CD60403 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9428ABB5AB6C179E322CA5179E7164DA /* TransitionTreasury.xcconfig */;
+			baseConfigurationReference = 74B601B516CC8B8F4F7DC2C576F0DEA4 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TransitionTreasury/TransitionTreasury-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TransitionTreasury/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TransitionTreasury/TransitionTreasury.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TransitionTreasury;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3250351D26134ABA915E9508F77FC681 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23ED855C98ED9FDAE713AF9C80C7982D /* TransitionAnimation.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TransitionAnimation/TransitionAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TransitionAnimation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TransitionAnimation/TransitionAnimation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TransitionAnimation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		55DDA2EC0D5FC1B4EC94A070226375D9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23ED855C98ED9FDAE713AF9C80C7982D /* TransitionAnimation.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TransitionAnimation/TransitionAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TransitionAnimation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TransitionAnimation/TransitionAnimation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TransitionAnimation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6BFCA07371AF12EB511C43EE1071A9A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9428ABB5AB6C179E322CA5179E7164DA /* TransitionTreasury.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TransitionTreasury/TransitionTreasury-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TransitionTreasury/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TransitionTreasury/TransitionTreasury.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TransitionTreasury;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6E393A6F371CA541C0AA9CEE9CE33BEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE0B48677457C6CEF1E8D7F4A6F627BB /* Pods-TabBarDemo.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TabBarDemo/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TabBarDemo/Pods-TabBarDemo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		CFBDB072A19E3762E53D39DAF4830003 /* Debug */ = {
+		3881FF7E42C99B57E5908608C48678F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52A1D3C245DB229BEE3902EBE1D52134 /* Pods-TabBarDemo.debug.xcconfig */;
+			baseConfigurationReference = 326765BF7A6D34F4A8AE0275D2E3DFA7 /* TransitionTreasury.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionTreasury/TransitionTreasury-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionTreasury/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TransitionTreasury/TransitionTreasury.modulemap";
+				PRODUCT_MODULE_NAME = TransitionTreasury;
+				PRODUCT_NAME = TransitionTreasury;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		76EC983F5512A7B05A116BC034C12310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773BD238FCB2DA9FF9579C52220AAD49 /* TransitionAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionAnimation/TransitionAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TransitionAnimation/TransitionAnimation.modulemap";
+				PRODUCT_MODULE_NAME = TransitionAnimation;
+				PRODUCT_NAME = TransitionAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		770D443E7E2EB87DF1B9EA11865D7C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6C4FED3D154BCBA3959873314273D6F /* Pods-Demo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7891488092FE722B49D9F2C1B2605B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE7152A0B83C128E615318C4C80FC43B /* Pods-TabBarDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TabBarDemo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TabBarDemo/Pods-TabBarDemo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TabBarDemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D249378B73EAE4433C77AFDD3AB058AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95A6F0807E07795B6EC226D6D62B487C /* Pods-Demo.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Demo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DAB9644457EC4DEE3E0A66F29ADD981A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6294989B4C98AD9A4968437DFF74ED0E /* Pods-Demo.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Demo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Demo/Pods-Demo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Demo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		89337EF94E55F2EEA0E3FBEB34883185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 326765BF7A6D34F4A8AE0275D2E3DFA7 /* TransitionTreasury.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionTreasury/TransitionTreasury-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionTreasury/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TransitionTreasury/TransitionTreasury.modulemap";
+				PRODUCT_MODULE_NAME = TransitionTreasury;
+				PRODUCT_NAME = TransitionTreasury;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D23DA9EF8E46380833EF70AEF045FADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773BD238FCB2DA9FF9579C52220AAD49 /* TransitionAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TransitionAnimation/TransitionAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TransitionAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TransitionAnimation/TransitionAnimation.modulemap";
+				PRODUCT_MODULE_NAME = TransitionAnimation;
+				PRODUCT_NAME = TransitionAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA2DCF4A2BFCB54CBA4489D33A71D058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE67EA71144AFE4A380C87377C64EF35 /* Pods-TabBarDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TabBarDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TabBarDemo/Pods-TabBarDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
@@ -1022,8 +1033,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C104F7F091290C3D1E248192F07FE689 /* Debug */,
-				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1031,8 +1042,8 @@
 		A217DC3605D1AB87A1A041CDF1958E05 /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D249378B73EAE4433C77AFDD3AB058AB /* Debug */,
-				DAB9644457EC4DEE3E0A66F29ADD981A /* Release */,
+				08E29241D125819CABFBEFAB6CD60403 /* Debug */,
+				770D443E7E2EB87DF1B9EA11865D7C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1040,8 +1051,8 @@
 		ACE5FB70D846D61F0133FDD0D0A8C548 /* Build configuration list for PBXNativeTarget "Pods-TabBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFBDB072A19E3762E53D39DAF4830003 /* Debug */,
-				6E393A6F371CA541C0AA9CEE9CE33BEA /* Release */,
+				EA2DCF4A2BFCB54CBA4489D33A71D058 /* Debug */,
+				7891488092FE722B49D9F2C1B2605B5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1049,8 +1060,8 @@
 		C408B919E34BE44A56F76564A82F42A9 /* Build configuration list for PBXNativeTarget "TransitionTreasury" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BFCA07371AF12EB511C43EE1071A9A7 /* Debug */,
-				1E3C20ABC1F2834138EC834144EDF753 /* Release */,
+				89337EF94E55F2EEA0E3FBEB34883185 /* Debug */,
+				3881FF7E42C99B57E5908608C48678F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1058,8 +1069,8 @@
 		D1223C5E7805C920EBC463B75796338C /* Build configuration list for PBXNativeTarget "TransitionAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3250351D26134ABA915E9508F77FC681 /* Debug */,
-				55DDA2EC0D5FC1B4EC94A070226375D9 /* Release */,
+				76EC983F5512A7B05A116BC034C12310 /* Debug */,
+				D23DA9EF8E46380833EF70AEF045FADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -96,7 +96,7 @@ open class PopTipTransitionAnimation: NSObject, TRViewControllerAnimatedTransiti
     
     }
     
-    func tapDismiss(_ tap: UITapGestureRecognizer) {
+    @objc func tapDismiss(_ tap: UITapGestureRecognizer) {
         mainVC?.presentedViewController?.transitioningDelegate = nil
         mainVC?.dismiss(animated: true, completion: nil)
     }
