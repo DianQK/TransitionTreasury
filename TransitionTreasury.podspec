@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TransitionTreasury'
-  s.version = '5.0.0'
+  s.version = '6.0.0'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Easier way to push your viewController.'
   s.homepage = 'https://github.com/DianQK/TransitionTreasury'
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source_files = ['TransitionTreasury/*.swift','TransitionTreasury/*/*.swift']
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 end

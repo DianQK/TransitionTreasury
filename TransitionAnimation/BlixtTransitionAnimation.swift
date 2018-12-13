@@ -24,7 +24,7 @@ open class BlixtTransitionAnimation: NSObject, TRViewControllerAnimatedTransitio
     
     open var interacting: Bool = false
     
-    open let toFrame: CGRect
+    public let toFrame: CGRect
     
     fileprivate lazy var keyViewCopy: UIView = self.keyView.tr_copyWithSnapshot()
     

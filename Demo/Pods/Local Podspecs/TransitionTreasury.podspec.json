@@ -1,6 +1,6 @@
 {
   "name": "TransitionTreasury",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/DianQK/TransitionTreasury.git",
-    "tag": "5.0.0"
+    "tag": "6.0.0"
   },
   "source_files": [
     "TransitionTreasury/*.swift",
@@ -24,5 +24,5 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "swift_version": "4.1"
+  "swift_version": "4.2"
 }
