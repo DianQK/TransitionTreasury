@@ -14,9 +14,9 @@ open class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
     
     open var transitionContext: UIViewControllerContextTransitioning?
     
-    open let maskView: UIView
+    public let maskView: UIView
     
-    open let toPosition: CGPoint
+    public let toPosition: CGPoint
     
     open fileprivate(set) lazy var maskViewCopy: UIView = self.maskView.tr_copyWithContents()
     
@@ -84,7 +84,7 @@ open class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         maskLayerAnimation.fromValue = NSValue(cgSize: startSize)
         maskLayerAnimation.toValue = NSValue(cgSize: endSize)
         maskLayerAnimation.duration = transitionDuration(using: transitionContext)
-        maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         maskLayerAnimation.delegate = self
         
         maskLayer.add(maskLayerAnimation, forKey: "path")
@@ -94,7 +94,7 @@ open class ElevateTransitionAnimation: NSObject, TRViewControllerAnimatedTransit
         maskViewPositionAnimation.fromValue = NSValue(cgPoint: startPosition)
         maskViewPositionAnimation.toValue = NSValue(cgPoint: endPosition)
         maskViewPositionAnimation.duration = transitionDuration(using: transitionContext)
-        maskViewPositionAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        maskViewPositionAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         maskViewPositionAnimation.delegate = self
         
         maskViewCopy.layer.add(maskViewPositionAnimation, forKey: "position")
