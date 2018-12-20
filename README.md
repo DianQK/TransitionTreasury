@@ -6,15 +6,15 @@
 <a href="https://travis-ci.org/DianQK/TransitionTreasury"><img src="https://travis-ci.org/DianQK/TransitionTreasury.svg"></a>
 <a href="https://img.shields.io/cocoapods/v/TransitionTreasury.svg"><img src="https://img.shields.io/cocoapods/v/TransitionTreasury.svg"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
-<a href="http://cocoadocs.org/docsets/TransitionTreasury"><img src="https://img.shields.io/cocoapods/p/TransitionTreasury.svg?style=flat"></a>
+<a href="https://cocoadocs.org/docsets/TransitionTreasury"><img src="https://img.shields.io/cocoapods/p/TransitionTreasury.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/DianQK/TransitionTreasury/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat"></a>
-<a href="http://twitter.com/Songxut"><img src="https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat"></a>
+<a href="https://twitter.com/Songxut"><img src="https://img.shields.io/badge/twitter-@Songxut-blue.svg?style=flat"></a>
 </p>
 
 TransitionTreasury is a viewController transition framework in Swift.      
 
 <p align="center">
-<h1>You can see http://transitiontreasury.com</h1>
+<h1>You can see https://transitiontreasury.com</h1>
 </p>
 
 ## Features    
@@ -46,7 +46,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 
 ### CocoaPods    
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
@@ -58,7 +58,7 @@ To integrate TransitionTreasury into your Xcode project using CocoaPods, specify
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury', '~> 5.0'
+pod 'TransitionTreasury', '~> 6.0'
 ```
 
 Then, run the following command:
@@ -72,12 +72,12 @@ In any file you'd like to use TransitionTreasury in, don't forget to import the 
 For TransitionAnimation extensions, this project will include them as dependencies. You can do this via CocoaPods subspecs.
 
 ```ruby
-pod 'TransitionAnimation', '~> 5.0'
+pod 'TransitionAnimation', '~> 6.0'
 ```
 
 <s>### Carthage    
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Cocoa application. To install the carthage tool, you can use [Homebrew](http://brew.sh).
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Cocoa application. To install the carthage tool, you can use [Homebrew](https://brew.sh).
 
 ```bash
 $ brew update
@@ -124,7 +124,7 @@ For more information about how to use Carthage, please see its [project page](ht
 
 If we need to push `FirstViewController` to `SecondViewController`, `SecondViewController` should conform `NavgationTransitionable`, and add code `var tr_pushTransition: TRNavgationTransitionDelegate?`, I need use this property to retain animation object. Of course, you can use this do more, but it is dangerous.   
 
-When you need to push, just call `public func tr_pushViewController<T : UIViewController where T : NavgationTransitionable>(viewController: T, method: TransitionAnimationable, statusBarStyle: TransitionTreasury.TRStatusBarStyle = default, completion: (() -> Void)? = default)`, like Apple method. About `method` parameter, see [transitiontreasury.com](http://transitiontreasury.com).
+When you need to push, just call `public func tr_pushViewController<T : UIViewController where T : NavgationTransitionable>(viewController: T, method: TransitionAnimationable, statusBarStyle: TransitionTreasury.TRStatusBarStyle = default, completion: (() -> Void)? = default)`, like Apple method. About `method` parameter, see [transitiontreasury.com](https://transitiontreasury.com).
 
 Example：   
 
@@ -204,7 +204,7 @@ func modalViewControllerDismiss(callbackData data:AnyObject?)
 > If you don't need callbackData, maybe you haven't implemented `func modalViewControllerDismiss(callbackData data:AnyObject?)`.
 > If you don't want to use `ModalTransitionDelegate`, you can use `ViewControllerTransitionable` which only for Animation.
 > Warning:    
-> You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](http://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
+> You shouldn't use `tr_dismissViewController()` in your **ModalViewController**. Please use `delegate`. I have implented this, just use `modalDelegate?.modalViewControllerDismiss(callbackData: ["data":"back"])`. For more, you can read [Dismissing a Presented View Controller](https://stackoverflow.com/questions/14636891/dismissing-a-presented-view-controller).
 
 ## Advanced Usage
 
