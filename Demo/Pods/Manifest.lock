@@ -1,7 +1,7 @@
 PODS:
-  - TransitionAnimation (5.0.0):
-    - TransitionTreasury (~> 5.0)
-  - TransitionTreasury (5.0.0)
+  - TransitionAnimation (7.0.0):
+    - TransitionTreasury (~> 7.0.0)
+  - TransitionTreasury (7.0.0)
 
 DEPENDENCIES:
   - TransitionAnimation (from `../`)
@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TransitionAnimation: ca18e5be3439f15b77966da87d2cd5390d8cbc53
-  TransitionTreasury: 0e36897308d706ea4d67c4c44b5cc47d65f53acc
+  TransitionAnimation: cf8926e5e11e4f3b3d8b8a4260d1e7953567af58
+  TransitionTreasury: f88c2bdf282c85d02386362c3c25981174fec995
 
 PODFILE CHECKSUM: 9bd788565ad1f90aad399b5f8ad013f745f2212d
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

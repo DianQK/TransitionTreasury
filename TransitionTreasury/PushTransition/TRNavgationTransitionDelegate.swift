@@ -64,6 +64,8 @@ public class TRNavgationTransitionDelegate: NSObject, UINavigationControllerDele
             return transition
         case .none :
             return nil
+        @unknown default:
+            return nil
         }
     }
     

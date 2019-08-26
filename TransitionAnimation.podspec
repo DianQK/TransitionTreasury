@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TransitionAnimation'
-  s.version = '6.0.0'
+  s.version = '7.0.0'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Transition Animation with TransitionTreasury'
   s.homepage = 'https://github.com/DianQK/TransitionTreasury'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
 
-  s.dependency 'TransitionTreasury', '~> 6.0.0'
+  s.dependency 'TransitionTreasury', '~> 7.0.0'
 
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end

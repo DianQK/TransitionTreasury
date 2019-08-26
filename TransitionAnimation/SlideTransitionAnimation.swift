@@ -45,8 +45,8 @@ open class SlideTransitionAnimation: NSObject, TRViewControllerAnimatedTransitio
         let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         let containView = transitionContext.containerView
         guard let tabBarController = fromVC?.tabBarController else { fatalError("No TabBarController.") }
-        guard let fromVCIndex = tabBarController.viewControllers?.index(of: fromVC!)
-            , let toVCIndex = tabBarController.viewControllers?.index(of: toVC!) else {
+        guard let fromVCIndex = tabBarController.viewControllers?.firstIndex(of: fromVC!)
+            , let toVCIndex = tabBarController.viewControllers?.firstIndex(of: toVC!) else {
             fatalError("VC not in TabBarController.")
         }
         

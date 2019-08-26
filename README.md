@@ -35,7 +35,7 @@ TransitionTreasury is a viewController transition framework in Swift.
 ## Requirements   
 
 * iOS 8.0+
-* Xcode 7.3+
+* Xcode 10.0+
 
 ## Communication
 
@@ -52,13 +52,11 @@ TransitionTreasury is a viewController transition framework in Swift.
 $ gem install cocoapods
 ```
 
-> CocoaPods 0.39.0+ is required to build TransitionTreasury.
-
 To integrate TransitionTreasury into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 use_frameworks!
-pod 'TransitionTreasury', '~> 6.0'
+pod 'TransitionTreasury', '~> 7.0'
 ```
 
 Then, run the following command:
@@ -72,7 +70,7 @@ In any file you'd like to use TransitionTreasury in, don't forget to import the 
 For TransitionAnimation extensions, this project will include them as dependencies. You can do this via CocoaPods subspecs.
 
 ```ruby
-pod 'TransitionAnimation', '~> 6.0'
+pod 'TransitionAnimation', '~> 7.0'
 ```
 
 <s>### Carthage    
