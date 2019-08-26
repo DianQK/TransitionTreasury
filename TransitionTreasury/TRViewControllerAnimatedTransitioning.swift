@@ -44,7 +44,7 @@ public protocol TransitionInteractiveable {
 
 public extension TRViewControllerAnimatedTransitioning {
     
-    public var completion: (() -> Void)? {
+    var completion: (() -> Void)? {
         get {
             return nil
         }
@@ -56,26 +56,26 @@ public extension TRViewControllerAnimatedTransitioning {
 }
 
 public extension TransitionInteractiveable {
-    public var panGestureRecognizer: UIPanGestureRecognizer? {
+    var panGestureRecognizer: UIPanGestureRecognizer? {
         get {
             return nil
         }
         set {}
     }
     
-    public var interactivePrecent: CGFloat {
+    var interactivePrecent: CGFloat {
         get {
             return 0.3
         }
     }
 
-    public var edgeSlidePop: Bool {
+    var edgeSlidePop: Bool {
         get {
             return true
         }
         set {}
     }
     
-    public func finishByCancelled(_ isCancelled:Bool) -> Void {
+    func finishByCancelled(_ isCancelled:Bool) -> Void {
     }
 }

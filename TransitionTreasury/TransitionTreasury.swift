@@ -67,7 +67,7 @@ public protocol TabBarTransitionInteractiveable : class, NSObjectProtocol{
 }
 
 public extension TabBarTransitionInteractiveable {
-    public var completion: (() -> Void)? {
+    var completion: (() -> Void)? {
         get {
             return nil
         }
