@@ -15,7 +15,7 @@ public typealias ViewControllerIndex = Int
 
 public extension UITabBarController {
     
-    public var tr_transitionDelegate: TRTabBarTransitionDelegate? {
+    var tr_transitionDelegate: TRTabBarTransitionDelegate? {
         get {
             return objc_getAssociatedObject(self, &transition_key) as? TRTabBarTransitionDelegate
         }
@@ -27,7 +27,7 @@ public extension UITabBarController {
         }
     }
     
-    public weak var tr_delegate: TRTabBarControllerDelegate? {
+    weak var tr_delegate: TRTabBarControllerDelegate? {
         get {
             if tr_transitionDelegate == nil {
                 debugPrint("Warning: You forget set tr_transitionDelegate.")
@@ -42,7 +42,7 @@ public extension UITabBarController {
         }
     }
     
-    public func tr_selected(_ index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) {
+    func tr_selected(_ index: ViewControllerIndex, gesture: UIGestureRecognizer, completion: (() -> Void)? = nil) {
         if let transitionAnimation = tr_transitionDelegate?.transitionAnimation as? TabBarTransitionInteractiveable {
             transitionAnimation.gestureRecognizer = gesture
             transitionAnimation.interacting = true

@@ -21,7 +21,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury present viewController.
      */
-    public func tr_presentViewController(_ viewControllerToPresent: UIViewController, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) {
+    func tr_presentViewController(_ viewControllerToPresent: UIViewController, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) {
         let transitionDelegate = TRViewControllerTransitionDelegate(method: method)
         
         tr_presentTransition = transitionDelegate
@@ -50,7 +50,7 @@ public extension ViewControllerTransitionable where Self: UIViewController {
     /**
      Transition treasury dismiss ViewController.
      */
-    public func tr_dismissViewController(_ interactive: Bool = false, completion: (() -> Void)? = nil) {
+    func tr_dismissViewController(_ interactive: Bool = false, completion: (() -> Void)? = nil) {
         let transitionDelegate = tr_presentTransition
         if var interactiveTransition = transitionDelegate?.transition as? TransitionInteractiveable {
             interactiveTransition.interacting = interactive

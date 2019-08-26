@@ -12,7 +12,7 @@ public extension UINavigationController {
     /**
      Transition treasury push viewController.
      */
-    public func tr_pushViewController<T: UIViewController>(_ viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) where T: NavgationTransitionable {
+    func tr_pushViewController<T: UIViewController>(_ viewController: T, method: TransitionAnimationable, statusBarStyle: TRStatusBarStyle = .default, completion: (() -> Void)? = nil) where T: NavgationTransitionable {
         let transitionDelegate = TRNavgationTransitionDelegate(method: method, status: .push, gestureFor: viewController)
         transitionDelegate.completion = { [weak self] in
             completion?()
@@ -29,7 +29,7 @@ public extension UINavigationController {
      Transition treasury pop viewController.
      */
     @discardableResult
-    public func tr_popViewController(_ completion: (() -> Void)? = nil) -> UIViewController? {
+    func tr_popViewController(_ completion: (() -> Void)? = nil) -> UIViewController? {
         let transitionDelegate = (topViewController as? NavgationTransitionable)?.tr_pushTransition
         transitionDelegate?.completion = { [weak self] in
             completion?()
@@ -43,8 +43,8 @@ public extension UINavigationController {
     /**
      Transition treasury pop to viewController.
      */
-    public func tr_popToViewController<T: UIViewController>(_ viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? where T: NavgationTransitionable {
-        guard let index = viewControllers.index(of: viewController) else {
+    func tr_popToViewController<T: UIViewController>(_ viewController: T, completion: (() -> Void)? = nil) -> [UIViewController]? where T: NavgationTransitionable {
+        guard let index = viewControllers.firstIndex(of: viewController) else {
             fatalError("No this viewController for pop!!!")
         }
         let transitionDelegate = viewController.tr_pushTransition
@@ -64,7 +64,7 @@ public extension UINavigationController {
     /**
      Transition Treasury Pop to Root ViewController.
      */
-    public func tr_popToRootViewController(_ completion: (() -> Void)? = nil) -> [UIViewController]? {
+    func tr_popToRootViewController(_ completion: (() -> Void)? = nil) -> [UIViewController]? {
         guard viewControllers.count > 1 else {
             return popToRootViewController(animated: true)
         }
